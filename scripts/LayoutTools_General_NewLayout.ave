@@ -1,0 +1,62 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_NewLayout.ave
+'# Author:       Adrian Boehlen
+'# Date:         10.09.2017
+'# Version:      0.2
+'#
+'# Purpose:      erstellt ein neues Layout-Dokument
+'#               Parameter koennen ueber den Dialog eingegeben werden
+'#               Default: A4 hoch
+'#
+'#########################################################################
+
+'# Variablen initialisieren
+
+param = MsgBox.MultiInput("","Define the Layout's Parameters",
+{"Name                                  :",
+ "Length (mm)                        :",
+ "Hight (mm)                          :",
+ "Margin left/right (mm)          :",
+ "Margin top/bottom (mm)      :",
+ "Grid spacing horizontal (mm):",
+ "Grid spacing vertical (mm)   :"},
+{"01", "210", "297", "15", "18", "2", "5"})
+
+if (param.Count = 0) then
+  MsgBox.Warning("Cancel Pressed: No Data Entered", "Canceling the Dialog")
+  return nil
+end
+
+theProject =   av.GetProject
+theLayout =    Layout.Make
+theLayout.SetName(param.Get(0))
+theLayoutDpy = theLayout.GetDisplay
+theLayoutGL =  theLayout.GetGraphics
+
+'# convert millimeters to inches
+laenge =       param.Get(1).AsNumber / 25.4
+breite =       param.Get(2).AsNumber / 25.4
+abst_hoehe =   param.Get(3).AsNumber / 25.4
+abst_breite =  param.Get(4).AsNumber / 25.4
+gitter_h =     param.Get(5).AsNumber / 25.4
+gitter_b =     param.Get(6).AsNumber / 25.4
+
+PageManager.GetUnits(#PAGEMANAGER_SIZE_A4)
+
+'# Parameter setzen
+marginRect = Rect.MakeXY(abst_breite, abst_hoehe, abst_breite, abst_hoehe)
+theLayoutDpy.SetUsingPrinterPageSize(false)
+theLayoutDpy.SetUsingPrinterMargins(false)
+theLayoutDpy.SetUnits(#UNITS_LINEAR_MILLIMETERS)
+theLayoutDpy.SetMargin(marginRect)
+theLayoutDpy.SetMarginVisible(true)
+theLayoutDpy.SetPageSize(Point.Make(laenge, breite))
+theLayoutDpy.SetGridActive(false)
+theLayoutDpy.SetGridVisible(true)
+theLayoutDpy.SetGridMesh(Point.Make(gitter_h, gitter_b))
+
+'# Dokument oeffnen
+theLayoutWin = theLayout.GetWin
+theLayoutWin.Open
+theLayoutDpy.ZoomToPage

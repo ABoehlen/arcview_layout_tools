@@ -1,0 +1,3244 @@
+/3.2
+(ODB.1
+	Dependencies:	"$AVEXT/dialog.avx\n"
+	FirstRootClassName:	"DEd"
+	Roots:	2
+	Roots:	182
+	Roots:	186
+	Roots:	190
+	Roots:	194
+	Roots:	198
+	Roots:	202
+	Roots:	206
+	Roots:	210
+	Roots:	214
+	Roots:	218
+	Roots:	222
+	Roots:	226
+	Roots:	230
+	Roots:	234
+	Roots:	238
+	Roots:	242
+	Roots:	246
+	Roots:	250
+	Roots:	254
+	Roots:	258
+	Roots:	262
+	Roots:	266
+	Version:	32
+)
+
+(DEd.2
+	Name:	"LayoutTools"
+	Creator:	"Adrian Boehlen"
+	CreationDate:	"Dienstag, 14. Mai 2013 09:15:52"
+	Comments:	"Version 0.9"
+	GUIName:	"DialogEditor"
+	Win:	3
+	CSMgr:	4
+	DocExts:	6
+	DocExts:	7
+	Graphics:	8
+	Dpy:	83
+	Dialog:	86
+	DialogExtent:	181
+	Compiled:	1
+)
+
+(DocWin.3
+	Owner:	2
+	Open:	1
+	X:	249
+	Y:	273
+	W:	620
+	H:	209
+)
+
+(CSMgr.4
+	Client:	5
+)
+
+(CSClient.5
+	Client:	6
+	ReqName:	"ClientNfy"
+)
+
+(PanMgr.6
+	Doc:	2
+)
+
+(DocAct.7
+	Doc:	2
+)
+
+(GList.8
+	Child:	9
+	Child:	12
+	Child:	16
+	Child:	20
+	Child:	24
+	Child:	28
+	Child:	31
+	Child:	35
+	Child:	39
+	Child:	43
+	Child:	47
+	Child:	51
+	Child:	55
+	Child:	59
+	Child:	63
+	Child:	67
+	Child:	71
+	Child:	75
+	Child:	79
+	Dpy:	83
+	FormatNumb:	85
+)
+
+(GCtrl.9
+	Name:	"aControlPanel5"
+	Bounds:	10
+	ControlConstraints:	0x55
+	Control:	11
+	Editable:	1
+)
+
+(RectD.10
+	Left:	0.30208333333333
+	Top:	1.43750000000000
+	Right:	5.59375000000000
+	Bottom:	1.08333333333333
+)
+
+(CPanel.11
+	InternalName:	"aControlPanel5"
+	UseGraphicNfy:	1
+	Constraints:	0x55
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(GCtrl.12
+	Name:	"CopyLayout"
+	Bounds:	13
+	ControlConstraints:	0x55
+	Control:	14
+	Editable:	1
+)
+
+(RectD.13
+	Left:	0.36458333333333
+	Top:	1.38541666666667
+	Right:	0.61458333333333
+	Bottom:	1.13541666666667
+)
+
+(Butn.14
+	InternalName:	"CopyLayout"
+	UseGraphicNfy:	1
+	Help:	"Copy Layout//"
+	Icon:	15
+	Click:	"LayoutTools.CopyLayout"
+)
+
+(AVIcon.15
+	Name:	"Copy"
+	Res:	"Icons.Copy"
+
+)
+
+(GCtrl.16
+	Name:	"SelectAll"
+	Bounds:	17
+	ControlConstraints:	0x55
+	Control:	18
+	Editable:	1
+)
+
+(RectD.17
+	Left:	0.93750000000000
+	Top:	1.38541666666667
+	Right:	1.18750000000000
+	Bottom:	1.13541666666667
+)
+
+(Butn.18
+	InternalName:	"SelectAll"
+	UseGraphicNfy:	1
+	Help:	"Select all graphic elements//"
+	Icon:	19
+	Click:	"LayoutTools.SelectAll"
+)
+
+(AVIcon.19
+	Name:	"SelectAll"
+	Res:	"Icons.SelectAll"
+
+)
+
+(GCtrl.20
+	Name:	"UnselectAll"
+	Bounds:	21
+	ControlConstraints:	0x55
+	Control:	22
+	Editable:	1
+)
+
+(RectD.21
+	Left:	1.21875000000000
+	Top:	1.38541666666667
+	Right:	1.46875000000000
+	Bottom:	1.13541666666667
+)
+
+(Butn.22
+	InternalName:	"UnselectAll"
+	UseGraphicNfy:	1
+	Help:	"Unselect all selected graphic elements//"
+	Icon:	23
+	Click:	"LayoutTools.UnselectAll"
+)
+
+(AVIcon.23
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(GCtrl.24
+	Name:	"BatchExport"
+	Bounds:	25
+	ControlConstraints:	0x55
+	Control:	26
+	Editable:	1
+)
+
+(RectD.25
+	Left:	4.80208333333333
+	Top:	1.38541666666667
+	Right:	5.05208333333333
+	Bottom:	1.13541666666667
+)
+
+(Butn.26
+	InternalName:	"BatchExport"
+	UseGraphicNfy:	1
+	Help:	"Export one or many layouts//"
+	Icon:	27
+	Click:	"LayoutTools.BatchExport"
+)
+
+(AVIcon.27
+	Name:	"export.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	01540000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 00000000 00000000 
+	Data:	000000c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	0000c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 00c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c00000c0 c0c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00c00000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00c0c0c0 c0c0c0c0 c0c0c0c0 c00000c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 0000c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	00000000 00000000 000000c0 c0c0c0c0 
+	Data:	c0c00000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(GCtrl.28
+	Name:	"Close"
+	Bounds:	29
+	ControlConstraints:	0x55
+	Control:	30
+	Editable:	1
+)
+
+(RectD.29
+	Left:	5.07291666666667
+	Top:	1.38541666666667
+	Right:	5.54166666666667
+	Bottom:	1.13541666666667
+)
+
+(LButn.30
+	InternalName:	"Close"
+	UseGraphicNfy:	1
+	Help:	"Close Utilities toolbar//"
+	Label:	"Close"
+	Click:	"LayoutTools.Close"
+)
+
+(GCtrl.31
+	Name:	"UndoZoom"
+	Bounds:	32
+	ControlConstraints:	0x55
+	Control:	33
+	Editable:	1
+)
+
+(RectD.32
+	Left:	4.53125000000000
+	Top:	1.38541666666667
+	Right:	4.78125000000000
+	Bottom:	1.13541666666667
+)
+
+(Butn.33
+	InternalName:	"UndoZoom"
+	UseGraphicNfy:	1
+	Help:	"Zoom to previous extent//"
+	Icon:	34
+	Click:	"LayoutTools.UndoZoom"
+)
+
+(AVIcon.34
+	Name:	"ZoomPrevious"
+	Res:	"Icons.ZoomPrevious"
+
+)
+
+(GCtrl.35
+	Name:	"SetQuality"
+	Bounds:	36
+	ControlConstraints:	0x55
+	Control:	37
+	Editable:	1
+)
+
+(RectD.36
+	Left:	2.31250000000000
+	Top:	1.38541666666667
+	Right:	2.56250000000000
+	Bottom:	1.13541666666667
+)
+
+(Butn.37
+	InternalName:	"SetQuality"
+	UseGraphicNfy:	1
+	Help:	"Change the drawing quality of all images from 'draft' to 'presentation' or the other way round//"
+	Icon:	38
+	Click:	"LayoutTools.SetQuality"
+)
+
+(AVIcon.38
+	Name:	"Frame"
+	Res:	"Icons.Frame"
+
+)
+
+(GCtrl.39
+	Name:	"GraphicTable"
+	Bounds:	40
+	ControlConstraints:	0x55
+	Control:	41
+	Editable:	1
+)
+
+(RectD.40
+	Left:	0.64583333333333
+	Top:	1.38541666666667
+	Right:	0.90625000000000
+	Bottom:	1.13541666666667
+)
+
+(Tool.41
+	InternalName:	"GraphicTable"
+	UseGraphicNfy:	1
+	Help:	"Place table in layout//"
+	Icon:	42
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.GraphicTable"
+)
+
+(AVIcon.42
+	Name:	"Table"
+	Res:	"Icons.Table"
+
+)
+
+(GCtrl.43
+	Name:	"RegistrationMarks"
+	Bounds:	44
+	ControlConstraints:	0x55
+	Control:	45
+	Editable:	1
+)
+
+(RectD.44
+	Left:	2.57291666666667
+	Top:	1.38541666666667
+	Right:	2.82291666666667
+	Bottom:	1.13541666666667
+)
+
+(Butn.45
+	InternalName:	"RegistrationMarks"
+	UseGraphicNfy:	1
+	Help:	"Put registration marks on a layout for printing//"
+	Icon:	46
+	Click:	"LayoutTools.MakeRegistrationMarks"
+)
+
+(AVIcon.46
+	Name:	"registration_marks.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 0000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 0000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.47
+	Name:	"HeaderAndFooter"
+	Bounds:	48
+	ControlConstraints:	0x55
+	Control:	49
+	Editable:	1
+)
+
+(RectD.48
+	Left:	2.84375000000000
+	Top:	1.38541666666667
+	Right:	3.09375000000000
+	Bottom:	1.13541666666667
+)
+
+(Butn.49
+	InternalName:	"HeaderAndFooter"
+	UseGraphicNfy:	1
+	Help:	"Click: Insert header and footer of the active layout\nShift-Click: Insert header and footer of many layouts\n//"
+	Icon:	50
+	Click:	"LayoutTools.HeaderAndFooter"
+)
+
+(AVIcon.50
+	Name:	"header_and_footer.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00000000 00000000 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00000000 00000000 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.51
+	Name:	"Refresh"
+	Bounds:	52
+	ControlConstraints:	0x55
+	Control:	53
+	Editable:	1
+)
+
+(RectD.52
+	Left:	4.26041666666667
+	Top:	1.38541666666667
+	Right:	4.51041666666667
+	Bottom:	1.13541666666667
+)
+
+(Butn.53
+	InternalName:	"Refresh"
+	UseGraphicNfy:	1
+	Help:	"Refresh Layout//"
+	Icon:	54
+	Click:	"LayoutTools.RefreshLayout"
+)
+
+(AVIcon.54
+	Name:	"R"
+	Res:	"Icons.R"
+
+)
+
+(GCtrl.55
+	Name:	"Measure"
+	Bounds:	56
+	ControlConstraints:	0x55
+	Control:	57
+	Editable:	1
+)
+
+(RectD.56
+	Left:	3.97916666666667
+	Top:	1.38541666666667
+	Right:	4.23958333333333
+	Bottom:	1.13541666666667
+)
+
+(Tool.57
+	InternalName:	"Measure"
+	UseGraphicNfy:	1
+	Help:	"Measure distance//"
+	Icon:	58
+	Cursor:	"Cursors.Measure"
+	Apply:	"LayoutTools.Measure"
+)
+
+(AVIcon.58
+	Name:	"Measure"
+	Res:	"Icons.Measure"
+
+)
+
+(GCtrl.59
+	Name:	"ImportText"
+	Bounds:	60
+	ControlConstraints:	0x55
+	Control:	61
+	Editable:	1
+)
+
+(RectD.60
+	Left:	2.04166666666667
+	Top:	1.38541666666667
+	Right:	2.29166666666667
+	Bottom:	1.13541666666667
+)
+
+(Butn.61
+	InternalName:	"ImportText"
+	UseGraphicNfy:	1
+	Help:	"Import text file in the defined size, font and color//"
+	Icon:	62
+	Click:	"LayoutTools.ImportText"
+)
+
+(AVIcon.62
+	Name:	"import_text.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 00d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 00d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d000 0000d0d0 d0000000 00000000 
+	Data:	00d0d0d0 d0000000 000000d0 d0d0d000 
+	Data:	000000d0 d0d0d0d0 d000d0d0 00d0d0d0 
+	Data:	d0d0d0d0 0000d0d0 d0d0d0d0 d000d0d0 
+	Data:	00d0d0d0 d0d0d0d0 0000d0d0 d0d0d0d0 
+	Data:	d000d0d0 00d0d0d0 d0d0d0d0 0000d0d0 
+	Data:	d0d0d0d0 d000d0d0 00d0d0d0 d0d0d0d0 
+	Data:	0000d0d0 d0d0d0d0 d000d0d0 00d0d0d0 
+	Data:	d0d0d0d0 0000d0d0 d0d0d0d0 d000d0d0 
+	Data:	00d0d0d0 d0d0d0d0 0000d0d0 d0d0d0d0 
+	Data:	d000d0d0 00d0d0d0 d0d0d0d0 0000d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	0000d0d0 d0d0d0d0 d000d0d0 d0d000d0 
+	Data:	d0d0d0d0 0000d0d0 d0d0d000 d000d0d0 
+	Data:	d0d000d0 d0d0d0d0 0000d0d0 d0d0d000 
+	Data:	d000d0d0 d0d00000 00d0d0d0 0000d0d0 
+	Data:	d0000000 d000d0d0 d0d00000 00000000 
+	Data:	00000000 00000000 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(GCtrl.63
+	Name:	"DrawRulers"
+	Bounds:	64
+	ControlConstraints:	0x55
+	Control:	65
+	Editable:	1
+)
+
+(RectD.64
+	Left:	3.40625000000000
+	Top:	1.38541666666667
+	Right:	3.66666666666667
+	Bottom:	1.13541666666667
+)
+
+(Tool.65
+	InternalName:	"DrawRulers"
+	UseGraphicNfy:	1
+	Help:	"Click: Draw a horizontal line at the clickpoint\nShift-Click: Draw a vertical line at the clickpoint\n//"
+	Icon:	66
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.DrawRulers"
+)
+
+(AVIcon.66
+	Name:	"draw_horizontal_and_vertical_lines.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.67
+	Name:	"Rulers_on_off"
+	Bounds:	68
+	ControlConstraints:	0x55
+	Control:	69
+	Editable:	1
+)
+
+(RectD.68
+	Left:	3.68750000000000
+	Top:	1.38541666666667
+	Right:	3.93750000000000
+	Bottom:	1.13541666666667
+)
+
+(Butn.69
+	InternalName:	"Rulers_on_off"
+	UseGraphicNfy:	1
+	Help:	"Click: Turn rulers off\nShift-Click: Turn rulers on\n//"
+	Icon:	70
+	Click:	"LayoutTools.TurnRulersOnOff"
+)
+
+(AVIcon.70
+	Name:	"turn_rulers_on_off.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.71
+	Name:	"footnote"
+	Bounds:	72
+	ControlConstraints:	0x55
+	Control:	73
+	Editable:	1
+)
+
+(RectD.72
+	Left:	3.11458333333333
+	Top:	1.38541666666667
+	Right:	3.37500000000000
+	Bottom:	1.13541666666667
+)
+
+(Tool.73
+	InternalName:	"footnote"
+	UseGraphicNfy:	1
+	Help:	"Insert footnote//"
+	Icon:	74
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.Footnote"
+)
+
+(AVIcon.74
+	Name:	"footnote.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00d0d000 d0d000d0 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 0000d000 d000d0d0 
+	Data:	00d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 00000000 00d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.75
+	Name:	"PlaceText"
+	Bounds:	76
+	ControlConstraints:	0x55
+	Control:	77
+	Editable:	1
+)
+
+(RectD.76
+	Left:	1.76041666666667
+	Top:	1.38541666666667
+	Right:	2.02083333333333
+	Bottom:	1.13541666666667
+)
+
+(Tool.77
+	InternalName:	"PlaceText"
+	UseGraphicNfy:	1
+	Help:	"Insert text manually//"
+	Update:	"LayoutTools.UpdateText"
+	Icon:	78
+	Cursor:	"Cursors.Text"
+	Apply:	"LayoutTools.InsertText"
+	Click:	"LayoutTools.DisplayFontPanel"
+)
+
+(AVIcon.78
+	Name:	"Text"
+	Res:	"Icons.Text"
+
+)
+
+(GCtrl.79
+	Name:	"Select"
+	Bounds:	80
+	ControlConstraints:	0x55
+	Control:	81
+	Editable:	1
+)
+
+(RectD.80
+	Left:	1.48958333333333
+	Top:	1.38541666666667
+	Right:	1.75000000000000
+	Bottom:	1.13541666666667
+)
+
+(Tool.81
+	InternalName:	"Select"
+	UseGraphicNfy:	1
+	Help:	"Select features//"
+	Icon:	82
+	Cursor:	"Cursors.Select"
+	Apply:	"LayoutTools.Select"
+	Click:	"LayoutTools.SelectTool"
+)
+
+(AVIcon.82
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(PageDpy.83
+	Top:	1.91666666666667
+	Right:	6.38541666666667
+	ReportUnits:	1
+	Units:	1
+	Scale:	84
+	ZoomRight:	6.38541666666667
+	ZoomTop:	1.91666666666667
+	GridSpacingX:	0.10000000000000
+	GridSpacingY:	0.10000000000000
+)
+
+(Numb.84
+	N:	96.00000000000000
+)
+
+(Numb.85
+)
+
+(AVDLog.86
+	Name:	"LayoutTools"
+	X:	28
+	Y:	64
+	W:	513
+	H:	40
+	ConstrainedControlNames:	87
+	ConstrainedControlNames:	88
+	ConstrainedControlNames:	89
+	ConstrainedControlNames:	90
+	ConstrainedControlNames:	91
+	ConstrainedControlNames:	92
+	ConstrainedControlNames:	93
+	ConstrainedControlNames:	94
+	ConstrainedControlNames:	95
+	ConstrainedControlNames:	96
+	ConstrainedControlNames:	97
+	ConstrainedControlNames:	98
+	ConstrainedControlNames:	99
+	ConstrainedControlNames:	100
+	ConstrainedControlNames:	101
+	ConstrainedControlNames:	102
+	ConstrainedControlNames:	103
+	ConstrainedControlNames:	104
+	Constraints:	105
+	Constraints:	106
+	Constraints:	107
+	Constraints:	108
+	Constraints:	109
+	Constraints:	110
+	Constraints:	111
+	Constraints:	112
+	Constraints:	113
+	Constraints:	114
+	Constraints:	115
+	Constraints:	116
+	Constraints:	117
+	Constraints:	118
+	Constraints:	119
+	Constraints:	120
+	Constraints:	121
+	Constraints:	122
+	Server:	123
+	ControlPanel:	124
+	Title:	"Layout Tools"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	180
+)
+
+(AVStr.87
+	S:	"Close"
+)
+
+(AVStr.88
+	S:	"CopyLayout"
+)
+
+(AVStr.89
+	S:	"SelectAll"
+)
+
+(AVStr.90
+	S:	"UnselectAll"
+)
+
+(AVStr.91
+	S:	"BatchExport"
+)
+
+(AVStr.92
+	S:	"UndoZoom"
+)
+
+(AVStr.93
+	S:	"SetQuality"
+)
+
+(AVStr.94
+	S:	"RegistrationMarks"
+)
+
+(AVStr.95
+	S:	"HeaderAndFooter"
+)
+
+(AVStr.96
+	S:	"Refresh"
+)
+
+(AVStr.97
+	S:	"ImportText"
+)
+
+(AVStr.98
+	S:	"Rulers_on_off"
+)
+
+(AVStr.99
+	S:	"GraphicTable"
+)
+
+(AVStr.100
+	S:	"Measure"
+)
+
+(AVStr.101
+	S:	"DrawRulers"
+)
+
+(AVStr.102
+	S:	"footnote"
+)
+
+(AVStr.103
+	S:	"PlaceText"
+)
+
+(AVStr.104
+	S:	"Select"
+)
+
+(Numb.105
+	N:	85.00000000000000
+)
+
+(Numb.106
+	N:	85.00000000000000
+)
+
+(Numb.107
+	N:	85.00000000000000
+)
+
+(Numb.108
+	N:	85.00000000000000
+)
+
+(Numb.109
+	N:	85.00000000000000
+)
+
+(Numb.110
+	N:	85.00000000000000
+)
+
+(Numb.111
+	N:	85.00000000000000
+)
+
+(Numb.112
+	N:	85.00000000000000
+)
+
+(Numb.113
+	N:	85.00000000000000
+)
+
+(Numb.114
+	N:	85.00000000000000
+)
+
+(Numb.115
+	N:	85.00000000000000
+)
+
+(Numb.116
+	N:	85.00000000000000
+)
+
+(Numb.117
+	N:	85.00000000000000
+)
+
+(Numb.118
+	N:	85.00000000000000
+)
+
+(Numb.119
+	N:	85.00000000000000
+)
+
+(Numb.120
+	N:	85.00000000000000
+)
+
+(Numb.121
+	N:	85.00000000000000
+)
+
+(Numb.122
+	N:	85.00000000000000
+)
+
+(Nil.123
+)
+
+(CPanel.124
+	Child:	125
+	ResBox:	179
+	Listening:	1
+)
+
+(CPanel.125
+	InternalName:	"aControlPanel5"
+	Child:	126
+	Child:	128
+	Child:	130
+	Child:	132
+	Child:	134
+	Child:	135
+	Child:	137
+	Child:	139
+	Child:	141
+	Child:	143
+	Child:	145
+	Child:	147
+	Child:	149
+	Child:	151
+	Child:	153
+	Child:	155
+	Child:	157
+	Child:	159
+	Constraints:	0x55
+	ResBox:	161
+	ResBox:	162
+	ResBox:	163
+	ResBox:	164
+	ResBox:	165
+	ResBox:	166
+	ResBox:	167
+	ResBox:	168
+	ResBox:	169
+	ResBox:	170
+	ResBox:	171
+	ResBox:	172
+	ResBox:	173
+	ResBox:	174
+	ResBox:	175
+	ResBox:	176
+	ResBox:	177
+	ResBox:	178
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.126
+	InternalName:	"CopyLayout"
+	Help:	"Copy Layout//"
+	Icon:	127
+	Click:	"LayoutTools.CopyLayout"
+)
+
+(AVIcon.127
+	Name:	"Copy"
+	Res:	"Icons.Copy"
+
+)
+
+(Butn.128
+	InternalName:	"SelectAll"
+	Help:	"Select all graphic elements//"
+	Icon:	129
+	Click:	"LayoutTools.SelectAll"
+)
+
+(AVIcon.129
+	Name:	"SelectAll"
+	Res:	"Icons.SelectAll"
+
+)
+
+(Butn.130
+	InternalName:	"UnselectAll"
+	Help:	"Unselect all selected graphic elements//"
+	Icon:	131
+	Click:	"LayoutTools.UnselectAll"
+)
+
+(AVIcon.131
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(Butn.132
+	InternalName:	"BatchExport"
+	Help:	"Export one or many layouts//"
+	Icon:	133
+	Click:	"LayoutTools.BatchExport"
+)
+
+(AVIcon.133
+	Name:	"export.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	01540000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 00000000 00000000 
+	Data:	000000c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	0000c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 00c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c00000c0 c0c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00c00000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00c0c0c0 c0c0c0c0 c0c0c0c0 c00000c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 0000c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	00000000 00000000 000000c0 c0c0c0c0 
+	Data:	c0c00000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(LButn.134
+	InternalName:	"Close"
+	Help:	"Close Utilities toolbar//"
+	Label:	"Close"
+	Click:	"LayoutTools.Close"
+)
+
+(Butn.135
+	InternalName:	"UndoZoom"
+	Help:	"Zoom to previous extent//"
+	Icon:	136
+	Click:	"LayoutTools.UndoZoom"
+)
+
+(AVIcon.136
+	Name:	"ZoomPrevious"
+	Res:	"Icons.ZoomPrevious"
+
+)
+
+(Butn.137
+	InternalName:	"SetQuality"
+	Help:	"Change the drawing quality of all images from 'draft' to 'presentation' or the other way round//"
+	Icon:	138
+	Click:	"LayoutTools.SetQuality"
+)
+
+(AVIcon.138
+	Name:	"Frame"
+	Res:	"Icons.Frame"
+
+)
+
+(Tool.139
+	InternalName:	"GraphicTable"
+	Help:	"Place table in layout//"
+	Icon:	140
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.GraphicTable"
+)
+
+(AVIcon.140
+	Name:	"Table"
+	Res:	"Icons.Table"
+
+)
+
+(Butn.141
+	InternalName:	"RegistrationMarks"
+	Help:	"Put registration marks on a layout for printing//"
+	Icon:	142
+	Click:	"LayoutTools.MakeRegistrationMarks"
+)
+
+(AVIcon.142
+	Name:	"registration_marks.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 0000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 0000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.143
+	InternalName:	"HeaderAndFooter"
+	Help:	"Click: Insert header and footer of the active layout\nShift-Click: Insert header and footer of many layouts\n//"
+	Icon:	144
+	Click:	"LayoutTools.HeaderAndFooter"
+)
+
+(AVIcon.144
+	Name:	"header_and_footer.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00000000 00000000 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00000000 00000000 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.145
+	InternalName:	"Refresh"
+	Help:	"Refresh Layout//"
+	Icon:	146
+	Click:	"LayoutTools.RefreshLayout"
+)
+
+(AVIcon.146
+	Name:	"R"
+	Res:	"Icons.R"
+
+)
+
+(Tool.147
+	InternalName:	"Measure"
+	Help:	"Measure distance//"
+	Icon:	148
+	Cursor:	"Cursors.Measure"
+	Apply:	"LayoutTools.Measure"
+)
+
+(AVIcon.148
+	Name:	"Measure"
+	Res:	"Icons.Measure"
+
+)
+
+(Butn.149
+	InternalName:	"ImportText"
+	Help:	"Import text file in the defined size, font and color//"
+	Icon:	150
+	Click:	"LayoutTools.ImportText"
+)
+
+(AVIcon.150
+	Name:	"import_text.bmp"
+	Data:	4e442049 6d616765 00010013 00130000 
+	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d000d0d0 00d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 00d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d000d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d000d000 0000d0d0 d0000000 00000000 
+	Data:	00d0d0d0 d0000000 000000d0 d0d0d000 
+	Data:	000000d0 d0d0d0d0 d000d0d0 00d0d0d0 
+	Data:	d0d0d0d0 0000d0d0 d0d0d0d0 d000d0d0 
+	Data:	00d0d0d0 d0d0d0d0 0000d0d0 d0d0d0d0 
+	Data:	d000d0d0 00d0d0d0 d0d0d0d0 0000d0d0 
+	Data:	d0d0d0d0 d000d0d0 00d0d0d0 d0d0d0d0 
+	Data:	0000d0d0 d0d0d0d0 d000d0d0 00d0d0d0 
+	Data:	d0d0d0d0 0000d0d0 d0d0d0d0 d000d0d0 
+	Data:	00d0d0d0 d0d0d0d0 0000d0d0 d0d0d0d0 
+	Data:	d000d0d0 00d0d0d0 d0d0d0d0 0000d0d0 
+	Data:	d0d0d0d0 d000d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	0000d0d0 d0d0d0d0 d000d0d0 d0d000d0 
+	Data:	d0d0d0d0 0000d0d0 d0d0d000 d000d0d0 
+	Data:	d0d000d0 d0d0d0d0 0000d0d0 d0d0d000 
+	Data:	d000d0d0 d0d00000 00d0d0d0 0000d0d0 
+	Data:	d0000000 d000d0d0 d0d00000 00000000 
+	Data:	00000000 00000000 d000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0000000 
+	Data:	04000000 00000101 01000202 02000303 
+	Data:	03000404 04000505 05000606 06000707 
+	Data:	07000808 08000909 09000a0a 0a000b0b 
+	Data:	0b000c0c 0c000d0d 0d000e0e 0e000f0f 
+	Data:	0f001010 10001111 11001212 12001313 
+	Data:	13001414 14001515 15001616 16001717 
+	Data:	17001818 18001919 19001a1a 1a001b1b 
+	Data:	1b001c1c 1c001d1d 1d001e1e 1e001f1f 
+	Data:	1f002020 20002121 21002222 22002323 
+	Data:	23002424 24002525 25002626 26002727 
+	Data:	27002828 28002929 29002a2a 2a002b2b 
+	Data:	2b002c2c 2c002d2d 2d002e2e 2e002f2f 
+	Data:	2f003030 30003131 31003232 32003333 
+	Data:	33003434 34003535 35003636 36003737 
+	Data:	37003838 38003939 39003a3a 3a003b3b 
+	Data:	3b003c3c 3c003d3d 3d003e3e 3e003f3f 
+	Data:	3f004040 40004141 41004242 42004343 
+	Data:	43004444 44004545 45004646 46004747 
+	Data:	47004848 48004949 49004a4a 4a004b4b 
+	Data:	4b004c4c 4c004d4d 4d004e4e 4e004f4f 
+	Data:	4f005050 50005151 51005252 52005353 
+	Data:	53005454 54005555 55005656 56005757 
+	Data:	57005858 58005959 59005a5a 5a005b5b 
+	Data:	5b005c5c 5c005d5d 5d005e5e 5e005f5f 
+	Data:	5f006060 60006161 61006262 62006363 
+	Data:	63006464 64006565 65006666 66006767 
+	Data:	67006868 68006969 69006a6a 6a006b6b 
+	Data:	6b006c6c 6c006d6d 6d006e6e 6e006f6f 
+	Data:	6f007070 70007171 71007272 72007373 
+	Data:	73007474 74007575 75007676 76007777 
+	Data:	77007878 78007979 79007a7a 7a007b7b 
+	Data:	7b007c7c 7c007d7d 7d007e7e 7e007f7f 
+	Data:	7f008080 80008181 81008282 82008383 
+	Data:	83008484 84008585 85008686 86008787 
+	Data:	87008888 88008989 89008a8a 8a008b8b 
+	Data:	8b008c8c 8c008d8d 8d008e8e 8e008f8f 
+	Data:	8f009090 90009191 91009292 92009393 
+	Data:	93009494 94009595 95009696 96009797 
+	Data:	97009898 98009999 99009a9a 9a009b9b 
+	Data:	9b009c9c 9c009d9d 9d009e9e 9e009f9f 
+	Data:	9f00a0a0 a000a1a1 a100a2a2 a200a3a3 
+	Data:	a300a4a4 a400a5a5 a500a6a6 a600a7a7 
+	Data:	a700a8a8 a800a9a9 a900aaaa aa00abab 
+	Data:	ab00acac ac00adad ad00aeae ae00afaf 
+	Data:	af00b0b0 b000b1b1 b100b2b2 b200b3b3 
+	Data:	b300b4b4 b400b5b5 b500b6b6 b600b7b7 
+	Data:	b700b8b8 b800b9b9 b900baba ba00bbbb 
+	Data:	bb00bcbc bc00bdbd bd00bebe be00bfbf 
+	Data:	bf00c0c0 c000c1c1 c100c2c2 c200c3c3 
+	Data:	c300c4c4 c400c5c5 c500c6c6 c600c7c7 
+	Data:	c700c8c8 c800c9c9 c900caca ca00cbcb 
+	Data:	cb00cccc cc00cdcd cd00cece ce00cfcf 
+	Data:	cf00d0d0 d000d1d1 d100d2d2 d200d3d3 
+	Data:	d300d4d4 d400d5d5 d500d6d6 d600d7d7 
+	Data:	d700d8d8 d800d9d9 d900dada da00dbdb 
+	Data:	db00dcdc dc00dddd dd00dede de00dfdf 
+	Data:	df00e0e0 e000e1e1 e100e2e2 e200e3e3 
+	Data:	e300e4e4 e400e5e5 e500e6e6 e600e7e7 
+	Data:	e700e8e8 e800e9e9 e900eaea ea00ebeb 
+	Data:	eb00ecec ec00eded ed00eeee ee00efef 
+	Data:	ef00f0f0 f000f1f1 f100f2f2 f200f3f3 
+	Data:	f300f4f4 f400f5f5 f500f6f6 f600f7f7 
+	Data:	f700f8f8 f800f9f9 f900fafa fa00fbfb 
+	Data:	fb00fcfc fc00fdfd fd00fefe fe00ffff 
+	Data:	ff000002 00080007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(Tool.151
+	InternalName:	"DrawRulers"
+	Help:	"Click: Draw a horizontal line at the clickpoint\nShift-Click: Draw a vertical line at the clickpoint\n//"
+	Icon:	152
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.DrawRulers"
+)
+
+(AVIcon.152
+	Name:	"draw_horizontal_and_vertical_lines.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.153
+	InternalName:	"Rulers_on_off"
+	Help:	"Click: Turn rulers off\nShift-Click: Turn rulers on\n//"
+	Icon:	154
+	Click:	"LayoutTools.TurnRulersOnOff"
+)
+
+(AVIcon.154
+	Name:	"turn_rulers_on_off.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Tool.155
+	InternalName:	"footnote"
+	Help:	"Insert footnote//"
+	Icon:	156
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.Footnote"
+)
+
+(AVIcon.156
+	Name:	"footnote.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00d0d000 d0d000d0 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 0000d000 d000d0d0 
+	Data:	00d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 00000000 00d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Tool.157
+	InternalName:	"PlaceText"
+	Help:	"Insert text manually//"
+	Update:	"LayoutTools.UpdateText"
+	Icon:	158
+	Cursor:	"Cursors.Text"
+	Apply:	"LayoutTools.InsertText"
+	Click:	"LayoutTools.DisplayFontPanel"
+)
+
+(AVIcon.158
+	Name:	"Text"
+	Res:	"Icons.Text"
+
+)
+
+(Tool.159
+	InternalName:	"Select"
+	Help:	"Select features//"
+	Icon:	160
+	Cursor:	"Cursors.Select"
+	Apply:	"LayoutTools.Select"
+	Click:	"LayoutTools.SelectTool"
+)
+
+(AVIcon.160
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(RectD.161
+	Left:	6.00000000000000
+	Top:	29.00000000000000
+	Right:	30.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.162
+	Left:	61.00000000000000
+	Top:	29.00000000000000
+	Right:	85.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.163
+	Left:	88.00000000000000
+	Top:	29.00000000000000
+	Right:	112.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.164
+	Left:	432.00000000000000
+	Top:	29.00000000000000
+	Right:	456.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.165
+	Left:	458.00000000000000
+	Top:	29.00000000000000
+	Right:	503.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.166
+	Left:	406.00000000000000
+	Top:	29.00000000000000
+	Right:	430.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.167
+	Left:	193.00000000000000
+	Top:	29.00000000000000
+	Right:	217.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.168
+	Left:	33.00000000000000
+	Top:	29.00000000000000
+	Right:	58.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.169
+	Left:	218.00000000000000
+	Top:	29.00000000000000
+	Right:	242.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.170
+	Left:	244.00000000000000
+	Top:	29.00000000000000
+	Right:	268.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.171
+	Left:	380.00000000000000
+	Top:	29.00000000000000
+	Right:	404.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.172
+	Left:	353.00000000000000
+	Top:	29.00000000000000
+	Right:	378.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.173
+	Left:	167.00000000000000
+	Top:	29.00000000000000
+	Right:	191.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.174
+	Left:	298.00000000000000
+	Top:	29.00000000000000
+	Right:	323.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.175
+	Left:	325.00000000000000
+	Top:	29.00000000000000
+	Right:	349.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.176
+	Left:	270.00000000000000
+	Top:	29.00000000000000
+	Right:	295.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.177
+	Left:	140.00000000000000
+	Top:	29.00000000000000
+	Right:	165.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.178
+	Left:	114.00000000000000
+	Top:	29.00000000000000
+	Right:	139.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.179
+	Left:	4.00000000000000
+	Top:	38.00000000000000
+	Right:	512.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(Nil.180
+)
+
+(RectD.181
+	Left:	0.26041666666667
+	Top:	1.47916666666667
+	Right:	5.60416666666667
+	Bottom:	1.06250000000000
+)
+
+(SEd.182
+	Name:	"LayoutTools.BatchExport"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:24:28 CEST"
+	GUIName:	"Script"
+	Win:	183
+	CSMgr:	184
+	DocExts:	185
+	Source:	"'NAME:     LayoutBatchExport\n'DATE:     160801\n'AUTHOR:   Sebastian Hofer - shofer@gmx.de\n\n'DESCRIPTION:\n'LayoutBatchExport is for fast export of multiple Layouts out of a project into eps (new) or jpg.\n'Other formats will not be implemented by me. Feel Free to do it.\n'After selecting the export parameters (file type, resolution, compression) and the LayoutdDocs\n'the user is prompted to chose the export filenames by Dialog.\n'It is not necessary to open the Layouts in a window before of the export!\n\n' REQUIR
+ES:   ---\n\n' LayoutBatchExport eignet sich zum schnellen Export von mehreren Layouts \n' im selben Datenformat und mit den selben Parametern.\n' Meinen Bedürfnissen nach wird nur eps (new) und jpg unterstützt. Wer andere \n' Formate unterstuetzen will darf die gerne einbauen. \n' Es ist nicht noetig die zu exportierenden Layouts als Fenster zu oeffnen!\n\n\ntheFormatL={\"eps (New)\", \"jpg\"}\ntheFormatChoice=msgBox.ListAsString(theFormatL, \"Choose the LayoutBatchExport format:\", \"LayoutBatchExport\")\nif  (theFormatChoi
+ce=Nil) then return Nil\nelseif (theFormatChoice=\"eps (New)\") then theShortFormat=3 \n  theResL={300,360,600,720}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif  (theResolution=Nil) then return Nil end\nelseif (theFormatChoice=\"jpg\") then theShortFormat=9 \n  theResL={72,90,120,144}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif  (theResolution=Nil) then return Nil end\n  theCompres
+sL={20,40,60,80,100}\n  theCompression=msgBox.ListAsString(theCompressL, \"Choose the LayoutBatchExport compression (jpg):\", \"LayoutBatchExport\")\nif  (theCompression=Nil) then return Nil end\nend\ntheProject=av.GetProject\ntheDocL=theProject.GetDocs\ntheLayoutL={}\nfor each theEntry in theDocL\n  if (theEntry.Is(Layout)) then\n    theLayoutL.Add(theEntry)\n  end\nend\nif (theLayoutL.Count=0) then\n  MsgBox.Error(\"No LayoutBatchExport possible. There are no Layouts to export. You have to create Layouts first!\", \"\")\n  ret
+urn nil\nelse\n  theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n  if (theBatchLayoutL=Nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count=0) \n    MsgBox.Error(\"No LayoutBatchExport possible. You must choose at least 1 Layout or press cancel to quit:\", \"\")\n    theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n    if (theBatchLayoutL=Nil) then\n      return nil\n    end\n  end\nend\n\n\ntheFirstLay
+out=theBatchLayoutL.Get(0)\ntheFirstLayout.GetWin.open\ntheFormatL = theBatchLayoutL.Get(0).GetDisplay.ReturnExportFormats\ntheFirstLayout.GetWin.close\n\n\ntheFormat = theFormatL.Get(theShortFormat)  \nif (theShortFormat=3) then\n  theFileExt=\"eps\"\nelseif (theShortFormat=9) then\n  theFileExt=\"jpg\"\nend\n\nfor each theBatchLayout in theBatchLayoutL\n  defaultFileName=FileName.Make(theBatchLayout.GetName +\".\"+theFileExt)\n  theFN=FileDialog.Put(defaultFileName, \"*.\"+theFileExt, \"Export >>\"+theBatchLayout.getName+\"<< to:\"
+ )\n\n  if (theFN=nil) then\n    return nil\n  end\n  if (theShortFormat=3) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution})\n  elseif (theShortFormat=9) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution,theCompression})\n  end\nend\nreturn nil\n\n\n\n\n"
+)
+
+(DocWin.183
+	Owner:	182
+	X:	23
+	Y:	95
+	W:	976
+	H:	529
+)
+
+(CSMgr.184
+)
+
+(DocAct.185
+	Doc:	182
+)
+
+(SEd.186
+	Name:	"LayoutTools.Close"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:49:48 CEST"
+	GUIName:	"Script"
+	Win:	187
+	CSMgr:	188
+	DocExts:	189
+	Source:	"self.GetDialog.Close"
+)
+
+(DocWin.187
+	Owner:	186
+	X:	27
+	Y:	251
+	W:	363
+	H:	245
+)
+
+(CSMgr.188
+)
+
+(DocAct.189
+	Doc:	186
+)
+
+(SEd.190
+	Name:	"LayoutTools.CopyLayout"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:25:09 CEST"
+	GUIName:	"Script"
+	Win:	191
+	CSMgr:	192
+	DocExts:	193
+	Source:	"'Copies a Layout and renames it...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  4/6/1999\n\n'Gets the Layout...\nmyProj = av.GetProject\nsomeLayouts = myProj.GetDocswithGui(av.FindGui(\"Layout\"))\nalayoutChoice = MsgBox.ChoiceAsString( someLayouts, \"Choose a Layout to copy:\", \"Copy Layout\")\nif (alayoutChoice = nil) then\n  return nil\nend\ntheLayout = myProj.FindDoc( alayoutChoice.AsString )\n\n'Copies the Layout and renames it...\nnewLayoutName = MsgBox.Input( \"Enter a new name for the layout:\", \"New Layout Name\",
+ \"New Layout\" )\nif (newLayoutName = nil) then   'Cancels if the there is no Layout name\n  return nil\nend\nif (av.FindDoc(newLayoutName).AsString = newLayoutName.AsString) then\n  'Cancels if the Layout name already exists\n  MsgBox.Error(\"That layout name already exists! Press the Copy Layout button again...\",\"Layout Already Exists\")\n  return nil\nelse\n  newLayout = theLayout.Clone\n  newLayout.SetName ( newLayoutName )\n  myProj.AddDoc ( newLayout )\n  newLayout.GetWin.Open\nend\n\n'End of script..."
+)
+
+(DocWin.191
+	Owner:	190
+	X:	174
+	Y:	27
+	W:	843
+	H:	595
+)
+
+(CSMgr.192
+)
+
+(DocAct.193
+	Doc:	190
+)
+
+(SEd.194
+	Name:	"LayoutTools.DisplayFontPanel"
+	Creator:	"adrian"
+	CreationDate:	"Sam 09 Jan 2016 11:14:40 CET"
+	GUIName:	"Script"
+	Win:	195
+	CSMgr:	196
+	DocExts:	197
+	Source:	"if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FONT)\nend"
+)
+
+(DocWin.195
+	Owner:	194
+	X:	180
+	Y:	196
+	W:	772
+	H:	306
+)
+
+(CSMgr.196
+)
+
+(DocAct.197
+	Doc:	194
+)
+
+(SEd.198
+	Name:	"LayoutTools.DrawRulers"
+	Creator:	"adrian"
+	CreationDate:	"Die 12 Mai 2015 19:57:09 CEST"
+	GUIName:	"Script"
+	Win:	199
+	CSMgr:	200
+	DocExts:	201
+	Source:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_DrawRulers.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2015\n'# Version:      0.2\n'#\n'# Purpose:      Zieht horizontale und vertikale Hilfslinien am Clickpunkt\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc  \n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this tool from an active Layout.\",\"\")\n  return nil\nend\n\n'# Lay
+out-Geometrie ermitteln\nthePageDisplay = av.GetActiveDoc.GetDisplay\nrecMargin = thePageDisplay.ReturnMarginExtent\ntheOrigin = recMargin.ReturnOrigin\nxOriginLeft = theOrigin.GetX\nxOriginRight = xOriginLeft + recMargin.GetWidth\nyOriginBottom = theOrigin.GetY\nyOriginTop = yOriginBottom + recMargin.GetHeight\n\nif (System.IsShiftKeyDown) then\n  '# vertikale Linie aus Clickpunkt ableiten\n  pt = theLayout.GetDisplay.ReturnUserPoint\n\n  xU = pt.GetX\n  yU = yOriginTop + 1\n  xD = pt.GetX\n  yD = yOriginBottom - 1\n\n  '# 
+Strichstil definieren\n  thePen = BasicPen.Make\n  theColor = Color.Make\n  theColor.SetRGBList({240,40,200})\n  thePen.SetColor(theColor)\n  thePen.SetSize(0.5)\n\n  '# Linie zeichnen\n  theLine = Line.Make( xU@yU, xD@yD)\n  theGraphicLine = GraphicShape.Make(theLine)\n  theGraphicLine.SetSymbol(thePen)\n\n  theLayout.GetGraphics.UnselectAll\n  theGraphicLine.SetSelected(TRUE)\n  theLayout.GetGraphics.Add(theGraphicLine)\n  av.GetProject.SetModified(TRUE)\n  \nelse\n  '# horizontale Linie aus Clickpunkt ableiten\n  pt = theL
+ayout.GetDisplay.ReturnUserPoint\n\n  xL = xOriginLeft - 1\n  yL = pt.GetY\n  xR = xOriginRight + 1\n  yR = pt.GetY\n\n  '# Strichstil definieren\n  thePen = BasicPen.Make\n  theColor = Color.Make\n  theColor.SetRGBList({240,40,200})\n  thePen.SetColor(theColor)\n  thePen.SetSize(0.5)\n\n  '# Linie zeichnen\n  theLine = Line.Make( xL@yL, xR@yR)\n  theGraphicLine = GraphicShape.Make(theLine)\n  theGraphicLine.SetSymbol(thePen)\n\n  theLayout.GetGraphics.UnselectAll\n  theGraphicLine.SetSelected(TRUE)\n  theLayout.GetGraphics.Add
+(theGraphicLine)\n  av.GetProject.SetModified(TRUE)\nend\n"
+	SearchStr:	"aPen"
+)
+
+(DocWin.199
+	Owner:	198
+	X:	42
+	Y:	54
+	W:	822
+	H:	574
+)
+
+(CSMgr.200
+)
+
+(DocAct.201
+	Doc:	198
+)
+
+(SEd.202
+	Name:	"LayoutTools.Footnote"
+	Creator:	"adrian"
+	CreationDate:	"Don 31 Dez 2015 16:49:11 CET"
+	GUIName:	"Script"
+	Win:	203
+	CSMgr:	204
+	DocExts:	205
+	Source:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Footnote.ave\n'# Author:       Adrian Boehlen\n'# Date:         31.12.2015\n'# Version:      0.1\n'#\n'# Purpose:      erzeugt Fussnoten\n'#\n'###################################################################\n\n_theLayout = av.GetActiveDoc  \n\nif (_theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this tool from an active Layout.\",\"\")\n  return nil\nend\n\n'# Schriftgroesse definieren\n_textSize = MsgBox.Inpu
+t(\"Schriftgroesse eingeben\", \"Schriftgroesse\",10.AsString)\n\nif (_textSize = nil) then\n  return nil\nelseif (_textSize.IsNumber.Not) then\n  MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nend\n_textSize = _textSize.AsNumber\n\n'########## Layout-Geometrie ermitteln ##########\n\nthePageDisplay = av.GetActiveDoc.GetDisplay\nrecMargin = thePageDisplay.ReturnMarginExtent\ntheOrigin = recMargin.ReturnOrigin\nxOriginLeft = theOrigin.GetX\nxOriginRight = xOriginLeft + recMargin.GetWidth\n\n'########## horizontale 
+Linie aus Clickpunkt ableiten ##########\n\npt = _theLayout.GetDisplay.ReturnUserPoint\n\nxL = xOriginLeft + 0.01\nyL = pt.GetY\nxR = (xOriginRight - xOriginLeft) / 3 + xOriginLeft\nyR = pt.GetY\n\n'# Strichstil definieren\nthePen = BasicPen.Make\nschwarz = Color.GetBlack\nthePen.SetColor(schwarz)\nthePen.SetSize(1)\n\n'# Linie zeichnen\ntheLine = Line.Make( xL@yL, xR@yR)\ntheGraphicLine = GraphicShape.Make(theLine)\ntheGraphicLine.SetSymbol(thePen)\n\n_theLayout.GetGraphics.UnselectAll\ntheGraphicLine.SetSelected(TRUE)\n_theLay
+out.GetGraphics.Add(theGraphicLine)\nav.GetProject.SetModified(TRUE)\n\n'########## Text definieren und platzieren ##########\n\n_textFont = Font.Make (\"DejaVu Sans\", \"Condensed\")\n_textString = \"Text\"\n_textOrigin = (xOriginLeft)@(pt.GetY - 0.25)\n_textColor = Color.GetBlack\nav.Run(\"LayoutTools.PlaceText\", {_textString, _textOrigin})\n\n"
+)
+
+(DocWin.203
+	Owner:	202
+	X:	-12
+	Y:	27
+	W:	916
+	H:	579
+)
+
+(CSMgr.204
+)
+
+(DocAct.205
+	Doc:	202
+)
+
+(SEd.206
+	Name:	"LayoutTools.GraphicTable"
+	Creator:	"adrian"
+	CreationDate:	"Die 04 Nov 2014 19:07:08 CET"
+	GUIName:	"Script"
+	Win:	207
+	CSMgr:	208
+	DocExts:	209
+	Source:	"' Name:   Layout.GraphicTable\n' Title:  Places a Graphic of the table you specify into a layout\n'\n' Topics : Layouts\n' Version: 3.0a.02\n' Source : ArcView Sample scripts\n' Changed: 07-30-98\n' By     : Rob Buurman\n'          rbuurman@isis.nl\n'          ISIS BENELUX\n'          \n'\n' Description:  Use the tool with this script attached as the \n' apply event to drag a rectangle in a layout.  You will be prompted\n' to choose which table you want to make the representation of \n' and which fields to show.\n' When th
+e table has an selection, you will be asked if you want to display\n' only the selected records. You can bypass this question by pressing the\n' shift-key when you drag the rectangle in a layout.\n' The script will populatate rows with cell values of those fields until the \n' bottom of the rectangle you specified is reached.\n' If you choose more fields than would fit within the width of the rectangle,\n' those will be included.\n'\n' This script gets around several annoying limitations in ArcView's\n' TableFrame g
+raphic:\n' \n' 1) With this script you can make a table that is wider than 80\n'    text columns. (Great for landscape docs).\n' 2) You change the font of this table.\n' 3) Since this table is graphicgroup, you can ungroup it and\n'    change the symbols for individual parts.\n' 4) This table will always print correctly - on some printers\n'    printing directly from the table doc & from table frames,\n'    there were gross formating errors\n' 5) You can resize this table and the text just gets resized,\n'    rather t
+han including more data like the tableframe does.\n' \n' This script cannot produce the representation of the table if\n' it is sorted - you will get the unsorted version.  Additionally,\n' since this representation is just a dumb graphic, it does not\n' automatically update itself in any way, shape, or form.\n'\n' Additionally, you can use the symbol window to change the button \n' color by using the foreground, change the table background by using\n' the background color, or change the text and outline color as we
+ll.\n' If you want to highlight a particular column, ungroup the graphic\n' table and then you can select the column by clicking on its border,\n' then change its background color or text color by using background\n' or text from the color palette.\n'\n' Requires:  Place this script as the apply event for a tool in \n' your Layout GUI.  There must be at least one table document in \n' the current project.\n'\n' Self:  \n'\n' Returns:  \n\ntheLayout = av.GetActiveDoc\ngl = theLayout.GetGraphics\nbRect = theLayout.ReturnUser
+Rect\nif (bRect.GetWidth < 0.1) then\n  return nil\nend\n\nif (System.IsShiftKeyDown) then\n  SelectedOnly = true\nelse\n  SelectedOnly = false\nend\n\nTableDocNames = {}\nfor each d in av.GetProject.GetDocs\n  if(d.Is(Table)) then\n    TableDocNames.Add(d.GetName)\n  end\nend\n\nif (TableDocNames.Count = 0) then\n  Msgbox.Error(\"You must have a table document in the Project\",\"Buh!\")\n  return nil\nend\ngl.UnSelectAll\n\nTableName = Msgbox.ChoiceAsString(TableDocNames,\"Choose a table:\",\"Smart Table\")\nif (TableName = nil) then\n  re
+turn nil\nend\n\ntheTable = av.GetProject.FindDoc(TableName)\ntheVTab = theTable.GetVTab\ntheFieldNames = {}\nfor each f in theVTab.GetFields\n  if (f.IsTypeShape.Not) then\n    theFieldNames.Add(f.GetAlias)\n  end\nend\n\n\nFieldsToShow = Msgbox.MultiListAsString(theFieldNames,\"Choose the Fields to Show\",\"Smart Table\")\nif (FieldsToShow = nil) then return nil end\nif (FieldsToShow.Count = 0) then\n  return nil\nend\n\n  if (SelectedOnly) then\n    theBitmap = theVTab.GetSelection\n  else\n    theBitmap = theVTab.GetDefBitmap\n  
+  if (theVTab.GetSelection.Count <> 0) then\n      if (Msgbox.YesNo(\"Use only the selected records\",\"Smart Table\", true)) then\n        theBitmap = theVTab.GetSelection\n      end\n    end\n  end\n\n' Background color for field names\nbc = Color.Make\nbc.SetRGBList({255,255,225})\nftbf = RasterFill.Make\nftbf.SetStyle(#RASTERFILL_STYLE_SOLID)\nftbf.SetColor(bc)\n\nbRectO = bRect.ReturnOrigin\nbRectH = bRect.GetHeight\nbRectW = bRect.GetWidth\nbRectT = bRect.GetTop\nbrectB = bRect.GetBottom\nbRectR = bRect.GetRight\nHeightLeft 
+= bRect.GetHeight\n\ntbo = bRectO + (0@bRectH)\ncspace = 0\n\nfor each f in FieldsToShow\n  \n  'Make Field Title\n  fl = GraphicText.Make(f,(tbo +(0.1@0)) )\n  fl.GetSymbol.SetSize(12)\n  fl.SetDisplay(theLayout.GetDisplay)\n  tbo = tbo - (0@(fl.GetBounds.GetHeight + 0.05))\n  fl.SetSelected(true)\n  \n  gl.AddBatch(fl)\n  HeightLeft = HeightLeft - fl.GetBounds.GetHeight - 0.05\n  HbarHeight = HeightLeft\n\n  \n  'Now do the column of values\n  counter = -1\n  ColStr = \"\"\n  vst = GraphicText.Make(ColStr,(0@0))\n  vst.SetDisplay
+(theLayout.GetDisplay)\n  vst.GetSymbol.SetSize(10)\n  While (HeightLeft <> 0)\n    rec = theBitmap.GetNextSet(counter)\n    counter = rec\n    ValStr = theVTab.ReturnValueString(theVTab.FindField(f),rec)\n    ColStr = ColStr + ValStr\n    vst.SetText(ColStr)\n    'Check to see if column has exceeded Height\n    if (HeightLeft < vst.GetBounds.GetHeight) then\n      HeightLeft = 0\n    end \n    if (theBitmap.GetNextSet(counter) = -1) then\n      HeightLeft = 0\n    end\n    ColStr = ColStr + nl\n  end\n  \n  vst.SetOrigin(tb
+o - (0@(vst.getBounds.GetHeight)) )\n  \n  'Check to see if the Column is wider than the Title\n  if (fl.GetBounds.GetWidth > vst.GetBounds.GetWidth) then\n    'Title is wider, so move column\n    if (theVTab.FindField(f).IsTypeNumber) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_RIGHT)\n      vst.GetBounds.Move((fl.GetBounds.GetWidth - vst.GetBounds.GetWidth + 0.1),0.1)\n      gl.AddBatch(vst)\n    elseif(theVTab.FindField(f).IsTypeString) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n      vst.GetBounds.
+Move(0.1,0.1)\n      gl.AddBatch(vst)\n    end  \n  else\n    'Column is wider so move  & justify title\n    if (theVTab.FindField(f).IsTypeNumber) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_RIGHT)\n      vst.GetBounds.Move(0.1, 0.1)\n      gl.AddBatch(vst)\n    elseif (theVTab.FindField(f).IsTypeString) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n      vst.GetBounds.Move(0.1, 0.1)\n      gl.AddBatch(vst)\n    end    \n    fl.GetBounds.Move( ( (vst.GetBounds.GetWidth - fl.GetBounds.GetWidth) /2 ) ,0)\n  en
+d  \n  vst.SetSelected(true)\n  \n  cbr = gl.ReturnSelectedExtent.clone\n  cbr.ExpandBy(0.05)\n  cbp = GraphicShape.Make(cbr)\n  cbp.GetSymbol.SetOLWidth(0.1)\n  gl.AddBatch(cbp)\n  cbp.SetSelected(true)  \n  gl.GroupSelected\n  gl.GetSelected.Get(0).SetObjectTag(\"col\")\n  cspace = cspace + gl.ReturnSelectedExtent.GetWidth  \n  gl.UnSelectAll\n  HeightLeft = bRectH\n  tbo = bRectO + (cspace@bRectH)\nend\n\n\nfor each g in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\nend\n\nse = gl.ReturnSelectedExtent\nseO = se.ReturnOrig
+in\nftr = Rect.Make(SeO + (0@(se.GetHeight - 0.275)),(se.GetWidth@0.275))\n\ncoltits = {}\nfor each g in gl.FindAllByObjectTag(\"col\")\n  colTitleRect = ftr.IntersectWith(g.GetBounds.Clone)\n  coltits.Add(colTitleRect)\n  g.SetSelected(false)\nend\ntc = Color.Make\ntc.SetTransParent(true)\n\n\n\n\nfor each ftr in coltits\n  bp = ftr.Clone.InsetBy(0.0125)\n  bpd = Polygon.Make({{ftr.ReturnOrigin,(ftr.GetRight@ftr.GetBottom),(ftr.GetRight@ftr.GetTop),(bp.GetRight@bp.GetTop),(bp.GetLeft@bp.GetBottom),ftr.ReturnOrigin}})\n  bpl =
+ Polygon.Make({{ftr.ReturnOrigin,(bp.ReturnOrigin),(bp.GetRight@bp.GetTop),(ftr.GetRight@ftr.GetTop),(ftr.GetLeft@ftr.GetTop),ftr.ReturnOrigin}})\n  gbp = GraphicShape.Make(bp)\n  gbpd = GraphicShape.Make(bpd)\n  gbpl = GraphicShape.Make(bpl)\n  gbp.SetSymbol(ftbf.Clone)\n  gbpd.SetSymbol(ftbf.Clone)\n  gbpl.SetSymbol(ftbf.Clone)\n  lg = Color.Make\n  lg.SetRGBList({220,220,220})\n  dg = Color.Make\n  dg.SetRGBList({120,120,120})\n  gbpd.GetSymbol.SetColor(dg.Clone)\n  gbpl.GetSymbol.SetColor(lg.Clone)\n  gbpl.GetSymbol
+.SetOLWidth(0)\n  gbpd.GetSymbol.SetOLWidth(0)\n  gbpl.GetSymbol.SetColorLock(true)\n  gbpd.GetSymbol.SetColorLock(true)\n  gbp.GetSymbol.SetOLWidth(0)\n  gbpl.GetSymbol.SetOLColor(tc.Clone)\n  gbpd.GetSymbol.SetOLColor(tc.Clone)\n  gbp.GetSymbol.SetOLColor(tc.Clone)\n  gl.AddBatch(gbpd)\n  gl.AddBatch(gbpl)\n  gl.AddBatch(gbp)\n  gbpd.SetSelected(true)\n  gbpl.SetSelected(true)\n  gbp.SetSelected(True)\nend\ngl.GroupSelected\ngl.MoveSelectedToBack\ngl.GetSelected.Get(0).SetObjectTag(\"buttons\")\ngl.UnSelectAll  \n\nfor each g 
+in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\n  gl.MoveSelectedToFront\nend\ngl.FindByObjectTag(\"buttons\").SetSelected(true)\n\nNeatRect = gl.ReturnSelectedExtent.Clone\nnrgs = GraphicShape.Make(NeatRect)\nnrgs.GetSymbol.SetOLWidth(0.6)\ntheLayout.GetGraphics.AddBatch(nrgs)\n\ngl.UnSelectAll\n\nbp = GraphicShape.Make(NeatRect)\nbw = Color.GetWhite\nbpf = RasterFill.Make\nbpf.SetStyle(#RASTERFILL_STYLE_OPAQUESTIPPLE)\nbp.SetSymbol(bpf)\nbp.GetSymbol.SetColor(tc.Clone)\nbp.GetSymbol.SetBGColor(Color.GetWhite)\ntheLayou
+t.GetGraphics.AddBatch(bp)\nbp.SetSelected(True)\ngl.MoveSelectedToBack\n\nfor each g in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\nend\ngl.FindByObjectTag(\"buttons\").SetSelected(true)\nnrgs.SetSelected(true)\ngl.GroupSelected\n\n\ntheLayout.GetGraphics.EndBatch\n"
+	SearchStr:	"Duh"
+)
+
+(DocWin.207
+	Owner:	206
+	X:	172
+	Y:	62
+	W:	826
+	H:	541
+)
+
+(CSMgr.208
+)
+
+(DocAct.209
+	Doc:	206
+)
+
+(SEd.210
+	Name:	"LayoutTools.HeaderAndFooter"
+	Creator:	"adrian"
+	CreationDate:	"Mon 20 Apr 2015 19:59:04 CEST"
+	GUIName:	"Script"
+	Win:	211
+	CSMgr:	212
+	DocExts:	213
+	Source:	"'# Name:          LayoutTools.HeaderAndFooter \n'#                lyt_head.ave\n'# Author:        Mike Quentel <mquentel@acceleration.net>,\n'#                 <kingofthewood@yahoo.com>\n'# Date:          Fri Dec 10 15:28:27 1999\n'# Revised by:    Adrian Boehlen\n'# Revision Date: 01/12/2015\n'# Purpose:       Creates header (optional) and footer\n'#                of one layout (default) or \n'#                of many layouts if Shift is pressed\n'#\n'#################################################################
+##\n\n'########## Variablen initialisieren ##########\ni = 0\ntheAuthor = \"Adrian Böhlen\"\ntheSizeFooter = 8\ntheSizeHeader = 14\ntheColor = Color.GetBlack\ntheFont = Font.Make (\"DejaVu Sans\", \"Condensed\")\n\n'########## wenn Shift gedrueckt ##########\n\nif (System.IsShiftKeyDown) then\n  theProject=av.GetProject\n  theDocL=theProject.GetDocs\n  theLayoutL={}\n  for each theEntry in theDocL\n    if (theEntry.Is(Layout)) then\n      theLayoutL.Add(theEntry)\n    end\n  end\n  theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Layout
+(s) auswählen:\", \"Kopf- und Fusszeilen\")\n  if (theBatchLayoutL=Nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count=0) \n    MsgBox.Error(\"Bitte mindestens 1 Layout auswählen\"+NL+\"Cancel für Abbruch\", \"\")\n    theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Layout(s) auswählen:\", \"Kopf- und Fusszeilen\")\n    if (theBatchLayoutL=Nil) then\n      return nil\n    end\n  end\n  \n  strUserName = MsgBox.Input (\"Name des Autors eingeben\",\"Autor\",theAuthor)\n\n  '# Header definieren (optional)\n  if (MsgBox.YesNo(\"Ko
+pfzeile definieren ?\",\"Header\",true)) then\n    strHeadLeft = MsgBox.Input(\"Text links oben eingeben:\",\n    \"Kopfzeile links\",\" \")\n    strHeadRight = MsgBox.Input(\"Text rechts oben eingeben:\",\n    \"Kopfzeile rechts\",\" \")\n  else\n    strHeadLeft = nil\n    strHeadRight = nil\n  end\n  \n  for each lytActive in theBatchLayoutL\n    i = i + 1\n    thePageDisplay = lytActive.GetDisplay\n    thePageExtent = thePageDisplay.ReturnPageExtent\n    theCenter = thePageExtent.ReturnCenter\n    recMargin = thePageDisplay.ReturnMar
+ginExtent\n    theOrigin = recMargin.ReturnOrigin\n    xOriginLeft = theOrigin.GetX\n    xOriginCenter = theCenter.GetX\n    xOriginRight = xOriginLeft + recMargin.GetWidth\n    yOriginBottom = theOrigin.GetY\n    yOriginTop = yOriginBottom + recMargin.GetHeight\n   \n    '# creates origins for graphic text (anchor points left)\n    docOrigin = (xOriginLeft + 0.01)@(yOriginBottom + 0.05)\n    userOrigin = (xOriginCenter)@(yOriginBottom + 0.05)\n    pageOrigin = (xOriginRight - 0.01)@(yOriginBottom + 0.05)\n  \n    headL
+eftOrigin = (xOriginLeft + 0.01)@(yOriginTop - 0.12)\n    headRightOrigin = (xOriginRight - 0.01)@(yOriginTop - 0.12)\n  \n    '# creates names strings for graphic text  \n    strDoc = av.GetProject.GetName\n    strLytName = lytActive.GetWin.GetTitle\n    strUser = strUserName\n    strPage = i.AsString + \"/\" + theLayoutL.Count.AsString\n  \n    '# creates, adjusts and adds graphic text to layout\n    gtxDoc = GraphicText.Make (strDoc, docOrigin)  \n    gtxUser = GraphicText.Make (strUser, userOrigin)\n    gtxPage = Gra
+phicText.Make (strPage, pageOrigin)\n  \n    if (strHeadLeft <> nil) then\n      gtxHeadLeft = GraphicText.Make (strHeadLeft, headLeftOrigin)\n    end\n    if (strHeadRight <> nil) then\n      gtxHeadRight = GraphicText.Make (strHeadRight, headRightOrigin)\n    end\n  \n    txtSymDoc = gtxDoc.ReturnSymbols.Get (0)\n    txtSymDoc.SetSize (theSizeFooter)\n    txtSymDoc.SetColor(theColor)\n    txtSymDoc.SetFont (theFont)\n\n    txtSymUser = gtxUser.ReturnSymbols.Get (0)\n    txtSymUser.SetSize (theSizeFooter)\n    txtSymUser.
+SetFont (theFont)\n    \n    txtSymPage = gtxPage.ReturnSymbols.Get (0)\n    txtSymPage.SetSize (theSizeFooter)\n    txtSymPage.SetFont (theFont)\n  \n    if (strHeadLeft <> nil) then\n      textSymHeadLeft = gtxHeadLeft.ReturnSymbols.Get (0)\n      textSymHeadLeft.SetSize (theSizeHeader)\n      textSymHeadLeft.SetColor(theColor)\n      textSymHeadLeft.SetFont (theFont)\n    end\n    if (strHeadRight <> nil) then\n      textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)\n      textSymHeadRight.SetSize (theSizeHeader)\n
+      textSymHeadRight.SetFont (theFont)\n    end\n  \n    lytActive.GetGraphics.Add (gtxDoc)\n    lytActive.GetGraphics.Add (gtxUser)\n    lytActive.GetGraphics.Add (gtxPage)\n  \n    if (strHeadLeft <> nil) then\n      lytActive.GetGraphics.Add (gtxHeadLeft)\n    end\n  \n    if (strHeadRight <> nil) then\n      lytActive.GetGraphics.Add (gtxHeadRight)\n    end\n    theGraphicList = lytActive.GetGraphics\n  \n    '# replace user name with simulated anchor point middle\n    userOrigin = (xOriginCenter - (gtxUser.GetExtent.
+GetX / 2))@(yOriginBottom + 0.05)\n    theGraphicList.RemoveGraphic(gtxUser)\n    gtxUser = GraphicText.Make (strUser, userOrigin)\n    txtSymUser = gtxUser.ReturnSymbols.Get (0)\n    txtSymUser.SetSize (theSizeFooter)\n    txtSymUser.SetColor(theColor)\n    txtSymUser.SetFont (theFont)\n    lytActive.GetGraphics.Add (gtxUser)\n  \n    '# replace page number with simulated anchor point right\n    pageOrigin = (xOriginRight - gtxPage.GetExtent.GetX)@(yOriginBottom + 0.05)\n    theGraphicList.RemoveGraphic(gtxPage)\n    
+gtxPage = GraphicText.Make (strPage, pageOrigin)\n    txtSymPage = gtxPage.ReturnSymbols.Get (0)\n    txtSymPage.SetSize (theSizeFooter)\n    txtSymPage.SetColor(theColor)\n    txtSymPage.SetFont (theFont)\n    lytActive.GetGraphics.Add (gtxPage)\n  \n    '# replace right header with simulated anchor point right\n    if (strHeadRight <> nil) then\n      headRightOrigin = (xOriginRight - gtxHeadRight.GetExtent.GetX)@(yOriginTop - 0.12)\n      theGraphicList.RemoveGraphic(gtxHeadRight)\n      gtxHeadRight = GraphicText.
+Make (strHeadRight, headRightOrigin)\n      textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)\n      textSymHeadRight.SetSize (theSizeHeader)\n      textSymHeadRight.SetColor(theColor)\n      textSymHeadRight.SetFont (theFont)\n      lytActive.GetGraphics.Add (gtxHeadRight)\n    end  \n  end\n  \n'########## wenn Shift nicht gedrueckt ist ##########\nelse\n  lytActive = av.GetActiveDoc\n  if ((lytActive.is(Layout)) and (lytActive.GetClass.GetClassName <> \"DialogEditor\")) then\n    thePageDisplay = lytActive.GetDispl
+ay\n    thePageExtent = thePageDisplay.ReturnPageExtent\n    theCenter = thePageExtent.ReturnCenter\n    recMargin = thePageDisplay.ReturnMarginExtent\n    theOrigin = recMargin.ReturnOrigin\n    xOriginLeft = theOrigin.GetX\n    xOriginCenter = theCenter.GetX\n    xOriginRight = xOriginLeft + recMargin.GetWidth\n    yOriginBottom = theOrigin.GetY\n    yOriginTop = yOriginBottom + recMargin.GetHeight\n   \n    '# creates origins for graphic text (anchor points left)\n    docOrigin = (xOriginLeft + 0.01)@(yOriginBottom 
++ 0.05)\n    userOrigin = (xOriginCenter)@(yOriginBottom + 0.05)\n    pageOrigin = (xOriginRight - 0.01)@(yOriginBottom + 0.05)\n  \n    headLeftOrigin = (xOriginLeft + 0.01)@(yOriginTop - 0.12)\n    headRightOrigin = (xOriginRight - 0.01)@(yOriginTop - 0.12)\n  \n    '# creates names strings for graphic text  \n    strAprName = av.GetProject.GetName\n    strLytName = lytActive.GetWin.GetTitle\n  \n    strUserName = MsgBox.Input (\"Name des Autors eingeben\",\"Autor\",theAuthor)\n  \n    strDoc = MsgBox.YesNo (\"Layoutname a
+n Projektname anfügen?\",\"Dokument\",true)\n    if (strDoc) then\n      strDoc = strAprName + \"/\" + strLytName\n    else\n      strDoc = strAprName\n    end\n    strUser = strUserName\n    strPage = MsgBox.Input (\"Seitenzahl eingeben\", \"Seitenzahl\", \"1\")\n    if (strPage = nil) then\n      return nil\n    end\n  \n    '# defines header (optional)\n    if (MsgBox.YesNo(\"Kopfzeile definieren ?\",\"Header\",true)) then\n      strHeadLeft = MsgBox.Input(\"Text links oben eingeben:\",\n      \"Kopfzeile links\",\" \")\n      strHeadRight 
+= MsgBox.Input(\"Text rechts oben eingeben:\",\n      \"Kopfzeile rechts\",\" \")\n    else\n      strHeadLeft = nil\n      strHeadRight = nil\n    end\n  \n    gtxDoc = GraphicText.Make (strDoc, docOrigin)  \n    gtxUser = GraphicText.Make (strUser, userOrigin)\n    gtxPage = GraphicText.Make (strPage, pageOrigin)\n  \n    if (strHeadLeft <> nil) then\n      gtxHeadLeft = GraphicText.Make (strHeadLeft, headLeftOrigin)\n    end\n    if (strHeadRight <> nil) then\n      gtxHeadRight = GraphicText.Make (strHeadRight, headRightOri
+gin)\n    end\n  \n    txtSymDoc = gtxDoc.ReturnSymbols.Get (0)\n    txtSymDoc.SetSize (theSizeFooter)\n    txtSymDoc.SetColor(theColor)\n    txtSymDoc.SetFont (theFont)\n\n    txtSymUser = gtxUser.ReturnSymbols.Get (0)\n    txtSymUser.SetSize (theSizeFooter)\n    txtSymUser.SetFont (theFont)\n    \n    txtSymPage = gtxPage.ReturnSymbols.Get (0)\n    txtSymPage.SetSize (theSizeFooter)\n    txtSymPage.SetFont (theFont)\n  \n    if (strHeadLeft <> nil) then\n      textSymHeadLeft = gtxHeadLeft.ReturnSymbols.Get (0)\n      text
+SymHeadLeft.SetSize (theSizeHeader)\n      textSymHeadLeft.SetColor(theColor)\n      textSymHeadLeft.SetFont (theFont)\n    end\n    if (strHeadRight <> nil) then\n      textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)\n      textSymHeadRight.SetSize (theSizeHeader)\n      textSymHeadRight.SetFont (theFont)\n    end\n  \n    lytActive.GetGraphics.Add (gtxDoc)\n    lytActive.GetGraphics.Add (gtxUser)\n    lytActive.GetGraphics.Add (gtxPage)\n  \n    if (strHeadLeft <> nil) then\n      lytActive.GetGraphics.Add (gtxHea
+dLeft)\n    end\n  \n    if (strHeadRight <> nil) then\n      lytActive.GetGraphics.Add (gtxHeadRight)\n    end\n    theGraphicList = lytActive.GetGraphics\n  \n    '# replace user name with simulated anchor point middle\n    userOrigin = (xOriginCenter - (gtxUser.GetExtent.GetX / 2))@(yOriginBottom + 0.05)\n    theGraphicList.RemoveGraphic(gtxUser)\n    gtxUser = GraphicText.Make (strUser, userOrigin)\n    txtSymUser = gtxUser.ReturnSymbols.Get (0)\n    txtSymUser.SetSize (theSizeFooter)\n    txtSymUser.SetColor(theColo
+r)\n    txtSymUser.SetFont (theFont)\n    lytActive.GetGraphics.Add (gtxUser)\n  \n    '# replace page number with simulated anchor point right\n    pageOrigin = (xOriginRight - gtxPage.GetExtent.GetX)@(yOriginBottom + 0.05)\n    theGraphicList.RemoveGraphic(gtxPage)\n    gtxPage = GraphicText.Make (strPage, pageOrigin)\n    txtSymPage = gtxPage.ReturnSymbols.Get (0)\n    txtSymPage.SetSize (theSizeFooter)\n    txtSymPage.SetColor(theColor)\n    txtSymPage.SetFont (theFont)\n    lytActive.GetGraphics.Add (gtxPage)\n  \n 
+   '# replace right header with simulated anchor point right\n    if (strHeadRight <> nil) then\n      headRightOrigin = (xOriginRight - gtxHeadRight.GetExtent.GetX)@(yOriginTop - 0.12)\n      theGraphicList.RemoveGraphic(gtxHeadRight)\n      gtxHeadRight = GraphicText.Make (strHeadRight, headRightOrigin)\n      textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)\n      textSymHeadRight.SetSize (theSizeHeader)\n      textSymHeadRight.SetColor(theColor)\n      textSymHeadRight.SetFont (theFont)\n      lytActive.Get
+Graphics.Add (gtxHeadRight)\n    end\n\n  else\n    MsgBox.Warning (\"This script is meant for an Active Layout only.  Exiting.\",\"\")\n    exit\n  end\nend\n"
+	SearchStr:	"strAprName"
+)
+
+(DocWin.211
+	Owner:	210
+	X:	-4
+	Y:	-4
+	W:	1020
+	H:	659
+)
+
+(CSMgr.212
+)
+
+(DocAct.213
+	Doc:	210
+)
+
+(SEd.214
+	Name:	"LayoutTools.ImportText"
+	Creator:	"adrian"
+	CreationDate:	"Son 03 Mai 2015 15:24:59 CEST"
+	GUIName:	"Script"
+	Win:	215
+	CSMgr:	216
+	DocExts:	217
+	Source:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_TextFormatter.ave\n'# Author:       Adrian Boehlen\n'# Date:         29.11.2015\n'# Version:      0.6\n'#\n'# Purpose:      Liest Textfile ein und bildet daraus einen Textblock\n'#               der definierten Anzahl Zeichen\n'#               bestehende Zeilenumbrueche bleiben erhalten\n'#               Schriftart, -groesse und -farbe muessen definiert werden\n'#\n'#               erwartet eine selektierte Text
+box im Layout,\n'#               an der Stelle, wo dann der neue Text erscheinen soll.\n'#               Die Textbox kann leer sein, oder schon mit Text gefuellt,\n'#               wobei dieser dann geloescht wird\n'#               Der neue Text beginnt an der linken oberen Ecke der \n'#               bestehenden Textbox \n'#\n'#               Bei proportionalen Fonts werden einzelne Zeichen nicht\n'#               gezaehlt, um einen ausgewogeneren Flattersatz zu erzeugen\n'#\n'#######################################
+##################################\n\nnullstring = \"\"\ntheLayout = av.GetActiveDoc \n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\n'########## Benutzereingaben aufnehmen ##########\n\ntheFile = FileDialog.Show(\"*.txt\",\"text files\",\"Textdatei auswaehlen\")\nif (theFile = nil) then\n  return nil\nend\n\n'# Maximale Anzahl Zeichen pro Zeile definieren\nmaxLength = MsgBox.Input(\"Maximale Anzahl Zeichen pro Zeile eingeben\",\n  \"Anzahl Zeichen\",50.AsString
+)\n\nif (maxLength = nil) then\n  return nil\nelseif (maxLength.IsNumber.Not) then\n  MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nend\nmaxLength = maxLength.AsNumber\n\n'# Schriftart definieren\nschriftartListe = {\"DejaVu Sans\", \"DejaVu Sans Mono\", \"DejaVu Serif\", \"Arial\", \"Courier New\"}\nschriftart = MsgBox.ListAsString(schriftartListe, \"Schriftart auswaehlen\", \"Schriftart\")\nif (schriftart = nil) then \n  return nil\nend\n\n'# Schriftschnitt definieren\nif (schriftart = \"DejaVu Sans\") then\n  schriftschnit
+tListe = {\"Condensed\", \"Condensed Bold\", \"Condensed Oblique\", \"Condensed Bold Oblique\", \"Oblique\", \"Bold Oblique\", \"Book\", \"Bold\"}\n  schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Schriftschnitt auswaehlen\", \"Schriftschnitt\")\n  if (schriftschnitt = nil) then \n    return nil\n  end\nelseif (schriftart = \"DejaVu Sans Mono\") then\n  schriftschnittListe = {\"Book\", \"Bold\", \"Oblique\", \"Bold Oblique\"}\n  schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Schriftschnitt auswaehlen\", \"Schriftschnitt\"
+)\n  if (schriftschnitt = nil) then \n    return nil\n  end\nelseif (schriftart = \"DejaVu Serif\") then\n  schriftschnittListe = {\"Book\", \"Bold\", \"Condensed\", \"Condensed Bold\", \"Condensed Italic\", \"Condensed Bold Italic\", \"Italic\", \"Bold Italic\"}\n  schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Schriftschnitt auswaehlen\", \"Schriftschnitt\")\n  if (schriftschnitt = nil) then \n    return nil\n  end\nelseif (schriftart = \"Arial\") then\n  schriftschnittListe = {\"Standard\", \"Kursiv\", \"Fett\", \"Fett Kursiv\"}\n  sc
+hriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Schriftschnitt auswaehlen\", \"Schriftschnitt\")\n  if (schriftschnitt = nil) then \n    return nil\n  end\nelseif (schriftart = \"Courier New\") then\n  schriftschnittListe = {\"Standard\"}\n  schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Schriftschnitt auswaehlen\", \"Schriftschnitt\")\n  if (schriftschnitt = nil) then \n    return nil\n  end\nend\n\n'# Schriftfarbe definieren\ntheColorList = {\"Schwarz\", \"Grau\", \"Rot\", \"Gruen\", \"Blau\", \"benutzerdefiniert\"}\nth
+eColor = MsgBox.ListAsString(theColorList, \"Schriftfarbe auswaehlen\", \"Schriftfarbe\")\nif (theColor = nil) then \n  return nil\nelseif (theColor = \"benutzerdefiniert\") then\n  theRGB = MsgBox.MultiInput(\"RGB-Wert definieren\", \"RGB\",\n  {\"Rot\", \"Gruen\", \"Blau\"}, {\"0\", \"0\", \"0\"})\n  if (theRGB = nil) then\n    return nil\n  end\n  rot = theRGB.Get(0)\n  gruen = theRGB.Get(1)\n  blau = theRGB.Get(2)\nend\n\n'# Schriftgroesse definieren\ntheSize = MsgBox.Input(\"Schriftgroesse eingeben\", \"Schriftgroesse\",10.AsString)\n\nif (theS
+ize = nil) then\n  return nil\nelseif (theSize.IsNumber.Not) then\n  MsgBox.Warning(\"Ungueltige Eingabe\",\"Abbruch\")\n  return nil\nend\ntheSize = theSize.AsNumber\n\n'########## Text einlesen, formatieren, symbolisieren und platzieren ##########\n\n'# LineFile erzeugen und Anzahl Zeilen ermitteln\ntheLineFile = LineFile.Make(theFile,#FILE_PERM_READ)\nelementCount = theLineFile.GetSize\n\n'# Variablen initialisieren\ntheTextBlock = \"\"\ntheNewLine = \"\"\ntheNewLineC = \"\"\ni = 0\n\n'# Farben zuweisen\nif (theColor = \"Schwarz\") then
+\n  theColor = Color.GetBlack\nelseif (theColor = \"Grau\") then\n  theColor = Color.GetGray\nelseif (theColor = \"Rot\") then\n  theColor = Color.GetRed\nelseif (theColor = \"Gruen\") then\n  theColor = Color.GetGreen\nelseif (theColor = \"Blau\") then\n  theColor = Color.GetBlue\nelseif (theColor = \"benutzerdefiniert\") then\n  theColor = Color.Make\n  theColor.SetRGBList({rot.AsNumber,gruen.AsNumber,blau.AsNumber})\nend\n\n'# Input-Text in neue Zeilen der gewuenschten Laenge umformatieren\n\n'# bei nicht proportionalen Fonts jede
+s Zeichen gleich behandeln\nif ((schriftart = \"DejaVu Sans Mono\") or (schriftart = \"Courier New\")) then\n  schriftart = Font.Make (schriftart, schriftschnitt)\n  for each i in 1..elementCount                                '# zeilenweise durchgehen\n    theLine = theLineFile.ReadElt                              '# aktuelle Zeile\n    if (theLine.Count > 0) then                                '# alle nicht leeren Zeilen\n      i = 0\n      for each word in theLine.AsList                          '# Zeile in Woerter
+ auftrennen\n        i = i + 1  \n        if (theNewLine.Count + word.Count > maxLength) then    '# wenn laenger als maxLength Zeichen...\n          theTextBlock = theTextBlock + theNewLine.Trim + NL   '# ...setze an Textblock an und schliesse mit Newline ab\n          theNewLine = \"\"                                      '# temporaere Zeile loeschen\n        end\n        if (theLine.AsList.Count = i) then                     '# beim letzten Wort der Zeile...\n          theNewLine = theNewLine ++ word + NL         
+        '# ...Woerter zusammensetzen und mit Newline abschliessen\n          theTextBlock = theTextBlock + theNewLine.Trim + NL   '# setze an Textblock an und schliesse mit Newline ab\n          theNewLine = \"\"                                      '# temporaere Zeile loeschen\n        else\n          theNewLine = theNewLine ++ word                      '# Woerter zu temporaerer Zeile zusammensetzen\n        end\n      end\n    else                                                       '# alle leeren Zeilen\n      i
+f (theNewLine.Count > 0) then                           '# wenn temporaere Zeile nicht leer ist... \n        theTextBlock = theTextBlock + theNewLine.Trim + NL     '# ...setze an Textblock an und schliesse mit Newline ab\n        theNewLine = \"\"                                        '# temporaere Zeile loeschen\n      end\n      theTextBlock = theTextBlock + NL                         '# wenn temporaere Zeile nicht leer ist, schliesse mit Newline ab\n    end\n  end\nelse\n  '# bei proportionalen Fonts einzelne Zei
+chen nicht zaehlen\n  schriftart = Font.Make (schriftart, schriftschnitt)\n  for each i in 1..elementCount                                '# zeilenweise durchgehen\n    theLine = theLineFile.ReadElt                              '# aktuelle Zeile\n    if (theLine.Count > 0) then                                '# alle nicht leeren Zeilen\n      i = 0\n      for each word in theLine.AsList                          '# Zeile in Woerter auftrennen\n        i = i + 1\n        wordC = word                                  
+         '# damit proportionale Fonts korrekter...\n        wordC = wordC.Substitute(\"i\",\"\")                       '# ...umbrochen werden, werden folgende...\n        wordC = wordC.Substitute(\"j\",\"\")                       '# ...Zeichen nicht gezaehlt:...\n        wordC = wordC.Substitute(\"l\",\"\")                       '# ...i, j, l, 1\n        wordC = wordC.Substitute(\"1\",\"\")\n        if (theNewLineC.Count + wordC.Count > maxLength) then  '# wenn laenger als maxLength Zeichen...\n          theTextBlock = theTextBl
+ock + theNewLine.Trim + NL   '# ...setze an Textblock an und schliesse mit Newline ab\n          theNewLine = \"\"                                      '# temporaere definitive Zeile loeschen\n          theNewLineC = \"\"                                     '# temporaere Zaehl-Zeile loeschen\n        end\n        if (theLine.AsList.Count = i) then                     '# beim letzten Wort der Zeile...\n          theNewLineC = theNewLineC ++ wordC + NL              '# ...Woerter zusammensetzen und mit Newline abschlie
+ssen\n          theNewLine = theNewLine ++ word + NL                 '# ...Woerter zusammensetzen und mit Newline abschliessen\n          theTextBlock = theTextBlock + theNewLine.Trim + NL   '# setze an Textblock an und schliesse mit Newline ab\n          theNewLine = \"\"                                      '# temporaere definitive Zeile loeschen\n          theNewLineC = \"\"                                     '# temporaere Zaehl-Zeile loeschen\n        else\n          theNewLine = theNewLine ++ word              
+        '# Woerter zu temporaerer definitiver Zeile zusammensetzen\n          theNewLineC = theNewLineC ++ wordC                   '# Woerter zu temporaerer Zaehl-Zeile zusammensetzen\n        end\n      end\n    else                                                       '# alle leeren Zeilen\n      if (theNewLine.Count > 0) then                           '# wenn temporaere Zeile nicht leer ist... \n        theTextBlock = theTextBlock + theNewLine.Trim + NL     '# ...setze an Textblock an und schliesse mit Newlin
+e ab\n        theNewLine = \"\"                                        '# temporaere definitive Zeile loeschen\n        theNewLineC = \"\"                                       '# temporaere Zaehl-Zeile loeschen\n      end\n      theTextBlock = theTextBlock + NL                         '# wenn temporaere Zeile nicht leer ist, schliesse mit Newline ab\n    end\n  end \nend  \ntheTextBlock = theTextBlock + theNewLine.Trim                  '# fuege Rest der letzten Zeile noch an\ntheTextBlock = theTextBlock.BasicTrim(\"\",NL
+)                   '# entfernt ueberschuessiges Newline am Ende\n\ntheLineFile.Close\n\n'# Text symbolisieren und temporaer in Layout platzieren\ntheGraphicList = theLayout.GetGraphics\ntheSelected = theGraphicList.GetSelected.Get(0)\ntheOrigin = theSelected.GetOrigin                                        '# Nullpunkt unten links bestimmen\ntheOrigin = theOrigin.GetX@(theOrigin.GetY + theSelected.GetExtent.GetY) '# Nullpunkt oben links ableiten\ntheGraphicText = GraphicText.Make (theTextBlock, theOrigin)\ntheSymbol
+ = theGraphicText.ReturnSymbols.Get (0)\ntheSymbol.SetColor(theColor)\ntheSymbol.SetFont(schriftart)\ntheSymbol.SetSize(theSize)\n\ntheLayout.GetGraphics.Add (theGraphicText)\ntheGraphicList.RemoveGraphic (theSelected)                   '# urspruenglich selektierte Textbox loeschen\n\n'# Hoehe des Textblocks bestimmen und Nullpunkt so umrechnen, dass der Text oben links\n'# mit dem bestehenden uebereinstimmt\ntheOrigin = theOrigin.GetX@(theOrigin.GetY - theGraphicText.GetExtent.GetY) \ntheGraphicList.RemoveGraphic(the
+GraphicText)                 '# temporaerer Text loeschen\ntheGraphicText = GraphicText.Make (theTextBlock, theOrigin)\ntheSymbol = theGraphicText.ReturnSymbols.Get (0)\ntheSymbol.SetColor(theColor)\ntheSymbol.SetFont(schriftart)\ntheSymbol.SetSize(theSize)\ntheLayout.GetGraphics.Add (theGraphicText)\n\ntheLayout.Invalidate\n"
+	SearchStr:	"word2"
+)
+
+(DocWin.215
+	Owner:	214
+	X:	-134
+	Y:	95
+	W:	1000
+	H:	528
+)
+
+(CSMgr.216
+)
+
+(DocAct.217
+	Doc:	214
+)
+
+(SEd.218
+	Name:	"LayoutTools.InsertText"
+	Creator:	"adrian"
+	CreationDate:	"Sam 09 Jan 2016 11:00:24 CET"
+	GUIName:	"Script"
+	Win:	219
+	CSMgr:	220
+	DocExts:	221
+	Source:	"CPC = av.FindDialog(\"Graphic.Label Defaults\")\nIconList = CPC.FindByName(\"CalloutIcons\")\nthePrefs = IconList.GetObjectTag.Get(\"Ttool1\")\n\n      '(0) Font Family    (String) \n      '(1) Font Style     (String)\n      '(2) Font Size      (Number)\n      '(3) Font Color     (String)\n      '(10) UseDefFont    (Boolean)\n\nCFont =      thePrefs.Get(0)\nCStyle =     thePrefs.Get(1)\nCSize =      thePrefs.Get(2)\nUseDef =     thePrefs.Get(10)\nif (thePrefs.Get(3) = \"Unnamed Color\") then\n  CColor = av.GetSymbolwin.ReturnCurr
+entSymbol(#SYMBOL_TEXT).Clone.GetColor\nelse \n  CColor = av.Run(\"View.Return Color\",thePrefs.Get(3))\nend\n\n\n\ntheLayout = av.GetActiveDoc\nif (theLayout.GetGraphics.EditText.Not) then\n  pt = theLayout.GetDisplay.ReturnUserPoint\n  t = GraphicText.Make(\"\", pt)\n  t.SetDisplay(theLayout.GetDisplay)\n  theLayout.GetGraphics.UnselectAll\n  t.SetSelected(TRUE)\n  if (t.EditText) then\n    theLayout.GetGraphics.AddName(t)\n    av.GetProject.SetModified(true)\n  end\n  if (not UseDef) then\n    t.GetSymbol.SetFont(Font.make(Cfo
+nt,CStyle))\n    t.GetSymbol.SetSize(CSize)\n    t.GetSymbol.SetColor(CColor)\n  end\n  \nend"
+)
+
+(DocWin.219
+	Owner:	218
+	X:	35
+	Y:	35
+	W:	728
+	H:	543
+)
+
+(CSMgr.220
+)
+
+(DocAct.221
+	Doc:	218
+)
+
+(SEd.222
+	Name:	"LayoutTools.MakeRegistrationMarks"
+	Creator:	"adrian"
+	CreationDate:	"Mon 20 Apr 2015 19:34:06 CEST"
+	GUIName:	"Script"
+	Win:	223
+	CSMgr:	224
+	DocExts:	225
+	Source:	"'##################################################################\n'#  Name:          Layout.MakeRegistrationMarks\n'#  Author:        Adam Hyer\n'#                 ashyer@syr.edu, ashyer@hotmail.com\n'#\n'#  Date Written:  2.24.99\n'#\n'#  Description:   Puts registration marks on a layout for printing.\n'#                 This is intended for plotters when you need to\n'#                 make the page size larger in order to show the \n'#                 entire layout.  The registration marks allow you\n'#        
+         to cut paper to it's originally intended page\n'#                 size.\n'#\n'#  Instructions:  Add a new button to the active layout add this\n'#                 script to the new button's click property.  Click\n'#                 the button when you want to add the marks and\n'#                 specify the desired dimensions for the marks.\n'#\n'#  Revision:      A.Boehlen 20/04/2015\n'#\n'##################################################################\n\ntheLayout = av.GetActiveDoc  \n\nif (theLayout.Is(l
+ayout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\nh=MsgBox.Input(\"Enter the page height in mm:\",\" \",\"297\")\nw=MsgBox.Input(\"Enter the page width in mm:\",\" \",\"210\")\nheight=h.AsNumber * 0.03937    ' converts mm to inches\nwidth=w.AsNumber * 0.03937     ' converts mm to inches\n\nd = av.GetActiveDoc.GetDisplay\nr = d.ReturnPageExtent\nrc = r.ReturnCenter\nlf = rc.GetX-(width/2)\nrt = rc.GetX+(width/2)\ntp = rc.GetY+(height/2)\nbm = rc.GetY-(height/2)\nlfL = lf-0.2\nlfR = lf
+-0.02 \nrtL = rt+0.02\nrtR = rt+0.2\ntpU = tp+0.2\ntpD = tp+0.02\nbmU = bm-0.02\nbmD = bm-0.2\n\naPen = BasicPen.Make\naPen.SetColor(Color.GetBlack)\naPen.SetSize(1)\n\nTL1 = Line.Make( lf@tpU, lf@tpD)\nTL2 = Line.Make( lfL@tp, lfR@tp)\nTR1 = Line.Make( rt@tpU, rt@tpD)\nTR2 = Line.Make( rtL@tp, rtR@tp)\nBL1 = Line.Make( lf@bmU, lf@bmD)\nBL2 = Line.Make( lfL@bm, lfR@bm)\nBR1 = Line.Make( rt@bmU, rt@bmD)\nBR2 = Line.Make( rtL@bm, rtR@bm)\n\ngTL1 = GraphicShape.Make(TL1)\ngTL1.SetSymbol(aPen)\ngTL2 = GraphicShape.Make(TL2)\ngTL2.SetS
+ymbol(aPen)\ngTR1 = GraphicShape.Make(TR1)\ngTR1.SetSymbol(aPen)\ngTR2 = GraphicShape.Make(TR2)\ngTR2.SetSymbol(aPen)\ngBL1 = GraphicShape.Make(BL1)\ngBL1.SetSymbol(aPen)\ngBL2 = GraphicShape.Make(BL2)\ngBL2.SetSymbol(aPen)\ngBR1 = GraphicShape.Make(BR1)\ngBR1.SetSymbol(aPen)\ngBR2 = GraphicShape.Make(BR2)\ngBR2.SetSymbol(aPen)\n\ntheLayout.GetGraphics.UnselectAll\ngTL1.SetSelected(TRUE)\ngTL2.SetSelected(TRUE)\ngTR1.SetSelected(TRUE)\ngTR2.SetSelected(TRUE)\ngBL1.SetSelected(TRUE)\ngBL2.SetSelected(TRUE)\ngBR1.SetSelected(TRUE
+)\ngBR2.SetSelected(TRUE)\n\ntheLayout.GetGraphics.Add(gTL1)\ntheLayout.GetGraphics.Add(gTL2)\ntheLayout.GetGraphics.Add(gTR1)\ntheLayout.GetGraphics.Add(gTR2)\ntheLayout.GetGraphics.Add(gBL1)\ntheLayout.GetGraphics.Add(gBL2)\ntheLayout.GetGraphics.Add(gBR1)\ntheLayout.GetGraphics.Add(gBR2)\nav.GetProject.SetModified(TRUE)\n\n"
+)
+
+(DocWin.223
+	Owner:	222
+	X:	76
+	Y:	109
+	W:	688
+	H:	500
+)
+
+(CSMgr.224
+)
+
+(DocAct.225
+	Doc:	222
+)
+
+(SEd.226
+	Name:	"LayoutTools.Measure"
+	Creator:	"adrian"
+	CreationDate:	"Mon 27 Apr 2015 20:43:42 CEST"
+	GUIName:	"Script"
+	Win:	227
+	CSMgr:	228
+	DocExts:	229
+	Source:	"theLayout = av.GetActiveDoc\np = theLayout.ReturnUserPolyLine"
+)
+
+(DocWin.227
+	Owner:	226
+	X:	50
+	Y:	50
+	W:	363
+	H:	245
+)
+
+(CSMgr.228
+)
+
+(DocAct.229
+	Doc:	226
+)
+
+(SEd.230
+	Name:	"LayoutTools.PlaceText"
+	Creator:	"adrian"
+	CreationDate:	"Don 31 Dez 2015 16:57:55 CET"
+	GUIName:	"Script"
+	Win:	231
+	CSMgr:	232
+	DocExts:	233
+	Source:	"'##########################################################\n'#\n'# Filename:     LayoutTools_PlaceText.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.06.2015\n'# Version:      0.1\n'#\n'# Purpose:      Subroutine zur Platzierung von Text\n'#\n'##########################################################\n\n_gtxText = GraphicText.Make (_textString, _textOrigin)\ntheText = _gtxText.ReturnSymbols.Get (0)\ntheText.SetSize(_textSize)\ntheText.SetColor(_textColor)\ntheText.SetFont(_textFont)\n_theLayout.GetGraphics.Add
+ (_gtxText)\n"
+)
+
+(DocWin.231
+	Owner:	230
+	X:	96
+	Y:	193
+	W:	804
+	H:	412
+)
+
+(CSMgr.232
+)
+
+(DocAct.233
+	Doc:	230
+)
+
+(SEd.234
+	Name:	"LayoutTools.RefreshLayout"
+	Creator:	"adrian"
+	CreationDate:	"Mon 27 Apr 2015 20:11:41 CEST"
+	GUIName:	"Script"
+	Win:	235
+	CSMgr:	236
+	DocExts:	237
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Info(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.ZoomIn(110)\ntheLayout.GetDisplay.ZoomOut(111)\n"
+)
+
+(DocWin.235
+	Owner:	234
+	X:	48
+	Y:	299
+	W:	631
+	H:	324
+)
+
+(CSMgr.236
+)
+
+(DocAct.237
+	Doc:	234
+)
+
+(SEd.238
+	Name:	"LayoutTools.Select"
+	Creator:	"adrian"
+	CreationDate:	"Sam 09 Jan 2016 11:08:59 CET"
+	GUIName:	"Script"
+	Win:	239
+	CSMgr:	240
+	DocExts:	241
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.Select"
+)
+
+(DocWin.239
+	Owner:	238
+	X:	395
+	Y:	7
+	W:	546
+	H:	245
+)
+
+(CSMgr.240
+)
+
+(DocAct.241
+	Doc:	238
+)
+
+(SEd.242
+	Name:	"LayoutTools.SelectAll"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:26:10 CEST"
+	GUIName:	"Script"
+	Win:	243
+	CSMgr:	244
+	DocExts:	245
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.SelectAll"
+)
+
+(DocWin.243
+	Owner:	242
+	X:	303
+	Y:	47
+	W:	515
+	H:	342
+)
+
+(CSMgr.244
+)
+
+(DocAct.245
+	Doc:	242
+)
+
+(SEd.246
+	Name:	"LayoutTools.SelectTool"
+	Creator:	"adrian"
+	CreationDate:	"Sam 09 Jan 2016 11:13:04 CET"
+	GUIName:	"Script"
+	Win:	247
+	CSMgr:	248
+	DocExts:	249
+	Source:	"theLayout = av.GetActiveDoc\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.SetSelectMode(#GRAPHICS_SELECT_NORMAL)"
+)
+
+(DocWin.247
+	Owner:	246
+	X:	257
+	Y:	12
+	W:	509
+	H:	271
+)
+
+(CSMgr.248
+)
+
+(DocAct.249
+	Doc:	246
+)
+
+(SEd.250
+	Name:	"LayoutTools.SetQuality"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:26:48 CEST"
+	GUIName:	"Script"
+	Win:	251
+	CSMgr:	252
+	DocExts:	253
+	Source:	"'########################################################\n'#\n'# Filename:     SetQuality.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.10.2014\n'# Version:      0.1\n'#\n'# Purpose:      aendert auf Knopfdruck bei allen Bildern\n'#               eines Layouts die Qualitaet von \"Draft\"\n'#               auf \"Presentation\" oder umgekehrt.             \n'#\n'########################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this 
+script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\n\nfor each theObject in theGraphicsList\n  if (theObject.Is(PictureFrame)) then\n    if (theObject.GetQuality = #FRAME_QUALITY_PRESENTATION) then\n      theObject.SetQuality(#FRAME_QUALITY_DRAFT)\n    else\n      theObject.SetQuality(#FRAME_QUALITY_PRESENTATION)\n    end\n  end\nend\n\ntheLayout.Invalidate"
+)
+
+(DocWin.251
+	Owner:	250
+	X:	268
+	Y:	57
+	W:	728
+	H:	510
+)
+
+(CSMgr.252
+)
+
+(DocAct.253
+	Doc:	250
+)
+
+(SEd.254
+	Name:	"LayoutTools.TurnRulersOnOff"
+	Creator:	"adrian"
+	CreationDate:	"Mit 02 Dez 2015 20:47:45 CET"
+	GUIName:	"Script"
+	Win:	255
+	CSMgr:	256
+	DocExts:	257
+	Source:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_TurnRulersOnOff.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.12.2015\n'# Version:      0.2\n'#\n'# Purpose:      schaltet durch DrawRulers erzeugte Hilfslinien aus oder ein\n'#\n'###########################################################################\n\ntheLayout = av.GetActiveDoc\nfarbeStr = \"\"\nhilfslFarbeStr = \"24040200\"          '# RGB-Wert der Hilfslinie...\nhilfslFarbe = Color.Make\nhilfslF
+arbe.SetRGBList({240,40,200}) '# ...gemaess Definition in DrawRulers\nweissStr = \"255255255\"\nweiss = Color.Make\nweiss.SetRGBList({255,255,255})      '# RGB weiss\n\nif (System.IsShiftKeyDown) then\n  for each g in theLayout.GetGraphics\n    symb = g.GetSymbol\n    rgb = symb.GetColor.GetRGBList\n    for each farbe in rgb\n      farbeStr = farbeStr + farbe.AsString '# RGB-String bilden\n    end\n    if (farbeStr = weissStr) then\n      g.SetSelected(TRUE)\n      g.GetSymbol.SetColor(hilfslFarbe)\n    end\n    farbeStr = \"
+\"\n  end\nelse\n  for each g in theLayout.GetGraphics\n    symb = g.GetSymbol\n    rgb = symb.GetColor.GetRGBList\n    for each farbe in rgb\n      farbeStr = farbeStr + farbe.AsString\n    end\n    if (farbeStr = hilfslFarbeStr) then\n      g.SetSelected(TRUE)\n      g.GetSymbol.SetColor(weiss)\n    end\n    farbeStr = \"\"\n  end\nend\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.MoveSelectedToBack\ntheGraphicsList.UnselectAll\ntheLayout.GetDisplay.Invalidate(true)\n"
+	SearchStr:	"theDoc"
+)
+
+(DocWin.255
+	Owner:	254
+	X:	127
+	Y:	21
+	W:	872
+	H:	628
+)
+
+(CSMgr.256
+)
+
+(DocAct.257
+	Doc:	254
+)
+
+(SEd.258
+	Name:	"LayoutTools.UndoZoom"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:27:23 CEST"
+	GUIName:	"Script"
+	Win:	259
+	CSMgr:	260
+	DocExts:	261
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.UndoZoom\n"
+)
+
+(DocWin.259
+	Owner:	258
+	X:	455
+	Y:	224
+	W:	363
+	H:	261
+)
+
+(CSMgr.260
+)
+
+(DocAct.261
+	Doc:	258
+)
+
+(SEd.262
+	Name:	"LayoutTools.UnselectAll"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:27:40 CEST"
+	GUIName:	"Script"
+	Win:	263
+	CSMgr:	264
+	DocExts:	265
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.UnselectAll\n"
+)
+
+(DocWin.263
+	Owner:	262
+	X:	356
+	Y:	37
+	W:	542
+	H:	305
+)
+
+(CSMgr.264
+)
+
+(DocAct.265
+	Doc:	262
+)
+
+(SEd.266
+	Name:	"LayoutTools.UpdateText"
+	Creator:	"adrian"
+	CreationDate:	"Sam 09 Jan 2016 11:03:20 CET"
+	GUIName:	"Script"
+	Win:	267
+	CSMgr:	268
+	DocExts:	269
+	Source:	"theExt = Extension.GetExtensions.Get(\"Label & Text Tools\")\nSELF.SetEnabled(theExt <> nil)\n"
+)
+
+(DocWin.267
+	Owner:	266
+	X:	50
+	Y:	50
+	W:	572
+	H:	245
+)
+
+(CSMgr.268
+)
+
+(DocAct.269
+	Doc:	266
+)
+

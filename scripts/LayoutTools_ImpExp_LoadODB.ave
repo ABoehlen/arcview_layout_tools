@@ -1,0 +1,220 @@
+
+' NAME: mm_docODBLoad
+
+' HERKUNFT: FSA, veraendert : H.
+
+' EINBINDUNG MTOOLS: Menueeintrag im Projektmenue (Label: Dokumentauswahl aus ODB importieren...)
+
+' HILFE: Oeffnet eine Auswahlliste zum Laden von Dokumenten aus einem ODB-File  (s. STRG-Klick Info)
+
+'*******************************************
+
+' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)
+ 
+if (System.IsControlKeyDown) then
+
+  message =  " "+nl+
+    
+    "SCRIPTNAME:    mm_DocODBLoad "+nl+nl+
+  
+    "ORIGIN:   FSA, modified "+nl+nl+
+    
+    "Opens a MultiList to select documents from a single ODB file to import. "+nl+
+    
+    "Extensions that are listed in the dependencies will be loaded if necessary. "+nl
+            
+  msgbox.report(message,"INFO: Import ODB ...")
+  
+  return nil
+end
+
+'-------------------------------------------------------
+
+theProject = av.GetProject
+
+ODBName = FileDialog.Show("*.odb","ODB-Files"," Choose ODB-File")
+
+if (ODBName = NIL) then
+  return NIL
+end
+
+theODB = ODB.OpenAndInstall(ODBName)
+
+if (theODB = NIL) then
+  MsgBox.Info("Can not import ODB File."," Info")
+  return NIL
+end  
+
+theODBDepends = theODB.GetDependencies
+
+deps = ""
+
+if (theODBDepends.count > 0) then
+  for each dep in theODBDepends
+    deps = deps+" ''"+dep.asString+"'', "
+  end 
+  MsgBox.Info("Have loaded if wasn't already: "+deps.left(deps.count-2)," Info")
+end
+
+
+theCount = theODB.count - 1
+
+theDict = Dictionary.Make(50)
+
+
+for each d in 0..theCount
+  theDict.Add(theODB.Get(d).GetClass.GetClassName.UCase ++ " : " ++ theODB.Get(d).GetName,d)
+end
+
+theDictList = theDict.ReturnKeys
+theDictList.Sort(TRUE)
+theLCount = 0
+theObj = theODB.Get(0)
+
+if (theDictList.Count > 1) then
+  theDocList = MsgBox.MultiListAsString(theDictList,"Select Docs to import (see that the DocNames are unique): ","Doc Type and Name")
+  if ((theDocList = nil) or (theDocList.Count = 0)) then
+    return nil
+  end
+elseif (theDictList.Count = 1) then
+  theClassName = theObj.GetClass.GetClassName
+  if (theClassName = "Dictionary") then
+    theKeyList = theObj.ReturnKeys
+    if (theKeyList.Count = 1) then
+      theKey = theKeyList.Get (0)
+    else
+      theKey = msgBox.ListAsString (theKeyList, "Select Docs to import (see that the DocNames are unique): ", "Import ODB")
+    end
+  
+    theDoc = theObj.Get(theKey)
+    
+    if (av.FindDoc(theDoc.AsString).AsString = theDoc.AsString) then
+      MsgBox.Info("A Document with the Name '"+theDoc.AsString+"' already exists. Enter "+
+                  "another Name!","'"+theDoc.AsString+"' already exists...")
+
+      theNDoc = MsgBox.Input( "Enter a Name for ''"+theDoc.AsString+"'':", "New "+
+                              "Name for '"+theDoc.AsString+"'", theDoc.AsString+"_b" )
+      if ((theNDoc = NIL) or (theNDoc = "")) then
+        return NIL
+      end
+      theDoc.SetName ( theNDoc )
+    end
+
+    if (theDoc.is(Doc)) then
+      av.GetProject.AddDoc(theDoc)
+      theLCount = theLCount + 1
+    end
+    
+    if (theKeyList.Count = 1) then
+      if (theDoc.AsString <> NIL) then
+        theName = "''"+theDoc.AsString+"'' "
+      else
+        theName = "Object"
+      end
+      if (theLCount > 0) then
+        MsgBox.Info(theName+" imported.","")
+        av.showMsg("llll llll llll llll llll   llll llll llll    "+theName+" imported")
+      else
+        MsgBox.Info("Nothing imported.","")
+        av.showMsg("llll llll llll llll llll   llll llll llll    Imported nothing")
+      end
+    else
+      if (theLCount > 0) then
+        MsgBox.Info(theKeyList.Count.AsString+" Objects imported.","")
+        av.showMsg("llll llll llll llll llll   llll llll llll    "+theKeyList.Count.AsString+" Objects imported")
+      else
+        MsgBox.Info("Nothing imported.","")
+        av.showMsg("llll llll llll llll llll   llll llll llll    Imported nothing")
+      end
+    end      
+    return NIL
+  else
+'    msgbox.info(av.FindDoc(theObj.AsString).AsString+theObj.AsString,"")
+    if (av.FindDoc(theObj.AsString).AsString = theObj.AsString) then
+      MsgBox.Info("A document with the name '"+theObj.AsString+"' already exists. Enter "+
+                  "another name!","'"+theObj.AsString+"' already exists...")
+
+      theNDoc = MsgBox.Input( "Enter a name for ''"+theObj.AsString+"'':", "New "+
+                              "name for '"+theObj.AsString+"'", theObj.AsString+"_b" )
+      if ((theNDoc = NIL) or (theNDoc = "")) then
+        return NIL
+      end
+      theObj.SetName ( theNDoc )
+    end
+
+    if (theObj.is(Doc)) then
+      av.GetProject.AddDoc(theObj)
+      theLCount = theLCount + 1
+    end
+    if (theObj.GetName <> NIL) then
+      theName = "''"+theObj.GetName+"'' "
+    else
+      theName = "Objekt"
+    end
+    if (theLCount > 0) then
+      MsgBox.Info(theName+" imported.","")
+      av.showMsg("llll llll llll llll llll   llll llll llll    "+theName+" imported")
+    else
+      MsgBox.Info("Nothing imported.","")
+      av.showMsg("llll llll llll llll llll   llll llll llll    Imported nothing")
+    end
+    return NIL
+  end
+else
+  return NIL
+end
+
+
+theCheckList = list.make
+
+for each k in theDocList
+  theCheckList.Add(theDict.Get(k))
+end
+
+dd = 0
+
+for each i in theCheckList
+  t = theODB.Get(i)
+  if (t.GetClass.GetClassName = "DialogEditor") then
+    names = extension.GetExplicitExtensions
+    dd = 0
+    for each j in names.ReturnKeys
+      if (j = "Dialog Designer") then
+        dd = 1
+      end
+    end
+  end
+  if (dd = 1) then
+    extension.open("$AVEXT/dialog.avx".AsFileName)
+  end
+  if (av.FindDoc(t.AsString).AsString = t.AsString) then
+    MsgBox.Info("A document with the name  '"+t.AsString+"' already exists. Enter "+
+                "another name!","'"+t.AsString+"' already exists...")
+
+    theNDoc = MsgBox.Input( "Enter a name for ''"+t.AsString+"'':", "New "+
+                            "name for '"+t.AsString+"'", t.AsString+"_b" )
+    if ((theNDoc = NIL) or (theNDoc = "")) then
+      return NIL
+    end
+    t.SetName ( theNDoc )
+  end
+  if (t.is(Doc)) then
+    av.GetProject.AddDoc(t)
+    theLCount = theLCount + 1
+  end
+end
+
+theProject.SetModified(TRUE)
+
+if (theLCount = 1) then
+  theGram = "Object"
+else
+  theGram = "Objects"
+end
+
+MsgBox.Info("Imported "+theLCount.AsString++theGram,"")
+av.showMsg("llll llll llll llll llll   llll llll llll     Imported "+theLCount.AsString++theGram)
+
+'END OF SCRIPT
+
+

@@ -1,0 +1,89 @@
+'NAME:     LayoutBatchExport
+'DATE:     160801
+'AUTHOR:   Sebastian Hofer - shofer@gmx.de
+
+'DESCRIPTION:
+'LayoutBatchExport is for fast export of multiple Layouts out of a project into eps (new) or jpg.
+'Other formats will not be implemented by me. Feel Free to do it.
+'After selecting the export parameters (file type, resolution, compression) and the LayoutdDocs
+'the user is prompted to chose the export filenames by Dialog.
+'It is not necessary to open the Layouts in a window before of the export!
+
+' REQUIRES:   ---
+
+' LayoutBatchExport eignet sich zum schnellen Export von mehreren Layouts 
+' im selben Datenformat und mit den selben Parametern.
+' Meinen Bedürfnissen nach wird nur eps (new) und jpg unterstützt. Wer andere 
+' Formate unterstuetzen will darf die gerne einbauen. 
+' Es ist nicht noetig die zu exportierenden Layouts als Fenster zu oeffnen!
+
+
+theFormatL={"eps (New)", "jpg"}
+theFormatChoice=msgBox.ListAsString(theFormatL, "Choose the LayoutBatchExport format:", "LayoutBatchExport")
+if  (theFormatChoice=Nil) then return Nil
+elseif (theFormatChoice="eps (New)") then theShortFormat=3 
+  theResL={300,360,600,720}
+  theResolution=msgBox.ListAsString(theResL, "Choose the LayoutBatchExport resolution:", "LayoutBatchExport")
+if  (theResolution=Nil) then return Nil end
+elseif (theFormatChoice="jpg") then theShortFormat=9 
+  theResL={72,90,120,144}
+  theResolution=msgBox.ListAsString(theResL, "Choose the LayoutBatchExport resolution:", "LayoutBatchExport")
+if  (theResolution=Nil) then return Nil end
+  theCompressL={20,40,60,80,100}
+  theCompression=msgBox.ListAsString(theCompressL, "Choose the LayoutBatchExport compression (jpg):", "LayoutBatchExport")
+if  (theCompression=Nil) then return Nil end
+end
+theProject=av.GetProject
+theDocL=theProject.GetDocs
+theLayoutL={}
+for each theEntry in theDocL
+  if (theEntry.Is(Layout)) then
+    theLayoutL.Add(theEntry)
+  end
+end
+if (theLayoutL.Count=0) then
+  MsgBox.Error("No LayoutBatchExport possible. There are no Layouts to export. You have to create Layouts first!", "")
+  return nil
+else
+  theBatchLayoutL=MsgBox.MultiList(theLayoutL, "Choose the Layouts to be exported:", "LayoutBatchExport")
+  if (theBatchLayoutL=Nil) then 
+    return nil
+  end
+  while (theBatchLayoutL.Count=0) 
+    MsgBox.Error("No LayoutBatchExport possible. You must choose at least 1 Layout or press cancel to quit:", "")
+    theBatchLayoutL=MsgBox.MultiList(theLayoutL, "Choose the Layouts to be exported:", "LayoutBatchExport")
+    if (theBatchLayoutL=Nil) then
+      return nil
+    end
+  end
+end
+
+
+theFirstLayout=theBatchLayoutL.Get(0)
+theFirstLayout.GetWin.open
+theFormatL = theBatchLayoutL.Get(0).GetDisplay.ReturnExportFormats
+theFirstLayout.GetWin.close   '# Layout nach Export schliessen
+
+
+theFormat = theFormatL.Get(theShortFormat)  
+if (theShortFormat=3) then
+  theFileExt="eps"
+elseif (theShortFormat=9) then
+  theFileExt="jpg"
+end
+
+for each theBatchLayout in theBatchLayoutL
+  defaultFileName=FileName.Make(theBatchLayout.GetName +"."+theFileExt)
+  theFN=FileDialog.Put(defaultFileName, "*."+theFileExt, "Export «"+theBatchLayout.getName+"» to:" )
+
+  if (theFN=nil) then
+    return nil
+  end
+  if (theShortFormat=3) then
+    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution})
+  elseif (theShortFormat=9) then
+    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution,theCompression})
+  end
+end
+return nil
+

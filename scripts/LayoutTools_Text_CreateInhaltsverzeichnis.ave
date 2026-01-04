@@ -1,0 +1,128 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_CreateInhaltsverzeichnis.ave
+'# Author:       Adrian Boehlen
+'# Date:         09.11.2018
+'# Version:      0.3
+'#
+'# Purpose:      Erstellt ein Inhaltsverzeichnis
+'#
+'#########################################################################
+
+'# Defaultwerte einlesen
+av.Run("LayoutTools.Sub_DefaultValues", {})
+
+'# Variablen initialisieren
+
+farbeStr = ""
+titelFarbeStr = "2103545"          '# RGB-Wert der Titel
+titelFarbe = Color.Make
+titelFarbe.SetRGBList({210,35,45})
+theProject = av.GetProject
+theDocList = theProject.GetDocs
+theLayoutList = {}
+theStringList = {}
+
+for each theEntry in theDocList
+  if (theEntry.Is(Layout)) then
+    theLayoutList.Add(theEntry)
+  end
+end
+
+'########## Layout fuer Inhaltsverzeichnis festlegen ##########
+
+if (theLayoutList.Count=0) then
+  MsgBox.Error("There are no Layouts. You have to create Layouts first!", "")
+  return nil
+else
+  inhaltseite=MsgBox.List(theLayoutList, "Layout fuer Inhaltsverzeichnis festlegen:", "Inhaltsverzeichnis")
+  if (inhaltseite = nil) then 
+    return nil
+  end
+end
+
+'tbd bestehender Inhalt loeschen
+'theGraphicsList = inhaltseite.GetGraphics
+'for each theGraphic in theGraphicsList
+'  theGraphicsList.RemoveGraphic(theGraphic)
+'end
+'inhaltseite.Invalidate
+
+'########## Titelinformationen ermitteln ##########
+
+for each theLayout in theLayoutList
+  for each g in theLayout.GetGraphics
+    symb = g.GetSymbol
+    if (symb = nil) then
+      continue
+    end
+    rgb = symb.GetColor.GetRGBList
+    for each farbe in rgb
+      farbeStr = farbeStr + farbe.AsString
+    end
+    if (farbeStr = titelFarbeStr) then
+      g.SetSelected(TRUE)
+      theString = g.GetText
+      theStringList.Add(theString)
+    end
+    farbeStr = ""
+  end
+  theGraphicsList = theLayout.GetGraphics
+  theGraphicsList.UnselectAll
+  theLayout.GetDisplay.Invalidate(true)
+end
+
+'########## Geometrie von Inhaltseite ermitteln ##########
+
+_theLayout = inhaltseite
+thePageDisplay = _theLayout.GetDisplay
+recMargin = thePageDisplay.ReturnMarginExtent
+theOrigin = recMargin.ReturnOrigin
+xOriginLeft = theOrigin.GetX
+xOriginRight = xOriginLeft + recMargin.GetWidth
+yOriginBottom = theOrigin.GetY
+yOriginTop = yOriginBottom + recMargin.GetHeight
+
+'########## Schriften definieren ##########
+
+theSizeTitle = 22
+theSizeText = 10
+schwarz = Color.GetBlack
+textFont = Font.Make (_schriftart, _schriftschnitt)
+
+'########## Seitentitel platzieren ##########
+
+textString = "Inhaltsverzeichnis"
+textOrigin = (xOriginLeft + 0.01)@(yOriginTop - 0.5)
+textSize = theSizeTitle
+textColor = titelFarbe
+
+av.Run("LayoutTools.Sub_PlaceText", {textFont, textString, textOrigin, textColor, textSize})
+
+'########## Inhaltsverzeichnis aufbauen ##########
+
+i = 0
+zeile = 0.6
+zeilenabst = 0.2
+for each theString in theStringList
+  i = i + 1
+  '# Nummer
+  if (i Mod 2 <> 0) then
+    zeile = zeile + zeilenabst
+    textString = theString
+    textOrigin = (xOriginLeft + 0.01)@(yOriginTop - zeile)
+    textSize = theSizeText
+    textColor = schwarz
+    av.Run("LayoutTools.Sub_PlaceText", {textFont, textString, textOrigin, textColor, textSize})
+  '# zugehoeriger Titel
+  else
+    textString = theString
+    textOrigin = (xOriginLeft + 0.6)@(yOriginTop - zeile)
+    textSize = theSizeText
+    textColor = schwarz
+    av.Run("LayoutTools.Sub_PlaceText", {textFont, textString, textOrigin, textColor, textSize})
+  end
+end
+
+_theLayout.Invalidate
+

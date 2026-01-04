@@ -1,0 +1,94 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_InsertText.ave
+'# Author:       Adrian Boehlen
+'# Date:         10.09.2017
+'# Version:      0.6
+'#
+'# Purpose:      Basiert auf Layout.Text mit folgenden Erweiterungen:
+'#               - Standardschrift wird vordefiniert
+'#               - der Nullpunkt ist oben statt unten, wenn bestehender
+'#                 Text editiert wird
+'#               Einschraenkungen:
+'#               - wenn Text editiert werden soll, muss das Textobjekt
+'#                 selektiert sein
+'#               - funktioniert nur mit Flattersatz linksbuendig und
+'#                 Standard-Zeilenabstand 1.0
+'#
+'#               erfordert:
+'#               - LayoutTools.Sub_DefaultValues
+'#               - LayoutTools.Sub_ReturnColor
+'#
+'#########################################################################
+
+theLayout = av.GetActiveDoc
+theGraphicList = theLayout.GetGraphics
+if (theGraphicList.HasSelected = TRUE) then
+  theSelected = theGraphicList.GetSelected.Get(0)
+  '# urspruengliche Hoehe der Textbox bestimmen, sofern vorhanden
+  theOriY = theSelected.GetExtent.GetY
+end
+
+av.Run("LayoutTools.Sub_DefaultValues", {})   '# Defaultwerte einlesen
+
+CPC = av.FindDialog("Graphic.Label Defaults")
+IconList = CPC.FindByName("CalloutIcons")
+thePrefs = IconList.GetObjectTag.Get("Ttool1")
+
+thePrefs.Set(0, _schriftart)
+thePrefs.Set(1, _schriftschnitt)
+thePrefs.Set(2, _schriftgroesse)
+
+      '(0) Font Family    (String) 
+      '(1) Font Style     (String)
+      '(2) Font Size      (Number)
+      '(3) Font Color     (String)
+      '(10) UseDefFont    (Boolean)
+
+CFont =      thePrefs.Get(0)
+CStyle =     thePrefs.Get(1)
+CSize =      thePrefs.Get(2)
+UseDef =     thePrefs.Get(10)
+if (thePrefs.Get(3) = "Unnamed Color") then
+  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor
+else 
+  CColor = av.Run("LayoutTools.Sub_ReturnColor",thePrefs.Get(3))
+end
+
+'# neues Textobjekt platzieren
+if (theLayout.GetGraphics.EditText.Not) then
+  pt = theLayout.GetDisplay.ReturnUserPoint
+  theGraphicText = GraphicText.Make("", pt)
+  theGraphicText.SetDisplay(theLayout.GetDisplay)
+  theLayout.GetGraphics.UnselectAll
+  theGraphicText.SetSelected(TRUE)
+  if (theGraphicText.EditText) then
+    theLayout.GetGraphics.AddName(theGraphicText)
+    av.GetProject.SetModified(TRUE)
+  end
+  theString = theGraphicText.GetText
+  theGraphicText.GetSymbol.SetFont(Font.make(CFont,CStyle))
+  theGraphicText.GetSymbol.SetSize(CSize)
+  theGraphicText.GetSymbol.SetColor(CColor)
+  
+'# bestehendes Textobjekt editieren
+else
+  if (theGraphicList.HasSelected = FALSE) then
+    MsgBox.Warning("Please select a text object","")
+    return nil
+  end 
+  theSelected = theGraphicList.GetSelected.Get(0)
+  theString = theSelected.GetText
+  CColor = theSelected.ReturnSymbols.Get(0).GetColor
+  CSize = theSelected.ReturnSymbols.Get(0).GetSize
+  theOrigin = theSelected.GetOrigin
+  theNewY = theSelected.GetExtent.GetY  '# Hoehe der editierten Textbox bestimmen
+  theOrigin = theOrigin.GetX@(theOrigin.GetY - (theNewY - theOriY))
+  theGraphicList.RemoveGraphic(theSelected)
+  theGraphicText = GraphicText.Make (theString, theOrigin) 
+  theSymbol = theGraphicText.ReturnSymbols.Get (0)
+  theSymbol.SetColor(CColor)
+  theSymbol.SetFont(Font.make(CFont,CStyle))
+  theSymbol.SetSize(CSize) 
+  theLayout.GetGraphics.Add (theGraphicText)  
+end

@@ -1,0 +1,6 @@
+' Reservierte Farben
+' ------------------
+'
+' 240,40,200  - Hilfslinien
+' 255,255,255 - Hilfslinien unsichtbar
+' 1,1,1       - Kopf- und Fusszeilen

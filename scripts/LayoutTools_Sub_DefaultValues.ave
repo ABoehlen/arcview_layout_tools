@@ -1,0 +1,27 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools.Sub_DefaultValues.ave
+'# Author:       Adrian Boehlen
+'# Date:         09.11.2018
+'# Version:      0.3
+'#
+'# Purpose:      legt Defaultwerte fest
+'#
+'#########################################################################
+
+_abstList =         5                '# Abstand zwischen Aufzaehlungszeichen und Text
+_autor =            "Adrian Böhlen"
+_breiteTextbl =     125
+_bullet =           150              '# ASCII-Code fuer Halbgeviertstrich
+_groesseFusszeile = 8
+_groesseKopfzeile = 14
+_schriftart =       "DejaVu Sans"
+_schriftgroesse =   10
+_schriftschnitt =   "Condensed"
+_seitenhoehe =      297
+_seitenbreite =     210
+_schwarzT =         "Black"
+_schwarzC =         Color.GetBlack
+_schwarzHF =        Color.Make       '# Farbe fuer Header/Footer
+_schwarzHF.SetRGBList({1,1,1})
+

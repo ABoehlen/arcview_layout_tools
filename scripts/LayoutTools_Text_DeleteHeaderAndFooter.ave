@@ -1,0 +1,52 @@
+'###########################################################################
+'#
+'# Filename:     LayoutTools_DeleteHeaderAndFooter.ave
+'# Author:       Adrian Boehlen
+'# Date:         19.12.2017
+'# Version:      0.1
+'#
+'# Purpose:      loescht durch HeaderAndFooterOne und -Many
+'#               erzeugte Kopf- und Fusszeilen
+'#
+'###########################################################################
+
+theProject=av.GetProject
+theDocL=theProject.GetDocs
+theLayoutL={}
+for each theEntry in theDocL
+  if (theEntry.Is(Layout)) then
+    theLayoutL.Add(theEntry)
+  end
+end
+theBatchLayoutL=MsgBox.MultiList(theLayoutL, "Choose layout(s):", "Delete Header and Footer")
+if (theBatchLayoutL=Nil) then 
+  return nil
+end
+while (theBatchLayoutL.Count=0) 
+  MsgBox.Error("Please choose one oder more layout(s)"+NL+"Cancel for abort", "")
+  theBatchLayoutL=MsgBox.MultiList(theLayoutL, "Choose layout(s):", "Turn Rulers Off")
+  if (theBatchLayoutL=Nil) then
+    return nil
+  end
+end
+
+for each theLayout in theBatchLayoutL
+  farbeStr = ""
+  farbeHF_Str = "111"    '# RGB-Wert der Kopf- und Fusszeilen...
+
+  for each g in theLayout.GetGraphics
+    symb = g.GetSymbol
+    rgb = symb.GetColor.GetRGBList
+    for each farbe in rgb
+      farbeStr = farbeStr + farbe.AsString
+    end
+    if (farbeStr = farbeHF_Str) then
+      g.SetSelected(TRUE)
+    end
+    farbeStr = ""
+  end
+
+  theGraphicsList = theLayout.GetGraphics
+  theGraphicsList.ClearSelected
+  theLayout.GetDisplay.Invalidate(true)
+end

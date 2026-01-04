@@ -1,0 +1,3 @@
+theExt = Extension.GetExtensions.Get("Label & Text Tools")
+SELF.SetEnabled(theExt <> nil)
+

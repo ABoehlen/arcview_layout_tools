@@ -1,0 +1,1322 @@
+/3.2
+(Extension.1
+	Name:	"LayoutTools"
+	Dependencies:	"$AVBIN/avdlog.dll\n"
+	FirstRootClassName:	"Butn"
+	Roots:	2
+	Roots:	4
+	Roots:	72
+	Roots:	82
+	Roots:	83
+	Roots:	84
+	Roots:	85
+	Roots:	86
+	Roots:	87
+	Roots:	88
+	Roots:	89
+	Roots:	90
+	Roots:	91
+	Roots:	92
+	Roots:	93
+	Roots:	94
+	Roots:	95
+	Roots:	96
+	Roots:	97
+	Roots:	98
+	Roots:	99
+	Roots:	100
+	Roots:	101
+	Roots:	102
+	Roots:	103
+	Roots:	104
+	Roots:	105
+	Roots:	106
+	Roots:	107
+	Roots:	108
+	Roots:	109
+	Roots:	110
+	Roots:	111
+	Roots:	112
+	Roots:	113
+	Roots:	114
+	Roots:	115
+	Roots:	116
+	Roots:	117
+	Roots:	118
+	Roots:	119
+	Roots:	120
+	Roots:	121
+	Roots:	122
+	Roots:	123
+	Roots:	124
+	Roots:	125
+	Roots:	126
+	Roots:	127
+	Version:	32
+	About:	"LayoutTools Toolbar (v2.1) "
+	UnloadScript:	128
+	InstallScript:	129
+	UninstallScript:	130
+	ExtVersion:	1
+)
+
+(Butn.2
+	Help:	"Starts LayoutTools toolbar//"
+	HelpTopic:	" "
+	Icon:	3
+	Click:	"LayoutTools.start"
+)
+
+(AVIcon.3
+	Name:	"L"
+	Res:	"Icons.L"
+
+)
+
+(AVDLog.4
+	Name:	"LayoutTools"
+	X:	556
+	Y:	343
+	W:	465
+	H:	40
+	ConstrainedControlNames:	5
+	ConstrainedControlNames:	6
+	ConstrainedControlNames:	7
+	ConstrainedControlNames:	8
+	ConstrainedControlNames:	9
+	ConstrainedControlNames:	10
+	ConstrainedControlNames:	11
+	ConstrainedControlNames:	12
+	ConstrainedControlNames:	13
+	ConstrainedControlNames:	14
+	ConstrainedControlNames:	15
+	ConstrainedControlNames:	16
+	Constraints:	17
+	Constraints:	18
+	Constraints:	19
+	Constraints:	20
+	Constraints:	21
+	Constraints:	22
+	Constraints:	23
+	Constraints:	24
+	Constraints:	25
+	Constraints:	26
+	Constraints:	27
+	Constraints:	28
+	Server:	29
+	ControlPanel:	30
+	Title:	"Layout Tools"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	71
+)
+
+(AVStr.5
+	S:	"Close"
+)
+
+(AVStr.6
+	S:	"UnselectAll"
+)
+
+(AVStr.7
+	S:	"BatchExport"
+)
+
+(AVStr.8
+	S:	"UndoZoom"
+)
+
+(AVStr.9
+	S:	"SetQuality"
+)
+
+(AVStr.10
+	S:	"Refresh"
+)
+
+(AVStr.11
+	S:	"GraphicTable"
+)
+
+(AVStr.12
+	S:	"Measure"
+)
+
+(AVStr.13
+	S:	"DrawRulers"
+)
+
+(AVStr.14
+	S:	"footnote"
+)
+
+(AVStr.15
+	S:	"PlaceText"
+)
+
+(AVStr.16
+	S:	"Select"
+)
+
+(Numb.17
+	N:	85.00000000000000
+)
+
+(Numb.18
+	N:	85.00000000000000
+)
+
+(Numb.19
+	N:	85.00000000000000
+)
+
+(Numb.20
+	N:	85.00000000000000
+)
+
+(Numb.21
+	N:	85.00000000000000
+)
+
+(Numb.22
+	N:	85.00000000000000
+)
+
+(Numb.23
+	N:	85.00000000000000
+)
+
+(Numb.24
+	N:	85.00000000000000
+)
+
+(Numb.25
+	N:	85.00000000000000
+)
+
+(Numb.26
+	N:	85.00000000000000
+)
+
+(Numb.27
+	N:	85.00000000000000
+)
+
+(Numb.28
+	N:	85.00000000000000
+)
+
+(Nil.29
+)
+
+(CPanel.30
+	Child:	31
+	ResBox:	70
+	Listening:	1
+)
+
+(CPanel.31
+	InternalName:	"aControlPanel5"
+	Child:	32
+	Child:	34
+	Child:	36
+	Child:	37
+	Child:	39
+	Child:	41
+	Child:	43
+	Child:	45
+	Child:	47
+	Child:	49
+	Child:	51
+	Child:	53
+	Child:	55
+	Constraints:	0x55
+	ResBox:	57
+	ResBox:	58
+	ResBox:	59
+	ResBox:	60
+	ResBox:	61
+	ResBox:	62
+	ResBox:	63
+	ResBox:	64
+	ResBox:	65
+	ResBox:	66
+	ResBox:	67
+	ResBox:	68
+	ResBox:	69
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.32
+	InternalName:	"UnselectAll"
+	Help:	"Unselect all selected graphic elements//"
+	Icon:	33
+	Click:	"LayoutTools.Sel_UnselectAll"
+)
+
+(AVIcon.33
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(Butn.34
+	InternalName:	"BatchExport"
+	Help:	"Export one or many layouts//"
+	Icon:	35
+	Click:	"LayoutTools.ImpExp_BatchExport"
+)
+
+(AVIcon.35
+	Name:	"export.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	01540000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 00000000 00000000 
+	Data:	000000c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	0000c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 00c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c00000c0 c0c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00c00000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00c0c0c0 c0c0c0c0 c0c0c0c0 c00000c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 0000c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	00000000 00000000 000000c0 c0c0c0c0 
+	Data:	c0c00000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(LButn.36
+	InternalName:	"Close"
+	Help:	"Close Utilities toolbar//"
+	Label:	"Close"
+	Click:	"LayoutTools.General_Close"
+)
+
+(Butn.37
+	InternalName:	"UndoZoom"
+	Help:	"Zoom to previous extent//"
+	Icon:	38
+	Click:	"LayoutTools.View_UndoZoom"
+)
+
+(AVIcon.38
+	Name:	"ZoomPrevious"
+	Res:	"Icons.ZoomPrevious"
+
+)
+
+(Butn.39
+	InternalName:	"SetQuality"
+	Help:	"Change the drawing quality of all images from 'draft' to 'presentation' or the other way round//"
+	Icon:	40
+	Click:	"LayoutTools.View_SetQuality"
+)
+
+(AVIcon.40
+	Name:	"Frame"
+	Res:	"Icons.Frame"
+
+)
+
+(Tool.41
+	InternalName:	"GraphicTable"
+	Help:	"Place table in layout//"
+	Icon:	42
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.General_GraphicTable"
+)
+
+(AVIcon.42
+	Name:	"Table"
+	Res:	"Icons.Table"
+
+)
+
+(Butn.43
+	InternalName:	"Refresh"
+	Help:	"Refresh Layout//"
+	Icon:	44
+	Click:	"LayoutTools.View_RefreshLayout"
+)
+
+(AVIcon.44
+	Name:	"R"
+	Res:	"Icons.R"
+
+)
+
+(Tool.45
+	InternalName:	"Measure"
+	Help:	"Measure distance//"
+	Icon:	46
+	Cursor:	"Cursors.Measure"
+	Apply:	"LayoutTools.General_Measure"
+)
+
+(AVIcon.46
+	Name:	"Measure"
+	Res:	"Icons.Measure"
+
+)
+
+(Tool.47
+	InternalName:	"DrawRulers"
+	Help:	"Click: Draw a horizontal line at the clickpoint\nShift-Click: Draw a vertical line at the clickpoint\n//"
+	Icon:	48
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.Guides_DrawGuides"
+)
+
+(AVIcon.48
+	Name:	"draw_horizontal_and_vertical_lines.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d000d0d0 
+	Data:	d000d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d000d0d0 d000d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Tool.49
+	InternalName:	"footnote"
+	Help:	"Insert footnote//"
+	Icon:	50
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.Text_Footnote"
+)
+
+(AVIcon.50
+	Name:	"footnote.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00d0d000 d0d000d0 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 0000d000 d000d0d0 
+	Data:	00d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 00000000 00d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Tool.51
+	InternalName:	"PlaceText"
+	Help:	"Insert text manually//"
+	Update:	"LayoutTools.UpdateText"
+	Icon:	52
+	Cursor:	"Cursors.Text"
+	Apply:	"LayoutTools.Text_InsertText"
+	Click:	"LayoutTools.DisplayFontPanel"
+)
+
+(AVIcon.52
+	Name:	"Text"
+	Res:	"Icons.Text"
+
+)
+
+(Tool.53
+	InternalName:	"Select"
+	Help:	"Select features//"
+	Icon:	54
+	Cursor:	"Cursors.Select"
+	Apply:	"LayoutTools.Sel_Select"
+	Click:	"LayoutTools.Sel_SelectTool"
+)
+
+(AVIcon.54
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(TextLine.55
+	InternalName:	"EnterCommand"
+	Label:	" "
+	Constraints:	0x55
+	Listening:	1
+	TextType:	56
+	Apply:	"LayoutTools.EnterCommand"
+	NextControl:	29
+)
+
+(AVEnum.56
+	Name:	"TEXTLINE_TYPE_ALL"
+)
+
+(RectD.57
+	Left:	33.00000000000000
+	Top:	29.00000000000000
+	Right:	57.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.58
+	Left:	277.00000000000000
+	Top:	29.00000000000000
+	Right:	301.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.59
+	Left:	408.00000000000000
+	Top:	29.00000000000000
+	Right:	453.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.60
+	Left:	251.00000000000000
+	Top:	29.00000000000000
+	Right:	275.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.61
+	Left:	115.00000000000000
+	Top:	29.00000000000000
+	Right:	139.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.62
+	Left:	59.00000000000000
+	Top:	29.00000000000000
+	Right:	84.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.63
+	Left:	225.00000000000000
+	Top:	29.00000000000000
+	Right:	249.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.64
+	Left:	198.00000000000000
+	Top:	29.00000000000000
+	Right:	223.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.65
+	Left:	170.00000000000000
+	Top:	29.00000000000000
+	Right:	195.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.66
+	Left:	142.00000000000000
+	Top:	29.00000000000000
+	Right:	167.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.67
+	Left:	87.00000000000000
+	Top:	29.00000000000000
+	Right:	112.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.68
+	Left:	5.00000000000000
+	Top:	29.00000000000000
+	Right:	30.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.69
+	Left:	301.00000000000000
+	Top:	27.00000000000000
+	Right:	400.00000000000000
+	Bottom:	7.00000000000000
+)
+
+(RectD.70
+	Left:	5.00000000000000
+	Top:	38.00000000000000
+	Right:	464.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(Nil.71
+)
+
+(AVDLog.72
+	Name:	"Satzspiegel"
+	X:	388
+	Y:	366
+	W:	282
+	H:	248
+	ConstrainedControlNames:	73
+	Constraints:	74
+	Server:	75
+	ControlPanel:	76
+	Title:	"Recommended margins"
+	EscapeEnabled:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	81
+)
+
+(AVStr.73
+	S:	"Close"
+)
+
+(Numb.74
+	N:	85.00000000000000
+)
+
+(Nil.75
+)
+
+(CPanel.76
+	Child:	77
+	Child:	78
+	ResBox:	79
+	ResBox:	80
+	Listening:	1
+)
+
+(TextBox.77
+	InternalName:	"output"
+	Listening:	1
+	ReadOnly:	1
+	Text:	"Left Page (Recta)\nTop:          15\nBottom:     18\nLeft:          12\nRight:        16\n\nRight Page (Versa)\nTop:          15\nBottom:     18\nLeft:          16\nRight:        12\n"
+	Constraints:	0x55
+	NextControl:	75
+)
+
+(LButn.78
+	InternalName:	"Close"
+	Label:	"Close"
+	Click:	"LayoutTools.General_Close"
+)
+
+(RectD.79
+	Left:	12.00000000000000
+	Top:	201.00000000000000
+	Right:	266.00000000000000
+	Bottom:	9.00000000000000
+)
+
+(RectD.80
+	Left:	143.00000000000000
+	Top:	241.00000000000000
+	Right:	263.00000000000000
+	Bottom:	211.00000000000000
+)
+
+(Nil.81
+)
+
+(Script.82
+	Name:	"___LayoutTools.DefaultFont"
+	SourceCode:	"'##########################################################\n'#\n'# Filename:     LayoutTools_DefaultFont.ave\n'# Author:       Adrian Boehlen\n'# Date:         24.01.2016\n'# Version:      0.1\n'#\n'# Purpose:      Definition globaler Variablen\n'#               fuer die Standardschrift\n'#\n'##########################################################\n\n_defFont =    \"DejaVu Sans\"\n_defSchnitt = \"Condensed\"\n_defColor =   Color.GetBlack"
+)
+
+(Script.83
+	Name:	"___LayoutTools.Sub_DefaultValues"
+	SourceCode:	"'##############################################################################\n'#\n'# Filename:     LayoutTools_Sub_DefaultValues.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.3\n'#\n'# Purpose:      legt Defaultwerte fest und speichert sie in globalen Variablen\n'#\n'##############################################################################\n\n_abstList =         5                '# Abstand zwischen Aufzaehlungszeichen und Text\n_autor =            \"Adrian Böhlen\"  '# Dies
+er Name erscheint in der Fusszeile\n_breiteTextbl =     125\n_bullet =           150              '# ASCII-Code fuer Halbgeviertstrich\n_groesseFusszeile = 8\n_groesseKopfzeile = 14\n_schriftart =       \"DejaVu Sans\"\n_schriftgroesse =   10\n_schriftschnitt =   \"Condensed\"\n_seitenhoehe =      297\n_seitenbreite =     210\n_schwarzT =         \"Black\"\n_schwarzC =         Color.GetBlack\n_schwarzHF =        Color.Make\n_schwarzHF.SetRGBList({1,1,1})\n"
+)
+
+(Script.84
+	Name:	"___LayoutTools.Sub_mm2inch"
+	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_mm2inch.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.10.2022\n'# Version:      0.1\n'#\n'# Purpose:      rechnet den eingegebenen mm-Wert in inches um\n'#               und liefert ihn zurueck\n'#\n'######################################################################\n\nmm = Self.Get(0)\n  \nreturn mm * 0.0393700787"
+)
+
+(Script.85
+	Name:	"___LayoutTools.UpdateText"
+	SourceCode:	"theExt = Extension.GetExtensions.Get(\"Label & Text Tools\")\nSELF.SetEnabled(theExt <> nil)\n"
+)
+
+(Script.86
+	Name:	"LayoutTools.DisplayFontPanel"
+	SourceCode:	"if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FONT)\nend"
+)
+
+(Script.87
+	Name:	"LayoutTools.EnterCommand"
+	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Enter_command.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      loest diverse Funktionen durch Kommandos aus\n'#\n'#               erfordert \n'#               - LayoutTools.Sub_Documentation\n'#               - alle Tools, die ueber Kommandos aufgerufen werden\n'#\n'###########################################################################\n\n\n'# Einle
+sen der globalen Variablen fuer die Hilfeseiten\n\nav.Run(\"LayoutTools.Sub_Documentation\", _uebersicht)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpnew)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpcopy)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpdelhd)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpdels)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpfi)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpfis)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpgo)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpgom)\nav.Run(\"
+LayoutTools.Sub_Documentation\", _helpgf)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpgfm)\nav.Run(\"LayoutTools.Sub_Documentation\", _helphd)\nav.Run(\"LayoutTools.Sub_Documentation\", _helphdm)\nav.Run(\"LayoutTools.Sub_Documentation\", _helplytimp)\nav.Run(\"LayoutTools.Sub_Documentation\", _helplytexp)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpmrg)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpmx)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpmy)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpoli)\nav.Run(\"LayoutTool
+s.Sub_Documentation\", _helpolis)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpregm)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpselall)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpti)\nav.Run(\"LayoutTools.Sub_Documentation\", _helptis)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpuli)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpulis)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpunselall)\n\n\n_command = Self.GetDialog.FindByName(\"EnterCommand\").GetText\nSelf.SetText(\"\")\n\n'########## execute functions #########
+#\n\n'# New\nif (_command = \"new\") then\n  av.Run(\"LayoutTools.General_NewLayout\", {})\nelseif (_command = \"help new\") then\n  MsgBox.Report(_helpnew,\"Help new\")\n  \n'# Margin recommendations\nelseif (_command = \"mrg\") then\n  av.Run(\"LayoutTools.General_Satzspiegel\", {})\nelseif (_command = \"help mrg\") then\n  MsgBox.Report(_helpmrg,\"Help mrg\")\n\n'# Copy\nelseif (_command = \"cp\") then\n  av.Run(\"LayoutTools.General_CopyLayout\", {})\nelseif (_command = \"help cp\") then\n  MsgBox.Report(_helpcopy,\"Help cp\")\n\n'# Guide lines\ne
+lseif (_command = \"go\") then\n  av.Run(\"LayoutTools.Guides_TurnGuidesOnOff\", {\"one\", \"on\"})\nelseif (_command = \"help go\") then\n  MsgBox.Report(_helpgo,\"Help go\")\nelseif (_command = \"gf\") then\n  av.Run(\"LayoutTools.Guides_TurnGuidesOnOff\", {\"one\", \"off\"})\nelseif (_command = \"help gf\") then\n  MsgBox.Report(_helpgf,\"Help gf\")\nelseif (_command = \"gom\") then\n  av.Run(\"LayoutTools.Guides_TurnGuidesOnOff\", {\"many\", \"on\"})\nelseif (_command = \"help gom\") then\n  MsgBox.Report(_helpgom,\"Help gom\")\nelseif (_command = \"g
+fm\") then\n  av.Run(\"LayoutTools.Guides_TurnGuidesOnOff\", {\"many\", \"off\"})\nelseif (_command = \"help gfm\") then\n  MsgBox.Report(_helpgfm,\"Help gfm\")\n\n'# Header and Footer\nelseif (_command = \"hd\") then\n  av.Run(\"LayoutTools.Text_HeaderAndFooter\", \"one\")\nelseif (_command = \"help hd\") then\n  MsgBox.Report(_helphd,\"Help hd\")\nelseif (_command = \"hdm\") then\n  av.Run(\"LayoutTools.Text_HeaderAndFooter\", \"many\")\nelseif (_command = \"help hdm\") then\n  MsgBox.Report(_helphdm,\"Help hdm\")\nelseif (_command = \"delhd\") then\n 
+ av.Run(\"LayoutTools.Text_DeleteHeaderAndFooter\", {})\nelseif (_command = \"help delhd\") then\n  MsgBox.Report(_helpdelhd, \"Help delhd\")\n  \n'# Import and Export\nelseif (_command = \"lytimp\") then\n  av.Run(\"LayoutTools.ImpExp_LoadODB\", {})\nelseif (_command = \"help lytimp\") then\n  MsgBox.Report(_helplytimp,\"Help lytimp\")\nelseif (_command = \"lytexp\") then\n  av.Run(\"LayoutTools.ImpExp_CreateODB\", {})\nelseif (_command = \"help lytexp\") then\n  MsgBox.Report(_helplytexp,\"Help lytexp\")\n  \n'# Import Text\nelseif ((_comman
+d = \"fi\") or (_command = \"fis\")) then\n  av.Run(\"LayoutTools.Text_ImportText\", {})\nelseif (_command = \"help fi\") then\n  MsgBox.Report(_helpfi,\"Help fi\")\nelseif (_command = \"help fis\") then\n  MsgBox.Report(_helpfis,\"Help fis\")\nelseif ((_command = \"ol\") or (_command = \"ols\")) then\n  av.Run(\"LayoutTools.Text_ImportText\", {})\nelseif (_command = \"help ol\") then\n  MsgBox.Report(_helpoli,\"Help ol\")\nelseif (_command = \"help ols\") then\n  MsgBox.Report(_helpolis,\"Help ols\")\nelseif ((_command = \"ul\") or (_command = \"ul
+s\")) then\n  av.Run(\"LayoutTools.Text_ImportText\", {})\nelseif (_command = \"help ul\") then\n  MsgBox.Report(_helpuli,\"Help ui\")\nelseif (_command = \"help uls\") then\n  MsgBox.Report(_helpulis,\"Help uls\")\nelseif ((_command = \"ti\") or (_command = \"tis\")) then\n  av.Run(\"LayoutTools.Text_ImportText\", {})\nelseif (_command = \"help ti\") then\n  MsgBox.Report(_helpti,\"Help ti\")\nelseif (_command = \"help tis\") then\n  MsgBox.Report(_helptis,\"Help tis\")\n\n'# Registration marks\nelseif (_command = \"regm\") then\n  av.Run(\"LayoutT
+ools.General_MakeRegistrationMarks\", {})\nelseif (_command = \"help regm\") then\n  MsgBox.Report(_helpregm,\"Help regm\")\n  \n'# Select and delete elements\nelseif (_command = \"selall\") then\n  av.Run(\"LayoutTools.Sel_SelectAll\", {})\nelseif (_command = \"help selall\") then\n  MsgBox.Report(_helpselall, \"Help selall\")\nelseif (_command = \"unselall\") then\n  av.Run(\"LayoutTools.Sel_UnselectAll\", {})\nelseif (_command = \"help unselall\") then\n  MsgBox.Report(_helpunselall, \"Help unselall\")\nelseif (_command = \"dels\") then\n  
+av.Run(\"LayoutTools.Sel_Delete\", {})\nelseif (_command = \"help dels\") then\n  MsgBox.Report(_helpdels, \"Help dels\")\n\n  \n'# Move features\nelseif (_command.Left(2) = \"mx\") then\n  av.Run(\"LayoutTools.General_MoveFeature\", {})\nelseif (_command = \"help mx\") then\n  MsgBox.Report(_helpmx, \"Help mx\")\nelseif (_command.Left(2) = \"my\") then\n  av.Run(\"LayoutTools.General_MoveFeature\", {})\nelseif (_command = \"help my\") then\n  MsgBox.Report(_helpmy, \"Help my\")\n  \n'# Help / Misc\nelseif (_command = \"wd\") then\n  av.Run(\"Layou
+tTools.General_SetWorkingDirectory\", {})\nelseif (_command = \"def\") then\n  av.Run(\"LayoutTools.General_SetDefaultValues\", {})\nelseif ((_command = \"help\") or (_command = \"h\")) then\n  MsgBox.Report(_uebersicht,\"\")\nelseif (_command = \"zoomex\") then\n  av.Run(\"LayoutTools.View_ZoomToExportview\", {})\nelseif ((_command = \"quit\") or (_command = \"exit\")) then\n  self.GetDialog.Close\nelseif (_command = nil) then\n  return nil\nelse\n  MsgBox.Warning(\"Command not found. Please try again.\",\"Command not found\")\nend"
+)
+
+(Script.88
+	Name:	"LayoutTools.General_Close"
+	SourceCode:	"self.GetDialog.Close"
+)
+
+(Script.89
+	Name:	"LayoutTools.General_CopyLayout"
+	SourceCode:	"'Copies a Layout and renames it...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  4/6/1999\n\n'Gets the Layout...\nmyProj = av.GetProject\nsomeLayouts = myProj.GetDocswithGui(av.FindGui(\"Layout\"))\naLayoutChoice = MsgBox.ChoiceAsString( someLayouts, \"Choose a Layout to copy:\", \"Copy Layout\")\nif (aLayoutChoice = nil) then\n  return nil\nend\ntheLayout = myProj.FindDoc( alayoutChoice.AsString )\n\n'Copies the Layout and renames it...\nnewLayoutName = MsgBox.Input( \"Enter a new name for the layout:\", \"New Layout Name\",
+ \"New Layout\" )\nif (newLayoutName = nil) then   'Cancels if the there is no Layout name\n  return nil\nend\nif (av.FindDoc(newLayoutName).AsString = newLayoutName.AsString) then\n  'Cancels if the Layout name already exists\n  MsgBox.Error(\"That layout name already exists! Press the Copy Layout button again...\",\"Layout Already Exists\")\n  return nil\nelse\n  newLayout = theLayout.Clone\n  newLayout.SetName ( newLayoutName )\n  myProj.AddDoc ( newLayout )\n  newLayout.GetWin.Open\nend\n"
+)
+
+(Script.90
+	Name:	"LayoutTools.General_GraphicTable"
+	SourceCode:	"' Name:   Layout.GraphicTable\n' Title:  Places a Graphic of the table you specify into a layout\n'\n' Topics : Layouts\n' Version: 3.0a.02\n' Source : ArcView Sample scripts\n' Changed: 07-30-98\n' By     : Rob Buurman\n'          rbuurman@isis.nl\n'          ISIS BENELUX\n'          \n'\n' Description:  Use the tool with this script attached as the \n' apply event to drag a rectangle in a layout.  You will be prompted\n' to choose which table you want to make the representation of \n' and which fields to show.\n' When th
+e table has an selection, you will be asked if you want to display\n' only the selected records. You can bypass this question by pressing the\n' shift-key when you drag the rectangle in a layout.\n' The script will populatate rows with cell values of those fields until the \n' bottom of the rectangle you specified is reached.\n' If you choose more fields than would fit within the width of the rectangle,\n' those will be included.\n'\n' This script gets around several annoying limitations in ArcView's\n' TableFrame g
+raphic:\n' \n' 1) With this script you can make a table that is wider than 80\n'    text columns. (Great for landscape docs).\n' 2) You change the font of this table.\n' 3) Since this table is graphicgroup, you can ungroup it and\n'    change the symbols for individual parts.\n' 4) This table will always print correctly - on some printers\n'    printing directly from the table doc & from table frames,\n'    there were gross formating errors\n' 5) You can resize this table and the text just gets resized,\n'    rather t
+han including more data like the tableframe does.\n' \n' This script cannot produce the representation of the table if\n' it is sorted - you will get the unsorted version.  Additionally,\n' since this representation is just a dumb graphic, it does not\n' automatically update itself in any way, shape, or form.\n'\n' Additionally, you can use the symbol window to change the button \n' color by using the foreground, change the table background by using\n' the background color, or change the text and outline color as we
+ll.\n' If you want to highlight a particular column, ungroup the graphic\n' table and then you can select the column by clicking on its border,\n' then change its background color or text color by using background\n' or text from the color palette.\n'\n' Requires:  Place this script as the apply event for a tool in \n' your Layout GUI.  There must be at least one table document in \n' the current project.\n'\n' Self:  \n'\n' Returns:  \n\ntheLayout = av.GetActiveDoc\ngl = theLayout.GetGraphics\nbRect = theLayout.ReturnUser
+Rect\nif (bRect.GetWidth < 0.1) then\n  return nil\nend\n\nif (System.IsShiftKeyDown) then\n  SelectedOnly = true\nelse\n  SelectedOnly = false\nend\n\nTableDocNames = {}\nfor each d in av.GetProject.GetDocs\n  if(d.Is(Table)) then\n    TableDocNames.Add(d.GetName)\n  end\nend\n\nif (TableDocNames.Count = 0) then\n  Msgbox.Error(\"You must have a table document in the Project\",\"Buh!\")\n  return nil\nend\ngl.UnSelectAll\n\nTableName = Msgbox.ChoiceAsString(TableDocNames,\"Choose a table:\",\"Smart Table\")\nif (TableName = nil) then\n  re
+turn nil\nend\n\ntheTable = av.GetProject.FindDoc(TableName)\ntheVTab = theTable.GetVTab\ntheFieldNames = {}\nfor each f in theVTab.GetFields\n  if (f.IsTypeShape.Not) then\n    theFieldNames.Add(f.GetAlias)\n  end\nend\n\n\nFieldsToShow = Msgbox.MultiListAsString(theFieldNames,\"Choose the Fields to Show\",\"Smart Table\")\nif (FieldsToShow = nil) then return nil end\nif (FieldsToShow.Count = 0) then\n  return nil\nend\n\n  if (SelectedOnly) then\n    theBitmap = theVTab.GetSelection\n  else\n    theBitmap = theVTab.GetDefBitmap\n  
+  if (theVTab.GetSelection.Count <> 0) then\n      if (Msgbox.YesNo(\"Use only the selected records\",\"Smart Table\", true)) then\n        theBitmap = theVTab.GetSelection\n      end\n    end\n  end\n\n' Background color for field names\nbc = Color.Make\nbc.SetRGBList({255,255,225})\nftbf = RasterFill.Make\nftbf.SetStyle(#RASTERFILL_STYLE_SOLID)\nftbf.SetColor(bc)\n\nbRectO = bRect.ReturnOrigin\nbRectH = bRect.GetHeight\nbRectW = bRect.GetWidth\nbRectT = bRect.GetTop\nbrectB = bRect.GetBottom\nbRectR = bRect.GetRight\nHeightLeft 
+= bRect.GetHeight\n\ntbo = bRectO + (0@bRectH)\ncspace = 0\n\nfor each f in FieldsToShow\n  \n  'Make Field Title\n  fl = GraphicText.Make(f,(tbo +(0.1@0)) )\n  fl.GetSymbol.SetSize(12)\n  fl.SetDisplay(theLayout.GetDisplay)\n  tbo = tbo - (0@(fl.GetBounds.GetHeight + 0.05))\n  fl.SetSelected(true)\n  \n  gl.AddBatch(fl)\n  HeightLeft = HeightLeft - fl.GetBounds.GetHeight - 0.05\n  HbarHeight = HeightLeft\n\n  \n  'Now do the column of values\n  counter = -1\n  ColStr = \"\"\n  vst = GraphicText.Make(ColStr,(0@0))\n  vst.SetDisplay
+(theLayout.GetDisplay)\n  vst.GetSymbol.SetSize(10)\n  While (HeightLeft <> 0)\n    rec = theBitmap.GetNextSet(counter)\n    counter = rec\n    ValStr = theVTab.ReturnValueString(theVTab.FindField(f),rec)\n    ColStr = ColStr + ValStr\n    vst.SetText(ColStr)\n    'Check to see if column has exceeded Height\n    if (HeightLeft < vst.GetBounds.GetHeight) then\n      HeightLeft = 0\n    end \n    if (theBitmap.GetNextSet(counter) = -1) then\n      HeightLeft = 0\n    end\n    ColStr = ColStr + nl\n  end\n  \n  vst.SetOrigin(tb
+o - (0@(vst.getBounds.GetHeight)) )\n  \n  'Check to see if the Column is wider than the Title\n  if (fl.GetBounds.GetWidth > vst.GetBounds.GetWidth) then\n    'Title is wider, so move column\n    if (theVTab.FindField(f).IsTypeNumber) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_RIGHT)\n      vst.GetBounds.Move((fl.GetBounds.GetWidth - vst.GetBounds.GetWidth + 0.1),0.1)\n      gl.AddBatch(vst)\n    elseif(theVTab.FindField(f).IsTypeString) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n      vst.GetBounds.
+Move(0.1,0.1)\n      gl.AddBatch(vst)\n    end  \n  else\n    'Column is wider so move  & justify title\n    if (theVTab.FindField(f).IsTypeNumber) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_RIGHT)\n      vst.GetBounds.Move(0.1, 0.1)\n      gl.AddBatch(vst)\n    elseif (theVTab.FindField(f).IsTypeString) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n      vst.GetBounds.Move(0.1, 0.1)\n      gl.AddBatch(vst)\n    end    \n    fl.GetBounds.Move( ( (vst.GetBounds.GetWidth - fl.GetBounds.GetWidth) /2 ) ,0)\n  en
+d  \n  vst.SetSelected(true)\n  \n  cbr = gl.ReturnSelectedExtent.clone\n  cbr.ExpandBy(0.05)\n  cbp = GraphicShape.Make(cbr)\n  cbp.GetSymbol.SetOLWidth(0.1)\n  gl.AddBatch(cbp)\n  cbp.SetSelected(true)  \n  gl.GroupSelected\n  gl.GetSelected.Get(0).SetObjectTag(\"col\")\n  cspace = cspace + gl.ReturnSelectedExtent.GetWidth  \n  gl.UnSelectAll\n  HeightLeft = bRectH\n  tbo = bRectO + (cspace@bRectH)\nend\n\n\nfor each g in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\nend\n\nse = gl.ReturnSelectedExtent\nseO = se.ReturnOrig
+in\nftr = Rect.Make(SeO + (0@(se.GetHeight - 0.275)),(se.GetWidth@0.275))\n\ncoltits = {}\nfor each g in gl.FindAllByObjectTag(\"col\")\n  colTitleRect = ftr.IntersectWith(g.GetBounds.Clone)\n  coltits.Add(colTitleRect)\n  g.SetSelected(false)\nend\ntc = Color.Make\ntc.SetTransParent(true)\n\n\n\n\nfor each ftr in coltits\n  bp = ftr.Clone.InsetBy(0.0125)\n  bpd = Polygon.Make({{ftr.ReturnOrigin,(ftr.GetRight@ftr.GetBottom),(ftr.GetRight@ftr.GetTop),(bp.GetRight@bp.GetTop),(bp.GetLeft@bp.GetBottom),ftr.ReturnOrigin}})\n  bpl =
+ Polygon.Make({{ftr.ReturnOrigin,(bp.ReturnOrigin),(bp.GetRight@bp.GetTop),(ftr.GetRight@ftr.GetTop),(ftr.GetLeft@ftr.GetTop),ftr.ReturnOrigin}})\n  gbp = GraphicShape.Make(bp)\n  gbpd = GraphicShape.Make(bpd)\n  gbpl = GraphicShape.Make(bpl)\n  gbp.SetSymbol(ftbf.Clone)\n  gbpd.SetSymbol(ftbf.Clone)\n  gbpl.SetSymbol(ftbf.Clone)\n  lg = Color.Make\n  lg.SetRGBList({220,220,220})\n  dg = Color.Make\n  dg.SetRGBList({120,120,120})\n  gbpd.GetSymbol.SetColor(dg.Clone)\n  gbpl.GetSymbol.SetColor(lg.Clone)\n  gbpl.GetSymbol
+.SetOLWidth(0)\n  gbpd.GetSymbol.SetOLWidth(0)\n  gbpl.GetSymbol.SetColorLock(true)\n  gbpd.GetSymbol.SetColorLock(true)\n  gbp.GetSymbol.SetOLWidth(0)\n  gbpl.GetSymbol.SetOLColor(tc.Clone)\n  gbpd.GetSymbol.SetOLColor(tc.Clone)\n  gbp.GetSymbol.SetOLColor(tc.Clone)\n  gl.AddBatch(gbpd)\n  gl.AddBatch(gbpl)\n  gl.AddBatch(gbp)\n  gbpd.SetSelected(true)\n  gbpl.SetSelected(true)\n  gbp.SetSelected(True)\nend\ngl.GroupSelected\ngl.MoveSelectedToBack\ngl.GetSelected.Get(0).SetObjectTag(\"buttons\")\ngl.UnSelectAll  \n\nfor each g 
+in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\n  gl.MoveSelectedToFront\nend\ngl.FindByObjectTag(\"buttons\").SetSelected(true)\n\nNeatRect = gl.ReturnSelectedExtent.Clone\nnrgs = GraphicShape.Make(NeatRect)\nnrgs.GetSymbol.SetOLWidth(0.6)\ntheLayout.GetGraphics.AddBatch(nrgs)\n\ngl.UnSelectAll\n\nbp = GraphicShape.Make(NeatRect)\nbw = Color.GetWhite\nbpf = RasterFill.Make\nbpf.SetStyle(#RASTERFILL_STYLE_OPAQUESTIPPLE)\nbp.SetSymbol(bpf)\nbp.GetSymbol.SetColor(tc.Clone)\nbp.GetSymbol.SetBGColor(Color.GetWhite)\ntheLayou
+t.GetGraphics.AddBatch(bp)\nbp.SetSelected(True)\ngl.MoveSelectedToBack\n\nfor each g in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\nend\ngl.FindByObjectTag(\"buttons\").SetSelected(true)\nnrgs.SetSelected(true)\ngl.GroupSelected\n\n\ntheLayout.GetGraphics.EndBatch\n"
+)
+
+(Script.91
+	Name:	"LayoutTools.General_MakeRegistrationMarks"
+	SourceCode:	"'##################################################################\n'#  Name:          Layout.MakeRegistrationMarks\n'#  Author:        Adam Hyer\n'#                 ashyer@syr.edu, ashyer@hotmail.com\n'#\n'#  Date Written:  2.24.99\n'#\n'#  Description:   Puts registration marks on a layout for printing.\n'#                 This is intended for plotters when you need to\n'#                 make the page size larger in order to show the \n'#                 entire layout.  The registration marks allow you\n'#        
+         to cut paper to it's originally intended page\n'#                 size.\n'#\n'#  Instructions:  Add a new button to the active layout add this\n'#                 script to the new button's click property.  Click\n'#                 the button when you want to add the marks and\n'#                 specify the desired dimensions for the marks.\n'#\n'#  Revision:      A.Boehlen 27/11/2022\n'#\n'##################################################################\n\ntheLayout = av.GetActiveDoc  \n\nif (theLayout.Is(l
+ayout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\nh=MsgBox.Input(\"Enter the page height in mm:\",\" \",_defaultValues.Get(\"seitenhoehe\").AsString)\nif (h = nil) then\n  return nil\nend\nw=MsgBox.Input(\"Enter the page width in mm:\",\" \",_defaultValues.Get(\"seitenbreite\").AsString)\nif (w = nil) then\n  return nil\nend\nheight=h.AsNumber * 0.03937    ' converts mm to inches\nwidth=w.AsNumber * 0.03937     ' converts mm to inches\n\nd = av.GetActiveDoc.GetDisplay\nr = d.ReturnP
+ageExtent\nrc = r.ReturnCenter\nlf = rc.GetX-(width/2)\nrt = rc.GetX+(width/2)\ntp = rc.GetY+(height/2)\nbm = rc.GetY-(height/2)\nlfL = lf-0.2\nlfR = lf-0.02 \nrtL = rt+0.02\nrtR = rt+0.2\ntpU = tp+0.2\ntpD = tp+0.02\nbmU = bm-0.02\nbmD = bm-0.2\n\naPen = BasicPen.Make\naPen.SetColor(Color.GetBlack)\naPen.SetSize(1)\n\nTL1 = Line.Make( lf@tpU, lf@tpD)\nTL2 = Line.Make( lfL@tp, lfR@tp)\nTR1 = Line.Make( rt@tpU, rt@tpD)\nTR2 = Line.Make( rtL@tp, rtR@tp)\nBL1 = Line.Make( lf@bmU, lf@bmD)\nBL2 = Line.Make( lfL@bm, lfR@bm)\nBR1 = Line.M
+ake( rt@bmU, rt@bmD)\nBR2 = Line.Make( rtL@bm, rtR@bm)\n\ngTL1 = GraphicShape.Make(TL1)\ngTL1.SetSymbol(aPen)\ngTL2 = GraphicShape.Make(TL2)\ngTL2.SetSymbol(aPen)\ngTR1 = GraphicShape.Make(TR1)\ngTR1.SetSymbol(aPen)\ngTR2 = GraphicShape.Make(TR2)\ngTR2.SetSymbol(aPen)\ngBL1 = GraphicShape.Make(BL1)\ngBL1.SetSymbol(aPen)\ngBL2 = GraphicShape.Make(BL2)\ngBL2.SetSymbol(aPen)\ngBR1 = GraphicShape.Make(BR1)\ngBR1.SetSymbol(aPen)\ngBR2 = GraphicShape.Make(BR2)\ngBR2.SetSymbol(aPen)\n\ntheLayout.GetGraphics.UnselectAll\ngTL1.SetSelect
+ed(TRUE)\ngTL2.SetSelected(TRUE)\ngTR1.SetSelected(TRUE)\ngTR2.SetSelected(TRUE)\ngBL1.SetSelected(TRUE)\ngBL2.SetSelected(TRUE)\ngBR1.SetSelected(TRUE)\ngBR2.SetSelected(TRUE)\n\ntheLayout.GetGraphics.Add(gTL1)\ntheLayout.GetGraphics.Add(gTL2)\ntheLayout.GetGraphics.Add(gTR1)\ntheLayout.GetGraphics.Add(gTR2)\ntheLayout.GetGraphics.Add(gBL1)\ntheLayout.GetGraphics.Add(gBL2)\ntheLayout.GetGraphics.Add(gBR1)\ntheLayout.GetGraphics.Add(gBR2)\nav.GetProject.SetModified(TRUE)\n\n"
+)
+
+(Script.92
+	Name:	"LayoutTools.General_Measure"
+	SourceCode:	"theLayout = av.GetActiveDoc\np = theLayout.ReturnUserPolyLine"
+)
+
+(Script.93
+	Name:	"LayoutTools.General_MoveFeature"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_MoveFeature.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.08.2017\n'# Version:      1.0\n'#\n'# Purpose:      verschiebt die selektierten Features um den eingegeben\n'#               Wert in mm\n'#               Das Kommando wird mit mx (move x) oder my (move y)\n'#               ausgeloest\n'#\n'#########################################################################\n\ntheLayout = av.GetActi
+veDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\nwert = _command.Middle(2,5)\nwert = wert.AsNumber\nwert = wert / 25.4     '# mm to inch\ntheGraphicList = theLayout.GetGraphics\nif (theGraphicList.HasSelected = TRUE) then\n  for each theSelected in theGraphicList.GetSelected\n    theOrigin = theSelected.GetOrigin\n    theX = theOrigin.GetX\n    theY = theOrigin.GetY\n    if (_command.Left(2) = \"mx\") then\n      theX = theX + wert\n    else\n    
+  theY = theY + wert\n    end\n    theSelected.SetOrigin(theX@theY)\n  end\nend\n\ntheLayout.Invalidate\n\n"
+)
+
+(Script.94
+	Name:	"LayoutTools.General_NewLayout"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_NewLayout.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.10.2022\n'# Version:      1.0\n'#\n'# Purpose:      erstellt ein neues Layout-Dokument\n'#               Parameter koennen ueber den Dialog eingegeben oder\n'#               Standardwerte uebernommen werden\n'#               Default: A4 hoch\n'#\n'#########################################################################\n\n'# Variablen ini
+tialisieren\n\nparam = MsgBox.MultiInput(\"\",\"Define the Layout's Parameters\",\n{\"Name                                  :\",\n \"Width (mm)                        :\",\n \"Hight (mm)                          :\",\n \"Margin left/right (mm)          :\",\n \"Margin top/bottom (mm)      :\",\n \"Grid spacing horizontal (mm):\",\n \"Grid spacing vertical (mm)   :\"},\n{\"01\", \"210\", \"297\", \"15\", \"18\", \"2\", \"5\"})\n\nif (param.Count = 0) then\n  MsgBox.Warning(\"Cancel Pressed: No Data Entered\", \"Canceling the Dialog\")\n  return nil\nend\n\nthe
+Project =   av.GetProject\ntheLayout =    Layout.Make\ntheLayout.SetName(param.Get(0))\ntheLayoutDpy = theLayout.GetDisplay\ntheLayoutGL =  theLayout.GetGraphics\n\n'# convert millimeters to inches\nlaenge =       param.Get(1).AsNumber / 25.4\nbreite =       param.Get(2).AsNumber / 25.4\neinzug_seite = param.Get(3).AsNumber / 25.4\neinzug_hoehe = param.Get(4).AsNumber / 25.4\ngitter_h =     param.Get(5).AsNumber / 25.4\ngitter_b =     param.Get(6).AsNumber / 25.4\n\nPageManager.GetUnits(#PAGEMANAGER_SIZE_A4)\n\n'# Paramete
+r setzen\nmarginRect = Rect.MakeXY(einzug_seite, einzug_hoehe, einzug_seite, einzug_hoehe)\ntheLayoutDpy.SetUsingPrinterPageSize(false)\ntheLayoutDpy.SetUsingPrinterMargins(false)\ntheLayoutDpy.SetUnits(#UNITS_LINEAR_MILLIMETERS)\ntheLayoutDpy.SetMargin(marginRect)\ntheLayoutDpy.SetMarginVisible(true)\ntheLayoutDpy.SetPageSize(Point.Make(laenge, breite))\ntheLayoutDpy.SetGridActive(false)\ntheLayoutDpy.SetGridVisible(true)\ntheLayoutDpy.SetGridMesh(Point.Make(gitter_h, gitter_b))\n\n'# Dokument oeffnen\ntheLayoutWin = t
+heLayout.GetWin\ntheLayoutWin.Open\ntheLayoutDpy.ZoomToPage\n"
+)
+
+(Script.95
+	Name:	"LayoutTools.General_Satzspiegel"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_Satzspiegel.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      - Script macht Vorschlaege zur Groesse des Satzspiegels\n'#                 anhand der angegebenen Seitengroesse.\n'#               - Es koennen Satzspiegel fuer Doppelseiten und Einzelseiten\n'#                 berechnet werden.\n'#               - Die vorgeschlagenen Raender muesse
+n manuell in den \n'#                 entsprechenden Dialog eingegeben werden.\n'#               - frei nach buchsatz-fuer-selfpublisher.de\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\n'########## Benutzereingaben aufnehmen ##########\n\nseitentypListe = {\"Single Page\", \"Double Page\"}\n\nseitentyp = MsgBox.ListAsString(seitentypListe,\"D
+efine page type (single / double)\",\"Page type\")\nif (seitentyp = nil) then\n  return nil\nend\n\nsatzspiegelListe = {\"small\", \"medium\", \"big\"}\n\nsatzspiegelGr = MsgBox.ListAsString(satzspiegelListe,\"Define margins in general\",\"Margins\")\nif (satzspiegelGr = nil) then\n  return nil\nend\n\nif (seitentyp = \"Double Page\") then\n  abm = MsgBox.MultiInput(\"\",\"Dimensions of one page\",\n  {\"Width (mm)        :\",\n   \"Hight (mm)         :\"},\n  {_defaultValues.Get(\"seitenbreite\").AsString, _defaultValues.Get(\"seitenhoehe\").AsStri
+ng})\n\n\nelseif (seitentyp = \"Single Page\") then\n  abm = MsgBox.MultiInput(\"\",\"Dimensions of the page\",\n  {\"Width (mm)        :\",\n   \"Hight (mm)         :\"},\n  {_defaultValues.Get(\"seitenbreite\").AsString, _defaultValues.Get(\"seitenhoehe\").AsString})\n \nelse\n  MsgBox.Warning(\"Wrong page type\",\"\")\n  return nil\nend\n\nif (abm.Count = 0) then\n  MsgBox.Warning(\"Cancel Pressed: No Data Entered\", \"Canceling the Dialog\")\n  return nil\nend\n\n'########## Satzspiegel berechnen ##########\n\nif (satzspiegelGr = \"small\") then\n 
+ faktor = 4\nelseif (satzspiegelGr = \"medium\") then\n  faktor = 8\nelseif (satzspiegelGr = \"big\") then\n  faktor = 16\nelse\n  MsgBox.Warning(\"Wrong margins\",\"\")\n  return nil\nend\n\nbreite =  abm.Get(0).AsNumber\nhoehe =   abm.Get(1).AsNumber\n\nif ((breite = 0) or (hoehe = 0)) then\n  MsgBox.Warning(\"Either width or heigth must not be 0\", \"Canceling the Dialog\")\n  return nil\nend \n\n'# Berechnung fuer Doppelseite und Einzelseite vornehmen\n\nif (seitentyp = \"Double Page\") then\n  breiteSpiegel =  (breite * 0.62) + (breite 
+/ faktor)\n  weissHoriz =     breite - breiteSpiegel\n  stegAussen_t =   weissHoriz * 0.62\n  stegAussen =     stegAussen_t - (breite / 40)\n  stegBund =       (weissHoriz - stegAussen_t) + (breite / 40)\n\n  hoeheSpiegel =   breiteSpiegel * (hoehe / breite)\n  weissVert =      hoehe - hoeheSpiegel\n  stegFuss_t =     weissVert * 0.62\n  stegFuss =       (weissVert * 0.62) - (hoehe / 47.5)\n  stegKopf =       weissVert - stegFuss_t\n  \n  satzspAusg = \n  \"Left Page (Recta)\"+NL+\n  \"Top:          \" + stegKopf.SetFormat(\"
+d\").AsString +NL+\n  \"Bottom:     \" + stegFuss.SetFormat(\"d\").AsString +NL+\n  \"Left:          \" + stegAussen.SetFormat(\"d\").AsString +NL+\n  \"Right:        \" + stegBund.SetFormat(\"d\").AsString +NL+NL+\n  \"Right Page (Versa)\"+NL+\n  \"Top:          \" + stegKopf.SetFormat(\"d\").AsString +NL+\n  \"Bottom:     \" + stegFuss.SetFormat(\"d\").AsString +NL+\n  \"Left:          \" + stegBund.SetFormat(\"d\").AsString +NL+\n  \"Right:        \" + stegAussen.SetFormat(\"d\").AsString +NL\n\nelseif (seitentyp = \"Single Page\") then\n  breiteS
+piegel =  (breite * 0.62) + (breite / faktor)\n  stegAussen =     (breite - breiteSpiegel) / 2\n\n  hoeheSpiegel =   breiteSpiegel * (hoehe / breite)\n  weissVert =      hoehe - hoeheSpiegel\n  stegFuss_t =     weissVert * 0.62\n  stegFuss =       (weissVert * 0.62) - (hoehe / 47.5)\n  stegKopf =       weissVert - stegFuss_t\n  \n  satzspAusg = \n  \"Single Page\"+NL+NL+\n  \"Top:          \" + stegKopf.SetFormat(\"d\").AsString +NL+\n  \"Bottom:     \" + stegFuss.SetFormat(\"d\").AsString +NL+\n  \"Left:          \" + stegAussen.S
+etFormat(\"d\").AsString +NL+\n  \"Right:        \" + stegAussen.SetFormat(\"d\").AsString +NL\n\nelse\n  MsgBox.Warning(\"Fehler\",\"\")\n  return nil\nend\n\n'########## Ausgabe ##########\n\n'# Dialog zur Ausgabe oeffnen\noutDlg = av.GetProject.FindDialog(\"Satzspiegel\")\noutTextfld = outDlg.FindByName(\"output\")\noutTextfld.SetText(satzspAusg)\noutDlg.Open\n\n'# Standarddialog Page Setup oeffnen\nPageSetupDialog.Show(theLayout.GetDisplay)\n"
+)
+
+(Script.96
+	Name:	"LayoutTools.General_SetDefaultValues"
+	SourceCode:	"'##############################################################################\n'#\n'# Filename:     LayoutTools_General_SetDefaultValues.ave\n'# Author:       Adrian Boehlen\n'# Date:         31.01.2023\n'# Version:      1.2\n'#\n'# Purpose:      liest Defaultwerte aus default_values.dbf ein und speichert\n'#               sie im globalen Dictionary _defaultValues\n'#\n'#               wird auch im Editor verwendet\n'#\n'##############################################################################\n\nif (_defaultValue
+s = nil) then\n  theVTab = av.Run(\"LayoutTools.Sub_ReadTable\", {\"Select Default Values Table\"})\nelse\n  return nil\nend\n\nif (theVTab = nil) then\n  MsgBox.Warning(\"No default values defined. Use 'def' to define them later.\", \"No default values\")\n  return nil\nend\n\n\ntheFields = theVTab.GetFields\n\n_defaultValues = Dictionary.Make(2)\n\nfor each rec in theVTab\n  for each feld in theFields\n    if (feld.AsString = \"Key\") then\n      theKey = theVTab.ReturnValue(feld, rec)\n    elseif (feld.AsString = \"Value\") then\n      
+theValue = theVTab.ReturnValue(feld, rec)\n      if (theValue.IsNumber) then\n        theValue = theValue.AsNumber\n      end\n    else\n      MsgBox.Error(\"Wrong table structure. Please select the default values table.\", \"\")\n      return nil\n    end\n  end\n  _defaultValues.Add(theKey, theValue)\nend\n\n_schwarzC =         Color.GetBlack\n_schwarzHF =        Color.Make\n_schwarzHF.SetRGBList({1,1,1})\n"
+)
+
+(Script.97
+	Name:	"LayoutTools.General_SetWorkingDirectory"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_SetWorkingDirectory.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Alternativ-Script zum standardmaessigen Dialog zum \n'#               Festlegen des Arbeitsverzeichnisses. Im Gegensatz\n'#               zu diesem kann das Verzeichnis im Dialog ausgewaehlt\n'#               und braucht nicht eingetippt zu werden.\n'#\n'######################
+###################################################\n\ntheProject = av.GetProject\n\nnewDir = FileDialog.Put(\"   Select directory - not files\".AsFileName, \"*\",\"Set Working Directory \")\nif (newDir = nil) then\n  return nil\nend\n\nnewDir = newDir.ReturnDir\ntheProject.SetWorkDir(newDir)\n"
+)
+
+(Script.98
+	Name:	"LayoutTools.Guides_DrawGuides"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Guides_DrawGuides.ave\n'# Author:       Adrian Boehlen\n'# Date:         04.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Zieht horizontale und vertikale Hilfslinien am Clickpunkt\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc  \n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this tool from an active Layout.\",\"\")\n  return nil\nend\n
+\n'# Layout-Geometrie ermitteln\nthePageDisplay = av.GetActiveDoc.GetDisplay\nrecMargin = thePageDisplay.ReturnMarginExtent\ntheOrigin = recMargin.ReturnOrigin\nxOriginLeft = theOrigin.GetX\nxOriginRight = xOriginLeft + recMargin.GetWidth\nyOriginBottom = theOrigin.GetY\nyOriginTop = yOriginBottom + recMargin.GetHeight\n\nif (System.IsShiftKeyDown) then\n  '# vertikale Linie aus Clickpunkt ableiten\n  pt = theLayout.GetDisplay.ReturnUserPoint\n\n  xU = pt.GetX\n  yU = yOriginTop + 1\n  xD = pt.GetX\n  yD = yOriginBottom - 1
+\n\n  '# Strichstil definieren\n  thePen = BasicPen.Make\n  theColor = Color.Make\n  theColor.SetRGBList({240,40,200})\n  thePen.SetColor(theColor)\n  thePen.SetSize(0.5)\n\n  '# Linie zeichnen\n  theLine = Line.Make( xU@yU, xD@yD)\n  theGraphicLine = GraphicShape.Make(theLine)\n  theGraphicLine.SetSymbol(thePen)\n\n  theLayout.GetGraphics.UnselectAll\n  theGraphicLine.SetSelected(TRUE)\n  theLayout.GetGraphics.Add(theGraphicLine)\n  av.GetProject.SetModified(TRUE)\n  \nelse\n  '# horizontale Linie aus Clickpunkt ableiten\n  pt
+ = theLayout.GetDisplay.ReturnUserPoint\n\n  xL = xOriginLeft - 1\n  yL = pt.GetY\n  xR = xOriginRight + 1\n  yR = pt.GetY\n\n  '# Strichstil definieren\n  thePen = BasicPen.Make\n  theColor = Color.Make\n  theColor.SetRGBList({240,40,200})\n  thePen.SetColor(theColor)\n  thePen.SetSize(0.5)\n\n  '# Linie zeichnen\n  theLine = Line.Make( xL@yL, xR@yR)\n  theGraphicLine = GraphicShape.Make(theLine)\n  theGraphicLine.SetSymbol(thePen)\n\n  theLayout.GetGraphics.UnselectAll\n  theGraphicLine.SetSelected(TRUE)\n  theLayout.GetGraph
+ics.Add(theGraphicLine)\n  av.GetProject.SetModified(TRUE)\nend\n"
+)
+
+(Script.99
+	Name:	"LayoutTools.Guides_TurnGuidesOnOff"
+	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Guides_TurnGuidesOnOff.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      schaltet durch DrawGuides erzeugte Hilfslinien fuer\n'#               das aktive oder mehrere Layouts ein oder aus\n'#\n'###########################################################################\n\n'# Variablen uebernehmen\nanz = Self.Get(0)\nonoff = Self.Get(1)\n\n'# mehrere oder 
+ein Layout definieren\nif (anz = \"many\") then\n  theProject = av.GetProject\n  theDocL = theProject.GetDocs\n  theLayoutL = {}\n  for each theEntry in theDocL\n    if (theEntry.Is(Layout)) then\n      theLayoutL.Add(theEntry)\n    end\n  end\n  theBatchLayoutL = MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Turn Rulers Off\")\n  if (theBatchLayoutL = nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count = 0) \n    MsgBox.Error(\"Please choose one oder more layout(s)\"+NL+\"Cancel for abort\", \"\")\n    theBatchL
+ayoutL=MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Turn Rulers Off\")\n    if (theBatchLayoutL = nil) then\n      return nil\n    end\n  end\nelse\n  theLayout = av.GetActiveDoc\n  if (theLayout.Is(layout).Not) then\n    MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n    return nil\n  else\n    theBatchLayoutL = {theLayout}\n  end\nend\n\n'# Farbe fuer Hilfslinie und weiss festlegen und vorhandene Linien entsprechend aendern\nfor each theLayout in theBatchLayoutL\n  farbeStr = \"\"\n  hilfslFarbeStr = \"24
+040200\"          '# RGB-Wert der Hilfslinie...\n  hilfslFarbe = Color.Make\n  hilfslFarbe.SetRGBList({240,40,200}) '# ...gemaess Definition in DrawRulers\n  weissStr = \"255255255\"\n  weiss = Color.Make\n  weiss.SetRGBList({255,255,255})      '# RGB weiss\n\n  for each g in theLayout.GetGraphics\n    if (g.Is(GraphicGroup).Not) then\n      symb = g.GetSymbol\n      rgb = symb.GetColor.GetRGBList\n      for each farbe in rgb\n        farbeStr = farbeStr + farbe.AsString '# RGB-String bilden\n      end\n      if (onoff = \"o
+n\") then\n        if (farbeStr = weissStr) then\n          g.SetSelected(TRUE)\n          g.GetSymbol.SetColor(hilfslFarbe)\n        end\n      else\n        if (farbeStr = hilfslFarbeStr) then\n          g.SetSelected(TRUE)\n          g.GetSymbol.SetColor(weiss)\n        end\n      end\n    farbeStr = \"\"\n    end\n  end\n  theGraphicsList = theLayout.GetGraphics\n  theGraphicsList.MoveSelectedToBack\n  theGraphicsList.UnselectAll\n  theLayout.GetDisplay.Invalidate(true)\nend\n"
+)
+
+(Script.100
+	Name:	"LayoutTools.ImpExp_BatchExport"
+	SourceCode:	"'NAME:     LayoutBatchExport\n'DATE:     160801\n'AUTHOR:   Sebastian Hofer - shofer@gmx.de\n\n'REVISION: Adrian Boehlen, 20200731\n\n'DESCRIPTION:\n'LayoutBatchExport is for fast export of multiple Layouts out of a project into eps (new) or jpg.\n'Other formats will not be implemented by me. Feel Free to do it.\n'After selecting the export parameters (file type, resolution, compression) and the LayoutdDocs\n'the user is prompted to chose the export filenames by Dialog.\n'It is not necessary to open the Layouts in a w
+indow before of the export!\n\n' REQUIRES:   ---\n\n' LayoutBatchExport eignet sich zum schnellen Export von mehreren Layouts \n' im selben Datenformat und mit den selben Parametern.\n' Meinen Bedürfnissen nach wird nur eps (new) und jpg unterstützt. Wer andere \n' Formate unterstuetzen will darf die gerne einbauen. \n' Es ist nicht noetig die zu exportierenden Layouts als Fenster zu oeffnen!\n\n\ntheFormatL={\"eps (New)\", \"jpg\"}\ntheFormatChoice=msgBox.ListAsString(theFormatL, \"Choose the LayoutBatchExport format:\", \"L
+ayoutBatchExport\")\nif  (theFormatChoice=Nil) then return Nil\nelseif (theFormatChoice=\"eps (New)\") then theShortFormat=3 \n  theResL={300,360,600,720,900}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif  (theResolution=Nil) then return Nil end\nelseif (theFormatChoice=\"jpg\") then theShortFormat=9 \n  theResL={72,90,120,144,200,300,600}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif 
+ (theResolution=Nil) then return Nil end\n  theCompressL={20,40,60,80,100}\n  theCompression=msgBox.ListAsString(theCompressL, \"Choose the LayoutBatchExport compression (jpg):\", \"LayoutBatchExport\")\nif  (theCompression=Nil) then return Nil end\nend\ntheProject=av.GetProject\ntheDocL=theProject.GetDocs\ntheLayoutL={}\nfor each theEntry in theDocL\n  if (theEntry.Is(Layout)) then\n    theLayoutL.Add(theEntry)\n  end\nend\nif (theLayoutL.Count=0) then\n  MsgBox.Error(\"No LayoutBatchExport possible. There are no Layouts to 
+export. You have to create Layouts first!\", \"\")\n  return nil\nelse\n  theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n  if (theBatchLayoutL=Nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count=0) \n    MsgBox.Error(\"No LayoutBatchExport possible. You must choose at least 1 Layout or press cancel to quit:\", \"\")\n    theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n    if (theBatchLayoutL=Nil) 
+then\n      return nil\n    end\n  end\nend\n\n\ntheFirstLayout=theBatchLayoutL.Get(0)\ntheFirstLayout.GetWin.open\ntheFormatL = theBatchLayoutL.Get(0).GetDisplay.ReturnExportFormats\ntheFirstLayout.GetWin.close   '# Layout nach Export schliessen\n\n\ntheFormat = theFormatL.Get(theShortFormat)  \nif (theShortFormat=3) then\n  theFileExt=\"eps\"\nelseif (theShortFormat=9) then\n  theFileExt=\"jpg\"\nend\n\nfor each theBatchLayout in theBatchLayoutL\n  defaultFileName=FileName.Make(theBatchLayout.GetName +\".\"+theFileExt)\n  theFN=File
+Dialog.Put(defaultFileName, \"*.\"+theFileExt, \"Export «\"+theBatchLayout.getName+\"» to:\" )\n\n  if (theFN=nil) then\n    return nil\n  end\n  if (theShortFormat=3) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution})\n  elseif (theShortFormat=9) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution,theCompression})\n  end\nend\nreturn nil\n"
+)
+
+(Script.101
+	Name:	"LayoutTools.ImpExp_CreateODB"
+	SourceCode:	"\n' NAME: mm_docODBCreate\n\n' HERKUNFT: Harald (neu auf Grundlage von FSA)\n\n' EINBINDUNG MTOOLS: Menueeintrag im Projektmenue (Label: Dokumentauswahl exportieren (ODB))\n\n' HILFE: Oeffnet eine Auswahlliste zur Speicherung von Dokumenten in einem einzelnen ODB-File  (s. STRG-Klick Info)\n\n'*******************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =  \" \"+nl+\n    \n    \"SCRIPTNAME: 
+   mm_DocODBCreate \"+nl+nl+\n  \n    \"ORIGIN:   Harald (new on FSA Basis). \"+nl+nl+\n    \n    \"Opens a MultiList to write the selected documents to a single ODB file.\"+nl+nl+\n    \n    \"The dependencies of the project (as e.g. extensions) will be listet to annotate them \"+\n    \"in the ODB if desired. In this case they are loaded automatically when the ODB is imported into a blanc project. \"+\n    \"If you don't feel safe upon what extensions your ODB is dependent, it is advisable, to add all obligatory \"+\n    \"ex
+tensions of the project at least (find them labeld with ''- fix -'' in the dialog box or with a transparent \"+\n    \"check in the extensions dialog. Extensions that are not obligatory (that you can unload) are labeled with \"+\n    \"''- lax -'' in the dialog box. If the ODB to export contains a grid for example, Spatial- or 3D Analyst are \"+\n    \"obligatory.\"+nl+nl+\n    \n    \"The string  '$'  inheres a split function in this script. Documents, with names containing this sign \"+\n    \"can not be exported. Rename
+ this documents or change the split string in the system script called \"+\n    \"''mm_docODBCreate''. \"+nl\n    \n  msgbox.report(message,\"INFO: Export Documents (*.ODB) ...\")\n  \n  return nil\nend\n\n'-------------------------------------------------------\n\ntheProject = av.GetProject\n\nif (theProject = NIL) then\n  return NIL\nend\n\n'-------------------------------------------------------------------------------\n' CREATE DOCLIST \n\ntheDocList = List.Make\n\nfor each d in theProject.GetDocs\n  if (d.Is(Layout)) then  \n    
+theGUIString = d.GetGUI\n    theLString = theGUIString.UCase+\" :  \"+d.AsString\n    theDocList.Add(theLString)\n  end\nend\n\nif (theDocList.count = 0) then\n  MsgBox.Info(\"No Docs to be found...\",\"\")\n  return NIL\nend\n\ntheDocList.sort(TRUE)\n\n'-------------------------------------------------------------------------------\n' LET THE USER CHOOSE\n\ntheSelDocs = MsgBox.MultiListAsString(theDocList, \"Select documents to write to the ODB file: \"+\n             \"\", \" Write Docs to ODB\")\n\n\nif ((theSelDocs = NIL) or (theSelDo
+cs.Count = 0)) then return NIL end\n\n\n'-------------------------------------------------------------------------------\n' CREATE ODB-FILE, ASK FOR NAME AND PATH, CWD AND \"Docs\" AS DEFAULT\n\ntheCWD = FileName.getCWD\n\nif (File.isWritable(theCWD).not) then\n  av.GetProject.GetWorkDIR.setCWD\n  theCWD = FileName.getCWD\nend\n  \ndefaultName = FileName.Make(theCWD.AsString).MakeTmp(\"Docs\", \"odb\")\ntheDocODB = FileDialog.Put(defaultName, \"*.odb\", \" Save ODB-File as\")\n\nif (theDocODB = NIL) then\n  return NIL\nend\n\ntheODBFile
+ = ODB.Make(theDocODB)\n\n'-------------------------------------------------------------------------------\n' ASK FOR DEPENDENCIES\n\ntheProjDepends = av.GetProject.GetDependencies\n\nif (theProjDepends.count > 0) then\n\n  dctExts = Extension.GetExplicitExtensions\n  \n  theExt = {}\n  \n  for each oKey in dctExts.ReturnKeys\n    if (dctExts.Get(oKey).CanUnload.not) then\n      theExt.Add(oKey+\" (- fix -)\")\n    end\n  end\n  \n\n  for each fKey in dctExts.ReturnKeys\n    if (fKey <> \"Memo Tools 6.5  (English)\") then\n      if 
+(dctExts.Get(fKey).CanUnload) then\n        theExt.Add(fKey+\" (- lax -)\")\n      end\n    end\n  end\n\n  if (theExt.count > 0) then\n    theODBDepends = Msgbox.multiListAsString(theExt,\"Select extensions that should be loaded when the ODB will be imported  (OK to empty List = None):\",\" Extensions of the Project\")\n  \n    if (theOdbDepends = NIL) then\n      return NIL\n    end\n    \n    theFileNames = List.Make\n    for each E in theODBDepends\n      sExt = E\n      theExt = dctExts.Get(sExt.Left(sExt.count-10))\n      t
+heFN = theExt.GetFileName\n      theFileNames.Add(theFN)\n    end\n    \n    theODBDependencies = theODBFile.getDependencies\n  \n    for each dep in theFileNames\n      theODBDependencies.Add(dep)\n    end\n  end\nend\n\n'msgbox.multilistasstring(theODBDependencies,\"\",\"ODB-Depp\")\n  \n'-------------------------------------------------------------------------------\n' WE'VE TAKEN THE DOC-GUIS IN THE LINE FOR CLARITY; NOW WE HAVE TO SPLIT THE LINE\n' AND CREATE A SPLITSIGN '$' FOR THIS PURPOSE. CONSEQUENTIAL NO DOCS WITH TH
+AT SIGN COULD\n' BE EXPORTED... LOOK IF WE FIND SUCH DOCS AND SHOW IF WE HAD SUCCEEDED\n\ntheSelDokList = List.Make\ntheUnableList = List.Make\n\nfor each selDok in theSelDocs\n  if (selDok.AsString.contains(\"$\")) then\n    theUnableList.Add(selDok)\n  end\n  theSplit = selDok.Substitute(\" :  \",\"$\")\n  theSplit = theSplit.AsTokens(\"$\")\n  for each selDokString in theSplit\n    theSelDokList.Add(selDokString)\n  end\nend\n\n'-------------------------------------------------------------------------------\n' ODB MIT LISTE FUELL
+EN\n\nfor each d in theSelDokList\n  theClose = theProject.FindDoc(d)\n  if (theClose = NIL) then continue end\n  theODBFile.Add(theClose)\nend\n\n'-------------------------------------------------------------------------------\n' COMMIT UND SCHREIBEN\n\ntheODBFile.Commit\n\nif (theODBFile.Commit = FALSE) then\n  MsgBox.Info(\"Could not commit...\",\"\")\n  return NIL\nend\n\ntheDocsCount = theODBFile.Count\n\n'-------------------------------------------------------------------------------\n' GIVE SOME INFOS IN THE STATUS BAR\n\nif (
+theDocsCount <> 1) then\n  MsgBox.Info (\"Written \"+theDocsCount.AsString + \" Documents to  ''\"+theDocODB.AsString +\"''\", \"ODB-File\")\n  av.showMSG(\"llll llll llll llll llll   llll llll llll    Written \"+theDocsCount.AsString + \" documents to  ''\"+theDocODB.AsString +\"''\")\nelse\n  MsgBox.Info (\"Written \"+theDocsCount.AsString + \" Document to  ''\"+theDocODB.AsString +\"''\", \"ODB-File\")\n  av.showMSG(\"llll llll llll llll llll   llll llll llll    Written \"+theDocsCount.AsString + \" document to  ''\"+theDocODB.AsStrin
+g +\"''\")\nend\n\nif (theUnableList.count > 0) then\n  MsgBox.Info(\"The string  '$'  inheres a split function in the 'Sort'  part of this script. \"+theUnableList.count.AsString+\" Doc(s) \"+\n  \"named using this string could not be processed.\",\"\")\nend\n\n'-------------------------------------------------------------------------------\n\n' END OF FILE\n\n"
+)
+
+(Script.102
+	Name:	"LayoutTools.ImpExp_LoadODB"
+	SourceCode:	"\n' NAME: mm_docODBLoad\n\n' HERKUNFT: FSA, veraendert : H.\n\n' EINBINDUNG MTOOLS: Menueeintrag im Projektmenue (Label: Dokumentauswahl aus ODB importieren...)\n\n' HILFE: Oeffnet eine Auswahlliste zum Laden von Dokumenten aus einem ODB-File  (s. STRG-Klick Info)\n\n'*******************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =  \" \"+nl+\n    \n    \"SCRIPTNAME:    mm_DocODBLoad \"+nl+nl+\n
+  \n    \"ORIGIN:   FSA, modified \"+nl+nl+\n    \n    \"Opens a MultiList to select documents from a single ODB file to import. \"+nl+\n    \n    \"Extensions that are listed in the dependencies will be loaded if necessary. \"+nl\n            \n  msgbox.report(message,\"INFO: Import ODB ...\")\n  \n  return nil\nend\n\n'-------------------------------------------------------\n\ntheProject = av.GetProject\n\nODBName = FileDialog.Show(\"*.odb\",\"ODB-Files\",\" Choose ODB-File\")\n\nif (ODBName = NIL) then\n  return NIL\nend\n\ntheODB = ODB.Op
+enAndInstall(ODBName)\n\nif (theODB = NIL) then\n  MsgBox.Info(\"Can not import ODB File.\",\" Info\")\n  return NIL\nend  \n\ntheODBDepends = theODB.GetDependencies\n\ndeps = \"\"\n\nif (theODBDepends.count > 0) then\n  for each dep in theODBDepends\n    deps = deps+\" ''\"+dep.asString+\"'', \"\n  end \n  MsgBox.Info(\"Have loaded if wasn't already: \"+deps.left(deps.count-2),\" Info\")\nend\n\n\ntheCount = theODB.count - 1\n\ntheDict = Dictionary.Make(50)\n\n\nfor each d in 0..theCount\n  theDict.Add(theODB.Get(d).GetClass.GetClassName.UCase 
+++ \" : \" ++ theODB.Get(d).GetName,d)\nend\n\ntheDictList = theDict.ReturnKeys\ntheDictList.Sort(TRUE)\ntheLCount = 0\ntheObj = theODB.Get(0)\n\nif (theDictList.Count > 1) then\n  theDocList = MsgBox.MultiListAsString(theDictList,\"Select Docs to import (see that the DocNames are unique): \",\"Doc Type and Name\")\n  if ((theDocList = nil) or (theDocList.Count = 0)) then\n    return nil\n  end\nelseif (theDictList.Count = 1) then\n  theClassName = theObj.GetClass.GetClassName\n  if (theClassName = \"Dictionary\") then\n    theKey
+List = theObj.ReturnKeys\n    if (theKeyList.Count = 1) then\n      theKey = theKeyList.Get (0)\n    else\n      theKey = msgBox.ListAsString (theKeyList, \"Select Docs to import (see that the DocNames are unique): \", \"Import ODB\")\n    end\n  \n    theDoc = theObj.Get(theKey)\n    \n    if (av.FindDoc(theDoc.AsString).AsString = theDoc.AsString) then\n      MsgBox.Info(\"A Document with the Name '\"+theDoc.AsString+\"' already exists. Enter \"+\n                  \"another Name!\",\"'\"+theDoc.AsString+\"' already exists...\")\n
+\n      theNDoc = MsgBox.Input( \"Enter a Name for ''\"+theDoc.AsString+\"'':\", \"New \"+\n                              \"Name for '\"+theDoc.AsString+\"'\", theDoc.AsString+\"_b\" )\n      if ((theNDoc = NIL) or (theNDoc = \"\")) then\n        return NIL\n      end\n      theDoc.SetName ( theNDoc )\n    end\n\n    if (theDoc.is(Doc)) then\n      av.GetProject.AddDoc(theDoc)\n      theLCount = theLCount + 1\n    end\n    \n    if (theKeyList.Count = 1) then\n      if (theDoc.AsString <> NIL) then\n        theName = \"''\"+theDoc.AsStrin
+g+\"'' \"\n      else\n        theName = \"Object\"\n      end\n      if (theLCount > 0) then\n        MsgBox.Info(theName+\" imported.\",\"\")\n        av.showMsg(\"llll llll llll llll llll   llll llll llll    \"+theName+\" imported\")\n      else\n        MsgBox.Info(\"Nothing imported.\",\"\")\n        av.showMsg(\"llll llll llll llll llll   llll llll llll    Imported nothing\")\n      end\n    else\n      if (theLCount > 0) then\n        MsgBox.Info(theKeyList.Count.AsString+\" Objects imported.\",\"\")\n        av.showMsg(\"llll llll llll
+ llll llll   llll llll llll    \"+theKeyList.Count.AsString+\" Objects imported\")\n      else\n        MsgBox.Info(\"Nothing imported.\",\"\")\n        av.showMsg(\"llll llll llll llll llll   llll llll llll    Imported nothing\")\n      end\n    end      \n    return NIL\n  else\n'    msgbox.info(av.FindDoc(theObj.AsString).AsString+theObj.AsString,\"\")\n    if (av.FindDoc(theObj.AsString).AsString = theObj.AsString) then\n      MsgBox.Info(\"A document with the name '\"+theObj.AsString+\"' already exists. Enter \"+\n             
+     \"another name!\",\"'\"+theObj.AsString+\"' already exists...\")\n\n      theNDoc = MsgBox.Input( \"Enter a name for ''\"+theObj.AsString+\"'':\", \"New \"+\n                              \"name for '\"+theObj.AsString+\"'\", theObj.AsString+\"_b\" )\n      if ((theNDoc = NIL) or (theNDoc = \"\")) then\n        return NIL\n      end\n      theObj.SetName ( theNDoc )\n    end\n\n    if (theObj.is(Doc)) then\n      av.GetProject.AddDoc(theObj)\n      theLCount = theLCount + 1\n    end\n    if (theObj.GetName <> NIL) then\n      theName = 
+\"''\"+theObj.GetName+\"'' \"\n    else\n      theName = \"Objekt\"\n    end\n    if (theLCount > 0) then\n      MsgBox.Info(theName+\" imported.\",\"\")\n      av.showMsg(\"llll llll llll llll llll   llll llll llll    \"+theName+\" imported\")\n    else\n      MsgBox.Info(\"Nothing imported.\",\"\")\n      av.showMsg(\"llll llll llll llll llll   llll llll llll    Imported nothing\")\n    end\n    return NIL\n  end\nelse\n  return NIL\nend\n\n\ntheCheckList = list.make\n\nfor each k in theDocList\n  theCheckList.Add(theDict.Get(k))\nend\n\ndd = 0\n\nfo
+r each i in theCheckList\n  t = theODB.Get(i)\n  if (t.GetClass.GetClassName = \"DialogEditor\") then\n    names = extension.GetExplicitExtensions\n    dd = 0\n    for each j in names.ReturnKeys\n      if (j = \"Dialog Designer\") then\n        dd = 1\n      end\n    end\n  end\n  if (dd = 1) then\n    extension.open(\"$AVEXT/dialog.avx\".AsFileName)\n  end\n  if (av.FindDoc(t.AsString).AsString = t.AsString) then\n    MsgBox.Info(\"A document with the name  '\"+t.AsString+\"' already exists. Enter \"+\n                \"another name
+!\",\"'\"+t.AsString+\"' already exists...\")\n\n    theNDoc = MsgBox.Input( \"Enter a name for ''\"+t.AsString+\"'':\", \"New \"+\n                            \"name for '\"+t.AsString+\"'\", t.AsString+\"_b\" )\n    if ((theNDoc = NIL) or (theNDoc = \"\")) then\n      return NIL\n    end\n    t.SetName ( theNDoc )\n  end\n  if (t.is(Doc)) then\n    av.GetProject.AddDoc(t)\n    theLCount = theLCount + 1\n  end\nend\n\ntheProject.SetModified(TRUE)\n\nif (theLCount = 1) then\n  theGram = \"Object\"\nelse\n  theGram = \"Objects\"\nend\n\nMsgBox.Info(\"Imp
+orted \"+theLCount.AsString++theGram,\"\")\nav.showMsg(\"llll llll llll llll llll   llll llll llll     Imported \"+theLCount.AsString++theGram)\n\n'END OF SCRIPT\n\n"
+)
+
+(Script.103
+	Name:	"LayoutTools.Sel_Delete"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Sel_Delete.ave\n'# Author:       Adrian Boehlen\n'# Date:         04.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      loescht selektierte Elemente im Layout\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\nif (theLayout.GetGraphics
+.HasSelected) then\n  if (MsgBox.YesNo(\"Are you sure?\", \"Delete features?\", true)) then\n    av.GetProject.SetModified(true)\n    theLayout.GetGraphics.ClearSelected\n  else\n    return nil\n  end\nelse\n  MsgBox.Info(\"No selected features to delete.\",\"\")\nend\n"
+)
+
+(Script.104
+	Name:	"LayoutTools.Sel_Select"
+	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.Select"
+)
+
+(Script.105
+	Name:	"LayoutTools.Sel_SelectAll"
+	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.SelectAll"
+)
+
+(Script.106
+	Name:	"LayoutTools.Sel_SelectTool"
+	SourceCode:	"theLayout = av.GetActiveDoc\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.SetSelectMode(#GRAPHICS_SELECT_NORMAL)"
+)
+
+(Script.107
+	Name:	"LayoutTools.Sel_UnselectAll"
+	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.UnselectAll\n"
+)
+
+(Script.108
+	Name:	"LayoutTools.start"
+	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_start.ave\n'# Author:       Adrian Boehlen\n'# Date:         30.12.2022\n'# Version:      0.3\n'#\n'# Purpose:      oeffnet die LayoutTools Toolbar und den Dialog zum\n'#               Auswaehlen der Tabelle mit den Defaultwerten\n'#\n'###########################################################################\n\nav.GetProject.FindDialog(\"LayoutTools\").Open\nav.Run(\"LayoutTools.General_SetDefaultValues\", {})\n'a
+v.Run(\"LayoutTools.General_SetWorkingDirectory\", {})\n\n"
+)
+
+(Script.109
+	Name:	"LayoutTools.Sub_CreateList"
+	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_CreateList.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      erzeugt eine geordnete oder ungeordnete Liste\n'#\n'######################################################################\n\n'# Variablen initialisieren\nanzMark = 0\nchar = 0\nzeile = 0\ntheMarksTmp = \"\"\ntheString = Self.Get(0) '# Textblock uebernehmen\nlisteTyp = Self.Get(1)  '# Listentyp uebe
+rnehmen\n_theMarks = av.Run(\"LayoutTools.Sub_SubstituteAll\", {theString, listeTyp}) '# alle Zeichen ausser ¬ loeschen und neuer Variable zuweisen\n\n'# geordnete Liste\nif (listeTyp = \"ol\") then\n  for each char in _theMarks.AsTokens(NL)                       '# Textblock, welcher nur ¬ enthaelt, durchgehen \n    zeile = zeile + 1                                           '# Zeilen zaehlen\n    if (char.Contains(\"¬\")) then\n      anzMark = anzMark + 1                                     '# \"Listenzeichen zaehlen\n  
+    '# Listenzeichen durch aufsteigende Werte ersetzen und einen Punkt dahinter ergaenzen\n      theMarksTmp = theMarksTmp + char.Substitute(\"¬\", anzMark.AsString + \".\")\n      if (zeile <> _theMarks.AsTokens(NL).Count) then           '# ausser wenn die Ersetzung die letzte Zeile ist...\n        theMarksTmp = theMarksTmp + NL                          '# ...nach jeder Ersetzung ein Zeilenvorschub einfuegen\n      end\n    '# bei Zeilen, die Leerzeichen (32) enthalten, einen Zeilenvorschub setzen, ausser bei der l
+etzten\n    elseif (char.Contains(32.AsChar) and (zeile < _theMarks.AsTokens(NL).Count)) then\n      theMarksTmp = theMarksTmp + NL\n    end\n  end\n\n  _theMarks = theMarksTmp                                       '# Inhalt wieder urspruenglicher Variable zuweisen\n  _theMarks = _theMarks.Substitute(32.AsChar,\"\")                '# alle Leerzeichen entfernen\n  theTextBlock = Self.Get(0).Substitute(\"¬\",\"\")                 '# entferne Listenzeichen aus Textblock\n\n  return theTextBlock\n  \n'# ungeordnete Liste\nelse\n  
+_theMarks = _theMarks.Substitute(\"¬\",_defaultValues.Get(\"bullet\").AsChar) '# Listenzeichen durch definiertes Aufzaehlungszeichen ersetzen\n  theTextBlock = Self.Get(0).Substitute(\"¬\",\"\")                             '# Listenzeichen aus Textblock entfernen\n  return theTextBlock\nend"
+)
+
+(Script.110
+	Name:	"LayoutTools.Sub_Documentation"
+	SourceCode:	"'#################################################################\n'#\n'# Filename:     LayoutTools_Sub_Documentation.ave\n'# Author:       Adrian Boehlen\n'# Date:         06.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      enthaelt den Text fuer die Hilfeseiten. Dieser \n'#               wird globalen Variablen zugewiesen\n'#\n'#################################################################\n\n\n_uebersicht = \n\"===============================================\"+NL+\n\"                        Commands and their funct
+ions\"+NL+\n\"===============================================\"+NL+NL+\n\"cp                    Copies a layout\"+NL+\n\"delhd                Deletes header and footer for the chosen layouts\"+NL+\n\"dels                  Deletes selected features\"+NL+\n\"def                   Shows dialog to select the default value table\"+NL+\n\"fi                      Imports textfiles\"+NL+\n\"fis                     Imports textfiles preformatted\"+NL+\n\"go                    Switches guides on (for the active layout)\"+NL+\n\"gom            
+     Switches guides on (for many layouts)\"+NL+\n\"gf                     Switches guides off (for the active layout)\"+NL+\n\"gfm                  Switches guides off (for many layouts)\"+NL+\n\"hd                    Creates header and footer for the active layout\"+NL+\n\"hdm                  Creates header and footer for many layouts\"+NL+\n\"help                 Shows this help page\"+NL+\n\"help <cmd>     Shows the help for the chosen command\"+NL+\n\"lytimp               Imports a layout from an ODB file \"+NL+\n\"lytexp   
+            Exports one or more layouts into an ODB file\"+NL+\n\"mrg                  Shows recommended margins\"+NL+\n\"mx<value>       Moves the selected elements on the x axis\"+NL+\n\"my<value>       Moves the selected elements on the y axis\"+NL+\n\"new                 Creates a new layout document\"+NL+\n\"ol                      Imports text for ordered list\"+NL+\n\"ols                    Imports text preformatted for ordered list\"+NL+\n\"regm                Creates registration marks\"+NL+\n\"selall                Selec
+ts all elements on the active layout\"+NL+\n\"ti                      Imports text\"+NL+\n\"tis                     Imports text preformatted\"+NL+\n\"ul                      Imports text for unordered list\"+NL+\n\"uls                    Imports text preformatted for unordered list\"+NL+\n\"wd                   Shows dialog to select the working directory\"+NL+\n\"unselall            Unselect all selected elements\"+NL+\n\"zoomex            Zoom to exportview\"+NL\n\n_helpnew =\n\"Creates a new layout\"+NL+\n\"------------------------
+---------\"+NL+NL+\n\"1. Define the parameters for the new layout document\"+NL+\n\"2. ...or take over the predefined ones\"+NL+NL+\n\"The new layout will be added and opened\"\n\n\n_helpcopy =\n\"Copies a layout\"+NL+\n\"------------------------\"+NL+NL+\n\"1. Choose a layout to copy\"+NL+\n\"2. Enter a name for the new layout\"+NL+NL+\n\"The new layout will be added and opened\"\n\n\n_helpgo =\n\"Switch guides on (for the active layout)\"+NL+\n\"-------------------------------------------------------------\"+NL+NL+\n\"\"\"go\"\" stands for \"\"guide
+ on\"\" \"+NL+NL+\n\"In the active layout, switches previously turned off guides on again.\"\n\n_helpgom =\n\"Switch guides on (for many layouts)\"+NL+\n\"-------------------------------------------------------\"+NL+NL+\n\"\"\"gom\"\" stands for \"\"guide on many\"\" \"+NL+NL+\n\"In the chosen layouts, switches previously turned off guides on again.\"\n\n_helpgf =\n\"Switch guides off (for the active layout)\"+NL+\n\"-------------------------------------------------------------\"+NL+NL+\n\"\"\"gf\"\" stands for \"\"guide off\"\" \"+NL+NL+\n\"In the active
+ layout, switches guides, created with the horizontal/vertical guides tool, off.\"\n\n_helpgfm =\n\"Switch guides off (for many layouts)\"+NL+\n\"------------------------------------------------------\"+NL+NL+\n\"\"\"gfm\"\" stands for \"\"guide off many\"\" \"+NL+NL+\n\"In the chosen layouts, switches guides, created with the horizontal/vertical guides tool, off.\"\n\n_helphd =\n\"Creates header and footer for the active layout\"+NL+\n\"-------------------------------------------------------------------------\"+NL+NL+\n\"\"\"hd\"\" stands for
+ \"\"header (and footer) (for the active layout)\"\" \"+NL+NL+\n\"The following parameters are predefined:\"+NL+NL+\n\"Header (optional):\"+NL+\n\"- a text on the left and/or a text on the right\"+NL+\n\"Footer:\"+NL+\n\"- left: filename with or without the layoutname\"+NL+\n\"- centre: the author's name\"+NL+\n\"- right: a text, e.g. the date or the page number\"\n\n_helphdm =\n\"Creates header and footer for many layouts\"+NL+\n\"--------------------------------------------------------------------\"+NL+NL+\n\"\"\"hdm\"\" stands for \"\"header (an
+d footer) (for many layouts)\"\" \"+NL+NL+\n\"At least one layout has to be chosen.\"+NL+\n\"The following parameters are predefined:\"+NL+NL+\n\"Header (optional):\"+NL+\n\"- a text on the left and/or a text on the right\"+NL+\n\"Footer:\"+NL+\n\"- left: the filename\"+NL+\n\"- centre: the author's name\"+NL+\n\"- right: the number of the actual page and the total number of pages\"\n\n_helpdelhd =\n\"Deletes header and footer for the chosen layouts\"+NL+\n\"----------------------------------------------------------------------------\"+NL+NL
++\n\"\"\"delhd\"\" stands for \"\"delete header (and footer)\"\" \"+NL+NL+\n\"Header and footer for the chosen layouts will be deleted.\"\n\n_helpdels =\n\"Deletes selected features\"+NL+\n\"----------------------------------------------------------------------------\"+NL+NL+\n\"\"\"dels\"\" stands for \"\"delete selected features\"\" \"+NL+NL+\n\"Selected features (i.e. graphic elements) in the active layout will be deleted.\"\n\n\n_helplytimp =\n\"Imports a layout from an ODB file\"+NL+\n\"---------------------------------------------------\"+NL+NL+
+\n\"\"\"lytimp\"\" stands for \"\"layout import\"\" \"+NL+NL+\n\"Select an ODB file which will be imported into one or more new layout documents.\"\n\n_helplytexp =\n\"Exports one or more layouts into an ODB file\"+NL+\n\"----------------------------------------------------------------------\"+NL+NL+\n\"\"\"lytexp\"\" stands for \"\"layout export\"\" \"+NL+NL+\n\"Select one or more layouts to write them into an ODB file.\"\n\n_helpmrg =\n\"Shows recommended margins\"+NL+\n\"-----------------------------------------------\"+NL+NL+\n\"\"\"mrg\"\" stands for 
+\"\"margins\"\" \"+NL+NL+\n\"In typography, a margin is the area between the main content of a page and the page edges. (Wikipedia)\"+NL+\n\"Based on typographic guidelines this function calculates recommended margins, depending of the given dimensions of the page and if it is a single or a double page.\"+NL+\n\"You can enter this values directly into the Layout Page Settings dialog, or you can adapt them as you wish.\"\n\n_helpfi =\n\"Imports a textfile\"+NL+\n\"-------------------------\"+NL+NL+\n\"\"\"fi\"\" stands for \"\"file impor
+t\"\" \"+NL+NL+\n\"Imports the full content of a text file into the layout. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox.\"+NL+NL+\n\"1. Select the text file to import\"+NL+\n\"2. Define the width of the new textblock.\"+NL+\n\"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value.\"+NL+\n\"4. Define the font size\"+NL+\n\"The content of the chosen text file will then be visi
+ble inside the still selected textbox.\"+NL+\n\"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helpfis =\n\"Imports a textfile preformatted\"+NL+\n\"----------------------------------------------\"+NL+NL+\n\"\"\"fis\"\" stands for \"\"file import simple\"\" \"+NL+NL+\n\"Imports the full content of a text file into the layout. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the 
+upper left corner of the new textbox.\"+NL+NL+\n\"1. Select the text file to import\"+NL+\n\"2. Define the width of the new textblock.\"+NL+\n\"3. Define the font size\"+NL+\n\"The content of the chosen text file will then be visible inside the still selected textbox.\"+NL+\n\"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helpoli =\n\"Imports text for ordered list\"+NL+\n\"-----------------------------------------\"+NL+NL+\n\"\"\"ol\"\" stands for \"\"ordered list import\"\" \"+NL+NL+\n\"Imports 
+the content of a text window into the layout for building an ordered list. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox.\"+NL+NL+\n\"1. Type or paste text into the new window \"\"Import Text\"\". The beginning of each list element must be marked with the character \"\"¬\"\"\"+NL+\n\"2. Define the width of the new textblock.\"+NL+\n\"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by i
+t's RGB value.\"+NL+\n\"4. Define the font size\"+NL+\n\"5. Define the space between the marker and the text\"+NL+\n\"The content of the text window will then be visible inside the still selected textbox. The markers belonging to it will appear at the given distance to the left.\"+NL+\n\"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helpolis =\n\"Imports text for ordered list preformatted\"+NL+\n\"--------------------------------------------------------------\"+NL+NL+\n\"\"\"ols\"\" sta
+nds for \"\"ordered list import simple\"\" \"+NL+NL+\n\"Imports the content of a text window into the layout for building an ordered list. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox.\"+NL+NL+\n\"1. Type or paste text into the new window \"\"Import Text\"\". The beginning of each list element must be marked with the character \"\"¬\"\"\"+NL+\n\"2. Define the width of the new 
+textblock.\"+NL+\n\"3. Define the font size\"+NL+\n\"The content of the text window will then be visible inside the still selected textbox. The markers belonging to it will appear at the given distance to the left.\"+NL+\n\"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helpuli =\n\"Imports text for unordered list\"+NL+\n\"---------------------------------------------\"+NL+NL+\n\"\"\"ul\"\" stands for \"\"unordered list import\"\" \"+NL+NL+\n\"Imports the content of a text window into the la
+yout for building an unordered list. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox.\"+NL+NL+\n\"1. Type or paste text into the new window \"\"Import Text\"\". The beginning of each list element must be marked with the character \"\"¬\"\"\"+NL+\n\"2. Define the width of the new textblock.\"+NL+\n\"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value.\"+NL+\n\"4. Define the fon
+t size\"+NL+\n\"5. Define the space between the bullets and the text\"+NL+\n\"6. Define the character for the bullet (ASCII decimal)\"+NL+\n\"The content of the text window will then be visible inside the still selected textbox. The bullets belonging to it will appear at the given distance to the left.\"+NL+\n\"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helpulis =\n\"Imports text for unordered list preformatted\"+NL+\n\"---------------------------------------------------------
+---------\"+NL+NL+\n\"\"\"uls\"\" stands for \"\"unordered list import simple\"\" \"+NL+NL+\n\"Imports the content of a text window into the layout for building an unordered list. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox.\"+NL+NL+\n\"1. Type or paste text into the new window \"\"Import Text\"\". The beginning of each list element must be marked with the character \"\"¬\"\"\"+NL
++\n\"2. Define the width of the new textblock.\"+NL+\n\"3. Define the font size\"+NL+\n\"The content of the text window will then be visible inside the still selected textbox. The bullets belonging to it will appear at the given distance to the left.\"+NL+\n\"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helpti =\n\"Imports text\"+NL+\n\"------------------\"+NL+NL+\n\"\"\"ti\"\" stands for \"\"text import\"\" \"+NL+NL+\n\"Imports the content of a text window into the layout. There must be a s
+elected textbox (with or without content). This will be the upper left corner of the new textbox.\"+NL+NL+\n\"1. Type or paste text into the new window \"\"Import Text\"\"\"+NL+\n\"2. Define the width of the new textblock.\"+NL+\n\"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value.\"+NL+\n\"4. Define the font size\"+NL+\n\"The content of the text window will then be visible inside the still selected textbox.\"+NL+\n\"Note: Special characters
+ can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helptis =\n\"Imports text preformatted\"+NL+\n\"---------------------------------------\"+NL+NL+\n\"\"\"tis\"\" stands for \"\"text import simple\"\" \"+NL+NL+\n\"Imports the content of a text window into the layout. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox.\"+NL+NL+\n\"1. Type or paste text into the new win
+dow \"\"Import Text\"\"\"+NL+\n\"2. Define the width of the new textblock.\"+NL+\n\"3. Define the font size\"+NL+\n\"The content of the text window will then be visible inside the still selected textbox.\"+NL+\n\"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \\\"\n\n_helpregm =\n\"Creates registration marks\"+NL+\n\"----------------------------------------\"+NL+NL+\n\"\"\"regm\"\" stands for \"\"registration marks\"\" \"+NL+NL+\n\"Creates registration marks at all 4 corners of the layout.\"+NL+\n\"Note that t
+he page size defined in \"\"Layout -> Page Setup\"\" must be larger than the size entered in this tool, otherwise the registration marks will be outside the layout. The default size is DIN A4.\"\n\n_helpselall =\n\"Selects all elements on the active layout\"+NL+\n\"---------------------------------------------------------------\"+NL+NL+\n\"\"\"selall\"\" stands for \"\"select all\"\" \"+NL+NL+\n\"Selects all graphic elements on the layout.\"\n\n_helpunselall =\n\"Unselects all selected elements\"+NL+\n\"-------------------------------------
+------------\"+NL+NL+\n\"\"\"unselall\"\" stands for \"\"unselect all\"\" \"+NL+NL+\n\"Unselects all selected graphic elements on the layout.\"\n\n_helpmx =\n\"Moves the selected element(s) on the x axis\"+NL+\n\"--------------------------------------------------------------------\"+NL+NL+\n\"\"\"mx\"\" stands for \"\"move x\"\" \"+NL+NL+\n\"Moves the selected element(s) on the x axis.\"+NL+NL+\n\"1. Select the feature(s) that has to be moved.\"+NL+\n\"2. Type \"\"mx\"\" and the amount in mm without any blank between. Use positive values for moving to 
+the right and negative ones for moving to the left.\"+NL+\n\"e.g. \"\"mx50\"\" moves the selected element(s) 50 mm to the right.\"+NL+\n\"       \"\"mx-50\"\" moves the selected element(s) 50 mm to the left.\"\n\n_helpmy =\n\"Moves the selected element(s) on the y axis\"+NL+\n\"--------------------------------------------------------------------\"+NL+NL+\n\"\"\"my\"\" stands for \"\"move y\"\" \"+NL+NL+\n\"Moves the selected element(s) on the y axis.\"+NL+NL+\n\"1. Select the feature(s) that has to be moved.\"+NL+\n\"2. Type \"\"my\"\" and the amount i
+n mm without any blank between. Use positive values for moving upwards and negative ones for moving downwards.\"+NL+\n\"e.g. \"\"my50\"\" moves the selected element(s) 50 mm upwards.\"+NL+\n\"       \"\"my-50\"\" moves the selected element(s) 50 mm downwards.\"\n\n"
+)
+
+(Script.111
+	Name:	"LayoutTools.Sub_IstIn"
+	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_IstIn.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.2\n'#\n'# Purpose:      prueft, ob ein bestimmter Wert (1. Argument) in \n'#               der angegebenen Liste (2. Argument) enthalten ist\n'#               und setzt in diesem Fall die Variable istInR auf true\n'#\n'######################################################################\n\nistInR = false\nfor each i in S
+elf.Get(1)\n  if (i = Self.Get(0)) then\n    istInR = true\n  end\nend    \nreturn istInR"
+)
+
+(Script.112
+	Name:	"LayoutTools.Sub_PlaceText"
+	SourceCode:	"'##########################################################\n'#\n'# Filename:     LayoutTools_Sub_PlaceText.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.3\n'#\n'# Purpose:      Subroutine zur Platzierung von Text\n'#\n'##########################################################\n\ngtxText = GraphicText.Make (Self.Get(1), Self.Get(2))\ntheText = gtxText.ReturnSymbols.Get(0)\ntheText.SetSize(Self.Get(4))\ntheText.SetColor(Self.Get(3))\ntheText.SetFont(Self.Get(0))\n_theLayout.GetGraphi
+cs.Add(gtxText)"
+)
+
+(Script.113
+	Name:	"LayoutTools.Sub_ReadTable"
+	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_ReadTable.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Erzeugt einen Dialog zum Auswaehlen einer Tabelle,\n'#               die anschliessend eingelesen wird.\n'#               Die Tabelle wird nicht zum GUI hinzugefuegt.\n'#               Script liefert das VTab Objekt zurueck.\n'#\n'#               wird auch im Editor verwendet\n'#\n'#############
+#########################################################\n\nthePattern = \"*.dbf\"\ntheLabel = \"dBASE (*.dbf)\"\ntheTitle = Self.Get(0)\ntheFile = FileDialog.Show(thePattern, theLabel, theTitle)\n\nif (theFile = nil) then\n  return nil\nend\n\ntheVTab = VTab.Make(theFile, FALSE, FALSE)\n\nif (theVTab.HasError) then\n  if (theVTab.HasLockError) then\n    MsgBox.Error(\"Unable to acquire Read Lock for file \" + theFile.GetBaseName, \"\")\n  else\n    MsgBox.Error(\"The file '\" + theFile.GetBaseName + \"' is not valid.\", \"\")\n  end\nels
+e\n  return theVTab\nend\n\n\n\n\n"
+)
+
+(Script.114
+	Name:	"LayoutTools.Sub_ReturnColor"
+	SourceCode:	"'#####################################################################\n'#\n'# Filename:     LayoutTools_Sub_ReturnColor.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      1.0\n'#\n'# Purpose:      Definiert RGB-Werte von Farben, die ueber Namen\n'#               angesprochen werden\n'#\n'#####################################################################\n\nnc = Color.make\n\nif (Self = \"Black\") then\n  nc.SetRGBList({0,0,0})\nelseif (Self = \"White\") then\n  nc.SetRGBList({255,255,255})\ne
+lseif (Self = \"Dark Gray\") then\n  nc.SetRGBList({130,130,130})\nelseif (Self = \"Medium Gray\") then\n  nc.SetRGBList({165,165,165})\nelseif (Self = \"Light Gray\") then\n  nc.SetRGBList({210,210,210})\nelseif (Self = \"Dark Red\") then\n  nc.SetRGBList({150,0,0})\nelseif (Self = \"Medium Red\") then\n  nc.SetRGBList({255,0,0})\nelseif (Self = \"Light Red\") then\n  nc.SetRGBList({255,180,180})\nelseif (Self = \"Dark Orange\") then\n  nc.SetRGBList({180,140,0})\nelseif (Self = \"Medium Orange\") then\n  nc.SetRGBList({255,210,0})\nelse
+if (Self = \"Light Orange\") then\n  nc.SetRGBList({255,210,180})\nelseif (Self = \"Dark Yellow\") then\n  nc.SetRGBList({200,200,130})\nelseif (Self = \"Medium Yellow\") then\n  nc.SetRGBList({255,255,0})\nelseif (Self = \"Light Yellow\") then\n  nc.SetRGBList({255,255,200})\nelseif (Self = \"Dark Green\") then\n  nc.SetRGBList({0,150,0})\nelseif (Self = \"Medium Green\") then\n  nc.SetRGBList({0,255,0})\nelseif (Self = \"Light Green\") then\n  nc.SetRGBList({180,255,180})\nelseif (Self = \"Light Cyan\") then\n  nc.SetRGBList({150,255,2
+55})\nelseif (Self = \"Medium Cyan\") then\n  nc.SetRGBList({150,150,255})\nelseif (Self = \"Dark Cyan\") then\n  nc.SetRGBList({0,150,150})\nelseif (Self = \"Dark Blue\") then\n  nc.SetRGBList({0,0,150})  \nelseif (Self = \"Medium Blue\") then\n  nc.SetRGBList({0,0,255})\nelseif (Self = \"Light Blue\") then\n  nc.SetRGBList({150,150,255})\nelseif (Self = \"Dark Purple\") then\n  nc.SetRGBList({150,0,150})  \nelseif (Self = \"Medium Purple\") then\n  nc.SetRGBList({255,0,255})\nelseif (Self = \"Light Purple\") then\n  nc.SetRGBList({255,1
+80,255})\nelseif (Self = \"Transparent\") then\n  nc.SetTransparent(true)  \nend\n\nreturn nc"
+)
+
+(Script.115
+	Name:	"LayoutTools.Sub_SetASCII_Char"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Sub_SetASCII_Char.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      1.0\n'#\n'# Purpose:      Uebersetzt ASCII-Codes, die als dreistelliger dezimaler\n'#               Code mit dem Zeichen \\ davor gesetzt werden muessen\n'#               in das zugehoerige Zeichen\n'#\n'#########################################################################\n\nword = Self                       
+                  '# Argument in lokale Variable uerbertragen\nwordL = word.AsTokens(\"\\\")                          '# Wort an \\ auftrennen\nif (wordL.Count > 1) then                           '# nur wenn \\ vorkommt...\n  for each i in 1..wordL.Count                      '# jeden Wortteil durchgehen...\n    if (i = 1) then\n      continue                                      '# ...ausser den ersten\n    else\n      search = \"\\\" + wordL.Get(i - 1).Left(3)       '# nach \\ plus drei folgenden Zeichen suchen\n      repl
+ace = wordL.Get(i - 1).Left(3)            '# nur die drei Zeichen nach \\ auswaehlen\n      replace = replace.AsNumber                    '# in Nummer konvertieren\n      word = word.Substitute(search,replace.AsChar) '# Ersetzung vornehmen \n    end\n  end\nelse                                                '# wenn die Trennung nur einen Teil liefert...\n  if (word.Left(1) = \"\\\") then                      '# ...pruefen, ob \\ am Anfang des Strings liegt\n    search = word.Left(4)                           '# die er
+sten vier Zeichen extrahieren\n    replace = word.Middle(1,3)                      '# das 2., 3., und 4. Zeichen extrahieren\n    replace = replace.AsNumber                      '# in Nummer konvertieren\n    word = word.Substitute(search,replace.AsChar)   '# Ersetzung vornehmen\n  end  \nend\n\nreturn word"
+)
+
+(Script.116
+	Name:	"LayoutTools.Sub_SubstituteAll"
+	SourceCode:	"'###############################################################\n'#\n'# Filename:     LayoutTools_Sub_SubstituteAll.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      ersetzt alle Zeichen ausser dem Listenzeichen ¬\n'#               mit dem definierten Zeichen\n'#\n'###############################################################\n\n'# replace printable characters 32 - 255 except ¬ (ASCII 172)\n\n'# bei ungeordneten Listen, ersetzen durch Leerstring\nif (Self.Get(
+1) = \"ul\") then\n  str = Self.Get(0)\n  for each i in 32..(172 - 1)\n    str = str.Substitute(i.AsChar,\"\")\n  end\n\n  for each i in (172 + 1)..255\n    str = str.Substitute(i.AsChar,\"\")\n  end\n\n'# bei geordneten Listen, ersetzen durch Leerzeichen\nelseif (Self.Get(1) = \"ol\") then\n  str = Self.Get(0)\n  for each i in 33..(172 - 1)\n    str = str.Substitute(i.AsChar,32.AsChar)\n  end\n\n  for each i in (172 + 1)..255\n    str = str.Substitute(i.AsChar,32.AsChar)\n  end\nend\n\nreturn str"
+)
+
+(Script.117
+	Name:	"LayoutTools.Text_CreateInhaltsverzeichnis"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_CreateInhaltsverzeichnis.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      Erstellt ein Inhaltsverzeichnis\n'#\n'#               under construction!\n'#\n'#########################################################################\n\n'# Variablen initialisieren\n\nfarbeStr = \"\"\ntitelFarbeStr = \"2103545\"          '# RGB-Wert der Titel\ntitelFarbe = Color.
+Make\ntitelFarbe.SetRGBList({210,35,45})\ntheProject = av.GetProject\ntheDocList = theProject.GetDocs\ntheLayoutList = {}\ntheStringList = {}\n\nfor each theEntry in theDocList\n  if (theEntry.Is(Layout)) then\n    theLayoutList.Add(theEntry)\n  end\nend\n\n'########## Layout fuer Inhaltsverzeichnis festlegen ##########\n\nif (theLayoutList.Count=0) then\n  MsgBox.Error(\"There are no Layouts. You have to create Layouts first!\", \"\")\n  return nil\nelse\n  inhaltseite=MsgBox.List(theLayoutList, \"Layout fuer Inhaltsverzeichnis f
+estlegen:\", \"Inhaltsverzeichnis\")\n  if (inhaltseite = nil) then \n    return nil\n  end\nend\n\n'tbd bestehender Inhalt loeschen\n'theGraphicsList = inhaltseite.GetGraphics\n'for each theGraphic in theGraphicsList\n'  theGraphicsList.RemoveGraphic(theGraphic)\n'end\n'inhaltseite.Invalidate\n\n'########## Titelinformationen ermitteln ##########\n\nfor each theLayout in theLayoutList\n  for each g in theLayout.GetGraphics\n    symb = g.GetSymbol\n    if (symb = nil) then\n      continue\n    end\n    rgb = symb.GetColor.GetRGBLi
+st\n    for each farbe in rgb\n      farbeStr = farbeStr + farbe.AsString\n    end\n    if (farbeStr = titelFarbeStr) then\n      g.SetSelected(TRUE)\n      theString = g.GetText\n      theStringList.Add(theString)\n    end\n    farbeStr = \"\"\n  end\n  theGraphicsList = theLayout.GetGraphics\n  theGraphicsList.UnselectAll\n  theLayout.GetDisplay.Invalidate(true)\nend\n\n'########## Geometrie von Inhaltseite ermitteln ##########\n\n_theLayout = inhaltseite\nthePageDisplay = _theLayout.GetDisplay\nrecMargin = thePageDisplay.Retu
+rnMarginExtent\ntheOrigin = recMargin.ReturnOrigin\nxOriginLeft = theOrigin.GetX\nxOriginRight = xOriginLeft + recMargin.GetWidth\nyOriginBottom = theOrigin.GetY\nyOriginTop = yOriginBottom + recMargin.GetHeight\n\n'########## Schriften definieren ##########\n\ntheSizeTitle = 22\ntheSizeText = 10\nschwarz = Color.GetBlack\ntextFont = Font.Make (_defaultValues.Get(\"schriftart\"), _defaultValues.Get(\"schriftschnitt\"))\n\n'########## Seitentitel platzieren ##########\n\ntextString = \"Inhaltsverzeichnis\"\ntextOrigin = (xOriginLe
+ft + 0.01)@(yOriginTop - 0.5)\ntextSize = theSizeTitle\ntextColor = titelFarbe\n\nav.Run(\"LayoutTools.Sub_PlaceText\", {textFont, textString, textOrigin, textColor, textSize})\n\n'########## Inhaltsverzeichnis aufbauen ##########\n\ni = 0\nzeile = 0.6\nzeilenabst = 0.2\nfor each theString in theStringList\n  i = i + 1\n  '# Nummer\n  if (i Mod 2 <> 0) then\n    zeile = zeile + zeilenabst\n    textString = theString\n    textOrigin = (xOriginLeft + 0.01)@(yOriginTop - zeile)\n    textSize = theSizeText\n    textColor = schwarz\n
+    av.Run(\"LayoutTools.Sub_PlaceText\", {textFont, textString, textOrigin, textColor, textSize})\n  '# zugehoeriger Titel\n  else\n    textString = theString\n    textOrigin = (xOriginLeft + 0.6)@(yOriginTop - zeile)\n    textSize = theSizeText\n    textColor = schwarz\n    av.Run(\"LayoutTools.Sub_PlaceText\", {textFont, textString, textOrigin, textColor, textSize})\n  end\nend\n\n_theLayout.Invalidate\n"
+)
+
+(Script.118
+	Name:	"LayoutTools.Text_DeleteHeaderAndFooter"
+	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Text_DeleteHeaderAndFooter.ave\n'# Author:       Adrian Boehlen\n'# Date:         19.12.2017\n'# Version:      1.0\n'#\n'# Purpose:      loescht durch Text_HeaderAndFooter\n'#               erzeugte Kopf- und Fusszeile(n)\n'#\n'###########################################################################\n\ntheProject=av.GetProject\ntheDocL=theProject.GetDocs\ntheLayoutL={}\nfor each theEntry in theDocL\n  if (theEn
+try.Is(Layout)) then\n    theLayoutL.Add(theEntry)\n  end\nend\ntheBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Delete Header and Footer\")\nif (theBatchLayoutL=Nil) then \n  return nil\nend\nwhile (theBatchLayoutL.Count=0) \n  MsgBox.Error(\"Please choose one oder more layout(s)\"+NL+\"Cancel for abort\", \"\")\n  theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Turn Rulers Off\")\n  if (theBatchLayoutL=Nil) then\n    return nil\n  end\nend\n\nfor each theLayout in theBatchLayoutL\n  farbeStr =
+ \"\"\n  farbeHF_Str = \"111\"    '# RGB-Wert der Kopf- und Fusszeilen...\n\n  for each g in theLayout.GetGraphics\n    symb = g.GetSymbol\n    rgb = symb.GetColor.GetRGBList\n    for each farbe in rgb\n      farbeStr = farbeStr + farbe.AsString\n    end\n    if (farbeStr = farbeHF_Str) then\n      g.SetSelected(TRUE)\n    end\n    farbeStr = \"\"\n  end\n\n  theGraphicsList = theLayout.GetGraphics\n  theGraphicsList.ClearSelected\n  theLayout.GetDisplay.Invalidate(true)\nend"
+)
+
+(Script.119
+	Name:	"LayoutTools.Text_Footnote"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_Footnote.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.11.2022\n'# Version:      0.6\n'#\n'# Purpose:      erzeugt Fussnoten\n'#\n'###################################################################\n\n_theLayout = av.GetActiveDoc\n\nif (_theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this tool from an active Layout.\",\"\")\n  return nil\nend\n\n'# Schriftgroesse definieren\ntextSize = MsgBox.In
+put(\"Insert font size\", \"Font Size\",_defaultValues.Get(\"schriftgroesse\").AsString)\n\nif (textSize = nil) then\n  return nil\nelseif (textSize.IsNumber.Not) then\n  MsgBox.Warning(\"Invalid input\",\"Abort\")\n  return nil\nend\ntextSize = textSize.AsNumber\n\n'########## Layout-Geometrie ermitteln ##########\n\nthePageDisplay = av.GetActiveDoc.GetDisplay\nrecMargin = thePageDisplay.ReturnMarginExtent\ntheOrigin = recMargin.ReturnOrigin\nxOriginLeft = theOrigin.GetX\nxOriginRight = xOriginLeft + recMargin.GetWidth\n\n'##########
+ horizontale Linie aus Clickpunkt ableiten ##########\n\npt = _theLayout.GetDisplay.ReturnUserPoint\n\nxL = xOriginLeft + 0.01\nyL = pt.GetY\nxR = (xOriginRight - xOriginLeft) / 3 + xOriginLeft\nyR = pt.GetY\n\n'# Strichstil definieren\nthePen = BasicPen.Make\nschwarz = Color.GetBlack\nthePen.SetColor(schwarz)\nthePen.SetSize(1)\n\n'# Linie zeichnen\ntheLine = Line.Make( xL@yL, xR@yR)\ntheGraphicLine = GraphicShape.Make(theLine)\ntheGraphicLine.SetSymbol(thePen)\n\n_theLayout.GetGraphics.UnselectAll\ntheGraphicLine.SetSelected(
+TRUE)\n_theLayout.GetGraphics.Add(theGraphicLine)\nav.GetProject.SetModified(TRUE)\n\n'########## Text definieren und platzieren ##########\n\ntextFont = Font.Make (_defaultValues.Get(\"schriftart\"), _defaultValues.Get(\"schriftschnitt\"))\ntextString = \"Text\"\ntextOrigin = (xOriginLeft)@(pt.GetY - 0.25)\ntextColor = _schwarzC\nav.Run(\"LayoutTools.Sub_PlaceText\", {textFont, textString, textOrigin, textColor, textSize})\n"
+)
+
+(Script.120
+	Name:	"LayoutTools.Text_HeaderAndFooter"
+	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Text_HeaderAndFooter.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.2\n'#\n'# Purpose:      Erzeugt Kopf- und Fusszeile(n) fuer\n'#               das aktive oder mehrere Layouts\n'#\n'# Based on:     Mike Quentel <mquentel@acceleration.net>,\n'#               <kingofthewood@yahoo.com>\n'#               Fri Dec 10 15:28:27 1999\n'#\n'#########################################
+##################################\n\n'# Variablen initialisieren\nanz = Self\ni = 0\ntheAuthor = _defaultValues.Get(\"autor\")\ntheSizeFooter = _defaultValues.Get(\"groesseFusszeile\")\ntheSizeHeader = _defaultValues.Get(\"groesseKopfzeile\")\ntheColor = _schwarzHF\ntheFont = Font.Make (_defaultValues.Get(\"schriftart\"), _defaultValues.Get(\"schriftschnitt\"))\n\nif (anz = \"many\") then\n  theProject = av.GetProject\n  theDocL = theProject.GetDocs\n  theLayoutL={}\n  for each theEntry in theDocL\n    if (theEntry.Is(Layout)) then\n 
+     theLayoutL.Add(theEntry)\n    end\n  end\n  theBatchLayoutL = MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Header and Footer\")\n  if (theBatchLayoutL = nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count = 0) \n    MsgBox.Error(\"Please choose one oder more layout(s)\"+NL+\"Cancel for abort\", \"\")\n    theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Header and Footer\")\n    if (theBatchLayoutL = nil) then\n      return nil\n    end\n  end\nelse\n  theLayout = av.GetActiveDoc  \n  if 
+(theLayout.Is(layout).Not) then\n    MsgBox.Warning(\"Start this tool from an active Layout.\",\"\")\n    return nil\n  else\n    theBatchLayoutL = {theLayout}\n  end\nend\n \nstrUserName = MsgBox.Input (\"Name of the author\",\"Author\",theAuthor)\n\n'# Header definieren (optional)\nif (MsgBox.YesNo(\"Define header ?\",\"Header\",true)) then\n  strHeadLeft = MsgBox.Input(\"Insert text top left:\",\n  \"Header left\",\" \")\n  strHeadRight = MsgBox.Input(\"Insert text top right:\",\n  \"Header right\",\" \")\nelse\n  strHeadLeft = nil\n  strHeadRig
+ht = nil\nend\n  \nfor each lytActive in theBatchLayoutL\n  i = i + 1\n  thePageDisplay = lytActive.GetDisplay\n  thePageExtent = thePageDisplay.ReturnPageExtent\n  theCenter = thePageExtent.ReturnCenter\n  recMargin = thePageDisplay.ReturnMarginExtent\n  theOrigin = recMargin.ReturnOrigin\n  xOriginLeft = theOrigin.GetX\n  xOriginCenter = theCenter.GetX\n  xOriginRight = xOriginLeft + recMargin.GetWidth\n  yOriginBottom = theOrigin.GetY\n  yOriginTop = yOriginBottom + recMargin.GetHeight\n   \n  '# creates origins for gra
+phic text (anchor points left)\n  docOrigin = (xOriginLeft + 0.01)@(yOriginBottom + 0.05)\n  userOrigin = (xOriginCenter)@(yOriginBottom + 0.05)\n  pageOrigin = (xOriginRight - 0.01)@(yOriginBottom + 0.05)\n \n  headLeftOrigin = (xOriginLeft + 0.01)@(yOriginTop - 0.12)\n  headRightOrigin = (xOriginRight - 0.01)@(yOriginTop - 0.12)\n \n  '# creates names strings for graphic text  \n  strDoc = av.GetProject.GetName\n  strLytName = lytActive.GetWin.GetTitle\n  strUser = strUserName\n  if (anz = \"many\") then\n    strPage = 
+i.AsString + \"/\" + theBatchLayoutL.Count.AsString\n  else\n    strPage = MsgBox.Input (\"Insert text bottom right\", \"Footer right\", \"1\")\n    if (strPage = nil) then\n      return nil\n    end\n  end\n  \n  '# creates, adjusts and adds graphic text to layout\n  gtxDoc = GraphicText.Make (strDoc, docOrigin)  \n  gtxUser = GraphicText.Make (strUser, userOrigin)\n  gtxPage = GraphicText.Make (strPage, pageOrigin)\n  \n  if (strHeadLeft <> nil) then\n    gtxHeadLeft = GraphicText.Make (strHeadLeft, headLeftOrigin)\n  end\n  if 
+(strHeadRight <> nil) then\n    gtxHeadRight = GraphicText.Make (strHeadRight, headRightOrigin)\n  end\n  \n  txtSymDoc = gtxDoc.ReturnSymbols.Get (0)\n  txtSymDoc.SetSize (theSizeFooter)\n  txtSymDoc.SetColor(theColor)\n  txtSymDoc.SetFont (theFont)\n\n  txtSymUser = gtxUser.ReturnSymbols.Get (0)\n  txtSymUser.SetSize (theSizeFooter)\n  txtSymUser.SetFont (theFont)\n    \n  txtSymPage = gtxPage.ReturnSymbols.Get (0)\n  txtSymPage.SetSize (theSizeFooter)\n  txtSymPage.SetFont (theFont)\n  \n  if (strHeadLeft <> nil) then\n  
+  textSymHeadLeft = gtxHeadLeft.ReturnSymbols.Get (0)\n    textSymHeadLeft.SetSize (theSizeHeader)\n    textSymHeadLeft.SetColor(theColor)\n    textSymHeadLeft.SetFont (theFont)\n  end\n  if (strHeadRight <> nil) then\n    textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)\n    textSymHeadRight.SetSize (theSizeHeader)\n    textSymHeadRight.SetFont (theFont)\n  end\n  \n  lytActive.GetGraphics.Add (gtxDoc)\n  lytActive.GetGraphics.Add (gtxUser)\n  lytActive.GetGraphics.Add (gtxPage)\n  \n  if (strHeadLeft <> nil) then\n 
+   lytActive.GetGraphics.Add (gtxHeadLeft)\n  end\n  \n  if (strHeadRight <> nil) then\n    lytActive.GetGraphics.Add (gtxHeadRight)\n  end\n  theGraphicList = lytActive.GetGraphics\n  \n  '# replace user name with simulated anchor point middle\n  userOrigin = (xOriginCenter - (gtxUser.GetExtent.GetX / 2))@(yOriginBottom + 0.05)\n  theGraphicList.RemoveGraphic(gtxUser)\n  gtxUser = GraphicText.Make (strUser, userOrigin)\n  txtSymUser = gtxUser.ReturnSymbols.Get (0)\n  txtSymUser.SetSize (theSizeFooter)\n  txtSymUser.SetC
+olor(theColor)\n  txtSymUser.SetFont (theFont)\n  lytActive.GetGraphics.Add (gtxUser)\n  \n  '# replace page number with simulated anchor point right\n  pageOrigin = (xOriginRight - gtxPage.GetExtent.GetX)@(yOriginBottom + 0.05)\n  theGraphicList.RemoveGraphic(gtxPage)\n  gtxPage = GraphicText.Make (strPage, pageOrigin)\n  txtSymPage = gtxPage.ReturnSymbols.Get (0)\n  txtSymPage.SetSize (theSizeFooter)\n  txtSymPage.SetColor(theColor)\n  txtSymPage.SetFont (theFont)\n  lytActive.GetGraphics.Add (gtxPage)\n  \n  '# replac
+e right header with simulated anchor point right\n  if (strHeadRight <> nil) then\n    headRightOrigin = (xOriginRight - gtxHeadRight.GetExtent.GetX)@(yOriginTop - 0.12)\n    theGraphicList.RemoveGraphic(gtxHeadRight)\n    gtxHeadRight = GraphicText.Make (strHeadRight, headRightOrigin)\n    textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)\n    textSymHeadRight.SetSize (theSizeHeader)\n    textSymHeadRight.SetColor(theColor)\n    textSymHeadRight.SetFont (theFont)\n    lytActive.GetGraphics.Add (gtxHeadRight)\n  
+end  \nend"
+)
+
+(Script.121
+	Name:	"LayoutTools.Text_ImportText"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_ImportText.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.1\n'#\n'# Purpose:      Liest Text ein und bildet daraus einen Textblock\n'#               der definierten maximalen Breite in mm\n'#               bestehende Zeilenumbrueche bleiben erhalten\n'#               bei den Kommandos \"fi\", \"ti\", \"ul und \"ol\" muessen \n'#               Schriftart, -groesse und -farbe 
+definiert werden,\n'#               bei den Kommandos \"fis\", \"tis\", \"uls\" und \"ols\" werden \n'#               die Defaultwerte \"DejaVu Sans Condensed Black\n'#               gesetzt.\n'#\n'#               je nach Kommando wird ein gesamtes Textfile eingelesen\n'#               oder Text, der ueber eine Inputbox eingegeben wird.\n'#\n'#               erwartet eine selektierte Textbox im Layout,\n'#               an der Stelle, wo dann der neue Text erscheinen soll.\n'#               Die Textbox kann leer sein, oder sc
+hon mit Text gefuellt,\n'#               wobei dieser dann geloescht wird\n'#               Der neue Text beginnt an der linken oberen Ecke der \n'#               bestehenden Textbox.\n'#\n'#               Bei den Kommandos \"ul\", \"ol\", \"uls\" und \"ols\" wird \n'#               zugleich eine Spalte mit Aufzaehlungszeichen gesetzt. Die\n'#               Position der Aufzaehlungszeichen muss im importierten Text\n'#               mit dem Zeichen \"¬\" gekennzeichnet werden.\n'#\n'#               Sonderzeichen koennen ueber 
+ihren dreistelligen dezimalen\n'#               ASCII-Code im Textdokument deklariert werden, wenn das\n'#               Zeichen \\ davor gesetzt wird. z.B: \\036 wird dann zu $\n'#\n'#########################################################################\n\nnullstring = \"\"\ntheLayout = av.GetActiveDoc \n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\n'########## Benutzereingaben aufnehmen ##########\n\n'# ganze Textfiles importieren\nif ((_command 
+= \"fi\") or (_command = \"fis\")) then\n  theFile = FileDialog.Show(\"*.txt\",\"text files\",\"Choose text file\")\n  if (theFile = nil) then\n    return nil\n  end\n\n'# normalen Text ueber die Inputbox importieren\nelseif ((_command = \"ti\")  or (_command = \"tis\")) then\n  textstring = MsgBox.Input(\"\",\"Import Text\",\"\")\n  if (textstring = nil) then\n    return nil\n  end\n  theFile = FileName.Make(\"tmp.txt\")\n  if (File.Exists(theFile)) then\n    File.Delete(theFile)\n  end\n  tmpFile = LineFile.Make(theFile,#FILE_PERM_WRITE)\n  tm
+pFile.WriteElt(textstring)\n  tmpFile.close\n\n'# Text fuer Liste ueber die Inputbox importieren\nelseif ((_command = \"ul\")  or (_command = \"uls\")) then\n  textstring = MsgBox.Input(\"\",\"Import Text for Unordered List\",\"\")\n  if (textstring = nil) then\n    return nil\n  end\n  theFile = FileName.Make(\"tmp.txt\")\n  if (File.Exists(theFile)) then\n    File.Delete(theFile)\n  end\n  tmpFile = LineFile.Make(theFile,#FILE_PERM_WRITE)\n  tmpFile.WriteElt(textstring)\n  tmpFile.close\n  \nelseif ((_command = \"ol\")  or (_command = 
+\"ols\")) then\n  textstring = MsgBox.Input(\"\",\"Import Text for Ordered List\",\"\")\n  if (textstring = nil) then\n    return nil\n  end\n  theFile = FileName.Make(\"tmp.txt\")\n  if (File.Exists(theFile)) then\n    File.Delete(theFile)\n  end\n  tmpFile = LineFile.Make(theFile,#FILE_PERM_WRITE)\n  tmpFile.WriteElt(textstring)\n  tmpFile.close\n\nend\n\n\n'# Breite des Textblocks definieren\nmaxLength = MsgBox.Input(\"Insert the width of the new textblock in mm\",\"Width\",_defaultValues.Get(\"breiteTextbl\").AsString)\n\nif (maxLength =
+ nil) then\n  return nil\nelseif (maxLength.IsNumber.Not) then\n  MsgBox.Warning(\"Invalid input\",\"Abort\")\n  return nil\nend\nmaxLength = maxLength.AsNumber\n\n'########## Schrift bestimmen ##########\n\n'# Schriftart definieren\nif ((_command = \"fi\") or (_command = \"ti\") or (_command = \"ul\") or (_command = \"ol\")) then\n  schriftartListe = {\"DejaVu Sans\", \"DejaVu Sans Mono\", \"DejaVu Serif\", \"Khalid\", \"Segoe UI\", \"Courier New\"}\n  schriftart = MsgBox.ListAsString(schriftartListe, \"Choose font\", \"Font\")\n  if (schriftart =
+ nil) then \n    return nil\n  end\nelse\n  schriftart = _defaultValues.Get(\"schriftart\")\nend\n\n'# Schriftschnitt definieren\nif ((_command = \"fi\") or (_command = \"ti\") or (_command = \"ul\") or (_command = \"ol\")) then\n  if (schriftart = \"DejaVu Sans\") then\n    schriftschnittListe = {\"Condensed\", \"Condensed Bold\", \"Condensed Oblique\", \"Condensed Bold Oblique\"}\n    schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Choose font style\", \"Font Style\")\n    if (schriftschnitt = nil) then \n      return nil\n    end
+\n  elseif (schriftart = \"DejaVu Sans Mono\") then\n    schriftschnittListe = {\"Book\", \"Bold\", \"Oblique\", \"Bold Oblique\"}\n    schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Choose font style\", \"Font Style\")\n    if (schriftschnitt = nil) then \n      return nil\n    end\n  elseif (schriftart = \"DejaVu Serif\") then\n    schriftschnittListe = {\"Book\", \"Bold\", \"Condensed\", \"Condensed Bold\", \"Condensed Italic\", \"Condensed Bold Italic\", \"Italic\", \"Bold Italic\"}\n    schriftschnitt = MsgBox.ListAsString(schrif
+tschnittListe, \"Choose font style\", \"Font Style\")\n    if (schriftschnitt = nil) then \n      return nil\n    end\n  elseif (schriftart = \"Khalid\") then\n    schriftschnittListe = {\"Normal\"}\n    schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Choose font style\", \"Font Style\")\n    if (schriftschnitt = nil) then \n      return nil\n    end\n  elseif (schriftart = \"Segoe UI\") then\n    schriftschnittListe = {\"Standard\", \"Kursiv\", \"Fett\", \"Fett Kursiv\"}\n    schriftschnitt = MsgBox.ListAsString(schriftschnittL
+iste, \"Choose font style\", \"Font Style\")\n    if (schriftschnitt = nil) then \n      return nil\n    end\n  elseif (schriftart = \"Courier New\") then\n    schriftschnittListe = {\"Standard\"}\n    schriftschnitt = MsgBox.ListAsString(schriftschnittListe, \"Choose font style\", \"Font Style\")\n    if (schriftschnitt = nil) then \n      return nil\n    end\n  end\nelse\n  schriftschnitt = _defaultValues.Get(\"schriftschnitt\")\nend\n\n'# Schriftfarbe definieren\nif ((_command = \"fi\") or (_command = \"ti\") or (_command = \"ul\") or (_co
+mmand = \"ol\")) then\n  theColorList = {\"Black\", \"Grey\", \"Red\", \"Green\", \"Blue\", \"User defined\"}\n  theColor = MsgBox.ListAsString(theColorList, \"Choose font colour\", \"Font Colour\")\n  if (theColor = nil) then \n    return nil\n  elseif (theColor = \"User defined\") then\n    theRGB = MsgBox.MultiInput(\"Define RGB\", \"RGB\",\n    {\"Red\", \"Green\", \"Blue\"}, {\"0\", \"0\", \"0\"})\n    if (theRGB = nil) then\n      return nil\n    end\n    rot = theRGB.Get(0)\n    gruen = theRGB.Get(1)\n    blau = theRGB.Get(2)\n  end\nelse\n  theColor 
+= _defaultValues.Get(\"schwarzT\")\nend\n\n'# Schriftgroesse definieren\ntheSize = MsgBox.Input(\"Insert font size\", \"Font Size\",_defaultValues.Get(\"schriftgroesse\").AsString)\n\nif (theSize = nil) then\n  return nil\nelseif (theSize.IsNumber.Not) then\n  MsgBox.Warning(\"Invalid input\",\"Abort\")\n  return nil\nend\ntheSize = theSize.AsNumber\n\n'# Abstand der Aufzaehlungszeichen festlegen\nif ((_command = \"ol\") or (_command = \"ols\")) then\n  abst = MsgBox.Input(\"Define the space between the marker and the text in mm\",\n    \"Lis
+t: Space between marker and text\",_defaultValues.Get(\"abstList\").AsString)\n  if (abst = nil) then\n    return nil\n  elseif (abst.IsNumber.Not) then\n    MsgBox.Warning(\"Invalid input\",\"Abort\")\n    return nil\n  end\n  abst = abst.AsNumber\nend\n\nif ((_command = \"ul\") or (_command = \"uls\")) then\n  abst = MsgBox.Input(\"Define the space between the bullets and the text in mm\",\n    \"List: Space between bullets and text\",_defaultValues.Get(\"abstList\").AsString)\n  if (abst = nil) then\n    return nil\n  elseif (abst.IsNu
+mber.Not) then\n    MsgBox.Warning(\"Invalid input\",\"Abort\")\n    return nil\n  end\n  abst = abst.AsNumber\nend\n\n'# Aufzaehlungszeichen definieren\nif (_command = \"ul\") then\n  _bullet = MsgBox.Input(\"Define the character for the bullet (Default: Halbgeviertstrich)\",\n    \"List: Bullet character\",_defaultValues.Get(\"bullet\").AsString)\n  if (_bullet = nil) then\n    return nil\n  elseif (_bullet.IsNumber.Not) then\n    MsgBox.Warning(\"Invalid input\",\"Abort\")\n    return nil\n  end\n  _bullet = _bullet.AsNumber\nend\n\n'#####
+##### Text einlesen, formatieren, symbolisieren und platzieren ##########\n\n'# LineFile erzeugen und Anzahl Zeilen ermitteln\ntheLineFile = LineFile.Make(theFile,#FILE_PERM_READ)\nelementCount = theLineFile.GetSize\n\n'# Variablen initialisieren\ntheTextBlock = \"\"\ntheNewLine = \" \"\ntheNewLineT = \"\"\ntheWordT = \"\"\ni = 0\n\n'# Farben zuweisen\nif (theColor = \"Black\") then\n  theColor = Color.GetBlack\nelseif (theColor = \"Grey\") then\n  theColor = Color.GetGray\nelseif (theColor = \"Red\") then\n  theColor = Color.Make\n  theCol
+or.SetRGBList({210,35,45})\nelseif (theColor = \"Green\") then\n  theColor = Color.GetGreen\nelseif (theColor = \"Blue\") then\n  theColor = Color.Make\n  theColor.SetRGBList({0,137,207})\nelseif (theColor = \"User defined\") then\n  theColor = Color.Make\n  theColor.SetRGBList({rot.AsNumber,gruen.AsNumber,blau.AsNumber})\nend\n\nschriftart = Font.Make (schriftart, schriftschnitt)\ntheGraphicList = theLayout.GetGraphics\ntheSelected = theGraphicList.GetSelected.Get(0)\ntheOrigin = theSelected.GetOrigin                         
+      '# Nullpunkt unten links bestimmen\n\n'# Input-Text in neue Zeilen der gewuenschten Laenge umformatieren\n\nfor each i in 1..elementCount                                   '# zeilenweise durchgehen\n  theLine = theLineFile.ReadElt                                 '# aktuelle Zeile\n  if (theLine.Count > 0) then                                   '# alle nicht leeren Zeilen\n    i = 0\n    for each word in theLine.AsList                             '# Zeile in Woerter auftrennen\n      i = i + 1\n      word = av.R
+un(\"LayoutTools.Sub_SetASCII_Char\", word)      '# uebersetzen der ASCII-Codes in entsprechende Zeichen\n      theGraphicText = GraphicText.Make (theNewLine, theOrigin)\n      theSymbol = theGraphicText.ReturnSymbols.Get(0)\n      theSymbol.SetColor(theColor)\n      theSymbol.SetFont(schriftart)\n      theSymbol.SetSize(theSize)\n      theLayout.GetGraphics.Add(theGraphicText)\n      theWidth = theGraphicText.GetBounds.GetWidth\n      theWidth = theWidth * 25.4                                '# inch to mm\n      theG
+raphicList.RemoveGraphic(theGraphicText)\n      \n      if (theWidth > maxLength) then                            '# wenn laenger als maxLength Laenge...\n        theTextBlock = theTextBlock + theNewLineT.Trim + NL     '# ...setze temporaere Zeile an Textblock an und schliesse mit Newline ab\n        theNewLine = theWordT                                   '# starte neue Zeile mit letztem Wort aus letztem Durchgang\n      end\n      if (theLine.AsList.Count = i) then                        '# beim letzten Wort der
+ Zeile...\n        theNewLine = theNewLine ++ word + NL                    '# ...Woerter zusammensetzen und mit Newline abschliessen\n        theTextBlock = theTextBlock + theNewLine.Trim + NL      '# setze an Textblock an und schliesse mit Newline ab\n        theNewLine = \"\"                                         '# temporaere Zeile loeschen\n      else\n        theWordT = word                                         '# aktuelles Wort in temporaerer Variable speichern\n        theNewLineT = theNewLine          
+                      '# aktuelle Zeile in temporaerer Variable speichern\n        theNewLine = theNewLine ++ word                         '# Woerter zu neuer Zeile zusammensetzen\n      end\n    end\n  else                                                          '# alle leeren Zeilen\n    if (theNewLine.Count > 0) then                              '# wenn neue Zeile nicht leer ist... \n      theTextBlock = theTextBlock + theNewLine.Trim + NL        '# ...setze an Textblock an und schliesse mit Newline ab\n      
+theNewLine = \"\"                                           '# Inhalt der neuen Zeile loeschen\n    end\n    theTextBlock = theTextBlock + NL                            '# wenn neue Zeile nicht leer ist, schliesse mit Newline ab\n  end\nend\n\ntheTextBlock = theTextBlock + theNewLine.Trim                   '# fuege Rest der letzten Zeile noch an\ntheTextBlock = theTextBlock.BasicTrim(\"\",NL)                    '# entferne ueberschuessiges Newline am Ende\n\n'# ungeordnete Listen\nif ((_command = \"ul\") or (_command = \"ul
+s\")) then               '# fuer eine nicht geordnete Liste...\n  theTextBlock = av.Run(\"LayoutTools.Sub_CreateList\", {theTextBlock, \"ul\"})\nend\n\n'# geordnete Listen\nif ((_command = \"ol\") or (_command = \"ols\")) then               '# fuer eine geordnete Liste...\n  theTextBlock = av.Run(\"LayoutTools.Sub_CreateList\", {theTextBlock, \"ol\"})\nend\n\ntheLineFile.Close\n\n'# Text symbolisieren und temporaer in Layout platzieren\ntheGraphicList = theLayout.GetGraphics\ntheSelected = theGraphicList.GetSelected.Get(0)\ntheOrigin
+ = theSelected.GetOrigin                                        '# Nullpunkt unten links bestimmen\ntheOrigin = theOrigin.GetX@(theOrigin.GetY + theSelected.GetExtent.GetY) '# Nullpunkt oben links ableiten\ntheGraphicText = GraphicText.Make (theTextBlock, theOrigin)\ntheSymbol = theGraphicText.ReturnSymbols.Get (0)\ntheSymbol.SetColor(theColor)\ntheSymbol.SetFont(schriftart)\ntheSymbol.SetSize(theSize)\n\ntheLayout.GetGraphics.Add (theGraphicText)\ntheGraphicList.RemoveGraphic (theSelected)                     '# ur
+spruenglich selektierte Textbox loeschen\n\n'# Hoehe des Textblocks bestimmen und Nullpunkt so umrechnen, dass der Text oben links\n'# mit dem bestehenden uebereinstimmt. Bei Listen Textblock entsprechend einruecken\n\nif ((_command = \"ul\") or (_command = \"uls\") or (_command = \"ol\") or (_command = \"ols\")) then\n  abst = abst / 25.4     '# mm to inch\n  theOrigin = (theOrigin.GetX + abst)@(theOrigin.GetY - theGraphicText.GetExtent.GetY) \n  theGraphicList.RemoveGraphic(theGraphicText)                 '# temporaeren 
+Text loeschen\n  theGraphicText = GraphicText.Make (theTextBlock, theOrigin)\n  theSymbol = theGraphicText.ReturnSymbols.Get(0)\n  theSymbol.SetColor(theColor)\n  theSymbol.SetFont(schriftart)\n  theSymbol.SetSize(theSize)\n  theLayout.GetGraphics.Add (theGraphicText)\n  '# Aufzaehlungszeichen ergaenzen\n  theOrigin = (theOrigin.GetX - abst)@theOrigin.GetY\n  theGraphicText = GraphicText.Make (_theMarks, theOrigin)\n  if ((_command = \"ol\") or (_command = \"ols\")) then \n    theGraphicText.SetAlignment(#TEXTCOMPOSER_JUS
+T_RIGHT)\n  else\n    theGraphicText.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n  end\n  theSymbol = theGraphicText.ReturnSymbols.Get(0)\n  theSymbol.SetColor(theColor)\n  theSymbol.SetFont(schriftart)\n  theSymbol.SetSize(theSize)\n  theLayout.GetGraphics.Add (theGraphicText)\nelse\n  theOrigin = theOrigin.GetX@(theOrigin.GetY - theGraphicText.GetExtent.GetY) \n  theGraphicList.RemoveGraphic(theGraphicText)                 '# temporaeren Text loeschen\n  theGraphicText = GraphicText.Make (theTextBlock, theOrigin)\n  theSym
+bol = theGraphicText.ReturnSymbols.Get(0)\n  theSymbol.SetColor(theColor)\n  theSymbol.SetFont(schriftart)\n  theSymbol.SetSize(theSize)\n  theLayout.GetGraphics.Add (theGraphicText)\nend\n\ntheLayout.Invalidate\n\n'# bei Import ueber Textbox temporaer erzeugtes File loeschen\nif (theFile.AsString.Contains(\"tmp.txt\")) then\n  File.Delete(theFile)\nend"
+)
+
+(Script.122
+	Name:	"LayoutTools.Text_InsertText"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_InsertText.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.11.2022\n'# Version:      0.7\n'#\n'# Purpose:      Basiert auf Layout.Text mit folgenden Erweiterungen:\n'#               - Standardschrift wird vordefiniert\n'#               - der Nullpunkt ist oben statt unten, wenn bestehender\n'#                 Text editiert wird\n'#               Einschraenkungen:\n'#               - wenn Text edit
+iert werden soll, muss das Textobjekt\n'#                 selektiert sein\n'#               - funktioniert nur mit Flattersatz linksbuendig und\n'#                 Standard-Zeilenabstand 1.0\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\ntheGraphicList = theLayout.GetGraphics\nif (theGraphicList.HasSelected = TRUE) then\n  theSelected = theGraphicList.GetSelected.Get(0)\n  '# urspruengliche Hoehe der Textbox bestimmen, sofern vorhanden\n  theOriY = theSel
+ected.GetExtent.GetY\nend\n\nCPC = av.FindDialog(\"Graphic.Label Defaults\")\nIconList = CPC.FindByName(\"CalloutIcons\")\nthePrefs = IconList.GetObjectTag.Get(\"Ttool1\")\n\nthePrefs.Set(0, _defaultValues.Get(\"schriftart\"))\nthePrefs.Set(1, _defaultValues.Get(\"schriftschnitt\"))\nthePrefs.Set(2, _defaultValues.Get(\"schriftgroesse\"))\n\n      '(0) Font Family    (String) \n      '(1) Font Style     (String)\n      '(2) Font Size      (Number)\n      '(3) Font Color     (String)\n      '(10) UseDefFont    (Boolean)\n\nCFont =      
+thePrefs.Get(0)\nCStyle =     thePrefs.Get(1)\nCSize =      thePrefs.Get(2)\nUseDef =     thePrefs.Get(10)\nif (thePrefs.Get(3) = \"Unnamed Color\") then\n  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor\nelse \n  CColor = av.Run(\"LayoutTools.Sub_ReturnColor\",thePrefs.Get(3))\nend\n\n'# neues Textobjekt platzieren\nif (theLayout.GetGraphics.EditText.Not) then\n  pt = theLayout.GetDisplay.ReturnUserPoint\n  theGraphicText = GraphicText.Make(\"\", pt)\n  theGraphicText.SetDisplay(theLayout.GetDisplay
+)\n  theLayout.GetGraphics.UnselectAll\n  theGraphicText.SetSelected(TRUE)\n  if (theGraphicText.EditText) then\n    theLayout.GetGraphics.AddName(theGraphicText)\n    av.GetProject.SetModified(TRUE)\n  end\n  theString = theGraphicText.GetText\n  theGraphicText.GetSymbol.SetFont(Font.make(CFont,CStyle))\n  theGraphicText.GetSymbol.SetSize(CSize)\n  theGraphicText.GetSymbol.SetColor(CColor)\n  \n'# bestehendes Textobjekt editieren\nelse\n  if (theGraphicList.HasSelected = FALSE) then\n    MsgBox.Warning(\"Please select a t
+ext object\",\"\")\n    return nil\n  end \n  theSelected = theGraphicList.GetSelected.Get(0)\n  theString = theSelected.GetText\n  CColor = theSelected.ReturnSymbols.Get(0).GetColor\n  CSize = theSelected.ReturnSymbols.Get(0).GetSize\n  theOrigin = theSelected.GetOrigin\n  theNewY = theSelected.GetExtent.GetY  '# Hoehe der editierten Textbox bestimmen\n  theOrigin = theOrigin.GetX@(theOrigin.GetY - (theNewY - theOriY))\n  theGraphicList.RemoveGraphic(theSelected)\n  theGraphicText = GraphicText.Make (theString, theOrigi
+n) \n  theSymbol = theGraphicText.ReturnSymbols.Get (0)\n  theSymbol.SetColor(CColor)\n  theSymbol.SetFont(Font.make(CFont,CStyle))\n  theSymbol.SetSize(CSize) \n  theLayout.GetGraphics.Add (theGraphicText)  \nend"
+)
+
+(Script.123
+	Name:	"LayoutTools.Text_Silbentrennung"
+	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Text_Silbentrennung.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.2\n'#\n'# Purpose:      einfacher Algorithmus zur Silbentrennung deutscher \n'#               Woerter\n'#               basiert auf Open-Script von:\n'#               http://www.wer-weiss-was.de/t/silbentrennung/544436/4\n'#\n'#               under construction!\n'#\n'#               erfordert:\n'#               -
+ LayoutTools.Sub_IstIn\n'#\n'######################################################################\n\nwelchesWort = \"Donaudampfschifffahrskapitän\"\n\n'# Variablen initialisieren\nzeichenAnzahl = 0\ntrennenErlaubt = true\nz = \"\"\nz0 = \"\"\nz1 = \"\"\nv = \"\"\ntrennPositionen = {}\nistInR = false\n\nzeichenAnzahl = welchesWort.Count\n\nif (zeichenAnzahl > 2) then\n  trennenErlaubt = false\n  vokale = {\"a\",\"e\",\"i\",\"o\",\"u\",\"ä\",\"ü\",\"ö\"}\n  verbindungen = {\"sch\",\"ch\",\"ph\",\"ck\",\"pf\",\"br\",\"pl\",\"tr\",\"st\",\"gr\"}\n  trennungen = {\"-\",\"/\",\"\\\",\"
+*\",\"#\",\";\",\".\",\"+\",\"=\",\")\",\"(\",\"&\",\"!\",\"?\",\",\",\":\",\" \",\"_\",\"~\"}\n  for each i in 2..(zeichenAnzahl - 1)\n    z0 = welchesWort.Middle((i - 1),1)\n    char = z0\n    liste = vokale\n    istInR = av.Run(\"LayoutTools.Sub_IstIn\", {char, liste})\n    if ((trennenErlaubt = false) and (istInR = true)) then\n      trennenErlaubt = true\n    end\n    \n    if (trennenErlaubt = true) then\n      z = welchesWort.Middle(i,1)\n      z1 = welchesWort.Middle((i + 1),1)\n      v = z0 + z\n      if ((v = \"ch\") and (i > 2) and (welchesWort
+.Middle((i - 2),1) = \"s\")) then\n        v = \"sch\"\n      end\n      liste = vokale\n      char = z1\n      istInR = av.Run(\"LayoutTools.Sub_IstIn\", {char, liste})\n      if (istInR = true) then\n        char = z\n        istInR = av.Run(\"LayoutTools.Sub_IstIn\", {char, liste})\n        if (istInR = false) then\n          liste = trennungen\n          istInR = av.Run(\"LayoutTools.Sub_IstIn\", {char, liste})\n          if (istInR = false) then\n            char = z0\n            istInR = av.Run(\"LayoutTools.Sub_IstIn\", {cha
+r, liste})\n            if (istInR = false) then\n              char = v\n              liste = verbindungen\n              istInR = av.Run(\"LayoutTools.Sub_IstIn\", {char, liste})\n              if (istInR = true) then\n                trennPositionen.Add((i - (v.Count + 1)))\n              else\n                trennPositionen.Add(i)\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\n\nfor each pos in trennPositionen\n  silbe = welchesWort.Left(pos)\n  rest = welchesWort.Middle(po
+s,(welchesWort.Count - 2))\n  MsgBox.Info(silbe + \"-\" + NL + rest,\"Moegliche Trennungen\")\nend\n\n"
+)
+
+(Script.124
+	Name:	"LayoutTools.View_RefreshLayout"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_View_RefreshLayout.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Erzwingt einen Neuaufbau des Layouts durch mehrfaches\n'#               ZoomIn und ZoomOut\n'#\n'#########################################################################\n\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Info(\"Start this script from an active
+ Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.ZoomIn(110)\ntheLayout.GetDisplay.ZoomOut(111)\ntheLayout.GetDisplay.ZoomIn(111)\ntheLayout.GetDisplay.ZoomOut(110)\n"
+)
+
+(Script.125
+	Name:	"LayoutTools.View_SetQuality"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     LayoutTools_View_SetQuality.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.10.2014\n'# Version:      1.0\n'#\n'# Purpose:      aendert auf Knopfdruck bei allen Bildern\n'#               eines Layouts die Qualitaet von \"Draft\"\n'#               auf \"Presentation\" oder umgekehrt.             \n'#\n'########################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.War
+ning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\n\nfor each theObject in theGraphicsList\n  if (theObject.Is(PictureFrame)) then\n    if (theObject.GetQuality = #FRAME_QUALITY_PRESENTATION) then\n      theObject.SetQuality(#FRAME_QUALITY_DRAFT)\n    else\n      theObject.SetQuality(#FRAME_QUALITY_PRESENTATION)\n    end\n  end\nend\n\ntheLayout.Invalidate"
+)
+
+(Script.126
+	Name:	"LayoutTools.View_UndoZoom"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_View_UndoZoom.ave\n'# Author:       Adrian Boehlen\n'# Date:         06.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      Macht die aus dem View Modus bekannte Funktion auch fuer\n'#               Layouts verfuegbar\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active
+ Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.UndoZoom\n"
+)
+
+(Script.127
+	Name:	"LayoutTools.View_ZoomToExportview"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_View_ZoomToExportview.ave\n'# Author:       Adrian Boehlen\n'# Date:         06.11.2022\n'# Version:      0.2\n'#\n'# Purpose:      Die Laufweite von Text aendert je nach Schriftart und \n'#               Zoomstufe, daher ist es mitunter schwierig abzuschaetzen,  \n'#               wie das exportierte Layout aussehen wird. Diese Funktion \n'#               zoomt in eine Zoomstufe, in der die Anzeige ziemlich \n
+'#               genau der spaeteren Ausgabe entspricht.\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Info(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.ZoomToActual\ntheLayout.GetDisplay.ZoomIn(300)"
+)
+
+(Script.128
+	Name:	"Ext_Unload"
+	SourceCode:	"Dialog.DetachFromExtension(self)\n"
+)
+
+(Script.129
+	Name:	"Ext_Inst"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Inst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack = Self '# Der 'Sack' vom makescript, wo alles Benoetigte drin ist\n\nSchaltflaeche = Sack.Get(0)\nviewGUI = av.GetProject.FindGUI( \"Layout\" )\nif (v
+iewGUI <> nil) then\n  '# pruefen, ob die Schaltflaeche schon existiert\n  if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick) = nil) then\n    '# Schaltflaeche an der 2. Stelle einfügen\n    viewGUI.GetButtonBar.Add(Schaltflaeche, 2)\n  end\nend\n\nav.GetProject.AddDialog(Sack.Get(1)) '# 1. Dialog hinzufuegen\nav.GetProject.AddDialog(Sack.Get(2)) '# 2. Dialog hinzufuegen\n"
+)
+
+(Script.130
+	Name:	"Ext_Unin"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nlayoutGUI = av.GetProject.FindGUI( \"Layout\" )\n\n'# Schaltflaeche un
+d Dialoge entfernen\nlayoutGUI.GetButtonBar.Remove(layoutGUI.GetButtonBar.FindByScript( \"LayoutTools.start\"))\nav.GetProject.removedialog(\"LayoutTools\")\nav.GetProject.removedialog(\"Satzspiegel\")"
+)
+

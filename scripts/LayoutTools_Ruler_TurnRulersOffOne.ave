@@ -1,0 +1,40 @@
+'###########################################################################
+'#
+'# Filename:     LayoutTools_TurnRulersOff.ave
+'# Author:       Adrian Boehlen
+'# Date:         02.11.2018
+'# Version:      0.3
+'#
+'# Purpose:      schaltet durch DrawRulers erzeugte Hilfslinien aus
+'#
+'###########################################################################
+
+theLayout = av.GetActiveDoc
+farbeStr = ""
+hilfslFarbeStr = "24040200"          '# RGB-Wert der Hilfslinie...
+hilfslFarbe = Color.Make
+hilfslFarbe.SetRGBList({240,40,200}) '# ...gemaess Definition in DrawRulers
+weissStr = "255255255"
+weiss = Color.Make
+weiss.SetRGBList({255,255,255})      '# RGB weiss
+
+for each g in theLayout.GetGraphics
+  if (g.Is(GraphicGroup).Not) then
+    symb = g.GetSymbol
+    rgb = symb.GetColor.GetRGBList
+    for each farbe in rgb
+      farbeStr = farbeStr + farbe.AsString
+    end
+    if (farbeStr = hilfslFarbeStr) then
+      g.SetSelected(TRUE)
+      g.GetSymbol.SetColor(weiss)
+    end
+    farbeStr = ""
+  end
+end
+
+theGraphicsList = theLayout.GetGraphics
+theGraphicsList.MoveSelectedToBack
+theGraphicsList.UnselectAll
+theLayout.GetDisplay.Invalidate(true)
+

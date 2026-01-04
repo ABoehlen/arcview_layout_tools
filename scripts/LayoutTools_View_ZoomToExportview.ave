@@ -1,0 +1,9 @@
+theLayout = av.GetActiveDoc
+
+if (theLayout.Is(layout).Not) then
+  MsgBox.Info("Start this script from an active Layout.","")
+  return nil
+end
+
+theLayout.GetDisplay.ZoomToActual
+theLayout.GetDisplay.ZoomIn(300)

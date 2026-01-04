@@ -1,0 +1,7 @@
+theLayout = av.GetActiveDoc
+if (theLayout.Is(layout).Not) then
+  MsgBox.Warning("Start this script from an active Layout.","")
+  return nil
+end
+
+theLayout.SetSelectMode(#GRAPHICS_SELECT_NORMAL)

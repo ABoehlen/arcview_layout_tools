@@ -1,0 +1,15 @@
+'##########################################################
+'#
+'# Filename:     LayoutTools_DefaultFont.ave
+'# Author:       Adrian Boehlen
+'# Date:         24.01.2016
+'# Version:      0.1
+'#
+'# Purpose:      Definition globaler Variablen
+'#               fuer die Standardschrift
+'#
+'##########################################################
+
+_defFont =    "DejaVu Sans"
+_defSchnitt = "Condensed"
+_defColor =   Color.GetBlack

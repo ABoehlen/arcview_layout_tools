@@ -1,0 +1,59 @@
+nc = Color.make
+
+if (Self = "Black") then
+  nc.SetRGBList({0,0,0})
+elseif (Self = "White") then
+  nc.SetRGBList({255,255,255})
+elseif (Self = "Dark Gray") then
+  nc.SetRGBList({130,130,130})
+elseif (Self = "Medium Gray") then
+  nc.SetRGBList({165,165,165})
+elseif (Self = "Light Gray") then
+  nc.SetRGBList({210,210,210})
+elseif (Self = "Dark Red") then
+  nc.SetRGBList({150,0,0})
+elseif (Self = "Medium Red") then
+  nc.SetRGBList({255,0,0})
+elseif (Self = "Light Red") then
+  nc.SetRGBList({255,180,180})
+elseif (Self = "Dark Orange") then
+  nc.SetRGBList({180,140,0})
+elseif (Self = "Medium Orange") then
+  nc.SetRGBList({255,210,0})
+elseif (Self = "Light Orange") then
+  nc.SetRGBList({255,210,180})
+elseif (Self = "Dark Yellow") then
+  nc.SetRGBList({200,200,130})
+elseif (Self = "Medium Yellow") then
+  nc.SetRGBList({255,255,0})
+elseif (Self = "Light Yellow") then
+  nc.SetRGBList({255,255,200})
+elseif (Self = "Dark Green") then
+  nc.SetRGBList({0,150,0})
+elseif (Self = "Medium Green") then
+  nc.SetRGBList({0,255,0})
+elseif (Self = "Light Green") then
+  nc.SetRGBList({180,255,180})
+elseif (Self = "Light Cyan") then
+  nc.SetRGBList({150,255,255})
+elseif (Self = "Medium Cyan") then
+  nc.SetRGBList({150,150,255})
+elseif (Self = "Dark Cyan") then
+  nc.SetRGBList({0,150,150})
+elseif (Self = "Dark Blue") then
+  nc.SetRGBList({0,0,150})  
+elseif (Self = "Medium Blue") then
+  nc.SetRGBList({0,0,255})
+elseif (Self = "Light Blue") then
+  nc.SetRGBList({150,150,255})
+elseif (Self = "Dark Purple") then
+  nc.SetRGBList({150,0,150})  
+elseif (Self = "Medium Purple") then
+  nc.SetRGBList({255,0,255})
+elseif (Self = "Light Purple") then
+  nc.SetRGBList({255,180,255})
+elseif (Self = "Transparent") then
+  nc.SetTransparent(true)  
+end
+
+return nc

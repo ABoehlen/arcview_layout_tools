@@ -1,0 +1,3 @@
+if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then
+  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FONT)
+end

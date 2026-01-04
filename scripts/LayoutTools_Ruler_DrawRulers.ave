@@ -1,0 +1,80 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_DrawRulers.ave
+'# Author:       Adrian Boehlen
+'# Date:         02.12.2015
+'# Version:      0.2
+'#
+'# Purpose:      Zieht horizontale und vertikale Hilfslinien am Clickpunkt
+'#
+'#########################################################################
+
+theLayout = av.GetActiveDoc  
+
+if (theLayout.Is(layout).Not) then
+  MsgBox.Warning("Start this tool from an active Layout.","")
+  return nil
+end
+
+'# Layout-Geometrie ermitteln
+thePageDisplay = av.GetActiveDoc.GetDisplay
+recMargin = thePageDisplay.ReturnMarginExtent
+theOrigin = recMargin.ReturnOrigin
+xOriginLeft = theOrigin.GetX
+xOriginRight = xOriginLeft + recMargin.GetWidth
+yOriginBottom = theOrigin.GetY
+yOriginTop = yOriginBottom + recMargin.GetHeight
+
+if (System.IsShiftKeyDown) then
+  '# vertikale Linie aus Clickpunkt ableiten
+  pt = theLayout.GetDisplay.ReturnUserPoint
+
+  xU = pt.GetX
+  yU = yOriginTop + 1
+  xD = pt.GetX
+  yD = yOriginBottom - 1
+
+  '# Strichstil definieren
+  thePen = BasicPen.Make
+  theColor = Color.Make
+  theColor.SetRGBList({240,40,200})
+  thePen.SetColor(theColor)
+  thePen.SetSize(0.5)
+
+  '# Linie zeichnen
+  theLine = Line.Make( xU@yU, xD@yD)
+  theGraphicLine = GraphicShape.Make(theLine)
+  theGraphicLine.SetSymbol(thePen)
+
+  theLayout.GetGraphics.UnselectAll
+  theGraphicLine.SetSelected(TRUE)
+  theLayout.GetGraphics.Add(theGraphicLine)
+  av.GetProject.SetModified(TRUE)
+  
+else
+  '# horizontale Linie aus Clickpunkt ableiten
+  pt = theLayout.GetDisplay.ReturnUserPoint
+
+  xL = xOriginLeft - 1
+  yL = pt.GetY
+  xR = xOriginRight + 1
+  yR = pt.GetY
+
+  '# Strichstil definieren
+  thePen = BasicPen.Make
+  theColor = Color.Make
+  theColor.SetRGBList({240,40,200})
+  thePen.SetColor(theColor)
+  thePen.SetSize(0.5)
+
+  '# Linie zeichnen
+  theLine = Line.Make( xL@yL, xR@yR)
+  theGraphicLine = GraphicShape.Make(theLine)
+  theGraphicLine.SetSymbol(thePen)
+
+  theLayout.GetGraphics.UnselectAll
+  theGraphicLine.SetSelected(TRUE)
+  theLayout.GetGraphics.Add(theGraphicLine)
+  av.GetProject.SetModified(TRUE)
+end
+

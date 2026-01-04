@@ -1,0 +1,76 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_Footnote.ave
+'# Author:       Adrian Boehlen
+'# Date:         19.12.2017
+'# Version:      0.5
+'#
+'# Purpose:      erzeugt Fussnoten
+'#
+'#               erfordert:
+'#               - LayoutTools.Sub_DefaultValues
+'#               - LayoutTools.Sub_PlaceText
+'#
+'###################################################################
+
+_theLayout = av.GetActiveDoc
+
+av.Run("LayoutTools.Sub_DefaultValues", {})  '# Defaultwerte einlesen
+
+if (_theLayout.Is(layout).Not) then
+  MsgBox.Warning("Start this tool from an active Layout.","")
+  return nil
+end
+
+'# Schriftgroesse definieren
+textSize = MsgBox.Input("Insert font size", "Font Size",_schriftgroesse.AsString)
+
+if (textSize = nil) then
+  return nil
+elseif (textSize.IsNumber.Not) then
+  MsgBox.Warning("Invalid input","Abort")
+  return nil
+end
+textSize = textSize.AsNumber
+
+'########## Layout-Geometrie ermitteln ##########
+
+thePageDisplay = av.GetActiveDoc.GetDisplay
+recMargin = thePageDisplay.ReturnMarginExtent
+theOrigin = recMargin.ReturnOrigin
+xOriginLeft = theOrigin.GetX
+xOriginRight = xOriginLeft + recMargin.GetWidth
+
+'########## horizontale Linie aus Clickpunkt ableiten ##########
+
+pt = _theLayout.GetDisplay.ReturnUserPoint
+
+xL = xOriginLeft + 0.01
+yL = pt.GetY
+xR = (xOriginRight - xOriginLeft) / 3 + xOriginLeft
+yR = pt.GetY
+
+'# Strichstil definieren
+thePen = BasicPen.Make
+schwarz = Color.GetBlack
+thePen.SetColor(schwarz)
+thePen.SetSize(1)
+
+'# Linie zeichnen
+theLine = Line.Make( xL@yL, xR@yR)
+theGraphicLine = GraphicShape.Make(theLine)
+theGraphicLine.SetSymbol(thePen)
+
+_theLayout.GetGraphics.UnselectAll
+theGraphicLine.SetSelected(TRUE)
+_theLayout.GetGraphics.Add(theGraphicLine)
+av.GetProject.SetModified(TRUE)
+
+'########## Text definieren und platzieren ##########
+
+textFont = Font.Make (_schriftart, _schriftschnitt)
+textString = "Text"
+textOrigin = (xOriginLeft)@(pt.GetY - 0.25)
+textColor = _schwarzC
+av.Run("LayoutTools.Sub_PlaceText", {textFont, textString, textOrigin, textColor, textSize})
+

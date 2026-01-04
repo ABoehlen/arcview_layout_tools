@@ -1,0 +1,88 @@
+'######################################################################
+'#
+'# Filename:     LayoutTools.Text_Silbentrennung.ave
+'# Author:       Adrian Boehlen
+'# Date:         09.11.2018
+'# Version:      0.2
+'#
+'# Purpose:      einfacher Algorithmus zur Silbentrennung deutscher 
+'#               Woerter
+'#               basiert auf Open-Script von:
+'#               http://www.wer-weiss-was.de/t/silbentrennung/544436/4
+'#
+'#               erfordert:
+'#               - LayoutTools.Sub_IstIn
+'#
+'######################################################################
+
+welchesWort = "Donaudampfschifffahrskapitän"
+
+'# Variablen initialisieren
+zeichenAnzahl = 0
+trennenErlaubt = true
+z = ""
+z0 = ""
+z1 = ""
+v = ""
+trennPositionen = {}
+istInR = false
+
+zeichenAnzahl = welchesWort.Count
+
+if (zeichenAnzahl > 2) then
+  trennenErlaubt = false
+  vokale = {"a","e","i","o","u","ä","ü","ö"}
+  verbindungen = {"sch","ch","ph","ck","pf","br","pl","tr","st","gr"}
+  trennungen = {"-","/","\","*","#",";",".","+","=",")","(","&","!","?",",",":"," ","_","~"}
+  for each i in 2..(zeichenAnzahl - 1)
+    z0 = welchesWort.Middle((i - 1),1)
+    char = z0
+    liste = vokale
+    istInR = av.Run("LayoutTools.Sub_IstIn", {char, liste})
+    if ((trennenErlaubt = false) and (istInR = true)) then
+      trennenErlaubt = true
+    end
+    
+    if (trennenErlaubt = true) then
+      z = welchesWort.Middle(i,1)
+      z1 = welchesWort.Middle((i + 1),1)
+      v = z0 + z
+      if ((v = "ch") and (i > 2) and (welchesWort.Middle((i - 2),1) = "s")) then
+        v = "sch"
+      end
+      liste = vokale
+      char = z1
+      istInR = av.Run("LayoutTools.Sub_IstIn", {char, liste})
+      if (istInR = true) then
+        char = z
+        istInR = av.Run("LayoutTools.Sub_IstIn", {char, liste})
+        if (istInR = false) then
+          liste = trennungen
+          istInR = av.Run("LayoutTools.Sub_IstIn", {char, liste})
+          if (istInR = false) then
+            char = z0
+            istInR = av.Run("LayoutTools.Sub_IstIn", {char, liste})
+            if (istInR = false) then
+              char = v
+              liste = verbindungen
+              istInR = av.Run("LayoutTools.Sub_IstIn", {char, liste})
+              if (istInR = true) then
+                trennPositionen.Add((i - (v.Count + 1)))
+              else
+                trennPositionen.Add(i)
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end
+
+for each pos in trennPositionen
+  silbe = welchesWort.Left(pos)
+  rest = welchesWort.Middle(pos,(welchesWort.Count - 2))
+  MsgBox.Info(silbe + "-" + NL + rest,"Moegliche Trennungen")
+end
+
+

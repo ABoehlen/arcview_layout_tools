@@ -1,0 +1,209 @@
+
+' NAME: mm_docODBCreate
+
+' HERKUNFT: Harald (neu auf Grundlage von FSA)
+
+' EINBINDUNG MTOOLS: Menueeintrag im Projektmenue (Label: Dokumentauswahl exportieren (ODB))
+
+' HILFE: Oeffnet eine Auswahlliste zur Speicherung von Dokumenten in einem einzelnen ODB-File  (s. STRG-Klick Info)
+
+'*******************************************
+
+' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)
+ 
+if (System.IsControlKeyDown) then
+
+  message =  " "+nl+
+    
+    "SCRIPTNAME:    mm_DocODBCreate "+nl+nl+
+  
+    "ORIGIN:   Harald (new on FSA Basis). "+nl+nl+
+    
+    "Opens a MultiList to write the selected documents to a single ODB file."+nl+nl+
+    
+    "The dependencies of the project (as e.g. extensions) will be listet to annotate them "+
+    "in the ODB if desired. In this case they are loaded automatically when the ODB is imported into a blanc project. "+
+    "If you don't feel safe upon what extensions your ODB is dependent, it is advisable, to add all obligatory "+
+    "extensions of the project at least (find them labeld with ''- fix -'' in the dialog box or with a transparent "+
+    "check in the extensions dialog. Extensions that are not obligatory (that you can unload) are labeled with "+
+    "''- lax -'' in the dialog box. If the ODB to export contains a grid for example, Spatial- or 3D Analyst are "+
+    "obligatory."+nl+nl+
+    
+    "The string  '$'  inheres a split function in this script. Documents, with names containing this sign "+
+    "can not be exported. Rename this documents or change the split string in the system script called "+
+    "''mm_docODBCreate''. "+nl
+    
+  msgbox.report(message,"INFO: Export Documents (*.ODB) ...")
+  
+  return nil
+end
+
+'-------------------------------------------------------
+
+theProject = av.GetProject
+
+if (theProject = NIL) then
+  return NIL
+end
+
+'-------------------------------------------------------------------------------
+' CREATE DOCLIST 
+
+theDocList = List.Make
+
+for each d in theProject.GetDocs
+  if (d.Is(Layout)) then  
+    theGUIString = d.GetGUI
+    theLString = theGUIString.UCase+" :  "+d.AsString
+    theDocList.Add(theLString)
+  end
+end
+
+if (theDocList.count = 0) then
+  MsgBox.Info("No Docs to be found...","")
+  return NIL
+end
+
+theDocList.sort(TRUE)
+
+'-------------------------------------------------------------------------------
+' LET THE USER CHOOSE
+
+theSelDocs = MsgBox.MultiListAsString(theDocList, "Select documents to write to the ODB file: "+
+             "", " Write Docs to ODB")
+
+
+if ((theSelDocs = NIL) or (theSelDocs.Count = 0)) then return NIL end
+
+
+'-------------------------------------------------------------------------------
+' CREATE ODB-FILE, ASK FOR NAME AND PATH, CWD AND "Docs" AS DEFAULT
+
+theCWD = FileName.getCWD
+
+if (File.isWritable(theCWD).not) then
+  av.GetProject.GetWorkDIR.setCWD
+  theCWD = FileName.getCWD
+end
+  
+defaultName = FileName.Make(theCWD.AsString).MakeTmp("Docs", "odb")
+theDocODB = FileDialog.Put(defaultName, "*.odb", " Save ODB-File as")
+
+if (theDocODB = NIL) then
+  return NIL
+end
+
+theODBFile = ODB.Make(theDocODB)
+
+'-------------------------------------------------------------------------------
+' ASK FOR DEPENDENCIES
+
+theProjDepends = av.GetProject.GetDependencies
+
+if (theProjDepends.count > 0) then
+
+  dctExts = Extension.GetExplicitExtensions
+  
+  theExt = {}
+  
+  for each oKey in dctExts.ReturnKeys
+    if (dctExts.Get(oKey).CanUnload.not) then
+      theExt.Add(oKey+" (- fix -)")
+    end
+  end
+  
+
+  for each fKey in dctExts.ReturnKeys
+    if (fKey <> "Memo Tools 6.5  (English)") then
+      if (dctExts.Get(fKey).CanUnload) then
+        theExt.Add(fKey+" (- lax -)")
+      end
+    end
+  end
+
+  if (theExt.count > 0) then
+    theODBDepends = Msgbox.multiListAsString(theExt,"Select extensions that should be loaded when the ODB will be imported  (OK to empty List = None):"," Extensions of the Project")
+  
+    if (theOdbDepends = NIL) then
+      return NIL
+    end
+    
+    theFileNames = List.Make
+    for each E in theODBDepends
+      sExt = E
+      theExt = dctExts.Get(sExt.Left(sExt.count-10))
+      theFN = theExt.GetFileName
+      theFileNames.Add(theFN)
+    end
+    
+    theODBDependencies = theODBFile.getDependencies
+  
+    for each dep in theFileNames
+      theODBDependencies.Add(dep)
+    end
+  end
+end
+
+'msgbox.multilistasstring(theODBDependencies,"","ODB-Depp")
+  
+'-------------------------------------------------------------------------------
+' WE'VE TAKEN THE DOC-GUIS IN THE LINE FOR CLARITY; NOW WE HAVE TO SPLIT THE LINE
+' AND CREATE A SPLITSIGN '$' FOR THIS PURPOSE. CONSEQUENTIAL NO DOCS WITH THAT SIGN COULD
+' BE EXPORTED... LOOK IF WE FIND SUCH DOCS AND SHOW IF WE HAD SUCCEEDED
+
+theSelDokList = List.Make
+theUnableList = List.Make
+
+for each selDok in theSelDocs
+  if (selDok.AsString.contains("$")) then
+    theUnableList.Add(selDok)
+  end
+  theSplit = selDok.Substitute(" :  ","$")
+  theSplit = theSplit.AsTokens("$")
+  for each selDokString in theSplit
+    theSelDokList.Add(selDokString)
+  end
+end
+
+'-------------------------------------------------------------------------------
+' ODB MIT LISTE FUELLEN
+
+for each d in theSelDokList
+  theClose = theProject.FindDoc(d)
+  if (theClose = NIL) then continue end
+  theODBFile.Add(theClose)
+end
+
+'-------------------------------------------------------------------------------
+' COMMIT UND SCHREIBEN
+
+theODBFile.Commit
+
+if (theODBFile.Commit = FALSE) then
+  MsgBox.Info("Could not commit...","")
+  return NIL
+end
+
+theDocsCount = theODBFile.Count
+
+'-------------------------------------------------------------------------------
+' GIVE SOME INFOS IN THE STATUS BAR
+
+if (theDocsCount <> 1) then
+  MsgBox.Info ("Written "+theDocsCount.AsString + " Documents to  ''"+theDocODB.AsString +"''", "ODB-File")
+  av.showMSG("llll llll llll llll llll   llll llll llll    Written "+theDocsCount.AsString + " documents to  ''"+theDocODB.AsString +"''")
+else
+  MsgBox.Info ("Written "+theDocsCount.AsString + " Document to  ''"+theDocODB.AsString +"''", "ODB-File")
+  av.showMSG("llll llll llll llll llll   llll llll llll    Written "+theDocsCount.AsString + " document to  ''"+theDocODB.AsString +"''")
+end
+
+if (theUnableList.count > 0) then
+  MsgBox.Info("The string  '$'  inheres a split function in the 'Sort'  part of this script. "+theUnableList.count.AsString+" Doc(s) "+
+  "named using this string could not be processed.","")
+end
+
+'-------------------------------------------------------------------------------
+
+' END OF FILE
+
+

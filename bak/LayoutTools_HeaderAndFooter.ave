@@ -1,0 +1,144 @@
+'# Name:          LayoutTools.HeaderAndFooter 
+'#                lyt_head.ave
+'# Author:        Mike Quentel <mquentel@acceleration.net>,
+'#                 <kingofthewood@yahoo.com>
+'# Date:          Fri Dec 10 15:28:27 1999
+'# Revised by:    Adrian Boehlen
+'# Revision Date: 26/04/2015
+'# Purpose:       Creates header (optional) and footer
+'#
+'###################################################################
+
+lytActive = av.GetActiveDoc
+if ((lytActive.is(Layout)) and (lytActive.GetClass.GetClassName <> "DialogEditor")) then
+  thePageDisplay = lytActive.GetDisplay
+  thePageExtent = thePageDisplay.ReturnPageExtent
+  theCenter = thePageExtent.ReturnCenter
+  recMargin = thePageDisplay.ReturnMarginExtent
+  theOrigin = recMargin.ReturnOrigin
+  xOriginLeft = theOrigin.GetX
+  xOriginCenter = theCenter.GetX
+  xOriginRight = xOriginLeft + recMargin.GetWidth
+  yOriginBottom = theOrigin.GetY
+  yOriginTop = yOriginBottom + recMargin.GetHeight
+   
+  '# creates origins for graphic text (anchor points left)
+  docOrigin = (xOriginLeft + 0.01)@(yOriginBottom + 0.05)
+  userOrigin = (xOriginCenter)@(yOriginBottom + 0.05)
+  pageOrigin = (xOriginRight - 0.01)@(yOriginBottom + 0.05)
+  
+  headLeftOrigin = (xOriginLeft + 0.01)@(yOriginTop - 0.12)
+  headRightOrigin = (xOriginRight - 0.01)@(yOriginTop - 0.12)
+  
+  '# creates names strings for graphic text  
+  strAprName = av.GetProject.GetName
+  strLytName = lytActive.GetWin.GetTitle
+  fnUserName = ("$AVEXT/user_name.odb").AsFileName
+  strUserName = MsgBox.Input ("Name des Autors eingeben","Autor","Adrian Boehlen")
+  strDoc = (strAprName)
+  strUser = (strUserName)
+  strPage = MsgBox.Input ("Seitenzahl eingeben", "Seitenzahl", "1")
+  
+  '# defines header (optional)
+  if (MsgBox.YesNo("Kopfzeile definieren ?","Header",true)) then
+    strHeadLeft = MsgBox.Input("Text links oben eingeben:",
+    "Kopfzeile links"," ")
+    strHeadRight = MsgBox.Input("Text rechts oben eingeben:",
+    "Kopfzeile rechts"," ")
+  end
+  
+  '# creates, adjusts and adds graphic text to layout
+  theSizeFooter = 10
+  theSizeHeader = 14
+  theColor = Color.GetBlack
+  theFont = Font.Make ("DejaVu Sans", "Condensed")
+
+  gtxDoc = GraphicText.Make (strDoc, docOrigin)  
+  gtxUser = GraphicText.Make (strUser, userOrigin)
+  gtxPage = GraphicText.Make (strPage, pageOrigin)
+  
+  if (strHeadLeft <> nil) then
+    gtxHeadLeft = GraphicText.Make (strHeadLeft, headLeftOrigin)
+  end
+  if (strHeadRight <> nil) then
+    gtxHeadRight = GraphicText.Make (strHeadRight, headRightOrigin)
+  end
+  
+  txtSymDoc = gtxDoc.ReturnSymbols.Get (0)
+  txtSymDoc.SetSize (theSizeFooter)
+  txtSymDoc.SetColor(theColor)
+  txtSymDoc.SetFont (theFont)
+
+  txtSymUser = gtxUser.ReturnSymbols.Get (0)
+  txtSymUser.SetSize (theSizeFooter)
+  txtSymUser.SetFont (theFont)
+    
+  txtSymPage = gtxPage.ReturnSymbols.Get (0)
+  txtSymPage.SetSize (theSizeFooter)
+  txtSymPage.SetFont (theFont)
+  
+  if (strHeadLeft <> nil) then
+    textSymHeadLeft = gtxHeadLeft.ReturnSymbols.Get (0)
+    textSymHeadLeft.SetSize (theSizeHeader)
+    textSymHeadLeft.SetColor(theColor)
+    textSymHeadLeft.SetFont (theFont)
+  end
+  if (strHeadRight <> nil) then
+    textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)
+    textSymHeadRight.SetSize (theSizeHeader)
+    textSymHeadRight.SetFont (theFont)
+  end
+  
+  lytActive.GetGraphics.Add (gtxDoc)
+  lytActive.GetGraphics.Add (gtxUser)
+  lytActive.GetGraphics.Add (gtxPage)
+  
+  if (strHeadLeft <> nil) then
+    lytActive.GetGraphics.Add (gtxHeadLeft)
+  end
+  
+  if (strHeadRight <> nil) then
+    lytActive.GetGraphics.Add (gtxHeadRight)
+  end
+  theGraphicList = lytActive.GetGraphics
+  
+  '# replace user name with simulated anchor point middle
+  userOrigin = (xOriginCenter - (gtxUser.GetExtent.GetX / 2))@(yOriginBottom + 0.05)
+  theGraphicList.RemoveGraphic(gtxUser)
+  gtxUser = GraphicText.Make (strUser, userOrigin)
+  txtSymUser = gtxUser.ReturnSymbols.Get (0)
+  txtSymUser.SetSize (theSizeFooter)
+  txtSymUser.SetColor(theColor)
+  txtSymUser.SetFont (theFont)
+  lytActive.GetGraphics.Add (gtxUser)
+  
+  '# replace page number with simulated anchor point right
+  pageOrigin = (xOriginRight - gtxPage.GetExtent.GetX)@(yOriginBottom + 0.05)
+  theGraphicList.RemoveGraphic(gtxPage)
+  gtxPage = GraphicText.Make (strPage, pageOrigin)
+  txtSymPage = gtxPage.ReturnSymbols.Get (0)
+  txtSymPage.SetSize (theSizeFooter)
+  txtSymPage.SetColor(theColor)
+  txtSymPage.SetFont (theFont)
+  lytActive.GetGraphics.Add (gtxPage)
+  
+  '# replace right header with simulated anchor point right
+  if (strHeadRight <> nil) then
+    headRightOrigin = (xOriginRight - gtxHeadRight.GetExtent.GetX)@(yOriginTop - 0.12)
+    theGraphicList.RemoveGraphic(gtxHeadRight)
+    gtxHeadRight = GraphicText.Make (strHeadRight, headRightOrigin)
+    textSymHeadRight = gtxHeadRight.ReturnSymbols.Get (0)
+    textSymHeadRight.SetSize (theSizeHeader)
+    textSymHeadRight.SetColor(theColor)
+    textSymHeadRight.SetFont (theFont)
+    lytActive.GetGraphics.Add (gtxHeadRight)
+  end
+
+else
+  MsgBox.Warning ("This script is meant for an Active Layout only.  Exiting.","")
+  exit
+end  
+  
+
+
+

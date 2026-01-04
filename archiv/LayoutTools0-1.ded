@@ -1,0 +1,939 @@
+/3.2
+(ODB.1
+	Dependencies:	"$AVEXT/dialog.avx\n"
+	FirstRootClassName:	"DEd"
+	Roots:	2
+	Roots:	83
+	Roots:	87
+	Roots:	91
+	Roots:	95
+	Roots:	99
+	Roots:	103
+	Roots:	107
+	Version:	32
+)
+
+(DEd.2
+	Name:	"LayoutTools"
+	Creator:	"Adrian Boehlen"
+	CreationDate:	"Dienstag, 14. Mai 2013 09:15:52"
+	Comments:	"Version 0.1"
+	GUIName:	"DialogEditor"
+	Win:	3
+	CSMgr:	4
+	DocExts:	6
+	DocExts:	7
+	Graphics:	8
+	Dpy:	39
+	Dialog:	42
+	DialogExtent:	82
+	Compiled:	1
+)
+
+(DocWin.3
+	Owner:	2
+	Open:	1
+	X:	275
+	Y:	375
+	W:	493
+	H:	261
+)
+
+(CSMgr.4
+	Client:	5
+)
+
+(CSClient.5
+	Client:	6
+	ReqName:	"ClientNfy"
+)
+
+(PanMgr.6
+	Doc:	2
+)
+
+(DocAct.7
+	Doc:	2
+)
+
+(GList.8
+	Child:	9
+	Child:	12
+	Child:	16
+	Child:	20
+	Child:	24
+	Child:	28
+	Child:	31
+	Child:	35
+	Dpy:	39
+	FormatNumb:	41
+)
+
+(GCtrl.9
+	Name:	"aControlPanel5"
+	Bounds:	10
+	ControlConstraints:	0x55
+	Control:	11
+	Editable:	1
+)
+
+(RectD.10
+	Left:	0.87500000000000
+	Top:	2.07291666666667
+	Right:	3.12500000000000
+	Bottom:	1.73958333333333
+)
+
+(CPanel.11
+	InternalName:	"aControlPanel5"
+	UseGraphicNfy:	1
+	Constraints:	0x55
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(GCtrl.12
+	Name:	"CopyLayout"
+	Bounds:	13
+	ControlConstraints:	0x55
+	Control:	14
+	Editable:	1
+)
+
+(RectD.13
+	Left:	0.92708333333333
+	Top:	2.03125000000000
+	Right:	1.17708333333333
+	Bottom:	1.78125000000000
+)
+
+(Butn.14
+	InternalName:	"CopyLayout"
+	UseGraphicNfy:	1
+	Help:	"Copy Layout//"
+	Icon:	15
+	Click:	"LayoutTools.CopyLayout"
+)
+
+(AVIcon.15
+	Name:	"Copy"
+	Res:	"Icons.Copy"
+
+)
+
+(GCtrl.16
+	Name:	"SelectAll"
+	Bounds:	17
+	ControlConstraints:	0x55
+	Control:	18
+	Editable:	1
+)
+
+(RectD.17
+	Left:	1.20833333333333
+	Top:	2.03125000000000
+	Right:	1.45833333333333
+	Bottom:	1.78125000000000
+)
+
+(Butn.18
+	InternalName:	"SelectAll"
+	UseGraphicNfy:	1
+	Help:	"Select all graphic elements//"
+	Icon:	19
+	Click:	"LayoutTools.SelectAll"
+)
+
+(AVIcon.19
+	Name:	"SelectAll"
+	Res:	"Icons.SelectAll"
+
+)
+
+(GCtrl.20
+	Name:	"UnselectAll"
+	Bounds:	21
+	ControlConstraints:	0x55
+	Control:	22
+	Editable:	1
+)
+
+(RectD.21
+	Left:	1.48958333333333
+	Top:	2.03125000000000
+	Right:	1.73958333333333
+	Bottom:	1.78125000000000
+)
+
+(Butn.22
+	InternalName:	"UnselectAll"
+	UseGraphicNfy:	1
+	Help:	"Unselect all selected graphic elements//"
+	Icon:	23
+	Click:	"LayoutTools.UnselectAll"
+)
+
+(AVIcon.23
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(GCtrl.24
+	Name:	"BatchExport"
+	Bounds:	25
+	ControlConstraints:	0x55
+	Control:	26
+	Editable:	1
+)
+
+(RectD.25
+	Left:	2.31250000000000
+	Top:	2.03125000000000
+	Right:	2.56250000000000
+	Bottom:	1.78125000000000
+)
+
+(Butn.26
+	InternalName:	"BatchExport"
+	UseGraphicNfy:	1
+	Help:	"Exports one or more layouts//"
+	Icon:	27
+	Click:	"LayoutTools.BatchExport"
+)
+
+(AVIcon.27
+	Name:	"export.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	01540000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 00000000 00000000 
+	Data:	000000c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	0000c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 00c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c00000c0 c0c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00c00000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00c0c0c0 c0c0c0c0 c0c0c0c0 c00000c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 0000c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	00000000 00000000 000000c0 c0c0c0c0 
+	Data:	c0c00000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(GCtrl.28
+	Name:	"Close"
+	Bounds:	29
+	ControlConstraints:	0x55
+	Control:	30
+	Editable:	1
+)
+
+(RectD.29
+	Left:	2.58333333333333
+	Top:	2.03125000000000
+	Right:	3.05208333333333
+	Bottom:	1.78125000000000
+)
+
+(LButn.30
+	InternalName:	"Close"
+	UseGraphicNfy:	1
+	Help:	"Close Utilities toolbar//"
+	Label:	"Close"
+	Click:	"LayoutTools.Close"
+)
+
+(GCtrl.31
+	Name:	"UndoZoom"
+	Bounds:	32
+	ControlConstraints:	0x55
+	Control:	33
+	Editable:	1
+)
+
+(RectD.32
+	Left:	2.03125000000000
+	Top:	2.03125000000000
+	Right:	2.28125000000000
+	Bottom:	1.78125000000000
+)
+
+(Butn.33
+	InternalName:	"UndoZoom"
+	UseGraphicNfy:	1
+	Help:	"Zoom to previous extent//"
+	Icon:	34
+	Click:	"LayoutTools.UndoZoom"
+)
+
+(AVIcon.34
+	Name:	"ZoomPrevious"
+	Res:	"Icons.ZoomPrevious"
+
+)
+
+(GCtrl.35
+	Name:	"SetQuality"
+	Bounds:	36
+	ControlConstraints:	0x55
+	Control:	37
+	Editable:	1
+)
+
+(RectD.36
+	Left:	1.76041666666667
+	Top:	2.03125000000000
+	Right:	2.01041666666667
+	Bottom:	1.78125000000000
+)
+
+(Butn.37
+	InternalName:	"SetQuality"
+	UseGraphicNfy:	1
+	Help:	"Changes the drawing quality of all images from 'draft' to 'presentation' or the other way round//"
+	Icon:	38
+	Click:	"LayoutTools.SetQuality"
+)
+
+(AVIcon.38
+	Name:	"Frame"
+	Res:	"Icons.Frame"
+
+)
+
+(PageDpy.39
+	Top:	2.45833333333333
+	Right:	5.06250000000000
+	ReportUnits:	1
+	Units:	1
+	Scale:	40
+	ZoomRight:	5.06250000000000
+	ZoomTop:	2.45833333333333
+	GridSpacingX:	0.10000000000000
+	GridSpacingY:	0.10000000000000
+)
+
+(Numb.40
+	N:	96.00000000000000
+)
+
+(Numb.41
+)
+
+(AVDLog.42
+	Name:	"LayoutTools"
+	X:	83
+	Y:	53
+	W:	221
+	H:	40
+	ConstrainedControlNames:	43
+	ConstrainedControlNames:	44
+	ConstrainedControlNames:	45
+	ConstrainedControlNames:	46
+	ConstrainedControlNames:	47
+	ConstrainedControlNames:	48
+	ConstrainedControlNames:	49
+	Constraints:	50
+	Constraints:	51
+	Constraints:	52
+	Constraints:	53
+	Constraints:	54
+	Constraints:	55
+	Constraints:	56
+	Server:	57
+	ControlPanel:	58
+	Title:	"Layout Tools"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	81
+)
+
+(AVStr.43
+	S:	"Close"
+)
+
+(AVStr.44
+	S:	"CopyLayout"
+)
+
+(AVStr.45
+	S:	"SelectAll"
+)
+
+(AVStr.46
+	S:	"UnselectAll"
+)
+
+(AVStr.47
+	S:	"BatchExport"
+)
+
+(AVStr.48
+	S:	"UndoZoom"
+)
+
+(AVStr.49
+	S:	"SetQuality"
+)
+
+(Numb.50
+	N:	85.00000000000000
+)
+
+(Numb.51
+	N:	85.00000000000000
+)
+
+(Numb.52
+	N:	85.00000000000000
+)
+
+(Numb.53
+	N:	85.00000000000000
+)
+
+(Numb.54
+	N:	85.00000000000000
+)
+
+(Numb.55
+	N:	85.00000000000000
+)
+
+(Numb.56
+	N:	85.00000000000000
+)
+
+(Nil.57
+)
+
+(CPanel.58
+	Child:	59
+	ResBox:	80
+	Listening:	1
+)
+
+(CPanel.59
+	InternalName:	"aControlPanel5"
+	Child:	60
+	Child:	62
+	Child:	64
+	Child:	66
+	Child:	68
+	Child:	69
+	Child:	71
+	Constraints:	0x55
+	ResBox:	73
+	ResBox:	74
+	ResBox:	75
+	ResBox:	76
+	ResBox:	77
+	ResBox:	78
+	ResBox:	79
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.60
+	InternalName:	"CopyLayout"
+	Help:	"Copy Layout//"
+	Icon:	61
+	Click:	"LayoutTools.CopyLayout"
+)
+
+(AVIcon.61
+	Name:	"Copy"
+	Res:	"Icons.Copy"
+
+)
+
+(Butn.62
+	InternalName:	"SelectAll"
+	Help:	"Select all graphic elements//"
+	Icon:	63
+	Click:	"LayoutTools.SelectAll"
+)
+
+(AVIcon.63
+	Name:	"SelectAll"
+	Res:	"Icons.SelectAll"
+
+)
+
+(Butn.64
+	InternalName:	"UnselectAll"
+	Help:	"Unselect all selected graphic elements//"
+	Icon:	65
+	Click:	"LayoutTools.UnselectAll"
+)
+
+(AVIcon.65
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(Butn.66
+	InternalName:	"BatchExport"
+	Help:	"Exports one or more layouts//"
+	Icon:	67
+	Click:	"LayoutTools.BatchExport"
+)
+
+(AVIcon.67
+	Name:	"export.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	01540000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 00000000 00000000 
+	Data:	000000c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	0000c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 00c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c00000c0 c0c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00c00000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00c0c0c0 c0c0c0c0 c0c0c0c0 c00000c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 0000c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	00000000 00000000 000000c0 c0c0c0c0 
+	Data:	c0c00000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(LButn.68
+	InternalName:	"Close"
+	Help:	"Close Utilities toolbar//"
+	Label:	"Close"
+	Click:	"LayoutTools.Close"
+)
+
+(Butn.69
+	InternalName:	"UndoZoom"
+	Help:	"Zoom to previous extent//"
+	Icon:	70
+	Click:	"LayoutTools.UndoZoom"
+)
+
+(AVIcon.70
+	Name:	"ZoomPrevious"
+	Res:	"Icons.ZoomPrevious"
+
+)
+
+(Butn.71
+	InternalName:	"SetQuality"
+	Help:	"Changes the drawing quality of all images from 'draft' to 'presentation' or the other way round//"
+	Icon:	72
+	Click:	"LayoutTools.SetQuality"
+)
+
+(AVIcon.72
+	Name:	"Frame"
+	Res:	"Icons.Frame"
+
+)
+
+(RectD.73
+	Left:	5.00000000000000
+	Top:	28.00000000000000
+	Right:	29.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.74
+	Left:	32.00000000000000
+	Top:	28.00000000000000
+	Right:	56.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.75
+	Left:	59.00000000000000
+	Top:	28.00000000000000
+	Right:	83.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.76
+	Left:	138.00000000000000
+	Top:	28.00000000000000
+	Right:	162.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.77
+	Left:	164.00000000000000
+	Top:	28.00000000000000
+	Right:	209.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.78
+	Left:	111.00000000000000
+	Top:	28.00000000000000
+	Right:	135.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.79
+	Left:	85.00000000000000
+	Top:	28.00000000000000
+	Right:	109.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.80
+	Left:	4.00000000000000
+	Top:	38.00000000000000
+	Right:	220.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(Nil.81
+)
+
+(RectD.82
+	Left:	0.83333333333333
+	Top:	2.13541666666667
+	Right:	3.13541666666667
+	Bottom:	1.71875000000000
+)
+
+(SEd.83
+	Name:	"LayoutTools.BatchExport"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:24:28 CEST"
+	GUIName:	"Script"
+	Win:	84
+	CSMgr:	85
+	DocExts:	86
+	Source:	"'NAME:     LayoutBatchExport\n'DATE:     160801\n'AUTHOR:   Sebastian Hofer - shofer@gmx.de\n\n'DESCRIPTION:\n'LayoutBatchExport is for fast export of multiple Layouts out of a project into eps (new) or jpg.\n'Other formats will not be implemented by me. Feel Free to do it.\n'After selecting the export parameters (file type, resolution, compression) and the LayoutdDocs\n'the user is prompted to chose the export filenames by Dialog.\n'It is not necessary to open the Layouts in a window before of the export!\n\n' REQUIR
+ES:   ---\n\n' LayoutBatchExport eignet sich zum schnellen Export von mehreren Layouts \n' im selben Datenformat und mit den selben Parametern.\n' Meinen Bedürfnissen nach wird nur eps (new) und jpg unterstützt. Wer andere \n' Formate unterstuetzen will darf die gerne einbauen. \n' Es ist nicht noetig die zu exportierenden Layouts als Fenster zu oeffnen!\n\n\ntheFormatL={\"eps (New)\", \"jpg\"}\ntheFormatChoice=msgBox.ListAsString(theFormatL, \"Choose the LayoutBatchExport format:\", \"LayoutBatchExport\")\nif  (theFormatChoi
+ce=Nil) then return Nil\nelseif (theFormatChoice=\"eps (New)\") then theShortFormat=3 \n  theResL={300,360,600,720}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif  (theResolution=Nil) then return Nil end\nelseif (theFormatChoice=\"jpg\") then theShortFormat=9 \n  theResL={72,90,120,144}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif  (theResolution=Nil) then return Nil end\n  theCompres
+sL={20,40,60,80,100}\n  theCompression=msgBox.ListAsString(theCompressL, \"Choose the LayoutBatchExport compression (jpg):\", \"LayoutBatchExport\")\nif  (theCompression=Nil) then return Nil end\nend\ntheProject=av.GetProject\ntheDocL=theProject.GetDocs\ntheLayoutL={}\nfor each theEntry in theDocL\n  if (theEntry.Is(Layout)) then\n    theLayoutL.Add(theEntry)\n  end\nend\nif (theLayoutL.Count=0) then\n  MsgBox.Error(\"No LayoutBatchExport possible. There are no Layouts to export. You have to create Layouts first!\", \"\")\n  ret
+urn nil\nelse\n  theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n  if (theBatchLayoutL=Nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count=0) \n    MsgBox.Error(\"No LayoutBatchExport possible. You must choose at least 1 Layout or press cancel to quit:\", \"\")\n    theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n    if (theBatchLayoutL=Nil) then\n      return nil\n    end\n  end\nend\n\n\ntheFirstLay
+out=theBatchLayoutL.Get(0)\ntheFirstLayout.GetWin.open\ntheFormatL = theBatchLayoutL.Get(0).GetDisplay.ReturnExportFormats\ntheFirstLayout.GetWin.close\n\n\ntheFormat = theFormatL.Get(theShortFormat)  \nif (theShortFormat=3) then\n  theFileExt=\"eps\"\nelseif (theShortFormat=9) then\n  theFileExt=\"jpg\"\nend\n\nfor each theBatchLayout in theBatchLayoutL\n  defaultFileName=FileName.Make(theBatchLayout.GetName +\".\"+theFileExt)\n  theFN=FileDialog.Put(defaultFileName, \"*.\"+theFileExt, \"Export >>\"+theBatchLayout.getName+\"<< to:\"
+ )\n\n  if (theFN=nil) then\n    return nil\n  end\n  if (theShortFormat=3) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution})\n  elseif (theShortFormat=9) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution,theCompression})\n  end\nend\nreturn nil\n\n\n\n\n"
+)
+
+(DocWin.84
+	Owner:	83
+	X:	95
+	Y:	95
+	W:	801
+	H:	492
+)
+
+(CSMgr.85
+)
+
+(DocAct.86
+	Doc:	83
+)
+
+(SEd.87
+	Name:	"LayoutTools.Close"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:49:48 CEST"
+	GUIName:	"Script"
+	Win:	88
+	CSMgr:	89
+	DocExts:	90
+	Source:	"self.GetDialog.Close"
+)
+
+(DocWin.88
+	Owner:	87
+	X:	27
+	Y:	251
+	W:	363
+	H:	245
+)
+
+(CSMgr.89
+)
+
+(DocAct.90
+	Doc:	87
+)
+
+(SEd.91
+	Name:	"LayoutTools.CopyLayout"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:25:09 CEST"
+	GUIName:	"Script"
+	Win:	92
+	CSMgr:	93
+	DocExts:	94
+	Source:	"'Copies a Layout and renames it...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  4/6/1999\n\n'Gets the Layout...\nmyProj = av.GetProject\nsomeLayouts = myProj.GetDocswithGui(av.FindGui(\"Layout\"))\nalayoutChoice = MsgBox.ChoiceAsString( someLayouts, \"Choose a Layout to copy:\", \"Copy Layout\")\nif (alayoutChoice = nil) then\n  return nil\nend\ntheLayout = myProj.FindDoc( alayoutChoice.AsString )\n\n'Copies the Layout and renames it...\nnewLayoutName = MsgBox.Input( \"Enter a new name for the layout:\", \"New Layout Name\",
+ \"New Layout\" )\nif (newLayoutName = nil) then   'Cancels if the there is no Layout name\n  return nil\nend\nif (av.FindDoc(newLayoutName).AsString = newLayoutName.AsString) then\n  'Cancels if the Layout name already exists\n  MsgBox.Error(\"That layout name already exists! Press the Copy Layout button again...\",\"Layout Already Exists\")\n  return nil\nelse\n  newLayout = theLayout.Clone\n  newLayout.SetName ( newLayoutName )\n  myProj.AddDoc ( newLayout )\n  newLayout.GetWin.Open\nend\n\n'End of script..."
+)
+
+(DocWin.92
+	Owner:	91
+	X:	174
+	Y:	27
+	W:	843
+	H:	595
+)
+
+(CSMgr.93
+)
+
+(DocAct.94
+	Doc:	91
+)
+
+(SEd.95
+	Name:	"LayoutTools.SelectAll"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:26:10 CEST"
+	GUIName:	"Script"
+	Win:	96
+	CSMgr:	97
+	DocExts:	98
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.SelectAll"
+)
+
+(DocWin.96
+	Owner:	95
+	X:	303
+	Y:	47
+	W:	515
+	H:	342
+)
+
+(CSMgr.97
+)
+
+(DocAct.98
+	Doc:	95
+)
+
+(SEd.99
+	Name:	"LayoutTools.SetQuality"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:26:48 CEST"
+	GUIName:	"Script"
+	Win:	100
+	CSMgr:	101
+	DocExts:	102
+	Source:	"'########################################################\n'#\n'# Filename:     SetQuality.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.10.2014\n'# Version:      0.1\n'#\n'# Purpose:      aendert auf Knopfdruck bei allen Bildern\n'#               eines Layouts die Qualitaet von \"Draft\"\n'#               auf \"Presentation\" oder umgekehrt.             \n'#\n'########################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this 
+script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\n\nfor each theObject in theGraphicsList\n  if (theObject.Is(PictureFrame)) then\n    if (theObject.GetQuality = #FRAME_QUALITY_PRESENTATION) then\n      theObject.SetQuality(#FRAME_QUALITY_DRAFT)\n    else\n      theObject.SetQuality(#FRAME_QUALITY_PRESENTATION)\n    end\n  end\nend\n\ntheLayout.Invalidate"
+)
+
+(DocWin.100
+	Owner:	99
+	X:	268
+	Y:	57
+	W:	728
+	H:	510
+)
+
+(CSMgr.101
+)
+
+(DocAct.102
+	Doc:	99
+)
+
+(SEd.103
+	Name:	"LayoutTools.UndoZoom"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:27:23 CEST"
+	GUIName:	"Script"
+	Win:	104
+	CSMgr:	105
+	DocExts:	106
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.UndoZoom\n"
+)
+
+(DocWin.104
+	Owner:	103
+	X:	455
+	Y:	224
+	W:	363
+	H:	261
+)
+
+(CSMgr.105
+)
+
+(DocAct.106
+	Doc:	103
+)
+
+(SEd.107
+	Name:	"LayoutTools.UnselectAll"
+	Creator:	"adrian"
+	CreationDate:	"Sam 25 Okt 2014 16:27:40 CEST"
+	GUIName:	"Script"
+	Win:	108
+	CSMgr:	109
+	DocExts:	110
+	Source:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.UnselectAll\n"
+)
+
+(DocWin.108
+	Owner:	107
+	X:	356
+	Y:	37
+	W:	542
+	H:	305
+)
+
+(CSMgr.109
+)
+
+(DocAct.110
+	Doc:	107
+)
+

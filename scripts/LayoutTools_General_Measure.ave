@@ -1,0 +1,2 @@
+theLayout = av.GetActiveDoc
+p = theLayout.ReturnUserPolyLine

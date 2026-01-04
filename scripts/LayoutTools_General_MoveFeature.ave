@@ -1,0 +1,42 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_MoveFeature.ave
+'# Author:       Adrian Boehlen
+'# Date:         27.08.2017
+'# Version:      0.2
+'#
+'# Purpose:      verschiebt die selektierten Features um den eingegeben
+'#               Wert in mm
+'#               Das Kommando wird mit mx (move x) oder my (move y)
+'#               ausgeloest
+'#
+'#########################################################################
+
+theLayout = av.GetActiveDoc
+
+if (theLayout.Is(layout).Not) then
+  MsgBox.Warning("Start this script from an active Layout.","")
+  return nil
+end
+
+wert = _command.Middle(2,5)
+wert = wert.AsNumber
+wert = wert / 25.4     '# mm to inch
+theGraphicList = theLayout.GetGraphics
+if (theGraphicList.HasSelected = TRUE) then
+  for each theSelected in theGraphicList.GetSelected
+    theOrigin = theSelected.GetOrigin
+    theX = theOrigin.GetX
+    theY = theOrigin.GetY
+    if (_command.Left(2) = "mx") then
+      theX = theX + wert
+    else
+      theY = theY + wert
+    end
+    theSelected.SetOrigin(theX@theY)
+  end
+end
+
+theLayout.Invalidate
+
+

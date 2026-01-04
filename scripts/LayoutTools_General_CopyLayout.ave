@@ -1,0 +1,30 @@
+'Copies a Layout and renames it...
+'Created by Fred J. Calef III, CH2M Hill
+'Date:  4/6/1999
+
+'Gets the Layout...
+myProj = av.GetProject
+someLayouts = myProj.GetDocswithGui(av.FindGui("Layout"))
+alayoutChoice = MsgBox.ChoiceAsString( someLayouts, "Choose a Layout to copy:", "Copy Layout")
+if (alayoutChoice = nil) then
+  return nil
+end
+theLayout = myProj.FindDoc( alayoutChoice.AsString )
+
+'Copies the Layout and renames it...
+newLayoutName = MsgBox.Input( "Enter a new name for the layout:", "New Layout Name", "New Layout" )
+if (newLayoutName = nil) then   'Cancels if the there is no Layout name
+  return nil
+end
+if (av.FindDoc(newLayoutName).AsString = newLayoutName.AsString) then
+  'Cancels if the Layout name already exists
+  MsgBox.Error("That layout name already exists! Press the Copy Layout button again...","Layout Already Exists")
+  return nil
+else
+  newLayout = theLayout.Clone
+  newLayout.SetName ( newLayoutName )
+  myProj.AddDoc ( newLayout )
+  newLayout.GetWin.Open
+end
+
+'End of script...

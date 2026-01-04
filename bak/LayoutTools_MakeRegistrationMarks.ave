@@ -1,0 +1,102 @@
+'##################################################################
+'#  Name:          Layout.MakeRegistrationMarks
+'#  Author:        Adam Hyer
+'#                 ashyer@syr.edu, ashyer@hotmail.com
+'#
+'#  Date Written:  2.24.99
+'#
+'#  Description:   Puts registration marks on a layout for printing.
+'#                 This is intended for plotters when you need to
+'#                 make the page size larger in order to show the 
+'#                 entire layout.  The registration marks allow you
+'#                 to cut paper to it's originally intended page
+'#                 size.
+'#
+'#  Instructions:  Add a new button to the active layout add this
+'#                 script to the new button's click property.  Click
+'#                 the button when you want to add the marks and
+'#                 specify the desired dimensions for the marks.
+'#
+'#  Revision:      A.Boehlen 20/04/2015
+'#
+'##################################################################
+
+theLayout = av.GetActiveDoc  
+
+if (theLayout.Is(layout).Not) then
+  MsgBox.Warning("Start this script from an active Layout.","")
+  return nil
+end
+
+h=MsgBox.Input("Enter the page height in mm:"," ","297")
+w=MsgBox.Input("Enter the page width in mm:"," ","210")
+height=h.AsNumber * 0.03937    ' converts mm to inches
+width=w.AsNumber * 0.03937     ' converts mm to inches
+
+d = av.GetActiveDoc.GetDisplay
+r = d.ReturnPageExtent
+rc = r.ReturnCenter
+lf = rc.GetX-(width/2)
+rt = rc.GetX+(width/2)
+tp = rc.GetY+(height/2)
+bm = rc.GetY-(height/2)
+lfL = lf-0.2
+lfR = lf-0.02 
+rtL = rt+0.02
+rtR = rt+0.2
+tpU = tp+0.2
+tpD = tp+0.02
+bmU = bm-0.02
+bmD = bm-0.2
+
+aPen = BasicPen.Make
+aPen.SetColor(Color.GetBlack)
+aPen.SetSize(1)
+
+TL1 = Line.Make( lf@tpU, lf@tpD)
+TL2 = Line.Make( lfL@tp, lfR@tp)
+TR1 = Line.Make( rt@tpU, rt@tpD)
+TR2 = Line.Make( rtL@tp, rtR@tp)
+BL1 = Line.Make( lf@bmU, lf@bmD)
+BL2 = Line.Make( lfL@bm, lfR@bm)
+BR1 = Line.Make( rt@bmU, rt@bmD)
+BR2 = Line.Make( rtL@bm, rtR@bm)
+
+gTL1 = GraphicShape.Make(TL1)
+gTL1.SetSymbol(aPen)
+gTL2 = GraphicShape.Make(TL2)
+gTL2.SetSymbol(aPen)
+gTR1 = GraphicShape.Make(TR1)
+gTR1.SetSymbol(aPen)
+gTR2 = GraphicShape.Make(TR2)
+gTR2.SetSymbol(aPen)
+gBL1 = GraphicShape.Make(BL1)
+gBL1.SetSymbol(aPen)
+gBL2 = GraphicShape.Make(BL2)
+gBL2.SetSymbol(aPen)
+gBR1 = GraphicShape.Make(BR1)
+gBR1.SetSymbol(aPen)
+gBR2 = GraphicShape.Make(BR2)
+gBR2.SetSymbol(aPen)
+
+theLayout.GetGraphics.UnselectAll
+gTL1.SetSelected(TRUE)
+gTL2.SetSelected(TRUE)
+gTR1.SetSelected(TRUE)
+gTR2.SetSelected(TRUE)
+gBL1.SetSelected(TRUE)
+gBL2.SetSelected(TRUE)
+gBR1.SetSelected(TRUE)
+gBR2.SetSelected(TRUE)
+
+theLayout.GetGraphics.Add(gTL1)
+theLayout.GetGraphics.Add(gTL2)
+theLayout.GetGraphics.Add(gTR1)
+theLayout.GetGraphics.Add(gTR2)
+theLayout.GetGraphics.Add(gBL1)
+theLayout.GetGraphics.Add(gBL2)
+theLayout.GetGraphics.Add(gBR1)
+theLayout.GetGraphics.Add(gBR2)
+av.GetProject.SetModified(TRUE)
+
+

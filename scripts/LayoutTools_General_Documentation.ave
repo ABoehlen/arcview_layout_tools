@@ -1,0 +1,236 @@
+'#################################################################
+'#
+'# Filename:     LayoutTools.Documentation.ave
+'# Author:       Adrian Boehlen
+'# Date:         30.11.2018
+'# Version:      0.8
+'#
+'# Purpose:      enthaelt den Text fuer die Hilfeseiten
+'#
+'#################################################################
+
+
+_uebersicht = 
+"Commands and their functions"+NL+
+"-----------------------------------------------"+NL+NL+
+"new                 Creates a new layout document"+NL+
+"copy                Copies a layout"+NL+
+"fi                      Imports textfiles"+NL+
+"fis                    Imports textfiles preformatted"+NL+
+"help                 Shows this help page"+NL+
+"help <cmd>     Shows the help for the chosen command"+NL+
+"hlon                 Switches guides on (for the active layout)"+NL+
+"hlonm              Switches guides on (for many layouts)"+NL+
+"hloff                 Switches guides off (for the active layout)"+NL+
+"hloffm              Switches guides off (for many layouts)"+NL+
+"heado              Creates header and footer for the active layout"+NL+
+"headm             Creates header and footer for many layouts"+NL+
+"delhead           Deletes header and footer for the chosen layouts"+NL+
+"li                       Imports text for list"+NL+
+"lis                     Imports text preformatted for list"+NL+
+"mx<value>       Moves the selected elements on the x axis"+NL+
+"my<value>       Moves the selected elements on the y axis"+NL+
+"lytimp               Imports a layout from an ODB file "+NL+
+"lytexp               Exports one or more layouts into an ODB file"+NL+
+"regm                Creates registration marks"+NL+
+"selall                Selects all elements on the active layout"+NL+
+"ti                      Imports text"+NL+
+"tis                    Imports text preformatted"+NL+
+"unselall            Unselect all selected elements"+NL+
+"zoomex            Zoom to exportview"+NL
+
+_helpnew =
+"Creates a new layout"+NL+
+"---------------------------------"+NL+NL+
+"1. Define the parameters for the new layout document"+NL+
+"2. ...or take over the predefined ones"+NL+NL+
+"The new layout will be added and opened"
+
+
+_helpcopy =
+"Copies a layout"+NL+
+"------------------------"+NL+NL+
+"1. Choose a layout to copy"+NL+
+"2. Enter a name for the new layout"+NL+NL+
+"The new layout will be added and opened"
+
+
+_helphlon =
+"Switch guides on (for the active layout)"+NL+
+"-------------------------------------------------------------"+NL+NL+
+"""hlon"" stands for ""Hilfslinie (German for guide) on"" "+NL+NL+
+"In the active layout, switches previously turned off guides on again."
+
+_helphlonm =
+"Switch guides on (for many layouts)"+NL+
+"-------------------------------------------------------"+NL+NL+
+"""hlon"" stands for ""Hilfslinie (German for guide) on"" "+NL+NL+
+"In the chosen layouts, switches previously turned off guides on again."
+
+_helphloff =
+"Switch guides off (for the active layout)"+NL+
+"-------------------------------------------------------------"+NL+NL+
+"""hloff"" stands for ""Hilfslinie (German for guide) off"" "+NL+NL+
+"In the active layout, switches guides, created with the horizontal/vertical lines tool, off."
+
+_helphloffm =
+"Switch guides off (for many layouts)"+NL+
+"------------------------------------------------------"+NL+NL+
+"""hloff"" stands for ""Hilfslinie (German for guide) off"" "+NL+NL+
+"In the chosen layouts, switches guides, created with the horizontal/vertical lines tool, off."
+
+_helpheado =
+"Creates header and footer for the active layout"+NL+
+"-------------------------------------------------------------------------"+NL+NL+
+"""heado"" stands for ""header (and footer) for one (layout)"" "+NL+NL+
+"The following parameters are predefined:"+NL+NL+
+"Header (optional):"+NL+
+"- a text on the left and/or a text on the right"+NL+
+"Footer:"+NL+
+"- left: filename with or without the layoutname"+NL+
+"- centre: the author's name"+NL+
+"- right: a text, e.g. the date or the page number"
+
+_helpheadm =
+"Creates header and footer for many layouts"+NL+
+"--------------------------------------------------------------------"+NL+NL+
+"""headm"" stands for ""header (and footer) for many (layouts)"" "+NL+NL+
+"At least one layout has to be chosen."+NL+
+"The following parameters are predefined:"+NL+NL+
+"Header (optional):"+NL+
+"- a text on the left and/or a text on the right"+NL+
+"Footer:"+NL+
+"- left: the filename"+NL+
+"- centre: the author's name"+NL+
+"- right: the number of the actual page and the total number of pages"
+
+_helpdelhead =
+"Deletes header and footer for the chosen layouts"+NL+
+"----------------------------------------------------------------------------"+NL+NL+
+"""delhead"" stands for ""delete header (and footer)"" "+NL+NL+
+"Header and footer for the chosen layouts will be deleted."
+
+_helplytimp =
+"Imports a layout from an ODB file"+NL+
+"---------------------------------------------------"+NL+NL+
+"""lytimp"" stands for ""layout import"" "+NL+NL+
+"Select an ODB file which will be imported into one or more new layout documents."
+
+_helplytexp =
+"Exports one or more layouts into an ODB file"+NL+
+"----------------------------------------------------------------------"+NL+NL+
+"""lytexp"" stands for ""layout export"" "+NL+NL+
+"Select one or more layouts to write them into an ODB file."
+
+_helpfi =
+"Imports a textfile"+NL+
+"-------------------------"+NL+NL+
+"""fi"" stands for ""file import"" "+NL+NL+
+"Imports the full content of a text file into the layout. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Select the text file to import"+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value."+NL+
+"4. Define the font size"+NL+
+"The content of the chosen text file will then be visible inside the still selected textbox."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+_helpfis =
+"Imports a textfile preformatted"+NL+
+"----------------------------------------------"+NL+NL+
+"""fis"" stands for ""file import simple"" "+NL+NL+
+"Imports the full content of a text file into the layout. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Select the text file to import"+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Define the font size"+NL+
+"The content of the chosen text file will then be visible inside the still selected textbox."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+_helpli =
+"Imports text for list"+NL+
+"----------------------------"+NL+NL+
+"""li"" stands for ""list import"" "+NL+NL+
+"Imports the content of a text window into the layout for building a list. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Type or paste text into the new window ""Import Text"". The beginning of each list element must be marked with the character ""¬"""+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value."+NL+
+"4. Define the font size"+NL+
+"5. Define the space between the bullets and the text"+NL+
+"6. Define the character for the bullet (ASCII decimal)"+NL+
+"The content of the text window will then be visible inside the still selected textbox. The bullets belonging to it will appear at the given distance to the left."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+_helplis =
+"Imports text for list preformatted"+NL+
+"-------------------------------------------------"+NL+NL+
+"""lis"" stands for ""list import simple"" "+NL+NL+
+"Imports the content of a text window into the layout for building a list. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Type or paste text into the new window ""Import Text"". The beginning of each list element must be marked with the character ""¬"""+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Define the font size"+NL+
+"The content of the text window will then be visible inside the still selected textbox. The bullets belonging to it will appear at the given distance to the left."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+
+_helpti =
+"Imports text"+NL+
+"------------------"+NL+NL+
+"""ti"" stands for ""text import"" "+NL+NL+
+"Imports the content of a text window into the layout. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Type or paste text into the new window ""Import Text"""+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value."+NL+
+"4. Define the font size"+NL+
+"The content of the text window will then be visible inside the still selected textbox."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+_helptis =
+"Imports text preformatted"+NL+
+"---------------------------------------"+NL+NL+
+"""tis"" stands for ""text import simple"" "+NL+NL+
+"Imports the content of a text window into the layout. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Type or paste text into the new window ""Import Text"""+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Define the font size"+NL+
+"The content of the text window will then be visible inside the still selected textbox."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+_helpregm =
+"Creates registration marks"+NL+
+"----------------------------------------"+NL+NL+
+"""regm"" stands for ""registration marks"" "+NL+NL+
+"Creates registration marks at all 4 corners of the layout."+NL+
+"Note that the page size defined in ""Layout -> Page Setup"" must be larger than the size entered in this tool, otherwise the registration marks will be outside the layout. The default size is DIN A4."
+
+_helpselall =
+"Selects all elements on the active layout"+NL+
+"---------------------------------------------------------------"+NL+NL+
+"""selall"" stands for ""select all"" "+NL+NL+
+"Selects all graphic elements on the layout."
+
+_helpunselall =
+"Unselects all selected elements"+NL+
+"-------------------------------------------------"+NL+NL+
+"""unselall"" stands for ""unselect all"" "+NL+NL+
+"Unselects all selected graphic elements on the layout."
+
+_helpmx =
+"Moves the selected element(s) on the x axis"+NL+
+"--------------------------------------------------------------------"+NL+NL+
+"""mx"" stands for ""move x"" "+NL+NL+
+"Moves the selected element(s) on the x axis."+NL+NL+
+"1. Select the feature(s) that has to be moved."+NL+
+"2. Type ""mx"" and the amount in mm without any blank between. Use positive values for moving to the right and negative ones for moving to the left."+NL+
+"e.g. ""mx50"" moves the selected element(s) 50 mm to the right."+NL+
+"       ""mx-50"" moves the selected element(s) 50 mm to the left."
+
+_helpmy =
+"Moves the selected element(s) on the y axis"+NL+
+"--------------------------------------------------------------------"+NL+NL+
+"""my"" stands for ""move y"" "+NL+NL+
+"Moves the selected element(s) on the y axis."+NL+NL+
+"1. Select the feature(s) that has to be moved."+NL+
+"2. Type ""my"" and the amount in mm without any blank between. Use positive values for moving upwards and negative ones for moving downwards."+NL+
+"e.g. ""my50"" moves the selected element(s) 50 mm upwards."+NL+
+"       ""my-50"" moves the selected element(s) 50 mm downwards."
+
+

@@ -1,0 +1,36 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools.Sub_SetASCII_Char.ave
+'# Author:       Adrian Boehlen
+'# Date:         09.11.2018
+'# Version:      0.4
+'#
+'# Purpose:      Uebersetzt ASCII-Codes, die als dreistelliger dezimaler
+'#               Code mit dem Zeichen \ davor gesetzt werden muessen
+'#               in das zugehoerige Zeichen
+'#
+'#########################################################################
+
+word = Self                                         '# Argument in lokale Variable uerbertragen
+wordL = word.AsTokens("\")                          '# Wort an \ auftrennen
+if (wordL.Count > 1) then                           '# nur wenn \ vorkommt...
+  for each i in 1..wordL.Count                      '# jeden Wortteil durchgehen...
+    if (i = 1) then
+      continue                                      '# ...ausser den ersten
+    else
+      search = "\" + wordL.Get(i - 1).Left(3)       '# nach \ plus drei folgenden Zeichen suchen
+      replace = wordL.Get(i - 1).Left(3)            '# nur die drei Zeichen nach \ auswaehlen
+      replace = replace.AsNumber                    '# in Nummer konvertieren
+      word = word.Substitute(search,replace.AsChar) '# Ersetzung vornehmen 
+    end
+  end
+else                                                '# wenn die Trennung nur einen Teil liefert...
+  if (word.Left(1) = "\") then                      '# ...pruefen, ob \ am Anfang des Strings liegt
+    search = word.Left(4)                           '# die ersten vier Zeichen extrahieren
+    replace = word.Middle(1,3)                      '# das 2., 3., und 4. Zeichen extrahieren
+    replace = replace.AsNumber                      '# in Nummer konvertieren
+    word = word.Substitute(search,replace.AsChar)   '# Ersetzung vornehmen
+  end  
+end
+
+return word

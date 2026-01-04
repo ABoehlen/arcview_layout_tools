@@ -1,0 +1,17 @@
+'##########################################################
+'#
+'# Filename:     LayoutTools.Sub_PlaceText.ave
+'# Author:       Adrian Boehlen
+'# Date:         09.11.2018
+'# Version:      0.3
+'#
+'# Purpose:      Subroutine zur Platzierung von Text
+'#
+'##########################################################
+
+gtxText = GraphicText.Make (Self.Get(1), Self.Get(2))
+theText = gtxText.ReturnSymbols.Get(0)
+theText.SetSize(Self.Get(4))
+theText.SetColor(Self.Get(3))
+theText.SetFont(Self.Get(0))
+_theLayout.GetGraphics.Add(gtxText)

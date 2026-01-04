@@ -1,0 +1,777 @@
+/3.2
+(Extension.1
+	Name:	"LayoutTools"
+	Dependencies:	"$AVBIN/avdlog.dll\n"
+	FirstRootClassName:	"Butn"
+	Roots:	2
+	Roots:	4
+	Roots:	59
+	Roots:	60
+	Roots:	61
+	Roots:	62
+	Roots:	63
+	Roots:	64
+	Roots:	65
+	Roots:	66
+	Roots:	67
+	Roots:	68
+	Roots:	69
+	Version:	32
+	About:	"LayoutTools Toolbar (v0.3) "
+	UnloadScript:	70
+	InstallScript:	71
+	UninstallScript:	72
+	ExtVersion:	1
+)
+
+(Butn.2
+	Help:	"Starts LayoutTools toolbar//"
+	HelpTopic:	" "
+	Icon:	3
+	Click:	"LayoutTools.start"
+)
+
+(AVIcon.3
+	Name:	"L"
+	Res:	"Icons.L"
+
+)
+
+(AVDLog.4
+	Name:	"LayoutTools"
+	X:	88
+	Y:	75
+	W:	296
+	H:	40
+	ConstrainedControlNames:	5
+	ConstrainedControlNames:	6
+	ConstrainedControlNames:	7
+	ConstrainedControlNames:	8
+	ConstrainedControlNames:	9
+	ConstrainedControlNames:	10
+	ConstrainedControlNames:	11
+	ConstrainedControlNames:	12
+	ConstrainedControlNames:	13
+	ConstrainedControlNames:	14
+	Constraints:	15
+	Constraints:	16
+	Constraints:	17
+	Constraints:	18
+	Constraints:	19
+	Constraints:	20
+	Constraints:	21
+	Constraints:	22
+	Constraints:	23
+	Constraints:	24
+	Server:	25
+	ControlPanel:	26
+	Title:	"Layout Tools"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	58
+)
+
+(AVStr.5
+	S:	"Close"
+)
+
+(AVStr.6
+	S:	"CopyLayout"
+)
+
+(AVStr.7
+	S:	"SelectAll"
+)
+
+(AVStr.8
+	S:	"UnselectAll"
+)
+
+(AVStr.9
+	S:	"BatchExport"
+)
+
+(AVStr.10
+	S:	"UndoZoom"
+)
+
+(AVStr.11
+	S:	"SetQuality"
+)
+
+(AVStr.12
+	S:	"RegistrationMarks"
+)
+
+(AVStr.13
+	S:	"HeaderAndFooter"
+)
+
+(AVStr.14
+	S:	"GraphicTable"
+)
+
+(Numb.15
+	N:	85.00000000000000
+)
+
+(Numb.16
+	N:	85.00000000000000
+)
+
+(Numb.17
+	N:	85.00000000000000
+)
+
+(Numb.18
+	N:	85.00000000000000
+)
+
+(Numb.19
+	N:	85.00000000000000
+)
+
+(Numb.20
+	N:	85.00000000000000
+)
+
+(Numb.21
+	N:	85.00000000000000
+)
+
+(Numb.22
+	N:	85.00000000000000
+)
+
+(Numb.23
+	N:	85.00000000000000
+)
+
+(Numb.24
+	N:	85.00000000000000
+)
+
+(Nil.25
+)
+
+(CPanel.26
+	Child:	27
+	ResBox:	57
+	Listening:	1
+)
+
+(CPanel.27
+	InternalName:	"aControlPanel5"
+	Child:	28
+	Child:	30
+	Child:	32
+	Child:	34
+	Child:	36
+	Child:	37
+	Child:	39
+	Child:	41
+	Child:	43
+	Child:	45
+	Constraints:	0x55
+	ResBox:	47
+	ResBox:	48
+	ResBox:	49
+	ResBox:	50
+	ResBox:	51
+	ResBox:	52
+	ResBox:	53
+	ResBox:	54
+	ResBox:	55
+	ResBox:	56
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.28
+	InternalName:	"CopyLayout"
+	Help:	"Copy Layout//"
+	Icon:	29
+	Click:	"LayoutTools.CopyLayout"
+)
+
+(AVIcon.29
+	Name:	"Copy"
+	Res:	"Icons.Copy"
+
+)
+
+(Butn.30
+	InternalName:	"SelectAll"
+	Help:	"Select all graphic elements//"
+	Icon:	31
+	Click:	"LayoutTools.SelectAll"
+)
+
+(AVIcon.31
+	Name:	"SelectAll"
+	Res:	"Icons.SelectAll"
+
+)
+
+(Butn.32
+	InternalName:	"UnselectAll"
+	Help:	"Unselect all selected graphic elements//"
+	Icon:	33
+	Click:	"LayoutTools.UnselectAll"
+)
+
+(AVIcon.33
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(Butn.34
+	InternalName:	"BatchExport"
+	Help:	"Exports one or more layouts//"
+	Icon:	35
+	Click:	"LayoutTools.BatchExport"
+)
+
+(AVIcon.35
+	Name:	"export.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	01540000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 00000000 00000000 
+	Data:	000000c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	0000c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 00c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c00000c0 c0c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00c00000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00c00000 0000c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 c0c00000 
+	Data:	00c0c0c0 c0c0c0c0 c0c0c0c0 c00000c0 
+	Data:	c0c00000 00c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	0000c0c0 c0c00000 0000c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c00000 00000000 
+	Data:	00000000 000000c0 c0c0c0c0 c0c00000 
+	Data:	00000000 00000000 000000c0 c0c0c0c0 
+	Data:	c0c00000 00000000 00000000 000000c0 
+	Data:	c0c0c0c0 c0c00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(LButn.36
+	InternalName:	"Close"
+	Help:	"Close Utilities toolbar//"
+	Label:	"Close"
+	Click:	"LayoutTools.Close"
+)
+
+(Butn.37
+	InternalName:	"UndoZoom"
+	Help:	"Zoom to previous extent//"
+	Icon:	38
+	Click:	"LayoutTools.UndoZoom"
+)
+
+(AVIcon.38
+	Name:	"ZoomPrevious"
+	Res:	"Icons.ZoomPrevious"
+
+)
+
+(Butn.39
+	InternalName:	"SetQuality"
+	Help:	"Changes the drawing quality of all images from 'draft' to 'presentation' or the other way round//"
+	Icon:	40
+	Click:	"LayoutTools.SetQuality"
+)
+
+(AVIcon.40
+	Name:	"Frame"
+	Res:	"Icons.Frame"
+
+)
+
+(Tool.41
+	InternalName:	"GraphicTable"
+	Help:	"Place table in layout//"
+	Icon:	42
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"LayoutTools.GraphicTable"
+)
+
+(AVIcon.42
+	Name:	"Table"
+	Res:	"Icons.Table"
+
+)
+
+(Butn.43
+	InternalName:	"RegistrationMarks"
+	Help:	"Puts registration marks on a layout for printing//"
+	Icon:	44
+	Click:	"LayoutTools.MakeRegistrationMarks"
+)
+
+(AVIcon.44
+	Name:	"registration_marks.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 0000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 0000d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d000 00000000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 0000d0d0 d0d0d000 
+	Data:	d0d0d0d0 d0d0d0d0 d000d0d0 d0d0d000 
+	Data:	0000d0d0 d0d0d000 d0d0d0d0 d0d0d0d0 
+	Data:	d000d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.45
+	InternalName:	"HeaderAndFooter"
+	Help:	"Inserts header and footer//"
+	Icon:	46
+	Click:	"LayoutTools.HeaderAndFooter"
+)
+
+(AVIcon.46
+	Name:	"header_and_footer.bmp"
+	Data:	4e442049 6d616765 00010015 00130000 
+	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00000000 00000000 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d000d0 
+	Data:	00000000 00000000 00d000d0 d0d0d000 
+	Data:	0000d0d0 d0d000d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d000d0 d0d0d000 0000d0d0 d0d00000 
+	Data:	00000000 00000000 000000d0 d0d0d000 
+	Data:	0000d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d000 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(RectD.47
+	Left:	5.00000000000000
+	Top:	28.00000000000000
+	Right:	29.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.48
+	Left:	60.00000000000000
+	Top:	28.00000000000000
+	Right:	84.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.49
+	Left:	87.00000000000000
+	Top:	28.00000000000000
+	Right:	111.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.50
+	Left:	217.00000000000000
+	Top:	28.00000000000000
+	Right:	241.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.51
+	Left:	243.00000000000000
+	Top:	28.00000000000000
+	Right:	288.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.52
+	Left:	139.00000000000000
+	Top:	28.00000000000000
+	Right:	163.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.53
+	Left:	113.00000000000000
+	Top:	28.00000000000000
+	Right:	137.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.54
+	Left:	32.00000000000000
+	Top:	28.00000000000000
+	Right:	57.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.55
+	Left:	165.00000000000000
+	Top:	28.00000000000000
+	Right:	189.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.56
+	Left:	191.00000000000000
+	Top:	28.00000000000000
+	Right:	215.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.57
+	Left:	4.00000000000000
+	Top:	38.00000000000000
+	Right:	296.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(Nil.58
+)
+
+(Script.59
+	Name:	"LayoutTools.BatchExport"
+	SourceCode:	"'NAME:     LayoutBatchExport\n'DATE:     160801\n'AUTHOR:   Sebastian Hofer - shofer@gmx.de\n\n'DESCRIPTION:\n'LayoutBatchExport is for fast export of multiple Layouts out of a project into eps (new) or jpg.\n'Other formats will not be implemented by me. Feel Free to do it.\n'After selecting the export parameters (file type, resolution, compression) and the LayoutdDocs\n'the user is prompted to chose the export filenames by Dialog.\n'It is not necessary to open the Layouts in a window before of the export!\n\n' REQUIR
+ES:   ---\n\n' LayoutBatchExport eignet sich zum schnellen Export von mehreren Layouts \n' im selben Datenformat und mit den selben Parametern.\n' Meinen Bedürfnissen nach wird nur eps (new) und jpg unterstützt. Wer andere \n' Formate unterstuetzen will darf die gerne einbauen. \n' Es ist nicht noetig die zu exportierenden Layouts als Fenster zu oeffnen!\n\n\ntheFormatL={\"eps (New)\", \"jpg\"}\ntheFormatChoice=msgBox.ListAsString(theFormatL, \"Choose the LayoutBatchExport format:\", \"LayoutBatchExport\")\nif  (theFormatChoi
+ce=Nil) then return Nil\nelseif (theFormatChoice=\"eps (New)\") then theShortFormat=3 \n  theResL={300,360,600,720}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif  (theResolution=Nil) then return Nil end\nelseif (theFormatChoice=\"jpg\") then theShortFormat=9 \n  theResL={72,90,120,144}\n  theResolution=msgBox.ListAsString(theResL, \"Choose the LayoutBatchExport resolution:\", \"LayoutBatchExport\")\nif  (theResolution=Nil) then return Nil end\n  theCompres
+sL={20,40,60,80,100}\n  theCompression=msgBox.ListAsString(theCompressL, \"Choose the LayoutBatchExport compression (jpg):\", \"LayoutBatchExport\")\nif  (theCompression=Nil) then return Nil end\nend\ntheProject=av.GetProject\ntheDocL=theProject.GetDocs\ntheLayoutL={}\nfor each theEntry in theDocL\n  if (theEntry.Is(Layout)) then\n    theLayoutL.Add(theEntry)\n  end\nend\nif (theLayoutL.Count=0) then\n  MsgBox.Error(\"No LayoutBatchExport possible. There are no Layouts to export. You have to create Layouts first!\", \"\")\n  ret
+urn nil\nelse\n  theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n  if (theBatchLayoutL=Nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count=0) \n    MsgBox.Error(\"No LayoutBatchExport possible. You must choose at least 1 Layout or press cancel to quit:\", \"\")\n    theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose the Layouts to be exported:\", \"LayoutBatchExport\")\n    if (theBatchLayoutL=Nil) then\n      return nil\n    end\n  end\nend\n\n\ntheFirstLay
+out=theBatchLayoutL.Get(0)\ntheFirstLayout.GetWin.open\ntheFormatL = theBatchLayoutL.Get(0).GetDisplay.ReturnExportFormats\ntheFirstLayout.GetWin.close\n\n\ntheFormat = theFormatL.Get(theShortFormat)  \nif (theShortFormat=3) then\n  theFileExt=\"eps\"\nelseif (theShortFormat=9) then\n  theFileExt=\"jpg\"\nend\n\nfor each theBatchLayout in theBatchLayoutL\n  defaultFileName=FileName.Make(theBatchLayout.GetName +\".\"+theFileExt)\n  theFN=FileDialog.Put(defaultFileName, \"*.\"+theFileExt, \"Export >>\"+theBatchLayout.getName+\"<< to:\"
+ )\n\n  if (theFN=nil) then\n    return nil\n  end\n  if (theShortFormat=3) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution})\n  elseif (theShortFormat=9) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution,theCompression})\n  end\nend\nreturn nil\n\n\n\n\n"
+)
+
+(Script.60
+	Name:	"LayoutTools.Close"
+	SourceCode:	"self.GetDialog.Close"
+)
+
+(Script.61
+	Name:	"LayoutTools.CopyLayout"
+	SourceCode:	"'Copies a Layout and renames it...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  4/6/1999\n\n'Gets the Layout...\nmyProj = av.GetProject\nsomeLayouts = myProj.GetDocswithGui(av.FindGui(\"Layout\"))\nalayoutChoice = MsgBox.ChoiceAsString( someLayouts, \"Choose a Layout to copy:\", \"Copy Layout\")\nif (alayoutChoice = nil) then\n  return nil\nend\ntheLayout = myProj.FindDoc( alayoutChoice.AsString )\n\n'Copies the Layout and renames it...\nnewLayoutName = MsgBox.Input( \"Enter a new name for the layout:\", \"New Layout Name\",
+ \"New Layout\" )\nif (newLayoutName = nil) then   'Cancels if the there is no Layout name\n  return nil\nend\nif (av.FindDoc(newLayoutName).AsString = newLayoutName.AsString) then\n  'Cancels if the Layout name already exists\n  MsgBox.Error(\"That layout name already exists! Press the Copy Layout button again...\",\"Layout Already Exists\")\n  return nil\nelse\n  newLayout = theLayout.Clone\n  newLayout.SetName ( newLayoutName )\n  myProj.AddDoc ( newLayout )\n  newLayout.GetWin.Open\nend\n\n'End of script..."
+)
+
+(Script.62
+	Name:	"LayoutTools.GraphicTable"
+	SourceCode:	"' Name:   Layout.GraphicTable\n' Title:  Places a Graphic of the table you specify into a layout\n'\n' Topics : Layouts\n' Version: 3.0a.02\n' Source : ArcView Sample scripts\n' Changed: 07-30-98\n' By     : Rob Buurman\n'          rbuurman@isis.nl\n'          ISIS BENELUX\n'          \n'\n' Description:  Use the tool with this script attached as the \n' apply event to drag a rectangle in a layout.  You will be prompted\n' to choose which table you want to make the representation of \n' and which fields to show.\n' When th
+e table has an selection, you will be asked if you want to display\n' only the selected records. You can bypass this question by pressing the\n' shift-key when you drag the rectangle in a layout.\n' The script will populatate rows with cell values of those fields until the \n' bottom of the rectangle you specified is reached.\n' If you choose more fields than would fit within the width of the rectangle,\n' those will be included.\n'\n' This script gets around several annoying limitations in ArcView's\n' TableFrame g
+raphic:\n' \n' 1) With this script you can make a table that is wider than 80\n'    text columns. (Great for landscape docs).\n' 2) You change the font of this table.\n' 3) Since this table is graphicgroup, you can ungroup it and\n'    change the symbols for individual parts.\n' 4) This table will always print correctly - on some printers\n'    printing directly from the table doc & from table frames,\n'    there were gross formating errors\n' 5) You can resize this table and the text just gets resized,\n'    rather t
+han including more data like the tableframe does.\n' \n' This script cannot produce the representation of the table if\n' it is sorted - you will get the unsorted version.  Additionally,\n' since this representation is just a dumb graphic, it does not\n' automatically update itself in any way, shape, or form.\n'\n' Additionally, you can use the symbol window to change the button \n' color by using the foreground, change the table background by using\n' the background color, or change the text and outline color as we
+ll.\n' If you want to highlight a particular column, ungroup the graphic\n' table and then you can select the column by clicking on its border,\n' then change its background color or text color by using background\n' or text from the color palette.\n'\n' Requires:  Place this script as the apply event for a tool in \n' your Layout GUI.  There must be at least one table document in \n' the current project.\n'\n' Self:  \n'\n' Returns:  \n\ntheLayout = av.GetActiveDoc\ngl = theLayout.GetGraphics\nbRect = theLayout.ReturnUser
+Rect\nif (bRect.GetWidth < 0.1) then\n  return nil\nend\n\nif (System.IsShiftKeyDown) then\n  SelectedOnly = true\nelse\n  SelectedOnly = false\nend\n\nTableDocNames = {}\nfor each d in av.GetProject.GetDocs\n  if(d.Is(Table)) then\n    TableDocNames.Add(d.GetName)\n  end\nend\n\nif (TableDocNames.Count = 0) then\n  Msgbox.Error(\"You must have a table document in the Project\",\"Duh!\")\n  return nil\nend\ngl.UnSelectAll\n\nTableName = Msgbox.ChoiceAsString(TableDocNames,\"Choose a table:\",\"Smart Table\")\nif (TableName = nil) then\n  re
+turn nil\nend\n\ntheTable = av.GetProject.FindDoc(TableName)\ntheVTab = theTable.GetVTab\ntheFieldNames = {}\nfor each f in theVTab.GetFields\n  if (f.IsTypeShape.Not) then\n    theFieldNames.Add(f.GetAlias)\n  end\nend\n\n\nFieldsToShow = Msgbox.MultiListAsString(theFieldNames,\"Choose the Fields to Show\",\"Smart Table\")\nif (FieldsToShow = nil) then return nil end\nif (FieldsToShow.Count = 0) then\n  return nil\nend\n\n  if (SelectedOnly) then\n    theBitmap = theVTab.GetSelection\n  else\n    theBitmap = theVTab.GetDefBitmap\n  
+  if (theVTab.GetSelection.Count <> 0) then\n      if (Msgbox.YesNo(\"Use only the selected records\",\"Smart Table\", true)) then\n        theBitmap = theVTab.GetSelection\n      end\n    end\n  end\n\n' Background color for field names\nbc = Color.Make\nbc.SetRGBList({255,255,225})\nftbf = RasterFill.Make\nftbf.SetStyle(#RASTERFILL_STYLE_SOLID)\nftbf.SetColor(bc)\n\nbRectO = bRect.ReturnOrigin\nbRectH = bRect.GetHeight\nbRectW = bRect.GetWidth\nbRectT = bRect.GetTop\nbrectB = bRect.GetBottom\nbRectR = bRect.GetRight\nHeightLeft 
+= bRect.GetHeight\n\ntbo = bRectO + (0@bRectH)\ncspace = 0\n\nfor each f in FieldsToShow\n  \n  'Make Field Title\n  fl = GraphicText.Make(f,(tbo +(0.1@0)) )\n  fl.GetSymbol.SetSize(12)\n  fl.SetDisplay(theLayout.GetDisplay)\n  tbo = tbo - (0@(fl.GetBounds.GetHeight + 0.05))\n  fl.SetSelected(true)\n  \n  gl.AddBatch(fl)\n  HeightLeft = HeightLeft - fl.GetBounds.GetHeight - 0.05\n  HbarHeight = HeightLeft\n\n  \n  'Now do the column of values\n  counter = -1\n  ColStr = \"\"\n  vst = GraphicText.Make(ColStr,(0@0))\n  vst.SetDisplay
+(theLayout.GetDisplay)\n  vst.GetSymbol.SetSize(10)\n  While (HeightLeft <> 0)\n    rec = theBitmap.GetNextSet(counter)\n    counter = rec\n    ValStr = theVTab.ReturnValueString(theVTab.FindField(f),rec)\n    ColStr = ColStr + ValStr\n    vst.SetText(ColStr)\n    'Check to see if column has exceeded Height\n    if (HeightLeft < vst.GetBounds.GetHeight) then\n      HeightLeft = 0\n    end \n    if (theBitmap.GetNextSet(counter) = -1) then\n      HeightLeft = 0\n    end\n    ColStr = ColStr + nl\n  end\n  \n  vst.SetOrigin(tb
+o - (0@(vst.getBounds.GetHeight)) )\n  \n  'Check to see if the Column is wider than the Title\n  if (fl.GetBounds.GetWidth > vst.GetBounds.GetWidth) then\n    'Title is wider, so move column\n    if (theVTab.FindField(f).IsTypeNumber) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_RIGHT)\n      vst.GetBounds.Move((fl.GetBounds.GetWidth - vst.GetBounds.GetWidth + 0.1),0.1)\n      gl.AddBatch(vst)\n    elseif(theVTab.FindField(f).IsTypeString) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n      vst.GetBounds.
+Move(0.1,0.1)\n      gl.AddBatch(vst)\n    end  \n  else\n    'Column is wider so move  & justify title\n    if (theVTab.FindField(f).IsTypeNumber) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_RIGHT)\n      vst.GetBounds.Move(0.1, 0.1)\n      gl.AddBatch(vst)\n    elseif (theVTab.FindField(f).IsTypeString) then\n      vst.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n      vst.GetBounds.Move(0.1, 0.1)\n      gl.AddBatch(vst)\n    end    \n    fl.GetBounds.Move( ( (vst.GetBounds.GetWidth - fl.GetBounds.GetWidth) /2 ) ,0)\n  en
+d  \n  vst.SetSelected(true)\n  \n  cbr = gl.ReturnSelectedExtent.clone\n  cbr.ExpandBy(0.05)\n  cbp = GraphicShape.Make(cbr)\n  cbp.GetSymbol.SetOLWidth(0.1)\n  gl.AddBatch(cbp)\n  cbp.SetSelected(true)  \n  gl.GroupSelected\n  gl.GetSelected.Get(0).SetObjectTag(\"col\")\n  cspace = cspace + gl.ReturnSelectedExtent.GetWidth  \n  gl.UnSelectAll\n  HeightLeft = bRectH\n  tbo = bRectO + (cspace@bRectH)\nend\n\n\nfor each g in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\nend\n\nse = gl.ReturnSelectedExtent\nseO = se.ReturnOrig
+in\nftr = Rect.Make(SeO + (0@(se.GetHeight - 0.275)),(se.GetWidth@0.275))\n\ncoltits = {}\nfor each g in gl.FindAllByObjectTag(\"col\")\n  colTitleRect = ftr.IntersectWith(g.GetBounds.Clone)\n  coltits.Add(colTitleRect)\n  g.SetSelected(false)\nend\ntc = Color.Make\ntc.SetTransParent(true)\n\n\n\n\nfor each ftr in coltits\n  bp = ftr.Clone.InsetBy(0.0125)\n  bpd = Polygon.Make({{ftr.ReturnOrigin,(ftr.GetRight@ftr.GetBottom),(ftr.GetRight@ftr.GetTop),(bp.GetRight@bp.GetTop),(bp.GetLeft@bp.GetBottom),ftr.ReturnOrigin}})\n  bpl =
+ Polygon.Make({{ftr.ReturnOrigin,(bp.ReturnOrigin),(bp.GetRight@bp.GetTop),(ftr.GetRight@ftr.GetTop),(ftr.GetLeft@ftr.GetTop),ftr.ReturnOrigin}})\n  gbp = GraphicShape.Make(bp)\n  gbpd = GraphicShape.Make(bpd)\n  gbpl = GraphicShape.Make(bpl)\n  gbp.SetSymbol(ftbf.Clone)\n  gbpd.SetSymbol(ftbf.Clone)\n  gbpl.SetSymbol(ftbf.Clone)\n  lg = Color.Make\n  lg.SetRGBList({220,220,220})\n  dg = Color.Make\n  dg.SetRGBList({120,120,120})\n  gbpd.GetSymbol.SetColor(dg.Clone)\n  gbpl.GetSymbol.SetColor(lg.Clone)\n  gbpl.GetSymbol
+.SetOLWidth(0)\n  gbpd.GetSymbol.SetOLWidth(0)\n  gbpl.GetSymbol.SetColorLock(true)\n  gbpd.GetSymbol.SetColorLock(true)\n  gbp.GetSymbol.SetOLWidth(0)\n  gbpl.GetSymbol.SetOLColor(tc.Clone)\n  gbpd.GetSymbol.SetOLColor(tc.Clone)\n  gbp.GetSymbol.SetOLColor(tc.Clone)\n  gl.AddBatch(gbpd)\n  gl.AddBatch(gbpl)\n  gl.AddBatch(gbp)\n  gbpd.SetSelected(true)\n  gbpl.SetSelected(true)\n  gbp.SetSelected(True)\nend\ngl.GroupSelected\ngl.MoveSelectedToBack\ngl.GetSelected.Get(0).SetObjectTag(\"buttons\")\ngl.UnSelectAll  \n\nfor each g 
+in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\n  gl.MoveSelectedToFront\nend\ngl.FindByObjectTag(\"buttons\").SetSelected(true)\n\nNeatRect = gl.ReturnSelectedExtent.Clone\nnrgs = GraphicShape.Make(NeatRect)\nnrgs.GetSymbol.SetOLWidth(0.6)\ntheLayout.GetGraphics.AddBatch(nrgs)\n\ngl.UnSelectAll\n\nbp = GraphicShape.Make(NeatRect)\nbw = Color.GetWhite\nbpf = RasterFill.Make\nbpf.SetStyle(#RASTERFILL_STYLE_OPAQUESTIPPLE)\nbp.SetSymbol(bpf)\nbp.GetSymbol.SetColor(tc.Clone)\nbp.GetSymbol.SetBGColor(Color.GetWhite)\ntheLayou
+t.GetGraphics.AddBatch(bp)\nbp.SetSelected(True)\ngl.MoveSelectedToBack\n\nfor each g in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\nend\ngl.FindByObjectTag(\"buttons\").SetSelected(true)\nnrgs.SetSelected(true)\ngl.GroupSelected\n\n\ntheLayout.GetGraphics.EndBatch\n"
+)
+
+(Script.63
+	Name:	"LayoutTools.HeaderAndFooter"
+	SourceCode:	"'' Name: LYT.Header \n'       lyt_head.ave\n' Author: Mike Quentel <mquentel@acceleration.net>,\n'                      <kingofthewood@yahoo.com>\n' Date: Fri Dec 10 15:28:27 1999\n' Revised by: Adrian Boehlen\n' Revision Date: 20/04/2015\n' Revisions: \n' -------------------------------------------------------------------\n\nlytActive = av.GetActiveDoc\nif ((lytActive.is(Layout)) and (lytActive.GetClass.GetClassName <> \"DialogEditor\")) then\n  thePageDisplay = lytActive.GetDisplay\n  thePageExtent = thePageDisplay.Retu
+rnPageExtent\n  theCenter = thePageExtent.ReturnCenter\n  recMargin = thePageDisplay.ReturnMarginExtent\n  theOrigin = recMargin.ReturnOrigin\n  xOriginLeft = theOrigin.GetX\n  xOriginCenter = theCenter.GetX\n  xOriginRight = xOriginLeft + recMargin.GetWidth\n  yOrigin = theOrigin.GetY\n  \n  ' creates origins for graphic text (anchor points left)\n  docOrigin = (xOriginLeft + 0.01)@(yOrigin + 0.05)\n  userOrigin = (xOriginCenter)@(yOrigin + 0.05)\n  pageOrigin = (xOriginRight - 0.01)@(yOrigin + 0.05)\n  \n  ' REMOVES PR
+EVIOUS GRAPHIC TEXT\n  lGraphics = lytActive.GetGraphics\n  numLCount = lGraphics.Count\n  if (numLCount > 0) then\n    lGraphicsRemove = {}\n    for each g in lGraphics\n      if ((g.GetOrigin = docOrigin) or (g.GetOrigin = userOrigin)) then\n        lGraphicsRemove.Add (g)\n      end 'if ((g...\n    end 'for each g...\n    for each remove in lGraphicsRemove\n      lGraphics.RemoveGraphic (remove)\n    end 'for each remove...\n  end 'if (numLCount...\n  \n  ' creates names strings for graphic text  \n  strAprName = av.Get
+Project.GetName\n  strLytName = lytActive.GetWin.GetTitle\n  fnUserName = (\"$AVEXT/user_name.odb\").AsFileName\n  strUserName = MsgBox.Input (\"Enter your name.\",\"Layout User\",\"Adrian Boehlen\")\n  strDoc = (strAprName)\n  strUser = (strUserName)\n  'dtNow = Date.Now\n  'dtNow.SetFormat (\"yyyyy-MM-dd  hhh:m\")\n  'dtNow.SetFormat (\"ddd dd MMM yyyyy    hhh:m\")\n  'strDate = dtNow.AsString\n  strPage = MsgBox.Input (\"Enter page number\", \"Page Number\", \"1\")\n  \n  ' creates, adjusts and adds graphic text to layout\n  theSize =
+ 8\n  theColor = Color.GetBlack\n  theFont = Font.Make (\"DejaVu Sans\", \"Condensed\")\n\n  gtxDoc = GraphicText.Make (strDoc, docOrigin)  \n  gtxUser = GraphicText.Make (strUser, userOrigin)\n  gtxPage = GraphicText.Make (strPage, pageOrigin)\n  \n  txtSymDoc = gtxDoc.ReturnSymbols.Get (0)\n  txtSymDoc.SetSize (theSize)\n  txtSymDoc.SetColor(theColor)\n  txtSymDoc.SetFont (theFont)\n\n  txtSymUser = gtxUser.ReturnSymbols.Get (0)\n  txtSymUser.SetSize (theSize)\n  txtSymUser.SetFont (theFont)\n    \n  txtSymPage = gtxPage.Retu
+rnSymbols.Get (0)\n  txtSymPage.SetSize (theSize)\n  txtSymPage.SetFont (theFont)\n  \n  lytActive.GetGraphics.Add (gtxDoc)\n  lytActive.GetGraphics.Add (gtxUser)\n  lytActive.GetGraphics.Add (gtxPage)\n  theGraphicList = lytActive.GetGraphics\n  \n  ' replace user name with simulated anchor point middle\n  userOrigin = (xOriginCenter - (gtxUser.GetExtent.GetX / 2))@(yOrigin + 0.05)\n  theGraphicList.RemoveGraphic(gtxUser)\n  gtxUser = GraphicText.Make (strUser, userOrigin)\n  txtSymUser = gtxUser.ReturnSymbols.Get (0)\n
+  txtSymUser.SetSize (theSize)\n  txtSymUser.SetColor(theColor)\n  txtSymUser.SetFont (theFont)\n  lytActive.GetGraphics.Add (gtxUser)\n  \n  ' replace page number with simulated anchor point right\n  pageOrigin = (xOriginRight - gtxPage.GetExtent.GetX)@(yOrigin + 0.05)\n  theGraphicList.RemoveGraphic(gtxPage)\n  gtxPage = GraphicText.Make (strPage, pageOrigin)\n  txtSymPage = gtxPage.ReturnSymbols.Get (0)\n  txtSymPage.SetSize (theSize)\n  txtSymPage.SetColor(theColor)\n  txtSymPage.SetFont (theFont)\n  lytActive.GetGr
+aphics.Add (gtxPage)\n\nelse\n  MsgBox.Warning (\"This script is meant for an Active Layout only.  Exiting.\",\"\")\n  exit\nend  \n  \n\n\n"
+)
+
+(Script.64
+	Name:	"LayoutTools.MakeRegistrationMarks"
+	SourceCode:	"'##################################################################\n'#  Name:          Layout.MakeRegistrationMarks\n'#  Author:        Adam Hyer\n'#                 ashyer@syr.edu, ashyer@hotmail.com\n'#\n'#  Date Written:  2.24.99\n'#\n'#  Description:   Puts registration marks on a layout for printing.\n'#                 This is intended for plotters when you need to\n'#                 make the page size larger in order to show the \n'#                 entire layout.  The registration marks allow you\n'#        
+         to cut paper to it's originally intended page\n'#                 size.\n'#\n'#  Instructions:  Add a new button to the active layout add this\n'#                 script to the new button's click property.  Click\n'#                 the button when you want to add the marks and\n'#                 specify the desired dimensions for the marks.\n'#\n'#  Revision:      A.Boehlen 20/04/2015\n'#\n'##################################################################\n\ntheLayout = av.GetActiveDoc  \n\nif (theLayout.Is(l
+ayout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\nh=MsgBox.Input(\"Enter the page height in mm:\",\" \",\"297\")\nw=MsgBox.Input(\"Enter the page width in mm:\",\" \",\"210\")\nheight=h.AsNumber * 0.03937    ' converts mm to inches\nwidth=w.AsNumber * 0.03937     ' converts mm to inches\n\nd = av.GetActiveDoc.GetDisplay\nr = d.ReturnPageExtent\nrc = r.ReturnCenter\nlf = rc.GetX-(width/2)\nrt = rc.GetX+(width/2)\ntp = rc.GetY+(height/2)\nbm = rc.GetY-(height/2)\nlfL = lf-0.2\nlfR = lf
+-0.02 \nrtL = rt+0.02\nrtR = rt+0.2\ntpU = tp+0.2\ntpD = tp+0.02\nbmU = bm-0.02\nbmD = bm-0.2\n\naPen = BasicPen.Make\naPen.SetColor(Color.GetBlack)\naPen.SetSize(1)\n\nTL1 = Line.Make( lf@tpU, lf@tpD)\nTL2 = Line.Make( lfL@tp, lfR@tp)\nTR1 = Line.Make( rt@tpU, rt@tpD)\nTR2 = Line.Make( rtL@tp, rtR@tp)\nBL1 = Line.Make( lf@bmU, lf@bmD)\nBL2 = Line.Make( lfL@bm, lfR@bm)\nBR1 = Line.Make( rt@bmU, rt@bmD)\nBR2 = Line.Make( rtL@bm, rtR@bm)\n\ngTL1 = GraphicShape.Make(TL1)\ngTL1.SetSymbol(aPen)\ngTL2 = GraphicShape.Make(TL2)\ngTL2.SetS
+ymbol(aPen)\ngTR1 = GraphicShape.Make(TR1)\ngTR1.SetSymbol(aPen)\ngTR2 = GraphicShape.Make(TR2)\ngTR2.SetSymbol(aPen)\ngBL1 = GraphicShape.Make(BL1)\ngBL1.SetSymbol(aPen)\ngBL2 = GraphicShape.Make(BL2)\ngBL2.SetSymbol(aPen)\ngBR1 = GraphicShape.Make(BR1)\ngBR1.SetSymbol(aPen)\ngBR2 = GraphicShape.Make(BR2)\ngBR2.SetSymbol(aPen)\n\ntheLayout.GetGraphics.UnselectAll\ngTL1.SetSelected(TRUE)\ngTL2.SetSelected(TRUE)\ngTR1.SetSelected(TRUE)\ngTR2.SetSelected(TRUE)\ngBL1.SetSelected(TRUE)\ngBL2.SetSelected(TRUE)\ngBR1.SetSelected(TRUE
+)\ngBR2.SetSelected(TRUE)\n\ntheLayout.GetGraphics.Add(gTL1)\ntheLayout.GetGraphics.Add(gTL2)\ntheLayout.GetGraphics.Add(gTR1)\ntheLayout.GetGraphics.Add(gTR2)\ntheLayout.GetGraphics.Add(gBL1)\ntheLayout.GetGraphics.Add(gBL2)\ntheLayout.GetGraphics.Add(gBR1)\ntheLayout.GetGraphics.Add(gBR2)\nav.GetProject.SetModified(TRUE)\n\n"
+)
+
+(Script.65
+	Name:	"LayoutTools.SelectAll"
+	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.SelectAll"
+)
+
+(Script.66
+	Name:	"LayoutTools.SetQuality"
+	SourceCode:	"'########################################################\n'#\n'# Filename:     SetQuality.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.10.2014\n'# Version:      0.1\n'#\n'# Purpose:      aendert auf Knopfdruck bei allen Bildern\n'#               eines Layouts die Qualitaet von \"Draft\"\n'#               auf \"Presentation\" oder umgekehrt.             \n'#\n'########################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this 
+script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\n\nfor each theObject in theGraphicsList\n  if (theObject.Is(PictureFrame)) then\n    if (theObject.GetQuality = #FRAME_QUALITY_PRESENTATION) then\n      theObject.SetQuality(#FRAME_QUALITY_DRAFT)\n    else\n      theObject.SetQuality(#FRAME_QUALITY_PRESENTATION)\n    end\n  end\nend\n\ntheLayout.Invalidate"
+)
+
+(Script.67
+	Name:	"LayoutTools.start"
+	SourceCode:	"av.getproject.finddialog(\"LayoutTools\").open"
+)
+
+(Script.68
+	Name:	"LayoutTools.UndoZoom"
+	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.UndoZoom\n"
+)
+
+(Script.69
+	Name:	"LayoutTools.UnselectAll"
+	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.UnselectAll\n"
+)
+
+(Script.70
+	Name:	"Ext_Unload"
+	SourceCode:	"Dialog.DetachFromExtension(self)\n"
+)
+
+(Script.71
+	Name:	"Ext_Inst"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nSack=self 'Der Sack vom makescript, wo alles Benötigte drin ist\n\nSchaltflaeche=Sack.get(0)\nviewGUI = av.GetProject.FindGUI( \"Layout\" )\nif (viewGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existiert\n    if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      'Schaltfläche an der 2. Stelle einfügen\n      viewGUI.GetButtonBar.Add( Schaltflaeche, 2)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1))\n\n\n\n"
+)
+
+(Script.72
+	Name:	"Ext_Unin"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nlayoutGUI = av.GetProject.FindGUI( \"Layout\" )\n\nlayoutGUI.GetButtonBar.remove(layoutGUI.GetButtonBar.findbyscript( \"LayoutTools.start\"))\n\nav.GetProject.removedialog(\"LayoutTools\")"
+)
+
