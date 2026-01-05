@@ -2,43 +2,48 @@
 '#
 '# Filename:     LayoutTools_Enter_command.ave
 '# Author:       Adrian Boehlen
-'# Date:         30.11.2018
-'# Version:      0.16
+'# Date:         20.12.2022
+'# Version:      1.0
 '#
 '# Purpose:      loest diverse Funktionen durch Kommandos aus
 '#
 '#               erfordert 
-'#               - LayoutTools.General_Documentation
+'#               - LayoutTools.Sub_Documentation
 '#               - alle Tools, die ueber Kommandos aufgerufen werden
 '#
 '###########################################################################
 
 
-'########## Help messages ##########
+'# Einlesen der globalen Variablen fuer die Hilfeseiten
 
-av.Run("LayoutTools.General_Documentation", _uebersicht)
-av.Run("LayoutTools.General_Documentation", _helpnew)
-av.Run("LayoutTools.General_Documentation", _helpcopy)
-av.Run("LayoutTools.General_Documentation", _helphlon)
-av.Run("LayoutTools.General_Documentation", _helphlonm)
-av.Run("LayoutTools.General_Documentation", _helphloff)
-av.Run("LayoutTools.General_Documentation", _helphloffm)
-av.Run("LayoutTools.General_Documentation", _helpheado)
-av.Run("LayoutTools.General_Documentation", _helpheadm)
-av.Run("LayoutTools.General_Documentation", _helpdelhead)
-av.Run("LayoutTools.General_Documentation", _helplytimp)
-av.Run("LayoutTools.General_Documentation", _helplytexp)
-av.Run("LayoutTools.General_Documentation", _helpfi)
-av.Run("LayoutTools.General_Documentation", _helpfis)
-av.Run("LayoutTools.General_Documentation", _helpli)
-av.Run("LayoutTools.General_Documentation", _helplis)
-av.Run("LayoutTools.General_Documentation", _helpti)
-av.Run("LayoutTools.General_Documentation", _helptis)
-av.Run("LayoutTools.General_Documentation", _helpregm)
-av.Run("LayoutTools.General_Documentation", _helpselall)
-av.Run("LayoutTools.General_Documentation", _helpunselall)
-av.Run("LayoutTools.General_Documentation", _helpmx)
-av.Run("LayoutTools.General_Documentation", _helpmy)
+av.Run("LayoutTools.Sub_Documentation", _uebersicht)
+av.Run("LayoutTools.Sub_Documentation", _helpnew)
+av.Run("LayoutTools.Sub_Documentation", _helpcopy)
+av.Run("LayoutTools.Sub_Documentation", _helpdelhd)
+av.Run("LayoutTools.Sub_Documentation", _helpdels)
+av.Run("LayoutTools.Sub_Documentation", _helpfi)
+av.Run("LayoutTools.Sub_Documentation", _helpfis)
+av.Run("LayoutTools.Sub_Documentation", _helpgo)
+av.Run("LayoutTools.Sub_Documentation", _helpgom)
+av.Run("LayoutTools.Sub_Documentation", _helpgf)
+av.Run("LayoutTools.Sub_Documentation", _helpgfm)
+av.Run("LayoutTools.Sub_Documentation", _helphd)
+av.Run("LayoutTools.Sub_Documentation", _helphdm)
+av.Run("LayoutTools.Sub_Documentation", _helplytimp)
+av.Run("LayoutTools.Sub_Documentation", _helplytexp)
+av.Run("LayoutTools.Sub_Documentation", _helpmrg)
+av.Run("LayoutTools.Sub_Documentation", _helpmx)
+av.Run("LayoutTools.Sub_Documentation", _helpmy)
+av.Run("LayoutTools.Sub_Documentation", _helpoli)
+av.Run("LayoutTools.Sub_Documentation", _helpolis)
+av.Run("LayoutTools.Sub_Documentation", _helpregm)
+av.Run("LayoutTools.Sub_Documentation", _helpselall)
+av.Run("LayoutTools.Sub_Documentation", _helpti)
+av.Run("LayoutTools.Sub_Documentation", _helptis)
+av.Run("LayoutTools.Sub_Documentation", _helpuli)
+av.Run("LayoutTools.Sub_Documentation", _helpulis)
+av.Run("LayoutTools.Sub_Documentation", _helpunselall)
+
 
 _command = Self.GetDialog.FindByName("EnterCommand").GetText
 Self.SetText("")
@@ -50,44 +55,50 @@ if (_command = "new") then
   av.Run("LayoutTools.General_NewLayout", {})
 elseif (_command = "help new") then
   MsgBox.Report(_helpnew,"Help new")
+  
+'# Margin recommendations
+elseif (_command = "mrg") then
+  av.Run("LayoutTools.General_Satzspiegel", {})
+elseif (_command = "help mrg") then
+  MsgBox.Report(_helpmrg,"Help mrg")
 
 '# Copy
-elseif (_command = "copy") then
+elseif (_command = "cp") then
   av.Run("LayoutTools.General_CopyLayout", {})
-elseif (_command = "help copy") then
-  MsgBox.Report(_helpcopy,"Help copy")
+elseif (_command = "help cp") then
+  MsgBox.Report(_helpcopy,"Help cp")
 
-'# Hilfslinien
-elseif (_command = "hlon") then
-  av.Run("LayoutTools.Ruler_TurnRulersOnOne", {})
-elseif (_command = "help hlon") then
-  MsgBox.Report(_helphlon,"Help hlon")
-elseif (_command = "hloff") then
-  av.Run("LayoutTools.Ruler_TurnRulersOffOne", {})
-elseif (_command = "help hloff") then
-  MsgBox.Report(_helphloff,"Help hloff")
-elseif (_command = "hlonm") then
-  av.Run("LayoutTools.Ruler_TurnRulersOnMany", {})
-elseif (_command = "help hlonm") then
-  MsgBox.Report(_helphlonm,"Help hlonm")
-elseif (_command = "hloffm") then
-  av.Run("LayoutTools.Ruler_TurnRulersOffMany", {})
-elseif (_command = "help hloffm") then
-  MsgBox.Report(_helphloff,"Help hloffm")
+'# Guide lines
+elseif (_command = "go") then
+  av.Run("LayoutTools.Guides_TurnGuidesOnOff", {"one", "on"})
+elseif (_command = "help go") then
+  MsgBox.Report(_helpgo,"Help go")
+elseif (_command = "gf") then
+  av.Run("LayoutTools.Guides_TurnGuidesOnOff", {"one", "off"})
+elseif (_command = "help gf") then
+  MsgBox.Report(_helpgf,"Help gf")
+elseif (_command = "gom") then
+  av.Run("LayoutTools.Guides_TurnGuidesOnOff", {"many", "on"})
+elseif (_command = "help gom") then
+  MsgBox.Report(_helpgom,"Help gom")
+elseif (_command = "gfm") then
+  av.Run("LayoutTools.Guides_TurnGuidesOnOff", {"many", "off"})
+elseif (_command = "help gfm") then
+  MsgBox.Report(_helpgfm,"Help gfm")
 
 '# Header and Footer
-elseif (_command = "heado") then
-  av.Run("LayoutTools.Text_HeaderAndFooterOne", {})
-elseif (_command = "help heado") then
-  MsgBox.Report(_helpheado,"Help heado")
-elseif (_command = "headm") then
-  av.Run("LayoutTools.Text_HeaderAndFooterMany", {})
-elseif (_command = "help headm") then
-  MsgBox.Report(_helpheadm,"Help headm")
-elseif (_command = "delhead") then
+elseif (_command = "hd") then
+  av.Run("LayoutTools.Text_HeaderAndFooter", "one")
+elseif (_command = "help hd") then
+  MsgBox.Report(_helphd,"Help hd")
+elseif (_command = "hdm") then
+  av.Run("LayoutTools.Text_HeaderAndFooter", "many")
+elseif (_command = "help hdm") then
+  MsgBox.Report(_helphdm,"Help hdm")
+elseif (_command = "delhd") then
   av.Run("LayoutTools.Text_DeleteHeaderAndFooter", {})
-elseif (_command = "help delhead") then
-  MsgBox.Report(_helpdelhead, "Help delhead")
+elseif (_command = "help delhd") then
+  MsgBox.Report(_helpdelhd, "Help delhd")
   
 '# Import and Export
 elseif (_command = "lytimp") then
@@ -106,12 +117,18 @@ elseif (_command = "help fi") then
   MsgBox.Report(_helpfi,"Help fi")
 elseif (_command = "help fis") then
   MsgBox.Report(_helpfis,"Help fis")
-elseif ((_command = "li") or (_command = "lis")) then
+elseif ((_command = "ol") or (_command = "ols")) then
   av.Run("LayoutTools.Text_ImportText", {})
-elseif (_command = "help li") then
-  MsgBox.Report(_helpli,"Help li")
-elseif (_command = "help lis") then
-  MsgBox.Report(_helplis,"Help lis")
+elseif (_command = "help ol") then
+  MsgBox.Report(_helpoli,"Help ol")
+elseif (_command = "help ols") then
+  MsgBox.Report(_helpolis,"Help ols")
+elseif ((_command = "ul") or (_command = "uls")) then
+  av.Run("LayoutTools.Text_ImportText", {})
+elseif (_command = "help ul") then
+  MsgBox.Report(_helpuli,"Help ui")
+elseif (_command = "help uls") then
+  MsgBox.Report(_helpulis,"Help uls")
 elseif ((_command = "ti") or (_command = "tis")) then
   av.Run("LayoutTools.Text_ImportText", {})
 elseif (_command = "help ti") then
@@ -119,13 +136,13 @@ elseif (_command = "help ti") then
 elseif (_command = "help tis") then
   MsgBox.Report(_helptis,"Help tis")
 
-'# Schnittmarken
+'# Registration marks
 elseif (_command = "regm") then
   av.Run("LayoutTools.General_MakeRegistrationMarks", {})
 elseif (_command = "help regm") then
   MsgBox.Report(_helpregm,"Help regm")
   
-'# Select elements
+'# Select and delete elements
 elseif (_command = "selall") then
   av.Run("LayoutTools.Sel_SelectAll", {})
 elseif (_command = "help selall") then
@@ -134,6 +151,11 @@ elseif (_command = "unselall") then
   av.Run("LayoutTools.Sel_UnselectAll", {})
 elseif (_command = "help unselall") then
   MsgBox.Report(_helpunselall, "Help unselall")
+elseif (_command = "dels") then
+  av.Run("LayoutTools.Sel_Delete", {})
+elseif (_command = "help dels") then
+  MsgBox.Report(_helpdels, "Help dels")
+
   
 '# Move features
 elseif (_command.Left(2) = "mx") then
@@ -144,16 +166,20 @@ elseif (_command.Left(2) = "my") then
   av.Run("LayoutTools.General_MoveFeature", {})
 elseif (_command = "help my") then
   MsgBox.Report(_helpmy, "Help my")
- 
+  
 '# Help / Misc
-elseif (_command = "help") then
+elseif (_command = "wd") then
+  av.Run("LayoutTools.General_SetWorkingDirectory", {})
+elseif (_command = "def") then
+  av.Run("LayoutTools.General_SetDefaultValues", {})
+elseif ((_command = "help") or (_command = "h")) then
   MsgBox.Report(_uebersicht,"")
 elseif (_command = "zoomex") then
   av.Run("LayoutTools.View_ZoomToExportview", {})
-elseif (_command = "quit") then
+elseif ((_command = "quit") or (_command = "exit")) then
   self.GetDialog.Close
 elseif (_command = nil) then
   return nil
 else
-  MsgBox.Info("Command not found","")
+  MsgBox.Warning("Command not found. Please try again.","Command not found")
 end

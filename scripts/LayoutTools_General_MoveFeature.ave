@@ -1,9 +1,9 @@
 '#########################################################################
 '#
-'# Filename:     LayoutTools_MoveFeature.ave
+'# Filename:     LayoutTools_General_MoveFeature.ave
 '# Author:       Adrian Boehlen
 '# Date:         27.08.2017
-'# Version:      0.2
+'# Version:      1.0
 '#
 '# Purpose:      verschiebt die selektierten Features um den eingegeben
 '#               Wert in mm

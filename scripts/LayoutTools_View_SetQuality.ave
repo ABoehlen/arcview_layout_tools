@@ -1,9 +1,9 @@
 '########################################################
 '#
-'# Filename:     SetQuality.ave
+'# Filename:     LayoutTools_View_SetQuality.ave
 '# Author:       Adrian Boehlen
 '# Date:         21.10.2014
-'# Version:      0.1
+'# Version:      1.0
 '#
 '# Purpose:      aendert auf Knopfdruck bei allen Bildern
 '#               eines Layouts die Qualitaet von "Draft"

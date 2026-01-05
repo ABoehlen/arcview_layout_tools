@@ -1,14 +1,33 @@
+'#########################################################################
+'#
+'# Filename:     Ext.Make.ave
+'# Author:       Adrian Boehlen
+'# Date:         05.01.2026
+'# Version:      1.1
+'#
+'# Purpose:      erstellt die Extension
+'#               Zum Erstellen der Extension NUR dieses Script ausfuehren
+'#
+'#########################################################################
+
 LayoutTools = Extension.Make("$AVHOME\projects\layout_tools\LayoutTools.avx".AsFileName,
-"LayoutTools",av.FindScript("Ext_inst"),av.FindScript("Ext_unin"), {"$AVBIN/avdlog.dll".AsFileName})
+"LayoutTools",av.FindScript("Ext.Inst"),av.FindScript("Ext.Unin"), {"$AVBIN/avdlog.dll".AsFileName})
 
-LayoutTools.SetExtVersion(1)
-LayoutTools.SetAbout("LayoutTools Toolbar (v1.16) ")
-LayoutTools.SetUnloadScript(av.FindScript("ext_unload"))
+LayoutTools.SetExtVersion(2)
 
+'# Beschreibung (Version jeweils anpassen)
+LayoutTools.SetAbout("LayoutTools Toolbar (v2.2) ")
+
+LayoutTools.SetUnloadScript(av.FindScript("ext.Unload"))
+
+'# Schaltflaeche und Dialoge hinzufuegen
 Schaltflaeche=( av.FindGUI( "Layout").GetButtonBar.findbyscript("LayoutTools.start"))  
 LayoutToolsDialog = av.FindDialog("LayoutTools")
-LayoutTools.Add( Schaltflaeche)   'Schaltfläche hinzufügen
+SatzspiegelDialog = av.FindDialog("Satzspiegel")
+DefaultValues = av.FindScript("DefaultValues")
+LayoutTools.Add( Schaltflaeche)
 LayoutTools.Add(LayoutToolsDialog)
+LayoutTools.Add(SatzspiegelDialog)
 
 for each aDoc in av.GetProject.GetDocs
   if (aDoc.Is(SEd)) then

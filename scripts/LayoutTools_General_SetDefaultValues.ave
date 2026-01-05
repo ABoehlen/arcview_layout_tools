@@ -1,0 +1,51 @@
+'##############################################################################
+'#
+'# Filename:     LayoutTools_General_SetDefaultValues.ave
+'# Author:       Adrian Boehlen
+'# Date:         04.01.2026
+'# Version:      1.3
+'#
+'# Purpose:      liest Defaultwerte aus default_values.dbf ein und speichert
+'#               sie im globalen Dictionary _defaultValues
+'#
+'#               wird auch im Editor verwendet
+'#
+'##############################################################################
+
+if (_defaultValues = nil) then
+  theVTab = av.Run("LayoutTools.Sub_ReadTable", {"Select Default Values Table"})
+else
+  return nil
+end
+
+if (theVTab = nil) then
+  MsgBox.Warning("No default values defined. Use 'def' or click the Button ''D'' to define them later.", "No default values")
+  return nil
+end
+
+
+theFields = theVTab.GetFields
+
+_defaultValues = Dictionary.Make(2)
+
+for each rec in theVTab
+  for each feld in theFields
+    if (feld.AsString = "Key") then
+      theKey = theVTab.ReturnValue(feld, rec)
+    elseif (feld.AsString = "Value") then
+      theValue = theVTab.ReturnValue(feld, rec)
+      if (theValue.IsNumber) then
+        theValue = theValue.AsNumber
+      end
+    else
+      MsgBox.Error("Wrong table structure. Please select the default values table.", "")
+      return nil
+    end
+  end
+  _defaultValues.Add(theKey, theValue)
+end
+
+_schwarzC =         Color.GetBlack
+_schwarzHF =        Color.Make
+_schwarzHF.SetRGBList({1,1,1})
+

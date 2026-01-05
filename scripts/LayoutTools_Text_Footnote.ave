@@ -1,21 +1,15 @@
 '#########################################################################
 '#
-'# Filename:     LayoutTools_Footnote.ave
+'# Filename:     LayoutTools_Text_Footnote.ave
 '# Author:       Adrian Boehlen
-'# Date:         19.12.2017
-'# Version:      0.5
+'# Date:         27.11.2022
+'# Version:      0.6
 '#
 '# Purpose:      erzeugt Fussnoten
-'#
-'#               erfordert:
-'#               - LayoutTools.Sub_DefaultValues
-'#               - LayoutTools.Sub_PlaceText
 '#
 '###################################################################
 
 _theLayout = av.GetActiveDoc
-
-av.Run("LayoutTools.Sub_DefaultValues", {})  '# Defaultwerte einlesen
 
 if (_theLayout.Is(layout).Not) then
   MsgBox.Warning("Start this tool from an active Layout.","")
@@ -23,7 +17,7 @@ if (_theLayout.Is(layout).Not) then
 end
 
 '# Schriftgroesse definieren
-textSize = MsgBox.Input("Insert font size", "Font Size",_schriftgroesse.AsString)
+textSize = MsgBox.Input("Insert font size", "Font Size",_defaultValues.Get("schriftgroesse").AsString)
 
 if (textSize = nil) then
   return nil
@@ -68,7 +62,7 @@ av.GetProject.SetModified(TRUE)
 
 '########## Text definieren und platzieren ##########
 
-textFont = Font.Make (_schriftart, _schriftschnitt)
+textFont = Font.Make (_defaultValues.Get("schriftart"), _defaultValues.Get("schriftschnitt"))
 textString = "Text"
 textOrigin = (xOriginLeft)@(pt.GetY - 0.25)
 textColor = _schwarzC

@@ -1,9 +1,9 @@
 '#########################################################################
 '#
-'# Filename:     LayoutTools.Sub_SetASCII_Char.ave
+'# Filename:     LayoutTools_Sub_SetASCII_Char.ave
 '# Author:       Adrian Boehlen
 '# Date:         09.11.2018
-'# Version:      0.4
+'# Version:      1.0
 '#
 '# Purpose:      Uebersetzt ASCII-Codes, die als dreistelliger dezimaler
 '#               Code mit dem Zeichen \ davor gesetzt werden muessen

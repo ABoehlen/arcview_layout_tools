@@ -1,3 +1,18 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_View_ZoomToExportview.ave
+'# Author:       Adrian Boehlen
+'# Date:         06.11.2022
+'# Version:      0.2
+'#
+'# Purpose:      Die Laufweite von Text aendert je nach Schriftart und 
+'#               Zoomstufe, daher ist es mitunter schwierig abzuschaetzen,  
+'#               wie das exportierte Layout aussehen wird. Diese Funktion 
+'#               zoomt in eine Zoomstufe, in der die Anzeige ziemlich 
+'#               genau der spaeteren Ausgabe entspricht.
+'#
+'#########################################################################
+
 theLayout = av.GetActiveDoc
 
 if (theLayout.Is(layout).Not) then

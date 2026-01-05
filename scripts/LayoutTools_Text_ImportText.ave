@@ -1,16 +1,16 @@
 '#########################################################################
 '#
-'# Filename:     LayoutTools_ImportText.ave
+'# Filename:     LayoutTools_Text_ImportText.ave
 '# Author:       Adrian Boehlen
-'# Date:         09.12.2018
-'# Version:      0.22
+'# Date:         20.12.2022
+'# Version:      1.1
 '#
 '# Purpose:      Liest Text ein und bildet daraus einen Textblock
 '#               der definierten maximalen Breite in mm
 '#               bestehende Zeilenumbrueche bleiben erhalten
-'#               bei den Kommandos "fi", "ti", "uli und "oli" muessen 
+'#               bei den Kommandos "fi", "ti", "ul und "ol" muessen 
 '#               Schriftart, -groesse und -farbe definiert werden,
-'#               bei den Kommandos "fis", "tis", "ulis" und "olis" werden 
+'#               bei den Kommandos "fis", "tis", "uls" und "ols" werden 
 '#               die Defaultwerte "DejaVu Sans Condensed Black
 '#               gesetzt.
 '#
@@ -24,7 +24,7 @@
 '#               Der neue Text beginnt an der linken oberen Ecke der 
 '#               bestehenden Textbox.
 '#
-'#               Bei den Kommandos "uli", "oli", "ulis" und "olis" wird 
+'#               Bei den Kommandos "ul", "ol", "uls" und "ols" wird 
 '#               zugleich eine Spalte mit Aufzaehlungszeichen gesetzt. Die
 '#               Position der Aufzaehlungszeichen muss im importierten Text
 '#               mit dem Zeichen "¬" gekennzeichnet werden.
@@ -33,15 +33,9 @@
 '#               ASCII-Code im Textdokument deklariert werden, wenn das
 '#               Zeichen \ davor gesetzt wird. z.B: \036 wird dann zu $
 '#
-'#               erfordert:
-'#               - LayoutTools.Sub_DefaultValues
-'#               - LayoutTools.Sub_SetASCII_Char
-'#               - LayoutTools.Sub_SubstituteAll
-'#
 '#########################################################################
 
 nullstring = ""
-av.Run("LayoutTools.Sub_DefaultValues", {})   '# Defaultwerte einlesen
 theLayout = av.GetActiveDoc 
 
 if (theLayout.Is(layout).Not) then
@@ -73,7 +67,7 @@ elseif ((_command = "ti")  or (_command = "tis")) then
   tmpFile.close
 
 '# Text fuer Liste ueber die Inputbox importieren
-elseif ((_command = "uli")  or (_command = "ulis")) then
+elseif ((_command = "ul")  or (_command = "uls")) then
   textstring = MsgBox.Input("","Import Text for Unordered List","")
   if (textstring = nil) then
     return nil
@@ -86,7 +80,7 @@ elseif ((_command = "uli")  or (_command = "ulis")) then
   tmpFile.WriteElt(textstring)
   tmpFile.close
   
-elseif ((_command = "oli")  or (_command = "olis")) then
+elseif ((_command = "ol")  or (_command = "ols")) then
   textstring = MsgBox.Input("","Import Text for Ordered List","")
   if (textstring = nil) then
     return nil
@@ -103,7 +97,7 @@ end
 
 
 '# Breite des Textblocks definieren
-maxLength = MsgBox.Input("Insert the width of the new textblock in mm","Width",_breiteTextbl.AsString)
+maxLength = MsgBox.Input("Insert the width of the new textblock in mm","Width",_defaultValues.Get("breiteTextbl").AsString)
 
 if (maxLength = nil) then
   return nil
@@ -116,18 +110,18 @@ maxLength = maxLength.AsNumber
 '########## Schrift bestimmen ##########
 
 '# Schriftart definieren
-if ((_command = "fi") or (_command = "ti") or (_command = "uli") or (_command = "oli")) then
+if ((_command = "fi") or (_command = "ti") or (_command = "ul") or (_command = "ol")) then
   schriftartListe = {"DejaVu Sans", "DejaVu Sans Mono", "DejaVu Serif", "Khalid", "Segoe UI", "Courier New"}
   schriftart = MsgBox.ListAsString(schriftartListe, "Choose font", "Font")
   if (schriftart = nil) then 
     return nil
   end
 else
-  schriftart = _schriftart
+  schriftart = _defaultValues.Get("schriftart")
 end
 
 '# Schriftschnitt definieren
-if ((_command = "fi") or (_command = "ti") or (_command = "uli") or (_command = "oli")) then
+if ((_command = "fi") or (_command = "ti") or (_command = "ul") or (_command = "ol")) then
   if (schriftart = "DejaVu Sans") then
     schriftschnittListe = {"Condensed", "Condensed Bold", "Condensed Oblique", "Condensed Bold Oblique"}
     schriftschnitt = MsgBox.ListAsString(schriftschnittListe, "Choose font style", "Font Style")
@@ -166,11 +160,11 @@ if ((_command = "fi") or (_command = "ti") or (_command = "uli") or (_command = 
     end
   end
 else
-  schriftschnitt = _schriftschnitt
+  schriftschnitt = _defaultValues.Get("schriftschnitt")
 end
 
 '# Schriftfarbe definieren
-if ((_command = "fi") or (_command = "ti") or (_command = "uli") or (_command = "oli")) then
+if ((_command = "fi") or (_command = "ti") or (_command = "ul") or (_command = "ol")) then
   theColorList = {"Black", "Grey", "Red", "Green", "Blue", "User defined"}
   theColor = MsgBox.ListAsString(theColorList, "Choose font colour", "Font Colour")
   if (theColor = nil) then 
@@ -186,11 +180,11 @@ if ((_command = "fi") or (_command = "ti") or (_command = "uli") or (_command = 
     blau = theRGB.Get(2)
   end
 else
-  theColor = _schwarzT
+  theColor = _defaultValues.Get("schwarzT")
 end
 
 '# Schriftgroesse definieren
-theSize = MsgBox.Input("Insert font size", "Font Size",_schriftgroesse.AsString)
+theSize = MsgBox.Input("Insert font size", "Font Size",_defaultValues.Get("schriftgroesse").AsString)
 
 if (theSize = nil) then
   return nil
@@ -201,9 +195,9 @@ end
 theSize = theSize.AsNumber
 
 '# Abstand der Aufzaehlungszeichen festlegen
-if ((_command = "oli") or (_command = "olis")) then
+if ((_command = "ol") or (_command = "ols")) then
   abst = MsgBox.Input("Define the space between the marker and the text in mm",
-    "List: Space between marker and text",_abstList.AsString)
+    "List: Space between marker and text",_defaultValues.Get("abstList").AsString)
   if (abst = nil) then
     return nil
   elseif (abst.IsNumber.Not) then
@@ -213,9 +207,9 @@ if ((_command = "oli") or (_command = "olis")) then
   abst = abst.AsNumber
 end
 
-if ((_command = "uli") or (_command = "ulis")) then
+if ((_command = "ul") or (_command = "uls")) then
   abst = MsgBox.Input("Define the space between the bullets and the text in mm",
-    "List: Space between bullets and text",_abstList.AsString)
+    "List: Space between bullets and text",_defaultValues.Get("abstList").AsString)
   if (abst = nil) then
     return nil
   elseif (abst.IsNumber.Not) then
@@ -226,9 +220,9 @@ if ((_command = "uli") or (_command = "ulis")) then
 end
 
 '# Aufzaehlungszeichen definieren
-if (_command = "uli") then
+if (_command = "ul") then
   _bullet = MsgBox.Input("Define the character for the bullet (Default: Halbgeviertstrich)",
-    "List: Bullet character",_bullet.AsString)
+    "List: Bullet character",_defaultValues.Get("bullet").AsString)
   if (_bullet = nil) then
     return nil
   elseif (_bullet.IsNumber.Not) then
@@ -284,14 +278,14 @@ for each i in 1..elementCount                                   '# zeilenweise d
       i = i + 1
       word = av.Run("LayoutTools.Sub_SetASCII_Char", word)      '# uebersetzen der ASCII-Codes in entsprechende Zeichen
       theGraphicText = GraphicText.Make (theNewLine, theOrigin)
-      theSymbol = theGraphicText.ReturnSymbols.Get (0)
+      theSymbol = theGraphicText.ReturnSymbols.Get(0)
       theSymbol.SetColor(theColor)
       theSymbol.SetFont(schriftart)
       theSymbol.SetSize(theSize)
-      theLayout.GetGraphics.Add (theGraphicText)
+      theLayout.GetGraphics.Add(theGraphicText)
       theWidth = theGraphicText.GetBounds.GetWidth
       theWidth = theWidth * 25.4                                '# inch to mm
-      theGraphicList.RemoveGraphic (theGraphicText)
+      theGraphicList.RemoveGraphic(theGraphicText)
       
       if (theWidth > maxLength) then                            '# wenn laenger als maxLength Laenge...
         theTextBlock = theTextBlock + theNewLineT.Trim + NL     '# ...setze temporaere Zeile an Textblock an und schliesse mit Newline ab
@@ -320,37 +314,13 @@ theTextBlock = theTextBlock + theNewLine.Trim                   '# fuege Rest de
 theTextBlock = theTextBlock.BasicTrim("",NL)                    '# entferne ueberschuessiges Newline am Ende
 
 '# ungeordnete Listen
-if ((_command = "uli") or (_command = "ulis")) then             '# fuer eine nicht geordnete Liste...
-  theString = theTextBlock                                      '# kopiere Textblock
-  theString = theString.Substitute("¬",_bullet.AsChar)          '# ersetze Listenzeichen durch definiertes Aufzaehlungszeichen
-  theMarks = av.Run("LayoutTools.Sub_SubstituteAll", {theString, "UL"})  '# loesche uebrige Zeichen und weise neuer Variable zu
-  theTextBlock = theTextBlock.Substitute("¬","")                '# entferne Listenzeichen aus Textblock
+if ((_command = "ul") or (_command = "uls")) then               '# fuer eine nicht geordnete Liste...
+  theTextBlock = av.Run("LayoutTools.Sub_CreateList", {theTextBlock, "ul"})
 end
 
 '# geordnete Listen
-anzMark = 0
-char = 0
-zeile = 0
-theMarks2 = ""
-if ((_command = "oli") or (_command = "olis")) then             '# fuer eine geordnete Liste...
-  theString = theTextBlock                                      '# kopiere Textblock
-  theString = theString.Substitute("¬",_bullet.AsChar)          '# ersetze Listenzeichen durch definiertes Aufzaehlungszeichen
-  theMarks = av.Run("LayoutTools.Sub_SubstituteAll", {theString, "OL"})  '# loesche uebrige Zeichen und weise neuer Variable zu
-  for each char in theMarks.AsTokens(NL)                        '# Textblock, welcher nur "Bullets" enthaelt, durchgehen 
-    zeile = zeile + 1                                           '# Zeilen zaehlen
-    if (char.Contains(_bullet.AsChar)) then
-      anzMark = anzMark + 1                                     '# "Bullets" zaehlen
-      '# "Bullets" durch aufsteigende Werte ersetzen und einen Punkt dahinter ergaenzen
-      theMarks2 = theMarks2 + char.Substitute(_bullet.AsChar, anzMark.AsString + ".")
-      theMarks2 = theMarks2 + NL                                '# nach jeder Ersetzung ein Zeilenvorschub einfuegen
-    '# bei Zeilen, die Leerzeichen (32) enthalten, einen Zeilenvorschub setzen, ausser bei der letzten
-    elseif (char.Contains(32.AsChar) and (zeile < theMarks.AsTokens(NL).Count)) then
-      theMarks2 = theMarks2 + NL
-    end
-  end
-  theMarks = theMarks2                                          '# Inhalt wieder urspruenglicher Variable zuweisen
-  theMarks = theMarks.Substitute(32.AsChar,"")                  '# alle Leerzeichen entfernen
-  theTextBlock = theTextBlock.Substitute("¬","")                '# entferne Listenzeichen aus Textblock
+if ((_command = "ol") or (_command = "ols")) then               '# fuer eine geordnete Liste...
+  theTextBlock = av.Run("LayoutTools.Sub_CreateList", {theTextBlock, "ol"})
 end
 
 theLineFile.Close
@@ -372,20 +342,25 @@ theGraphicList.RemoveGraphic (theSelected)                     '# urspruenglich 
 '# Hoehe des Textblocks bestimmen und Nullpunkt so umrechnen, dass der Text oben links
 '# mit dem bestehenden uebereinstimmt. Bei Listen Textblock entsprechend einruecken
 
-if ((_command = "uli") or (_command = "ulis") or (_command = "oli") or (_command = "olis")) then
+if ((_command = "ul") or (_command = "uls") or (_command = "ol") or (_command = "ols")) then
   abst = abst / 25.4     '# mm to inch
   theOrigin = (theOrigin.GetX + abst)@(theOrigin.GetY - theGraphicText.GetExtent.GetY) 
   theGraphicList.RemoveGraphic(theGraphicText)                 '# temporaeren Text loeschen
   theGraphicText = GraphicText.Make (theTextBlock, theOrigin)
-  theSymbol = theGraphicText.ReturnSymbols.Get (0)
+  theSymbol = theGraphicText.ReturnSymbols.Get(0)
   theSymbol.SetColor(theColor)
   theSymbol.SetFont(schriftart)
   theSymbol.SetSize(theSize)
   theLayout.GetGraphics.Add (theGraphicText)
   '# Aufzaehlungszeichen ergaenzen
   theOrigin = (theOrigin.GetX - abst)@theOrigin.GetY
-  theGraphicText = GraphicText.Make (theMarks, theOrigin)
-  theSymbol = theGraphicText.ReturnSymbols.Get (0)
+  theGraphicText = GraphicText.Make (_theMarks, theOrigin)
+  if ((_command = "ol") or (_command = "ols")) then 
+    theGraphicText.SetAlignment(#TEXTCOMPOSER_JUST_RIGHT)
+  else
+    theGraphicText.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)
+  end
+  theSymbol = theGraphicText.ReturnSymbols.Get(0)
   theSymbol.SetColor(theColor)
   theSymbol.SetFont(schriftart)
   theSymbol.SetSize(theSize)
@@ -394,7 +369,7 @@ else
   theOrigin = theOrigin.GetX@(theOrigin.GetY - theGraphicText.GetExtent.GetY) 
   theGraphicList.RemoveGraphic(theGraphicText)                 '# temporaeren Text loeschen
   theGraphicText = GraphicText.Make (theTextBlock, theOrigin)
-  theSymbol = theGraphicText.ReturnSymbols.Get (0)
+  theSymbol = theGraphicText.ReturnSymbols.Get(0)
   theSymbol.SetColor(theColor)
   theSymbol.SetFont(schriftart)
   theSymbol.SetSize(theSize)

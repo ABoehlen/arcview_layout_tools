@@ -2,6 +2,8 @@
 'DATE:     160801
 'AUTHOR:   Sebastian Hofer - shofer@gmx.de
 
+'REVISION: Adrian Boehlen, 20200731
+
 'DESCRIPTION:
 'LayoutBatchExport is for fast export of multiple Layouts out of a project into eps (new) or jpg.
 'Other formats will not be implemented by me. Feel Free to do it.
@@ -22,11 +24,11 @@ theFormatL={"eps (New)", "jpg"}
 theFormatChoice=msgBox.ListAsString(theFormatL, "Choose the LayoutBatchExport format:", "LayoutBatchExport")
 if  (theFormatChoice=Nil) then return Nil
 elseif (theFormatChoice="eps (New)") then theShortFormat=3 
-  theResL={300,360,600,720}
+  theResL={300,360,600,720,900}
   theResolution=msgBox.ListAsString(theResL, "Choose the LayoutBatchExport resolution:", "LayoutBatchExport")
 if  (theResolution=Nil) then return Nil end
 elseif (theFormatChoice="jpg") then theShortFormat=9 
-  theResL={72,90,120,144}
+  theResL={72,90,120,144,200,300,600}
   theResolution=msgBox.ListAsString(theResL, "Choose the LayoutBatchExport resolution:", "LayoutBatchExport")
 if  (theResolution=Nil) then return Nil end
   theCompressL={20,40,60,80,100}

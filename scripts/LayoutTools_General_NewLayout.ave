@@ -1,12 +1,13 @@
 '#########################################################################
 '#
-'# Filename:     LayoutTools_NewLayout.ave
+'# Filename:     LayoutTools_General_NewLayout.ave
 '# Author:       Adrian Boehlen
-'# Date:         10.09.2017
-'# Version:      0.2
+'# Date:         21.10.2022
+'# Version:      1.0
 '#
 '# Purpose:      erstellt ein neues Layout-Dokument
-'#               Parameter koennen ueber den Dialog eingegeben werden
+'#               Parameter koennen ueber den Dialog eingegeben oder
+'#               Standardwerte uebernommen werden
 '#               Default: A4 hoch
 '#
 '#########################################################################
@@ -15,7 +16,7 @@
 
 param = MsgBox.MultiInput("","Define the Layout's Parameters",
 {"Name                                  :",
- "Length (mm)                        :",
+ "Width (mm)                        :",
  "Hight (mm)                          :",
  "Margin left/right (mm)          :",
  "Margin top/bottom (mm)      :",
@@ -37,15 +38,15 @@ theLayoutGL =  theLayout.GetGraphics
 '# convert millimeters to inches
 laenge =       param.Get(1).AsNumber / 25.4
 breite =       param.Get(2).AsNumber / 25.4
-abst_hoehe =   param.Get(3).AsNumber / 25.4
-abst_breite =  param.Get(4).AsNumber / 25.4
+einzug_seite = param.Get(3).AsNumber / 25.4
+einzug_hoehe = param.Get(4).AsNumber / 25.4
 gitter_h =     param.Get(5).AsNumber / 25.4
 gitter_b =     param.Get(6).AsNumber / 25.4
 
 PageManager.GetUnits(#PAGEMANAGER_SIZE_A4)
 
 '# Parameter setzen
-marginRect = Rect.MakeXY(abst_breite, abst_hoehe, abst_breite, abst_hoehe)
+marginRect = Rect.MakeXY(einzug_seite, einzug_hoehe, einzug_seite, einzug_hoehe)
 theLayoutDpy.SetUsingPrinterPageSize(false)
 theLayoutDpy.SetUsingPrinterMargins(false)
 theLayoutDpy.SetUnits(#UNITS_LINEAR_MILLIMETERS)
@@ -60,3 +61,4 @@ theLayoutDpy.SetGridMesh(Point.Make(gitter_h, gitter_b))
 theLayoutWin = theLayout.GetWin
 theLayoutWin.Open
 theLayoutDpy.ZoomToPage
+

@@ -1,0 +1,49 @@
+'######################################################################
+'#
+'# Filename:     LayoutTools_Sub_CreateList.ave
+'# Author:       Adrian Boehlen
+'# Date:         20.12.2022
+'# Version:      1.0
+'#
+'# Purpose:      erzeugt eine geordnete oder ungeordnete Liste
+'#
+'######################################################################
+
+'# Variablen initialisieren
+anzMark = 0
+char = 0
+zeile = 0
+theMarksTmp = ""
+theString = Self.Get(0) '# Textblock uebernehmen
+listeTyp = Self.Get(1)  '# Listentyp uebernehmen
+_theMarks = av.Run("LayoutTools.Sub_SubstituteAll", {theString, listeTyp}) '# alle Zeichen ausser ¬ loeschen und neuer Variable zuweisen
+
+'# geordnete Liste
+if (listeTyp = "ol") then
+  for each char in _theMarks.AsTokens(NL)                       '# Textblock, welcher nur ¬ enthaelt, durchgehen 
+    zeile = zeile + 1                                           '# Zeilen zaehlen
+    if (char.Contains("¬")) then
+      anzMark = anzMark + 1                                     '# "Listenzeichen zaehlen
+      '# Listenzeichen durch aufsteigende Werte ersetzen und einen Punkt dahinter ergaenzen
+      theMarksTmp = theMarksTmp + char.Substitute("¬", anzMark.AsString + ".")
+      if (zeile <> _theMarks.AsTokens(NL).Count) then           '# ausser wenn die Ersetzung die letzte Zeile ist...
+        theMarksTmp = theMarksTmp + NL                          '# ...nach jeder Ersetzung ein Zeilenvorschub einfuegen
+      end
+    '# bei Zeilen, die Leerzeichen (32) enthalten, einen Zeilenvorschub setzen, ausser bei der letzten
+    elseif (char.Contains(32.AsChar) and (zeile < _theMarks.AsTokens(NL).Count)) then
+      theMarksTmp = theMarksTmp + NL
+    end
+  end
+
+  _theMarks = theMarksTmp                                       '# Inhalt wieder urspruenglicher Variable zuweisen
+  _theMarks = _theMarks.Substitute(32.AsChar,"")                '# alle Leerzeichen entfernen
+  theTextBlock = Self.Get(0).Substitute("¬","")                 '# entferne Listenzeichen aus Textblock
+
+  return theTextBlock
+  
+'# ungeordnete Liste
+else
+  _theMarks = _theMarks.Substitute("¬",_defaultValues.Get("bullet").AsChar) '# Listenzeichen durch definiertes Aufzaehlungszeichen ersetzen
+  theTextBlock = Self.Get(0).Substitute("¬","")                             '# Listenzeichen aus Textblock entfernen
+  return theTextBlock
+end

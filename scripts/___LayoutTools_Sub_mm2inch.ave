@@ -1,0 +1,15 @@
+'######################################################################
+'#
+'# Filename:     LayoutTools_Sub_mm2inch.ave
+'# Author:       Adrian Boehlen
+'# Date:         20.10.2022
+'# Version:      0.1
+'#
+'# Purpose:      rechnet den eingegebenen mm-Wert in inches um
+'#               und liefert ihn zurueck
+'#
+'######################################################################
+
+mm = Self.Get(0)
+  
+return mm * 0.0393700787

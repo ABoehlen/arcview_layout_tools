@@ -1,0 +1,144 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_General_Satzspiegel.ave
+'# Author:       Adrian Boehlen
+'# Date:         02.12.2022
+'# Version:      1.0
+'#
+'# Purpose:      - Script macht Vorschlaege zur Groesse des Satzspiegels
+'#                 anhand der angegebenen Seitengroesse.
+'#               - Es koennen Satzspiegel fuer Doppelseiten und Einzelseiten
+'#                 berechnet werden.
+'#               - Die vorgeschlagenen Raender muessen manuell in den 
+'#                 entsprechenden Dialog eingegeben werden.
+'#               - frei nach buchsatz-fuer-selfpublisher.de
+'#
+'#########################################################################
+
+theLayout = av.GetActiveDoc
+
+if (theLayout.Is(layout).Not) then
+  MsgBox.Warning("Start this script from an active Layout.","")
+  return nil
+end
+
+'########## Benutzereingaben aufnehmen ##########
+
+seitentypListe = {"Single Page", "Double Page"}
+
+seitentyp = MsgBox.ListAsString(seitentypListe,"Define page type (single / double)","Page type")
+if (seitentyp = nil) then
+  return nil
+end
+
+satzspiegelListe = {"small", "medium", "big"}
+
+satzspiegelGr = MsgBox.ListAsString(satzspiegelListe,"Define margins in general","Margins")
+if (satzspiegelGr = nil) then
+  return nil
+end
+
+if (seitentyp = "Double Page") then
+  abm = MsgBox.MultiInput("","Dimensions of one page",
+  {"Width (mm)        :",
+   "Hight (mm)         :"},
+  {_defaultValues.Get("seitenbreite").AsString, _defaultValues.Get("seitenhoehe").AsString})
+
+
+elseif (seitentyp = "Single Page") then
+  abm = MsgBox.MultiInput("","Dimensions of the page",
+  {"Width (mm)        :",
+   "Hight (mm)         :"},
+  {_defaultValues.Get("seitenbreite").AsString, _defaultValues.Get("seitenhoehe").AsString})
+ 
+else
+  MsgBox.Warning("Wrong page type","")
+  return nil
+end
+
+if (abm.Count = 0) then
+  MsgBox.Warning("Cancel Pressed: No Data Entered", "Canceling the Dialog")
+  return nil
+end
+
+'########## Satzspiegel berechnen ##########
+
+if (satzspiegelGr = "small") then
+  faktor = 4
+elseif (satzspiegelGr = "medium") then
+  faktor = 8
+elseif (satzspiegelGr = "big") then
+  faktor = 16
+else
+  MsgBox.Warning("Wrong margins","")
+  return nil
+end
+
+breite =  abm.Get(0).AsNumber
+hoehe =   abm.Get(1).AsNumber
+
+if ((breite = 0) or (hoehe = 0)) then
+  MsgBox.Warning("Either width or heigth must not be 0", "Canceling the Dialog")
+  return nil
+end 
+
+'# Berechnung fuer Doppelseite und Einzelseite vornehmen
+
+if (seitentyp = "Double Page") then
+  breiteSpiegel =  (breite * 0.62) + (breite / faktor)
+  weissHoriz =     breite - breiteSpiegel
+  stegAussen_t =   weissHoriz * 0.62
+  stegAussen =     stegAussen_t - (breite / 40)
+  stegBund =       (weissHoriz - stegAussen_t) + (breite / 40)
+
+  hoeheSpiegel =   breiteSpiegel * (hoehe / breite)
+  weissVert =      hoehe - hoeheSpiegel
+  stegFuss_t =     weissVert * 0.62
+  stegFuss =       (weissVert * 0.62) - (hoehe / 47.5)
+  stegKopf =       weissVert - stegFuss_t
+  
+  satzspAusg = 
+  "Left Page (Recta)"+NL+
+  "Top:          " + stegKopf.SetFormat("d").AsString +NL+
+  "Bottom:     " + stegFuss.SetFormat("d").AsString +NL+
+  "Left:          " + stegAussen.SetFormat("d").AsString +NL+
+  "Right:        " + stegBund.SetFormat("d").AsString +NL+NL+
+  "Right Page (Versa)"+NL+
+  "Top:          " + stegKopf.SetFormat("d").AsString +NL+
+  "Bottom:     " + stegFuss.SetFormat("d").AsString +NL+
+  "Left:          " + stegBund.SetFormat("d").AsString +NL+
+  "Right:        " + stegAussen.SetFormat("d").AsString +NL
+
+elseif (seitentyp = "Single Page") then
+  breiteSpiegel =  (breite * 0.62) + (breite / faktor)
+  stegAussen =     (breite - breiteSpiegel) / 2
+
+  hoeheSpiegel =   breiteSpiegel * (hoehe / breite)
+  weissVert =      hoehe - hoeheSpiegel
+  stegFuss_t =     weissVert * 0.62
+  stegFuss =       (weissVert * 0.62) - (hoehe / 47.5)
+  stegKopf =       weissVert - stegFuss_t
+  
+  satzspAusg = 
+  "Single Page"+NL+NL+
+  "Top:          " + stegKopf.SetFormat("d").AsString +NL+
+  "Bottom:     " + stegFuss.SetFormat("d").AsString +NL+
+  "Left:          " + stegAussen.SetFormat("d").AsString +NL+
+  "Right:        " + stegAussen.SetFormat("d").AsString +NL
+
+else
+  MsgBox.Warning("Fehler","")
+  return nil
+end
+
+'########## Ausgabe ##########
+
+'# Dialog zur Ausgabe oeffnen
+outDlg = av.GetProject.FindDialog("Satzspiegel")
+outTextfld = outDlg.FindByName("output")
+outTextfld.SetText(satzspAusg)
+outDlg.Open
+
+'# Standarddialog Page Setup oeffnen
+PageSetupDialog.Show(theLayout.GetDisplay)
+

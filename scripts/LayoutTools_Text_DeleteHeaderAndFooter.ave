@@ -1,12 +1,12 @@
 '###########################################################################
 '#
-'# Filename:     LayoutTools_DeleteHeaderAndFooter.ave
+'# Filename:     LayoutTools_Text_DeleteHeaderAndFooter.ave
 '# Author:       Adrian Boehlen
 '# Date:         19.12.2017
-'# Version:      0.1
+'# Version:      1.0
 '#
-'# Purpose:      loescht durch HeaderAndFooterOne und -Many
-'#               erzeugte Kopf- und Fusszeilen
+'# Purpose:      loescht durch Text_HeaderAndFooter
+'#               erzeugte Kopf- und Fusszeile(n)
 '#
 '###########################################################################
 

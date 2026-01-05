@@ -1,9 +1,9 @@
 '#########################################################################
 '#
-'# Filename:     LayoutTools_DrawRulers.ave
+'# Filename:     LayoutTools_Guides_DrawGuides.ave
 '# Author:       Adrian Boehlen
-'# Date:         02.12.2015
-'# Version:      0.2
+'# Date:         04.12.2022
+'# Version:      1.0
 '#
 '# Purpose:      Zieht horizontale und vertikale Hilfslinien am Clickpunkt
 '#

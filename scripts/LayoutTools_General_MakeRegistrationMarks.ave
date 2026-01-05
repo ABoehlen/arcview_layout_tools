@@ -17,14 +17,10 @@
 '#                 the button when you want to add the marks and
 '#                 specify the desired dimensions for the marks.
 '#
-'#  Revision:      A.Boehlen 16/07/2017
-'#
-'#                 erfordert:
-'#                 - LayoutTools.Sub_DefaultValues
+'#  Revision:      A.Boehlen 27/11/2022
 '#
 '##################################################################
 
-av.Run("LayoutTools.Sub_DefaultValues", {})   '# Defaultwerte einlesen
 theLayout = av.GetActiveDoc  
 
 if (theLayout.Is(layout).Not) then
@@ -32,11 +28,11 @@ if (theLayout.Is(layout).Not) then
   return nil
 end
 
-h=MsgBox.Input("Enter the page height in mm:"," ",_seitenhoehe.AsString)
+h=MsgBox.Input("Enter the page height in mm:"," ",_defaultValues.Get("seitenhoehe").AsString)
 if (h = nil) then
   return nil
 end
-w=MsgBox.Input("Enter the page width in mm:"," ",_seitenbreite.AsString)
+w=MsgBox.Input("Enter the page width in mm:"," ",_defaultValues.Get("seitenbreite").AsString)
 if (w = nil) then
   return nil
 end

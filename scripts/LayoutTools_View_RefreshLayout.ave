@@ -1,3 +1,16 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_View_RefreshLayout.ave
+'# Author:       Adrian Boehlen
+'# Date:         21.12.2022
+'# Version:      1.0
+'#
+'# Purpose:      Erzwingt einen Neuaufbau des Layouts durch mehrfaches
+'#               ZoomIn und ZoomOut
+'#
+'#########################################################################
+
+
 theLayout = av.GetActiveDoc
 
 if (theLayout.Is(layout).Not) then
@@ -7,4 +20,6 @@ end
 
 theLayout.GetDisplay.ZoomIn(110)
 theLayout.GetDisplay.ZoomOut(111)
+theLayout.GetDisplay.ZoomIn(111)
+theLayout.GetDisplay.ZoomOut(110)
 

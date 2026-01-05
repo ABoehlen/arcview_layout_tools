@@ -1,0 +1,41 @@
+'######################################################################
+'#
+'# Filename:     LayoutTools_Sub_ReadTable.ave
+'# Author:       Adrian Boehlen
+'# Date:         02.12.2022
+'# Version:      1.0
+'#
+'# Purpose:      Erzeugt einen Dialog zum Auswaehlen einer Tabelle,
+'#               die anschliessend eingelesen wird.
+'#               Die Tabelle wird nicht zum GUI hinzugefuegt.
+'#               Script liefert das VTab Objekt zurueck.
+'#
+'#               wird auch im Editor verwendet
+'#
+'######################################################################
+
+thePattern = "*.dbf"
+theLabel = "dBASE (*.dbf)"
+theTitle = Self.Get(0)
+theFile = FileDialog.Show(thePattern, theLabel, theTitle)
+
+if (theFile = nil) then
+  return nil
+end
+
+theVTab = VTab.Make(theFile, FALSE, FALSE)
+
+if (theVTab.HasError) then
+  if (theVTab.HasLockError) then
+    MsgBox.Error("Unable to acquire Read Lock for file " + theFile.GetBaseName, "")
+  else
+    MsgBox.Error("The file '" + theFile.GetBaseName + "' is not valid.", "")
+  end
+else
+  return theVTab
+end
+
+
+
+
+

@@ -5,12 +5,7 @@
 	FirstRootClassName:	"Butn"
 	Roots:	2
 	Roots:	4
-	Roots:	72
-	Roots:	82
-	Roots:	83
-	Roots:	84
-	Roots:	85
-	Roots:	86
+	Roots:	77
 	Roots:	87
 	Roots:	88
 	Roots:	89
@@ -52,12 +47,17 @@
 	Roots:	125
 	Roots:	126
 	Roots:	127
+	Roots:	128
+	Roots:	129
+	Roots:	130
+	Roots:	131
+	Roots:	132
 	Version:	32
-	About:	"LayoutTools Toolbar (v2.1) "
-	UnloadScript:	128
-	InstallScript:	129
-	UninstallScript:	130
-	ExtVersion:	1
+	About:	"LayoutTools Toolbar (v2.2) "
+	UnloadScript:	133
+	InstallScript:	134
+	UninstallScript:	135
+	ExtVersion:	2
 )
 
 (Butn.2
@@ -75,9 +75,9 @@
 
 (AVDLog.4
 	Name:	"LayoutTools"
-	X:	556
-	Y:	343
-	W:	465
+	X:	182
+	Y:	64
+	W:	491
 	H:	40
 	ConstrainedControlNames:	5
 	ConstrainedControlNames:	6
@@ -91,7 +91,7 @@
 	ConstrainedControlNames:	14
 	ConstrainedControlNames:	15
 	ConstrainedControlNames:	16
-	Constraints:	17
+	ConstrainedControlNames:	17
 	Constraints:	18
 	Constraints:	19
 	Constraints:	20
@@ -103,14 +103,16 @@
 	Constraints:	26
 	Constraints:	27
 	Constraints:	28
-	Server:	29
-	ControlPanel:	30
+	Constraints:	29
+	Constraints:	30
+	Server:	31
+	ControlPanel:	32
 	Title:	"Layout Tools"
 	EscapeEnabled:	1
 	AlwaysOnTop:	1
 	HasTitleBar:	1
 	Closeable:	1
-	DefaultButton:	71
+	DefaultButton:	76
 )
 
 (AVStr.5
@@ -138,31 +140,31 @@
 )
 
 (AVStr.11
-	S:	"GraphicTable"
+	S:	"SetDefaultValues"
 )
 
 (AVStr.12
-	S:	"Measure"
+	S:	"GraphicTable"
 )
 
 (AVStr.13
-	S:	"DrawRulers"
+	S:	"Measure"
 )
 
 (AVStr.14
-	S:	"footnote"
+	S:	"DrawRulers"
 )
 
 (AVStr.15
-	S:	"PlaceText"
+	S:	"footnote"
 )
 
 (AVStr.16
-	S:	"Select"
+	S:	"PlaceText"
 )
 
-(Numb.17
-	N:	85.00000000000000
+(AVStr.17
+	S:	"Select"
 )
 
 (Numb.18
@@ -209,21 +211,28 @@
 	N:	85.00000000000000
 )
 
-(Nil.29
+(Numb.29
+	N:	85.00000000000000
 )
 
-(CPanel.30
-	Child:	31
-	ResBox:	70
+(Numb.30
+	N:	85.00000000000000
+)
+
+(Nil.31
+)
+
+(CPanel.32
+	Child:	33
+	ResBox:	75
 	Listening:	1
 )
 
-(CPanel.31
+(CPanel.33
 	InternalName:	"aControlPanel5"
-	Child:	32
 	Child:	34
 	Child:	36
-	Child:	37
+	Child:	38
 	Child:	39
 	Child:	41
 	Child:	43
@@ -233,11 +242,9 @@
 	Child:	51
 	Child:	53
 	Child:	55
+	Child:	57
+	Child:	59
 	Constraints:	0x55
-	ResBox:	57
-	ResBox:	58
-	ResBox:	59
-	ResBox:	60
 	ResBox:	61
 	ResBox:	62
 	ResBox:	63
@@ -247,31 +254,36 @@
 	ResBox:	67
 	ResBox:	68
 	ResBox:	69
+	ResBox:	70
+	ResBox:	71
+	ResBox:	72
+	ResBox:	73
+	ResBox:	74
 	VisibleBorder:	1
 	Listening:	1
 )
 
-(Butn.32
+(Butn.34
 	InternalName:	"UnselectAll"
 	Help:	"Unselect all selected graphic elements//"
-	Icon:	33
+	Icon:	35
 	Click:	"LayoutTools.Sel_UnselectAll"
 )
 
-(AVIcon.33
+(AVIcon.35
 	Name:	"SelectNone"
 	Res:	"Icons.SelectNone"
 
 )
 
-(Butn.34
+(Butn.36
 	InternalName:	"BatchExport"
 	Help:	"Export one or many layouts//"
-	Icon:	35
+	Icon:	37
 	Click:	"LayoutTools.ImpExp_BatchExport"
 )
 
-(AVIcon.35
+(AVIcon.37
 	Name:	"export.bmp"
 	Data:	4e442049 6d616765 00010014 00110000 
 	Data:	01540000 00000000 00000000 000000c0 
@@ -363,89 +375,89 @@
 	Data:	00200001 00020000 00000000 0000
 )
 
-(LButn.36
+(LButn.38
 	InternalName:	"Close"
 	Help:	"Close Utilities toolbar//"
 	Label:	"Close"
 	Click:	"LayoutTools.General_Close"
 )
 
-(Butn.37
+(Butn.39
 	InternalName:	"UndoZoom"
 	Help:	"Zoom to previous extent//"
-	Icon:	38
+	Icon:	40
 	Click:	"LayoutTools.View_UndoZoom"
 )
 
-(AVIcon.38
+(AVIcon.40
 	Name:	"ZoomPrevious"
 	Res:	"Icons.ZoomPrevious"
 
 )
 
-(Butn.39
+(Butn.41
 	InternalName:	"SetQuality"
 	Help:	"Change the drawing quality of all images from 'draft' to 'presentation' or the other way round//"
-	Icon:	40
+	Icon:	42
 	Click:	"LayoutTools.View_SetQuality"
 )
 
-(AVIcon.40
+(AVIcon.42
 	Name:	"Frame"
 	Res:	"Icons.Frame"
 
 )
 
-(Tool.41
+(Tool.43
 	InternalName:	"GraphicTable"
 	Help:	"Place table in layout//"
-	Icon:	42
+	Icon:	44
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"LayoutTools.General_GraphicTable"
 )
 
-(AVIcon.42
+(AVIcon.44
 	Name:	"Table"
 	Res:	"Icons.Table"
 
 )
 
-(Butn.43
+(Butn.45
 	InternalName:	"Refresh"
 	Help:	"Refresh Layout//"
-	Icon:	44
+	Icon:	46
 	Click:	"LayoutTools.View_RefreshLayout"
 )
 
-(AVIcon.44
+(AVIcon.46
 	Name:	"R"
 	Res:	"Icons.R"
 
 )
 
-(Tool.45
+(Tool.47
 	InternalName:	"Measure"
 	Help:	"Measure distance//"
-	Icon:	46
+	Icon:	48
 	Cursor:	"Cursors.Measure"
 	Apply:	"LayoutTools.General_Measure"
 )
 
-(AVIcon.46
+(AVIcon.48
 	Name:	"Measure"
 	Res:	"Icons.Measure"
 
 )
 
-(Tool.47
+(Tool.49
 	InternalName:	"DrawRulers"
 	Help:	"Click: Draw a horizontal line at the clickpoint\nShift-Click: Draw a vertical line at the clickpoint\n//"
-	Icon:	48
+	Icon:	50
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"LayoutTools.Guides_DrawGuides"
 )
 
-(AVIcon.48
+(AVIcon.50
 	Name:	"draw_horizontal_and_vertical_lines.bmp"
 	Data:	4e442049 6d616765 00010015 00130000 
 	Data:	01c8d0d0 d000d0d0 d000d0d0 d0d0d0d0 
@@ -545,15 +557,15 @@
 	Data:	0000
 )
 
-(Tool.49
+(Tool.51
 	InternalName:	"footnote"
 	Help:	"Insert footnote//"
-	Icon:	50
+	Icon:	52
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"LayoutTools.Text_Footnote"
 )
 
-(AVIcon.50
+(AVIcon.52
 	Name:	"footnote.bmp"
 	Data:	4e442049 6d616765 00010015 00130000 
 	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -653,247 +665,267 @@
 	Data:	0000
 )
 
-(Tool.51
+(Tool.53
 	InternalName:	"PlaceText"
 	Help:	"Insert text manually//"
 	Update:	"LayoutTools.UpdateText"
-	Icon:	52
+	Icon:	54
 	Cursor:	"Cursors.Text"
 	Apply:	"LayoutTools.Text_InsertText"
 	Click:	"LayoutTools.DisplayFontPanel"
 )
 
-(AVIcon.52
+(AVIcon.54
 	Name:	"Text"
 	Res:	"Icons.Text"
 
 )
 
-(Tool.53
+(Tool.55
 	InternalName:	"Select"
 	Help:	"Select features//"
-	Icon:	54
+	Icon:	56
 	Cursor:	"Cursors.Select"
 	Apply:	"LayoutTools.Sel_Select"
 	Click:	"LayoutTools.Sel_SelectTool"
 )
 
-(AVIcon.54
+(AVIcon.56
 	Name:	"Select"
 	Res:	"Icons.Select"
 
 )
 
-(TextLine.55
+(TextLine.57
 	InternalName:	"EnterCommand"
 	Label:	" "
 	Constraints:	0x55
 	Listening:	1
-	TextType:	56
+	TextType:	58
 	Apply:	"LayoutTools.EnterCommand"
-	NextControl:	29
+	NextControl:	31
 )
 
-(AVEnum.56
+(AVEnum.58
 	Name:	"TEXTLINE_TYPE_ALL"
 )
 
-(RectD.57
+(Butn.59
+	InternalName:	"SetDefaultValues"
+	Help:	"Set default values//"
+	Icon:	60
+	Click:	"LayoutTools.General_SetDefaultValues"
+)
+
+(AVIcon.60
+	Name:	"D"
+	Res:	"Icons.D"
+
+)
+
+(RectD.61
 	Left:	33.00000000000000
 	Top:	29.00000000000000
 	Right:	57.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.58
+(RectD.62
 	Left:	277.00000000000000
 	Top:	29.00000000000000
 	Right:	301.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.59
-	Left:	408.00000000000000
+(RectD.63
+	Left:	433.00000000000000
 	Top:	29.00000000000000
-	Right:	453.00000000000000
+	Right:	478.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.60
+(RectD.64
 	Left:	251.00000000000000
 	Top:	29.00000000000000
 	Right:	275.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.61
+(RectD.65
 	Left:	115.00000000000000
 	Top:	29.00000000000000
 	Right:	139.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.62
+(RectD.66
 	Left:	59.00000000000000
 	Top:	29.00000000000000
 	Right:	84.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.63
+(RectD.67
 	Left:	225.00000000000000
 	Top:	29.00000000000000
 	Right:	249.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.64
+(RectD.68
 	Left:	198.00000000000000
 	Top:	29.00000000000000
 	Right:	223.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.65
+(RectD.69
 	Left:	170.00000000000000
 	Top:	29.00000000000000
 	Right:	195.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.66
+(RectD.70
 	Left:	142.00000000000000
 	Top:	29.00000000000000
 	Right:	167.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.67
+(RectD.71
 	Left:	87.00000000000000
 	Top:	29.00000000000000
 	Right:	112.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.68
+(RectD.72
 	Left:	5.00000000000000
 	Top:	29.00000000000000
 	Right:	30.00000000000000
 	Bottom:	5.00000000000000
 )
 
-(RectD.69
+(RectD.73
 	Left:	301.00000000000000
 	Top:	27.00000000000000
 	Right:	400.00000000000000
 	Bottom:	7.00000000000000
 )
 
-(RectD.70
+(RectD.74
+	Left:	405.00000000000000
+	Top:	29.00000000000000
+	Right:	429.00000000000000
+	Bottom:	5.00000000000000
+)
+
+(RectD.75
 	Left:	5.00000000000000
 	Top:	38.00000000000000
-	Right:	464.00000000000000
+	Right:	489.00000000000000
 	Bottom:	4.00000000000000
 )
 
-(Nil.71
+(Nil.76
 )
 
-(AVDLog.72
+(AVDLog.77
 	Name:	"Satzspiegel"
 	X:	388
 	Y:	366
 	W:	282
 	H:	248
-	ConstrainedControlNames:	73
-	Constraints:	74
-	Server:	75
-	ControlPanel:	76
+	ConstrainedControlNames:	78
+	Constraints:	79
+	Server:	80
+	ControlPanel:	81
 	Title:	"Recommended margins"
 	EscapeEnabled:	1
 	HasTitleBar:	1
 	Closeable:	1
-	DefaultButton:	81
+	DefaultButton:	86
 )
 
-(AVStr.73
+(AVStr.78
 	S:	"Close"
 )
 
-(Numb.74
+(Numb.79
 	N:	85.00000000000000
 )
 
-(Nil.75
+(Nil.80
 )
 
-(CPanel.76
-	Child:	77
-	Child:	78
-	ResBox:	79
-	ResBox:	80
+(CPanel.81
+	Child:	82
+	Child:	83
+	ResBox:	84
+	ResBox:	85
 	Listening:	1
 )
 
-(TextBox.77
+(TextBox.82
 	InternalName:	"output"
 	Listening:	1
 	ReadOnly:	1
 	Text:	"Left Page (Recta)\nTop:          15\nBottom:     18\nLeft:          12\nRight:        16\n\nRight Page (Versa)\nTop:          15\nBottom:     18\nLeft:          16\nRight:        12\n"
 	Constraints:	0x55
-	NextControl:	75
+	NextControl:	80
 )
 
-(LButn.78
+(LButn.83
 	InternalName:	"Close"
 	Label:	"Close"
 	Click:	"LayoutTools.General_Close"
 )
 
-(RectD.79
+(RectD.84
 	Left:	12.00000000000000
 	Top:	201.00000000000000
 	Right:	266.00000000000000
 	Bottom:	9.00000000000000
 )
 
-(RectD.80
+(RectD.85
 	Left:	143.00000000000000
 	Top:	241.00000000000000
 	Right:	263.00000000000000
 	Bottom:	211.00000000000000
 )
 
-(Nil.81
+(Nil.86
 )
 
-(Script.82
+(Script.87
 	Name:	"___LayoutTools.DefaultFont"
 	SourceCode:	"'##########################################################\n'#\n'# Filename:     LayoutTools_DefaultFont.ave\n'# Author:       Adrian Boehlen\n'# Date:         24.01.2016\n'# Version:      0.1\n'#\n'# Purpose:      Definition globaler Variablen\n'#               fuer die Standardschrift\n'#\n'##########################################################\n\n_defFont =    \"DejaVu Sans\"\n_defSchnitt = \"Condensed\"\n_defColor =   Color.GetBlack"
 )
 
-(Script.83
+(Script.88
 	Name:	"___LayoutTools.Sub_DefaultValues"
 	SourceCode:	"'##############################################################################\n'#\n'# Filename:     LayoutTools_Sub_DefaultValues.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.3\n'#\n'# Purpose:      legt Defaultwerte fest und speichert sie in globalen Variablen\n'#\n'##############################################################################\n\n_abstList =         5                '# Abstand zwischen Aufzaehlungszeichen und Text\n_autor =            \"Adrian Böhlen\"  '# Dies
 er Name erscheint in der Fusszeile\n_breiteTextbl =     125\n_bullet =           150              '# ASCII-Code fuer Halbgeviertstrich\n_groesseFusszeile = 8\n_groesseKopfzeile = 14\n_schriftart =       \"DejaVu Sans\"\n_schriftgroesse =   10\n_schriftschnitt =   \"Condensed\"\n_seitenhoehe =      297\n_seitenbreite =     210\n_schwarzT =         \"Black\"\n_schwarzC =         Color.GetBlack\n_schwarzHF =        Color.Make\n_schwarzHF.SetRGBList({1,1,1})\n"
 )
 
-(Script.84
+(Script.89
 	Name:	"___LayoutTools.Sub_mm2inch"
 	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_mm2inch.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.10.2022\n'# Version:      0.1\n'#\n'# Purpose:      rechnet den eingegebenen mm-Wert in inches um\n'#               und liefert ihn zurueck\n'#\n'######################################################################\n\nmm = Self.Get(0)\n  \nreturn mm * 0.0393700787"
 )
 
-(Script.85
+(Script.90
 	Name:	"___LayoutTools.UpdateText"
 	SourceCode:	"theExt = Extension.GetExtensions.Get(\"Label & Text Tools\")\nSELF.SetEnabled(theExt <> nil)\n"
 )
 
-(Script.86
+(Script.91
 	Name:	"LayoutTools.DisplayFontPanel"
 	SourceCode:	"if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FONT)\nend"
 )
 
-(Script.87
+(Script.92
 	Name:	"LayoutTools.EnterCommand"
 	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Enter_command.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      loest diverse Funktionen durch Kommandos aus\n'#\n'#               erfordert \n'#               - LayoutTools.Sub_Documentation\n'#               - alle Tools, die ueber Kommandos aufgerufen werden\n'#\n'###########################################################################\n\n\n'# Einle
 sen der globalen Variablen fuer die Hilfeseiten\n\nav.Run(\"LayoutTools.Sub_Documentation\", _uebersicht)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpnew)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpcopy)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpdelhd)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpdels)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpfi)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpfis)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpgo)\nav.Run(\"LayoutTools.Sub_Documentation\", _helpgom)\nav.Run(\"
@@ -910,18 +942,18 @@ av.Run(\"LayoutTools.Sel_Delete\", {})\nelseif (_command = \"help dels\") then\n
 tTools.General_SetWorkingDirectory\", {})\nelseif (_command = \"def\") then\n  av.Run(\"LayoutTools.General_SetDefaultValues\", {})\nelseif ((_command = \"help\") or (_command = \"h\")) then\n  MsgBox.Report(_uebersicht,\"\")\nelseif (_command = \"zoomex\") then\n  av.Run(\"LayoutTools.View_ZoomToExportview\", {})\nelseif ((_command = \"quit\") or (_command = \"exit\")) then\n  self.GetDialog.Close\nelseif (_command = nil) then\n  return nil\nelse\n  MsgBox.Warning(\"Command not found. Please try again.\",\"Command not found\")\nend"
 )
 
-(Script.88
+(Script.93
 	Name:	"LayoutTools.General_Close"
 	SourceCode:	"self.GetDialog.Close"
 )
 
-(Script.89
+(Script.94
 	Name:	"LayoutTools.General_CopyLayout"
 	SourceCode:	"'Copies a Layout and renames it...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  4/6/1999\n\n'Gets the Layout...\nmyProj = av.GetProject\nsomeLayouts = myProj.GetDocswithGui(av.FindGui(\"Layout\"))\naLayoutChoice = MsgBox.ChoiceAsString( someLayouts, \"Choose a Layout to copy:\", \"Copy Layout\")\nif (aLayoutChoice = nil) then\n  return nil\nend\ntheLayout = myProj.FindDoc( alayoutChoice.AsString )\n\n'Copies the Layout and renames it...\nnewLayoutName = MsgBox.Input( \"Enter a new name for the layout:\", \"New Layout Name\",
  \"New Layout\" )\nif (newLayoutName = nil) then   'Cancels if the there is no Layout name\n  return nil\nend\nif (av.FindDoc(newLayoutName).AsString = newLayoutName.AsString) then\n  'Cancels if the Layout name already exists\n  MsgBox.Error(\"That layout name already exists! Press the Copy Layout button again...\",\"Layout Already Exists\")\n  return nil\nelse\n  newLayout = theLayout.Clone\n  newLayout.SetName ( newLayoutName )\n  myProj.AddDoc ( newLayout )\n  newLayout.GetWin.Open\nend\n"
 )
 
-(Script.90
+(Script.95
 	Name:	"LayoutTools.General_GraphicTable"
 	SourceCode:	"' Name:   Layout.GraphicTable\n' Title:  Places a Graphic of the table you specify into a layout\n'\n' Topics : Layouts\n' Version: 3.0a.02\n' Source : ArcView Sample scripts\n' Changed: 07-30-98\n' By     : Rob Buurman\n'          rbuurman@isis.nl\n'          ISIS BENELUX\n'          \n'\n' Description:  Use the tool with this script attached as the \n' apply event to drag a rectangle in a layout.  You will be prompted\n' to choose which table you want to make the representation of \n' and which fields to show.\n' When th
 e table has an selection, you will be asked if you want to display\n' only the selected records. You can bypass this question by pressing the\n' shift-key when you drag the rectangle in a layout.\n' The script will populatate rows with cell values of those fields until the \n' bottom of the rectangle you specified is reached.\n' If you choose more fields than would fit within the width of the rectangle,\n' those will be included.\n'\n' This script gets around several annoying limitations in ArcView's\n' TableFrame g
@@ -943,7 +975,7 @@ in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\n  gl.MoveSelectedToFro
 t.GetGraphics.AddBatch(bp)\nbp.SetSelected(True)\ngl.MoveSelectedToBack\n\nfor each g in gl.FindAllByObjectTag(\"col\")\n  g.SetSelected(true)\nend\ngl.FindByObjectTag(\"buttons\").SetSelected(true)\nnrgs.SetSelected(true)\ngl.GroupSelected\n\n\ntheLayout.GetGraphics.EndBatch\n"
 )
 
-(Script.91
+(Script.96
 	Name:	"LayoutTools.General_MakeRegistrationMarks"
 	SourceCode:	"'##################################################################\n'#  Name:          Layout.MakeRegistrationMarks\n'#  Author:        Adam Hyer\n'#                 ashyer@syr.edu, ashyer@hotmail.com\n'#\n'#  Date Written:  2.24.99\n'#\n'#  Description:   Puts registration marks on a layout for printing.\n'#                 This is intended for plotters when you need to\n'#                 make the page size larger in order to show the \n'#                 entire layout.  The registration marks allow you\n'#        
          to cut paper to it's originally intended page\n'#                 size.\n'#\n'#  Instructions:  Add a new button to the active layout add this\n'#                 script to the new button's click property.  Click\n'#                 the button when you want to add the marks and\n'#                 specify the desired dimensions for the marks.\n'#\n'#  Revision:      A.Boehlen 27/11/2022\n'#\n'##################################################################\n\ntheLayout = av.GetActiveDoc  \n\nif (theLayout.Is(l
@@ -953,19 +985,19 @@ ake( rt@bmU, rt@bmD)\nBR2 = Line.Make( rtL@bm, rtR@bm)\n\ngTL1 = GraphicShape.Ma
 ed(TRUE)\ngTL2.SetSelected(TRUE)\ngTR1.SetSelected(TRUE)\ngTR2.SetSelected(TRUE)\ngBL1.SetSelected(TRUE)\ngBL2.SetSelected(TRUE)\ngBR1.SetSelected(TRUE)\ngBR2.SetSelected(TRUE)\n\ntheLayout.GetGraphics.Add(gTL1)\ntheLayout.GetGraphics.Add(gTL2)\ntheLayout.GetGraphics.Add(gTR1)\ntheLayout.GetGraphics.Add(gTR2)\ntheLayout.GetGraphics.Add(gBL1)\ntheLayout.GetGraphics.Add(gBL2)\ntheLayout.GetGraphics.Add(gBR1)\ntheLayout.GetGraphics.Add(gBR2)\nav.GetProject.SetModified(TRUE)\n\n"
 )
 
-(Script.92
+(Script.97
 	Name:	"LayoutTools.General_Measure"
 	SourceCode:	"theLayout = av.GetActiveDoc\np = theLayout.ReturnUserPolyLine"
 )
 
-(Script.93
+(Script.98
 	Name:	"LayoutTools.General_MoveFeature"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_MoveFeature.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.08.2017\n'# Version:      1.0\n'#\n'# Purpose:      verschiebt die selektierten Features um den eingegeben\n'#               Wert in mm\n'#               Das Kommando wird mit mx (move x) oder my (move y)\n'#               ausgeloest\n'#\n'#########################################################################\n\ntheLayout = av.GetActi
 veDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\nwert = _command.Middle(2,5)\nwert = wert.AsNumber\nwert = wert / 25.4     '# mm to inch\ntheGraphicList = theLayout.GetGraphics\nif (theGraphicList.HasSelected = TRUE) then\n  for each theSelected in theGraphicList.GetSelected\n    theOrigin = theSelected.GetOrigin\n    theX = theOrigin.GetX\n    theY = theOrigin.GetY\n    if (_command.Left(2) = \"mx\") then\n      theX = theX + wert\n    else\n    
   theY = theY + wert\n    end\n    theSelected.SetOrigin(theX@theY)\n  end\nend\n\ntheLayout.Invalidate\n\n"
 )
 
-(Script.94
+(Script.99
 	Name:	"LayoutTools.General_NewLayout"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_NewLayout.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.10.2022\n'# Version:      1.0\n'#\n'# Purpose:      erstellt ein neues Layout-Dokument\n'#               Parameter koennen ueber den Dialog eingegeben oder\n'#               Standardwerte uebernommen werden\n'#               Default: A4 hoch\n'#\n'#########################################################################\n\n'# Variablen ini
 tialisieren\n\nparam = MsgBox.MultiInput(\"\",\"Define the Layout's Parameters\",\n{\"Name                                  :\",\n \"Width (mm)                        :\",\n \"Hight (mm)                          :\",\n \"Margin left/right (mm)          :\",\n \"Margin top/bottom (mm)      :\",\n \"Grid spacing horizontal (mm):\",\n \"Grid spacing vertical (mm)   :\"},\n{\"01\", \"210\", \"297\", \"15\", \"18\", \"2\", \"5\"})\n\nif (param.Count = 0) then\n  MsgBox.Warning(\"Cancel Pressed: No Data Entered\", \"Canceling the Dialog\")\n  return nil\nend\n\nthe
@@ -974,7 +1006,7 @@ r setzen\nmarginRect = Rect.MakeXY(einzug_seite, einzug_hoehe, einzug_seite, ein
 heLayout.GetWin\ntheLayoutWin.Open\ntheLayoutDpy.ZoomToPage\n"
 )
 
-(Script.95
+(Script.100
 	Name:	"LayoutTools.General_Satzspiegel"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_Satzspiegel.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      - Script macht Vorschlaege zur Groesse des Satzspiegels\n'#                 anhand der angegebenen Seitengroesse.\n'#               - Es koennen Satzspiegel fuer Doppelseiten und Einzelseiten\n'#                 berechnet werden.\n'#               - Die vorgeschlagenen Raender muesse
 n manuell in den \n'#                 entsprechenden Dialog eingegeben werden.\n'#               - frei nach buchsatz-fuer-selfpublisher.de\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\n'########## Benutzereingaben aufnehmen ##########\n\nseitentypListe = {\"Single Page\", \"Double Page\"}\n\nseitentyp = MsgBox.ListAsString(seitentypListe,\"D
@@ -987,20 +1019,20 @@ piegel =  (breite * 0.62) + (breite / faktor)\n  stegAussen =     (breite - brei
 etFormat(\"d\").AsString +NL+\n  \"Right:        \" + stegAussen.SetFormat(\"d\").AsString +NL\n\nelse\n  MsgBox.Warning(\"Fehler\",\"\")\n  return nil\nend\n\n'########## Ausgabe ##########\n\n'# Dialog zur Ausgabe oeffnen\noutDlg = av.GetProject.FindDialog(\"Satzspiegel\")\noutTextfld = outDlg.FindByName(\"output\")\noutTextfld.SetText(satzspAusg)\noutDlg.Open\n\n'# Standarddialog Page Setup oeffnen\nPageSetupDialog.Show(theLayout.GetDisplay)\n"
 )
 
-(Script.96
+(Script.101
 	Name:	"LayoutTools.General_SetDefaultValues"
-	SourceCode:	"'##############################################################################\n'#\n'# Filename:     LayoutTools_General_SetDefaultValues.ave\n'# Author:       Adrian Boehlen\n'# Date:         31.01.2023\n'# Version:      1.2\n'#\n'# Purpose:      liest Defaultwerte aus default_values.dbf ein und speichert\n'#               sie im globalen Dictionary _defaultValues\n'#\n'#               wird auch im Editor verwendet\n'#\n'##############################################################################\n\nif (_defaultValue
-s = nil) then\n  theVTab = av.Run(\"LayoutTools.Sub_ReadTable\", {\"Select Default Values Table\"})\nelse\n  return nil\nend\n\nif (theVTab = nil) then\n  MsgBox.Warning(\"No default values defined. Use 'def' to define them later.\", \"No default values\")\n  return nil\nend\n\n\ntheFields = theVTab.GetFields\n\n_defaultValues = Dictionary.Make(2)\n\nfor each rec in theVTab\n  for each feld in theFields\n    if (feld.AsString = \"Key\") then\n      theKey = theVTab.ReturnValue(feld, rec)\n    elseif (feld.AsString = \"Value\") then\n      
-theValue = theVTab.ReturnValue(feld, rec)\n      if (theValue.IsNumber) then\n        theValue = theValue.AsNumber\n      end\n    else\n      MsgBox.Error(\"Wrong table structure. Please select the default values table.\", \"\")\n      return nil\n    end\n  end\n  _defaultValues.Add(theKey, theValue)\nend\n\n_schwarzC =         Color.GetBlack\n_schwarzHF =        Color.Make\n_schwarzHF.SetRGBList({1,1,1})\n"
+	SourceCode:	"'##############################################################################\n'#\n'# Filename:     LayoutTools_General_SetDefaultValues.ave\n'# Author:       Adrian Boehlen\n'# Date:         04.01.2026\n'# Version:      1.3\n'#\n'# Purpose:      liest Defaultwerte aus default_values.dbf ein und speichert\n'#               sie im globalen Dictionary _defaultValues\n'#\n'#               wird auch im Editor verwendet\n'#\n'##############################################################################\n\nif (_defaultValue
+s = nil) then\n  theVTab = av.Run(\"LayoutTools.Sub_ReadTable\", {\"Select Default Values Table\"})\nelse\n  return nil\nend\n\nif (theVTab = nil) then\n  MsgBox.Warning(\"No default values defined. Use 'def' or click the Button ''D'' to define them later.\", \"No default values\")\n  return nil\nend\n\n\ntheFields = theVTab.GetFields\n\n_defaultValues = Dictionary.Make(2)\n\nfor each rec in theVTab\n  for each feld in theFields\n    if (feld.AsString = \"Key\") then\n      theKey = theVTab.ReturnValue(feld, rec)\n    elseif (feld.AsStr
+ing = \"Value\") then\n      theValue = theVTab.ReturnValue(feld, rec)\n      if (theValue.IsNumber) then\n        theValue = theValue.AsNumber\n      end\n    else\n      MsgBox.Error(\"Wrong table structure. Please select the default values table.\", \"\")\n      return nil\n    end\n  end\n  _defaultValues.Add(theKey, theValue)\nend\n\n_schwarzC =         Color.GetBlack\n_schwarzHF =        Color.Make\n_schwarzHF.SetRGBList({1,1,1})\n"
 )
 
-(Script.97
+(Script.102
 	Name:	"LayoutTools.General_SetWorkingDirectory"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_General_SetWorkingDirectory.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Alternativ-Script zum standardmaessigen Dialog zum \n'#               Festlegen des Arbeitsverzeichnisses. Im Gegensatz\n'#               zu diesem kann das Verzeichnis im Dialog ausgewaehlt\n'#               und braucht nicht eingetippt zu werden.\n'#\n'######################
 ###################################################\n\ntheProject = av.GetProject\n\nnewDir = FileDialog.Put(\"   Select directory - not files\".AsFileName, \"*\",\"Set Working Directory \")\nif (newDir = nil) then\n  return nil\nend\n\nnewDir = newDir.ReturnDir\ntheProject.SetWorkDir(newDir)\n"
 )
 
-(Script.98
+(Script.103
 	Name:	"LayoutTools.Guides_DrawGuides"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Guides_DrawGuides.ave\n'# Author:       Adrian Boehlen\n'# Date:         04.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Zieht horizontale und vertikale Hilfslinien am Clickpunkt\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc  \n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this tool from an active Layout.\",\"\")\n  return nil\nend\n
 \n'# Layout-Geometrie ermitteln\nthePageDisplay = av.GetActiveDoc.GetDisplay\nrecMargin = thePageDisplay.ReturnMarginExtent\ntheOrigin = recMargin.ReturnOrigin\nxOriginLeft = theOrigin.GetX\nxOriginRight = xOriginLeft + recMargin.GetWidth\nyOriginBottom = theOrigin.GetY\nyOriginTop = yOriginBottom + recMargin.GetHeight\n\nif (System.IsShiftKeyDown) then\n  '# vertikale Linie aus Clickpunkt ableiten\n  pt = theLayout.GetDisplay.ReturnUserPoint\n\n  xU = pt.GetX\n  yU = yOriginTop + 1\n  xD = pt.GetX\n  yD = yOriginBottom - 1
@@ -1009,7 +1041,7 @@ theValue = theVTab.ReturnValue(feld, rec)\n      if (theValue.IsNumber) then\n  
 ics.Add(theGraphicLine)\n  av.GetProject.SetModified(TRUE)\nend\n"
 )
 
-(Script.99
+(Script.104
 	Name:	"LayoutTools.Guides_TurnGuidesOnOff"
 	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Guides_TurnGuidesOnOff.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      schaltet durch DrawGuides erzeugte Hilfslinien fuer\n'#               das aktive oder mehrere Layouts ein oder aus\n'#\n'###########################################################################\n\n'# Variablen uebernehmen\nanz = Self.Get(0)\nonoff = Self.Get(1)\n\n'# mehrere oder 
 ein Layout definieren\nif (anz = \"many\") then\n  theProject = av.GetProject\n  theDocL = theProject.GetDocs\n  theLayoutL = {}\n  for each theEntry in theDocL\n    if (theEntry.Is(Layout)) then\n      theLayoutL.Add(theEntry)\n    end\n  end\n  theBatchLayoutL = MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Turn Rulers Off\")\n  if (theBatchLayoutL = nil) then \n    return nil\n  end\n  while (theBatchLayoutL.Count = 0) \n    MsgBox.Error(\"Please choose one oder more layout(s)\"+NL+\"Cancel for abort\", \"\")\n    theBatchL
@@ -1018,7 +1050,7 @@ ayoutL=MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Turn Rulers Off\")\
 n\") then\n        if (farbeStr = weissStr) then\n          g.SetSelected(TRUE)\n          g.GetSymbol.SetColor(hilfslFarbe)\n        end\n      else\n        if (farbeStr = hilfslFarbeStr) then\n          g.SetSelected(TRUE)\n          g.GetSymbol.SetColor(weiss)\n        end\n      end\n    farbeStr = \"\"\n    end\n  end\n  theGraphicsList = theLayout.GetGraphics\n  theGraphicsList.MoveSelectedToBack\n  theGraphicsList.UnselectAll\n  theLayout.GetDisplay.Invalidate(true)\nend\n"
 )
 
-(Script.100
+(Script.105
 	Name:	"LayoutTools.ImpExp_BatchExport"
 	SourceCode:	"'NAME:     LayoutBatchExport\n'DATE:     160801\n'AUTHOR:   Sebastian Hofer - shofer@gmx.de\n\n'REVISION: Adrian Boehlen, 20200731\n\n'DESCRIPTION:\n'LayoutBatchExport is for fast export of multiple Layouts out of a project into eps (new) or jpg.\n'Other formats will not be implemented by me. Feel Free to do it.\n'After selecting the export parameters (file type, resolution, compression) and the LayoutdDocs\n'the user is prompted to chose the export filenames by Dialog.\n'It is not necessary to open the Layouts in a w
 indow before of the export!\n\n' REQUIRES:   ---\n\n' LayoutBatchExport eignet sich zum schnellen Export von mehreren Layouts \n' im selben Datenformat und mit den selben Parametern.\n' Meinen Bedürfnissen nach wird nur eps (new) und jpg unterstützt. Wer andere \n' Formate unterstuetzen will darf die gerne einbauen. \n' Es ist nicht noetig die zu exportierenden Layouts als Fenster zu oeffnen!\n\n\ntheFormatL={\"eps (New)\", \"jpg\"}\ntheFormatChoice=msgBox.ListAsString(theFormatL, \"Choose the LayoutBatchExport format:\", \"L
@@ -1029,7 +1061,7 @@ then\n      return nil\n    end\n  end\nend\n\n\ntheFirstLayout=theBatchLayoutL.
 Dialog.Put(defaultFileName, \"*.\"+theFileExt, \"Export «\"+theBatchLayout.getName+\"» to:\" )\n\n  if (theFN=nil) then\n    return nil\n  end\n  if (theShortFormat=3) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution})\n  elseif (theShortFormat=9) then\n    theBatchLayout.ExportToFile(theFN, theFormat, {theResolution,theCompression})\n  end\nend\nreturn nil\n"
 )
 
-(Script.101
+(Script.106
 	Name:	"LayoutTools.ImpExp_CreateODB"
 	SourceCode:	"\n' NAME: mm_docODBCreate\n\n' HERKUNFT: Harald (neu auf Grundlage von FSA)\n\n' EINBINDUNG MTOOLS: Menueeintrag im Projektmenue (Label: Dokumentauswahl exportieren (ODB))\n\n' HILFE: Oeffnet eine Auswahlliste zur Speicherung von Dokumenten in einem einzelnen ODB-File  (s. STRG-Klick Info)\n\n'*******************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =  \" \"+nl+\n    \n    \"SCRIPTNAME: 
    mm_DocODBCreate \"+nl+nl+\n  \n    \"ORIGIN:   Harald (new on FSA Basis). \"+nl+nl+\n    \n    \"Opens a MultiList to write the selected documents to a single ODB file.\"+nl+nl+\n    \n    \"The dependencies of the project (as e.g. extensions) will be listet to annotate them \"+\n    \"in the ODB if desired. In this case they are loaded automatically when the ODB is imported into a blanc project. \"+\n    \"If you don't feel safe upon what extensions your ODB is dependent, it is advisable, to add all obligatory \"+\n    \"ex
@@ -1046,7 +1078,7 @@ theDocsCount <> 1) then\n  MsgBox.Info (\"Written \"+theDocsCount.AsString + \" 
 g +\"''\")\nend\n\nif (theUnableList.count > 0) then\n  MsgBox.Info(\"The string  '$'  inheres a split function in the 'Sort'  part of this script. \"+theUnableList.count.AsString+\" Doc(s) \"+\n  \"named using this string could not be processed.\",\"\")\nend\n\n'-------------------------------------------------------------------------------\n\n' END OF FILE\n\n"
 )
 
-(Script.102
+(Script.107
 	Name:	"LayoutTools.ImpExp_LoadODB"
 	SourceCode:	"\n' NAME: mm_docODBLoad\n\n' HERKUNFT: FSA, veraendert : H.\n\n' EINBINDUNG MTOOLS: Menueeintrag im Projektmenue (Label: Dokumentauswahl aus ODB importieren...)\n\n' HILFE: Oeffnet eine Auswahlliste zum Laden von Dokumenten aus einem ODB-File  (s. STRG-Klick Info)\n\n'*******************************************\n\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =  \" \"+nl+\n    \n    \"SCRIPTNAME:    mm_DocODBLoad \"+nl+nl+\n
   \n    \"ORIGIN:   FSA, modified \"+nl+nl+\n    \n    \"Opens a MultiList to select documents from a single ODB file to import. \"+nl+\n    \n    \"Extensions that are listed in the dependencies will be loaded if necessary. \"+nl\n            \n  msgbox.report(message,\"INFO: Import ODB ...\")\n  \n  return nil\nend\n\n'-------------------------------------------------------\n\ntheProject = av.GetProject\n\nODBName = FileDialog.Show(\"*.odb\",\"ODB-Files\",\" Choose ODB-File\")\n\nif (ODBName = NIL) then\n  return NIL\nend\n\ntheODB = ODB.Op
@@ -1063,39 +1095,39 @@ r each i in theCheckList\n  t = theODB.Get(i)\n  if (t.GetClass.GetClassName = \
 orted \"+theLCount.AsString++theGram,\"\")\nav.showMsg(\"llll llll llll llll llll   llll llll llll     Imported \"+theLCount.AsString++theGram)\n\n'END OF SCRIPT\n\n"
 )
 
-(Script.103
+(Script.108
 	Name:	"LayoutTools.Sel_Delete"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Sel_Delete.ave\n'# Author:       Adrian Boehlen\n'# Date:         04.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      loescht selektierte Elemente im Layout\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\nif (theLayout.GetGraphics
 .HasSelected) then\n  if (MsgBox.YesNo(\"Are you sure?\", \"Delete features?\", true)) then\n    av.GetProject.SetModified(true)\n    theLayout.GetGraphics.ClearSelected\n  else\n    return nil\n  end\nelse\n  MsgBox.Info(\"No selected features to delete.\",\"\")\nend\n"
 )
 
-(Script.104
+(Script.109
 	Name:	"LayoutTools.Sel_Select"
 	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.Select"
 )
 
-(Script.105
+(Script.110
 	Name:	"LayoutTools.Sel_SelectAll"
 	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.SelectAll"
 )
 
-(Script.106
+(Script.111
 	Name:	"LayoutTools.Sel_SelectTool"
 	SourceCode:	"theLayout = av.GetActiveDoc\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.SetSelectMode(#GRAPHICS_SELECT_NORMAL)"
 )
 
-(Script.107
+(Script.112
 	Name:	"LayoutTools.Sel_UnselectAll"
 	SourceCode:	"theLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\ntheGraphicsList.UnselectAll\n"
 )
 
-(Script.108
+(Script.113
 	Name:	"LayoutTools.start"
 	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_start.ave\n'# Author:       Adrian Boehlen\n'# Date:         30.12.2022\n'# Version:      0.3\n'#\n'# Purpose:      oeffnet die LayoutTools Toolbar und den Dialog zum\n'#               Auswaehlen der Tabelle mit den Defaultwerten\n'#\n'###########################################################################\n\nav.GetProject.FindDialog(\"LayoutTools\").Open\nav.Run(\"LayoutTools.General_SetDefaultValues\", {})\n'a
 v.Run(\"LayoutTools.General_SetWorkingDirectory\", {})\n\n"
 )
 
-(Script.109
+(Script.114
 	Name:	"LayoutTools.Sub_CreateList"
 	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_CreateList.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      erzeugt eine geordnete oder ungeordnete Liste\n'#\n'######################################################################\n\n'# Variablen initialisieren\nanzMark = 0\nchar = 0\nzeile = 0\ntheMarksTmp = \"\"\ntheString = Self.Get(0) '# Textblock uebernehmen\nlisteTyp = Self.Get(1)  '# Listentyp uebe
 rnehmen\n_theMarks = av.Run(\"LayoutTools.Sub_SubstituteAll\", {theString, listeTyp}) '# alle Zeichen ausser ¬ loeschen und neuer Variable zuweisen\n\n'# geordnete Liste\nif (listeTyp = \"ol\") then\n  for each char in _theMarks.AsTokens(NL)                       '# Textblock, welcher nur ¬ enthaelt, durchgehen \n    zeile = zeile + 1                                           '# Zeilen zaehlen\n    if (char.Contains(\"¬\")) then\n      anzMark = anzMark + 1                                     '# \"Listenzeichen zaehlen\n  
@@ -1104,7 +1136,7 @@ etzten\n    elseif (char.Contains(32.AsChar) and (zeile < _theMarks.AsTokens(NL)
 _theMarks = _theMarks.Substitute(\"¬\",_defaultValues.Get(\"bullet\").AsChar) '# Listenzeichen durch definiertes Aufzaehlungszeichen ersetzen\n  theTextBlock = Self.Get(0).Substitute(\"¬\",\"\")                             '# Listenzeichen aus Textblock entfernen\n  return theTextBlock\nend"
 )
 
-(Script.110
+(Script.115
 	Name:	"LayoutTools.Sub_Documentation"
 	SourceCode:	"'#################################################################\n'#\n'# Filename:     LayoutTools_Sub_Documentation.ave\n'# Author:       Adrian Boehlen\n'# Date:         06.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      enthaelt den Text fuer die Hilfeseiten. Dieser \n'#               wird globalen Variablen zugewiesen\n'#\n'#################################################################\n\n\n_uebersicht = \n\"===============================================\"+NL+\n\"                        Commands and their funct
 ions\"+NL+\n\"===============================================\"+NL+NL+\n\"cp                    Copies a layout\"+NL+\n\"delhd                Deletes header and footer for the chosen layouts\"+NL+\n\"dels                  Deletes selected features\"+NL+\n\"def                   Shows dialog to select the default value table\"+NL+\n\"fi                      Imports textfiles\"+NL+\n\"fis                     Imports textfiles preformatted\"+NL+\n\"go                    Switches guides on (for the active layout)\"+NL+\n\"gom            
@@ -1139,26 +1171,26 @@ the right and negative ones for moving to the left.\"+NL+\n\"e.g. \"\"mx50\"\" m
 n mm without any blank between. Use positive values for moving upwards and negative ones for moving downwards.\"+NL+\n\"e.g. \"\"my50\"\" moves the selected element(s) 50 mm upwards.\"+NL+\n\"       \"\"my-50\"\" moves the selected element(s) 50 mm downwards.\"\n\n"
 )
 
-(Script.111
+(Script.116
 	Name:	"LayoutTools.Sub_IstIn"
 	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_IstIn.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.2\n'#\n'# Purpose:      prueft, ob ein bestimmter Wert (1. Argument) in \n'#               der angegebenen Liste (2. Argument) enthalten ist\n'#               und setzt in diesem Fall die Variable istInR auf true\n'#\n'######################################################################\n\nistInR = false\nfor each i in S
 elf.Get(1)\n  if (i = Self.Get(0)) then\n    istInR = true\n  end\nend    \nreturn istInR"
 )
 
-(Script.112
+(Script.117
 	Name:	"LayoutTools.Sub_PlaceText"
 	SourceCode:	"'##########################################################\n'#\n'# Filename:     LayoutTools_Sub_PlaceText.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.3\n'#\n'# Purpose:      Subroutine zur Platzierung von Text\n'#\n'##########################################################\n\ngtxText = GraphicText.Make (Self.Get(1), Self.Get(2))\ntheText = gtxText.ReturnSymbols.Get(0)\ntheText.SetSize(Self.Get(4))\ntheText.SetColor(Self.Get(3))\ntheText.SetFont(Self.Get(0))\n_theLayout.GetGraphi
 cs.Add(gtxText)"
 )
 
-(Script.113
+(Script.118
 	Name:	"LayoutTools.Sub_ReadTable"
 	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Sub_ReadTable.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Erzeugt einen Dialog zum Auswaehlen einer Tabelle,\n'#               die anschliessend eingelesen wird.\n'#               Die Tabelle wird nicht zum GUI hinzugefuegt.\n'#               Script liefert das VTab Objekt zurueck.\n'#\n'#               wird auch im Editor verwendet\n'#\n'#############
 #########################################################\n\nthePattern = \"*.dbf\"\ntheLabel = \"dBASE (*.dbf)\"\ntheTitle = Self.Get(0)\ntheFile = FileDialog.Show(thePattern, theLabel, theTitle)\n\nif (theFile = nil) then\n  return nil\nend\n\ntheVTab = VTab.Make(theFile, FALSE, FALSE)\n\nif (theVTab.HasError) then\n  if (theVTab.HasLockError) then\n    MsgBox.Error(\"Unable to acquire Read Lock for file \" + theFile.GetBaseName, \"\")\n  else\n    MsgBox.Error(\"The file '\" + theFile.GetBaseName + \"' is not valid.\", \"\")\n  end\nels
 e\n  return theVTab\nend\n\n\n\n\n"
 )
 
-(Script.114
+(Script.119
 	Name:	"LayoutTools.Sub_ReturnColor"
 	SourceCode:	"'#####################################################################\n'#\n'# Filename:     LayoutTools_Sub_ReturnColor.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      1.0\n'#\n'# Purpose:      Definiert RGB-Werte von Farben, die ueber Namen\n'#               angesprochen werden\n'#\n'#####################################################################\n\nnc = Color.make\n\nif (Self = \"Black\") then\n  nc.SetRGBList({0,0,0})\nelseif (Self = \"White\") then\n  nc.SetRGBList({255,255,255})\ne
 lseif (Self = \"Dark Gray\") then\n  nc.SetRGBList({130,130,130})\nelseif (Self = \"Medium Gray\") then\n  nc.SetRGBList({165,165,165})\nelseif (Self = \"Light Gray\") then\n  nc.SetRGBList({210,210,210})\nelseif (Self = \"Dark Red\") then\n  nc.SetRGBList({150,0,0})\nelseif (Self = \"Medium Red\") then\n  nc.SetRGBList({255,0,0})\nelseif (Self = \"Light Red\") then\n  nc.SetRGBList({255,180,180})\nelseif (Self = \"Dark Orange\") then\n  nc.SetRGBList({180,140,0})\nelseif (Self = \"Medium Orange\") then\n  nc.SetRGBList({255,210,0})\nelse
@@ -1167,7 +1199,7 @@ if (Self = \"Light Orange\") then\n  nc.SetRGBList({255,210,180})\nelseif (Self 
 80,255})\nelseif (Self = \"Transparent\") then\n  nc.SetTransparent(true)  \nend\n\nreturn nc"
 )
 
-(Script.115
+(Script.120
 	Name:	"LayoutTools.Sub_SetASCII_Char"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Sub_SetASCII_Char.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      1.0\n'#\n'# Purpose:      Uebersetzt ASCII-Codes, die als dreistelliger dezimaler\n'#               Code mit dem Zeichen \\ davor gesetzt werden muessen\n'#               in das zugehoerige Zeichen\n'#\n'#########################################################################\n\nword = Self                       
                   '# Argument in lokale Variable uerbertragen\nwordL = word.AsTokens(\"\\\")                          '# Wort an \\ auftrennen\nif (wordL.Count > 1) then                           '# nur wenn \\ vorkommt...\n  for each i in 1..wordL.Count                      '# jeden Wortteil durchgehen...\n    if (i = 1) then\n      continue                                      '# ...ausser den ersten\n    else\n      search = \"\\\" + wordL.Get(i - 1).Left(3)       '# nach \\ plus drei folgenden Zeichen suchen\n      repl
@@ -1175,13 +1207,13 @@ ace = wordL.Get(i - 1).Left(3)            '# nur die drei Zeichen nach \\ auswae
 sten vier Zeichen extrahieren\n    replace = word.Middle(1,3)                      '# das 2., 3., und 4. Zeichen extrahieren\n    replace = replace.AsNumber                      '# in Nummer konvertieren\n    word = word.Substitute(search,replace.AsChar)   '# Ersetzung vornehmen\n  end  \nend\n\nreturn word"
 )
 
-(Script.116
+(Script.121
 	Name:	"LayoutTools.Sub_SubstituteAll"
 	SourceCode:	"'###############################################################\n'#\n'# Filename:     LayoutTools_Sub_SubstituteAll.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      ersetzt alle Zeichen ausser dem Listenzeichen ¬\n'#               mit dem definierten Zeichen\n'#\n'###############################################################\n\n'# replace printable characters 32 - 255 except ¬ (ASCII 172)\n\n'# bei ungeordneten Listen, ersetzen durch Leerstring\nif (Self.Get(
 1) = \"ul\") then\n  str = Self.Get(0)\n  for each i in 32..(172 - 1)\n    str = str.Substitute(i.AsChar,\"\")\n  end\n\n  for each i in (172 + 1)..255\n    str = str.Substitute(i.AsChar,\"\")\n  end\n\n'# bei geordneten Listen, ersetzen durch Leerzeichen\nelseif (Self.Get(1) = \"ol\") then\n  str = Self.Get(0)\n  for each i in 33..(172 - 1)\n    str = str.Substitute(i.AsChar,32.AsChar)\n  end\n\n  for each i in (172 + 1)..255\n    str = str.Substitute(i.AsChar,32.AsChar)\n  end\nend\n\nreturn str"
 )
 
-(Script.117
+(Script.122
 	Name:	"LayoutTools.Text_CreateInhaltsverzeichnis"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_CreateInhaltsverzeichnis.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      Erstellt ein Inhaltsverzeichnis\n'#\n'#               under construction!\n'#\n'#########################################################################\n\n'# Variablen initialisieren\n\nfarbeStr = \"\"\ntitelFarbeStr = \"2103545\"          '# RGB-Wert der Titel\ntitelFarbe = Color.
 Make\ntitelFarbe.SetRGBList({210,35,45})\ntheProject = av.GetProject\ntheDocList = theProject.GetDocs\ntheLayoutList = {}\ntheStringList = {}\n\nfor each theEntry in theDocList\n  if (theEntry.Is(Layout)) then\n    theLayoutList.Add(theEntry)\n  end\nend\n\n'########## Layout fuer Inhaltsverzeichnis festlegen ##########\n\nif (theLayoutList.Count=0) then\n  MsgBox.Error(\"There are no Layouts. You have to create Layouts first!\", \"\")\n  return nil\nelse\n  inhaltseite=MsgBox.List(theLayoutList, \"Layout fuer Inhaltsverzeichnis f
@@ -1192,14 +1224,14 @@ ft + 0.01)@(yOriginTop - 0.5)\ntextSize = theSizeTitle\ntextColor = titelFarbe\n
     av.Run(\"LayoutTools.Sub_PlaceText\", {textFont, textString, textOrigin, textColor, textSize})\n  '# zugehoeriger Titel\n  else\n    textString = theString\n    textOrigin = (xOriginLeft + 0.6)@(yOriginTop - zeile)\n    textSize = theSizeText\n    textColor = schwarz\n    av.Run(\"LayoutTools.Sub_PlaceText\", {textFont, textString, textOrigin, textColor, textSize})\n  end\nend\n\n_theLayout.Invalidate\n"
 )
 
-(Script.118
+(Script.123
 	Name:	"LayoutTools.Text_DeleteHeaderAndFooter"
 	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Text_DeleteHeaderAndFooter.ave\n'# Author:       Adrian Boehlen\n'# Date:         19.12.2017\n'# Version:      1.0\n'#\n'# Purpose:      loescht durch Text_HeaderAndFooter\n'#               erzeugte Kopf- und Fusszeile(n)\n'#\n'###########################################################################\n\ntheProject=av.GetProject\ntheDocL=theProject.GetDocs\ntheLayoutL={}\nfor each theEntry in theDocL\n  if (theEn
 try.Is(Layout)) then\n    theLayoutL.Add(theEntry)\n  end\nend\ntheBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Delete Header and Footer\")\nif (theBatchLayoutL=Nil) then \n  return nil\nend\nwhile (theBatchLayoutL.Count=0) \n  MsgBox.Error(\"Please choose one oder more layout(s)\"+NL+\"Cancel for abort\", \"\")\n  theBatchLayoutL=MsgBox.MultiList(theLayoutL, \"Choose layout(s):\", \"Turn Rulers Off\")\n  if (theBatchLayoutL=Nil) then\n    return nil\n  end\nend\n\nfor each theLayout in theBatchLayoutL\n  farbeStr =
  \"\"\n  farbeHF_Str = \"111\"    '# RGB-Wert der Kopf- und Fusszeilen...\n\n  for each g in theLayout.GetGraphics\n    symb = g.GetSymbol\n    rgb = symb.GetColor.GetRGBList\n    for each farbe in rgb\n      farbeStr = farbeStr + farbe.AsString\n    end\n    if (farbeStr = farbeHF_Str) then\n      g.SetSelected(TRUE)\n    end\n    farbeStr = \"\"\n  end\n\n  theGraphicsList = theLayout.GetGraphics\n  theGraphicsList.ClearSelected\n  theLayout.GetDisplay.Invalidate(true)\nend"
 )
 
-(Script.119
+(Script.124
 	Name:	"LayoutTools.Text_Footnote"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_Footnote.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.11.2022\n'# Version:      0.6\n'#\n'# Purpose:      erzeugt Fussnoten\n'#\n'###################################################################\n\n_theLayout = av.GetActiveDoc\n\nif (_theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this tool from an active Layout.\",\"\")\n  return nil\nend\n\n'# Schriftgroesse definieren\ntextSize = MsgBox.In
 put(\"Insert font size\", \"Font Size\",_defaultValues.Get(\"schriftgroesse\").AsString)\n\nif (textSize = nil) then\n  return nil\nelseif (textSize.IsNumber.Not) then\n  MsgBox.Warning(\"Invalid input\",\"Abort\")\n  return nil\nend\ntextSize = textSize.AsNumber\n\n'########## Layout-Geometrie ermitteln ##########\n\nthePageDisplay = av.GetActiveDoc.GetDisplay\nrecMargin = thePageDisplay.ReturnMarginExtent\ntheOrigin = recMargin.ReturnOrigin\nxOriginLeft = theOrigin.GetX\nxOriginRight = xOriginLeft + recMargin.GetWidth\n\n'##########
@@ -1207,7 +1239,7 @@ put(\"Insert font size\", \"Font Size\",_defaultValues.Get(\"schriftgroesse\").A
 TRUE)\n_theLayout.GetGraphics.Add(theGraphicLine)\nav.GetProject.SetModified(TRUE)\n\n'########## Text definieren und platzieren ##########\n\ntextFont = Font.Make (_defaultValues.Get(\"schriftart\"), _defaultValues.Get(\"schriftschnitt\"))\ntextString = \"Text\"\ntextOrigin = (xOriginLeft)@(pt.GetY - 0.25)\ntextColor = _schwarzC\nav.Run(\"LayoutTools.Sub_PlaceText\", {textFont, textString, textOrigin, textColor, textSize})\n"
 )
 
-(Script.120
+(Script.125
 	Name:	"LayoutTools.Text_HeaderAndFooter"
 	SourceCode:	"'###########################################################################\n'#\n'# Filename:     LayoutTools_Text_HeaderAndFooter.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.2\n'#\n'# Purpose:      Erzeugt Kopf- und Fusszeile(n) fuer\n'#               das aktive oder mehrere Layouts\n'#\n'# Based on:     Mike Quentel <mquentel@acceleration.net>,\n'#               <kingofthewood@yahoo.com>\n'#               Fri Dec 10 15:28:27 1999\n'#\n'#########################################
 ##################################\n\n'# Variablen initialisieren\nanz = Self\ni = 0\ntheAuthor = _defaultValues.Get(\"autor\")\ntheSizeFooter = _defaultValues.Get(\"groesseFusszeile\")\ntheSizeHeader = _defaultValues.Get(\"groesseKopfzeile\")\ntheColor = _schwarzHF\ntheFont = Font.Make (_defaultValues.Get(\"schriftart\"), _defaultValues.Get(\"schriftschnitt\"))\n\nif (anz = \"many\") then\n  theProject = av.GetProject\n  theDocL = theProject.GetDocs\n  theLayoutL={}\n  for each theEntry in theDocL\n    if (theEntry.Is(Layout)) then\n 
@@ -1224,7 +1256,7 @@ e right header with simulated anchor point right\n  if (strHeadRight <> nil) the
 end  \nend"
 )
 
-(Script.121
+(Script.126
 	Name:	"LayoutTools.Text_ImportText"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_ImportText.ave\n'# Author:       Adrian Boehlen\n'# Date:         20.12.2022\n'# Version:      1.1\n'#\n'# Purpose:      Liest Text ein und bildet daraus einen Textblock\n'#               der definierten maximalen Breite in mm\n'#               bestehende Zeilenumbrueche bleiben erhalten\n'#               bei den Kommandos \"fi\", \"ti\", \"ul und \"ol\" muessen \n'#               Schriftart, -groesse und -farbe 
 definiert werden,\n'#               bei den Kommandos \"fis\", \"tis\", \"uls\" und \"ols\" werden \n'#               die Defaultwerte \"DejaVu Sans Condensed Black\n'#               gesetzt.\n'#\n'#               je nach Kommando wird ein gesamtes Textfile eingelesen\n'#               oder Text, der ueber eine Inputbox eingegeben wird.\n'#\n'#               erwartet eine selektierte Textbox im Layout,\n'#               an der Stelle, wo dann der neue Text erscheinen soll.\n'#               Die Textbox kann leer sein, oder sc
@@ -1258,7 +1290,7 @@ T_RIGHT)\n  else\n    theGraphicText.SetAlignment(#TEXTCOMPOSER_JUST_LEFT)\n  en
 bol = theGraphicText.ReturnSymbols.Get(0)\n  theSymbol.SetColor(theColor)\n  theSymbol.SetFont(schriftart)\n  theSymbol.SetSize(theSize)\n  theLayout.GetGraphics.Add (theGraphicText)\nend\n\ntheLayout.Invalidate\n\n'# bei Import ueber Textbox temporaer erzeugtes File loeschen\nif (theFile.AsString.Contains(\"tmp.txt\")) then\n  File.Delete(theFile)\nend"
 )
 
-(Script.122
+(Script.127
 	Name:	"LayoutTools.Text_InsertText"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_Text_InsertText.ave\n'# Author:       Adrian Boehlen\n'# Date:         27.11.2022\n'# Version:      0.7\n'#\n'# Purpose:      Basiert auf Layout.Text mit folgenden Erweiterungen:\n'#               - Standardschrift wird vordefiniert\n'#               - der Nullpunkt ist oben statt unten, wenn bestehender\n'#                 Text editiert wird\n'#               Einschraenkungen:\n'#               - wenn Text edit
 iert werden soll, muss das Textobjekt\n'#                 selektiert sein\n'#               - funktioniert nur mit Flattersatz linksbuendig und\n'#                 Standard-Zeilenabstand 1.0\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\ntheGraphicList = theLayout.GetGraphics\nif (theGraphicList.HasSelected = TRUE) then\n  theSelected = theGraphicList.GetSelected.Get(0)\n  '# urspruengliche Hoehe der Textbox bestimmen, sofern vorhanden\n  theOriY = theSel
@@ -1269,7 +1301,7 @@ ext object\",\"\")\n    return nil\n  end \n  theSelected = theGraphicList.GetSe
 n) \n  theSymbol = theGraphicText.ReturnSymbols.Get (0)\n  theSymbol.SetColor(CColor)\n  theSymbol.SetFont(Font.make(CFont,CStyle))\n  theSymbol.SetSize(CSize) \n  theLayout.GetGraphics.Add (theGraphicText)  \nend"
 )
 
-(Script.123
+(Script.128
 	Name:	"LayoutTools.Text_Silbentrennung"
 	SourceCode:	"'######################################################################\n'#\n'# Filename:     LayoutTools_Text_Silbentrennung.ave\n'# Author:       Adrian Boehlen\n'# Date:         09.11.2018\n'# Version:      0.2\n'#\n'# Purpose:      einfacher Algorithmus zur Silbentrennung deutscher \n'#               Woerter\n'#               basiert auf Open-Script von:\n'#               http://www.wer-weiss-was.de/t/silbentrennung/544436/4\n'#\n'#               under construction!\n'#\n'#               erfordert:\n'#               -
  LayoutTools.Sub_IstIn\n'#\n'######################################################################\n\nwelchesWort = \"Donaudampfschifffahrskapitän\"\n\n'# Variablen initialisieren\nzeichenAnzahl = 0\ntrennenErlaubt = true\nz = \"\"\nz0 = \"\"\nz1 = \"\"\nv = \"\"\ntrennPositionen = {}\nistInR = false\n\nzeichenAnzahl = welchesWort.Count\n\nif (zeichenAnzahl > 2) then\n  trennenErlaubt = false\n  vokale = {\"a\",\"e\",\"i\",\"o\",\"u\",\"ä\",\"ü\",\"ö\"}\n  verbindungen = {\"sch\",\"ch\",\"ph\",\"ck\",\"pf\",\"br\",\"pl\",\"tr\",\"st\",\"gr\"}\n  trennungen = {\"-\",\"/\",\"\\\",\"
@@ -1279,44 +1311,44 @@ r, liste})\n            if (istInR = false) then\n              char = v\n      
 s,(welchesWort.Count - 2))\n  MsgBox.Info(silbe + \"-\" + NL + rest,\"Moegliche Trennungen\")\nend\n\n"
 )
 
-(Script.124
+(Script.129
 	Name:	"LayoutTools.View_RefreshLayout"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_View_RefreshLayout.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Erzwingt einen Neuaufbau des Layouts durch mehrfaches\n'#               ZoomIn und ZoomOut\n'#\n'#########################################################################\n\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Info(\"Start this script from an active
  Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.ZoomIn(110)\ntheLayout.GetDisplay.ZoomOut(111)\ntheLayout.GetDisplay.ZoomIn(111)\ntheLayout.GetDisplay.ZoomOut(110)\n"
 )
 
-(Script.125
+(Script.130
 	Name:	"LayoutTools.View_SetQuality"
 	SourceCode:	"'########################################################\n'#\n'# Filename:     LayoutTools_View_SetQuality.ave\n'# Author:       Adrian Boehlen\n'# Date:         21.10.2014\n'# Version:      1.0\n'#\n'# Purpose:      aendert auf Knopfdruck bei allen Bildern\n'#               eines Layouts die Qualitaet von \"Draft\"\n'#               auf \"Presentation\" oder umgekehrt.             \n'#\n'########################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.War
 ning(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theLayout.GetGraphics\n\nfor each theObject in theGraphicsList\n  if (theObject.Is(PictureFrame)) then\n    if (theObject.GetQuality = #FRAME_QUALITY_PRESENTATION) then\n      theObject.SetQuality(#FRAME_QUALITY_DRAFT)\n    else\n      theObject.SetQuality(#FRAME_QUALITY_PRESENTATION)\n    end\n  end\nend\n\ntheLayout.Invalidate"
 )
 
-(Script.126
+(Script.131
 	Name:	"LayoutTools.View_UndoZoom"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_View_UndoZoom.ave\n'# Author:       Adrian Boehlen\n'# Date:         06.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      Macht die aus dem View Modus bekannte Funktion auch fuer\n'#               Layouts verfuegbar\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Warning(\"Start this script from an active
  Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.UndoZoom\n"
 )
 
-(Script.127
+(Script.132
 	Name:	"LayoutTools.View_ZoomToExportview"
 	SourceCode:	"'#########################################################################\n'#\n'# Filename:     LayoutTools_View_ZoomToExportview.ave\n'# Author:       Adrian Boehlen\n'# Date:         06.11.2022\n'# Version:      0.2\n'#\n'# Purpose:      Die Laufweite von Text aendert je nach Schriftart und \n'#               Zoomstufe, daher ist es mitunter schwierig abzuschaetzen,  \n'#               wie das exportierte Layout aussehen wird. Diese Funktion \n'#               zoomt in eine Zoomstufe, in der die Anzeige ziemlich \n
 '#               genau der spaeteren Ausgabe entspricht.\n'#\n'#########################################################################\n\ntheLayout = av.GetActiveDoc\n\nif (theLayout.Is(layout).Not) then\n  MsgBox.Info(\"Start this script from an active Layout.\",\"\")\n  return nil\nend\n\ntheLayout.GetDisplay.ZoomToActual\ntheLayout.GetDisplay.ZoomIn(300)"
 )
 
-(Script.128
-	Name:	"Ext_Unload"
+(Script.133
+	Name:	"Ext.Unload"
 	SourceCode:	"Dialog.DetachFromExtension(self)\n"
 )
 
-(Script.129
-	Name:	"Ext_Inst"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Inst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack = Self '# Der 'Sack' vom makescript, wo alles Benoetigte drin ist\n\nSchaltflaeche = Sack.Get(0)\nviewGUI = av.GetProject.FindGUI( \"Layout\" )\nif (v
+(Script.134
+	Name:	"Ext.Inst"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext.Inst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack = Self '# Der 'Sack' vom makescript, wo alles Benoetigte drin ist\n\nSchaltflaeche = Sack.Get(0)\nviewGUI = av.GetProject.FindGUI( \"Layout\" )\nif (v
 iewGUI <> nil) then\n  '# pruefen, ob die Schaltflaeche schon existiert\n  if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick) = nil) then\n    '# Schaltflaeche an der 2. Stelle einfügen\n    viewGUI.GetButtonBar.Add(Schaltflaeche, 2)\n  end\nend\n\nav.GetProject.AddDialog(Sack.Get(1)) '# 1. Dialog hinzufuegen\nav.GetProject.AddDialog(Sack.Get(2)) '# 2. Dialog hinzufuegen\n"
 )
 
-(Script.130
-	Name:	"Ext_Unin"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nlayoutGUI = av.GetProject.FindGUI( \"Layout\" )\n\n'# Schaltflaeche un
+(Script.135
+	Name:	"Ext.Unin"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext.Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      1.0\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nlayoutGUI = av.GetProject.FindGUI( \"Layout\" )\n\n'# Schaltflaeche un
 d Dialoge entfernen\nlayoutGUI.GetButtonBar.Remove(layoutGUI.GetButtonBar.FindByScript( \"LayoutTools.start\"))\nav.GetProject.removedialog(\"LayoutTools\")\nav.GetProject.removedialog(\"Satzspiegel\")"
 )
 

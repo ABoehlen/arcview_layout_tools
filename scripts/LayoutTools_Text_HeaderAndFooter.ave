@@ -1,27 +1,73 @@
-'# Name:          LayoutTools.HeaderAndFooterOne
-'#                lyt_head.ave
-'# Author:        Mike Quentel <mquentel@acceleration.net>,
-'#                 <kingofthewood@yahoo.com>
-'# Date:          Fri Dec 10 15:28:27 1999
-'# Revised by:    Adrian Boehlen
-'# Revision Date: 19/12/2017
-'# Purpose:       Creates header (optional) and footer
-'#                of one layout
+'###########################################################################
 '#
-'###################################################################
+'# Filename:     LayoutTools_Text_HeaderAndFooter.ave
+'# Author:       Adrian Boehlen
+'# Date:         20.12.2022
+'# Version:      1.2
+'#
+'# Purpose:      Erzeugt Kopf- und Fusszeile(n) fuer
+'#               das aktive oder mehrere Layouts
+'#
+'# Based on:     Mike Quentel <mquentel@acceleration.net>,
+'#               <kingofthewood@yahoo.com>
+'#               Fri Dec 10 15:28:27 1999
+'#
+'###########################################################################
 
-av.Run("LayoutTools.Sub_DefaultValues", {})  '# Defaultwerte einlesen
-
-'########## Variablen initialisieren ##########
+'# Variablen initialisieren
+anz = Self
 i = 0
-theAuthor = _autor
-theSizeFooter = _groesseFusszeile
-theSizeHeader = _groesseKopfzeile
+theAuthor = _defaultValues.Get("autor")
+theSizeFooter = _defaultValues.Get("groesseFusszeile")
+theSizeHeader = _defaultValues.Get("groesseKopfzeile")
 theColor = _schwarzHF
-theFont = Font.Make (_schriftart, _schriftschnitt)
+theFont = Font.Make (_defaultValues.Get("schriftart"), _defaultValues.Get("schriftschnitt"))
 
-lytActive = av.GetActiveDoc
-if ((lytActive.is(Layout)) and (lytActive.GetClass.GetClassName <> "DialogEditor")) then
+if (anz = "many") then
+  theProject = av.GetProject
+  theDocL = theProject.GetDocs
+  theLayoutL={}
+  for each theEntry in theDocL
+    if (theEntry.Is(Layout)) then
+      theLayoutL.Add(theEntry)
+    end
+  end
+  theBatchLayoutL = MsgBox.MultiList(theLayoutL, "Choose layout(s):", "Header and Footer")
+  if (theBatchLayoutL = nil) then 
+    return nil
+  end
+  while (theBatchLayoutL.Count = 0) 
+    MsgBox.Error("Please choose one oder more layout(s)"+NL+"Cancel for abort", "")
+    theBatchLayoutL=MsgBox.MultiList(theLayoutL, "Choose layout(s):", "Header and Footer")
+    if (theBatchLayoutL = nil) then
+      return nil
+    end
+  end
+else
+  theLayout = av.GetActiveDoc  
+  if (theLayout.Is(layout).Not) then
+    MsgBox.Warning("Start this tool from an active Layout.","")
+    return nil
+  else
+    theBatchLayoutL = {theLayout}
+  end
+end
+ 
+strUserName = MsgBox.Input ("Name of the author","Author",theAuthor)
+
+'# Header definieren (optional)
+if (MsgBox.YesNo("Define header ?","Header",true)) then
+  strHeadLeft = MsgBox.Input("Insert text top left:",
+  "Header left"," ")
+  strHeadRight = MsgBox.Input("Insert text top right:",
+  "Header right"," ")
+else
+  strHeadLeft = nil
+  strHeadRight = nil
+end
+  
+for each lytActive in theBatchLayoutL
+  i = i + 1
   thePageDisplay = lytActive.GetDisplay
   thePageExtent = thePageDisplay.ReturnPageExtent
   theCenter = thePageExtent.ReturnCenter
@@ -32,44 +78,29 @@ if ((lytActive.is(Layout)) and (lytActive.GetClass.GetClassName <> "DialogEditor
   xOriginRight = xOriginLeft + recMargin.GetWidth
   yOriginBottom = theOrigin.GetY
   yOriginTop = yOriginBottom + recMargin.GetHeight
-  
+   
   '# creates origins for graphic text (anchor points left)
   docOrigin = (xOriginLeft + 0.01)@(yOriginBottom + 0.05)
   userOrigin = (xOriginCenter)@(yOriginBottom + 0.05)
   pageOrigin = (xOriginRight - 0.01)@(yOriginBottom + 0.05)
-
+ 
   headLeftOrigin = (xOriginLeft + 0.01)@(yOriginTop - 0.12)
   headRightOrigin = (xOriginRight - 0.01)@(yOriginTop - 0.12)
-  
-  '# creates names strings for graphic text  
-  strAprName = av.GetProject.GetName
-  strLytName = lytActive.GetWin.GetTitle
-  
-  strUserName = MsgBox.Input ("Name of the author","Author",theAuthor)
  
-  strDoc = MsgBox.YesNo ("Append layout name on project name?","Name",true)
-  if (strDoc) then
-    strDoc = strAprName + "/" + strLytName
-  else
-    strDoc = strAprName
-  end
+  '# creates names strings for graphic text  
+  strDoc = av.GetProject.GetName
+  strLytName = lytActive.GetWin.GetTitle
   strUser = strUserName
-  strPage = MsgBox.Input ("Insert text bottom right", "Footer right", "1")
-  if (strPage = nil) then
-    return nil
-  end
-  
-  '# defines header (optional)
-  if (MsgBox.YesNo("Define header ?","Header",true)) then
-    strHeadLeft = MsgBox.Input("Insert text top left:",
-    "Header left"," ")
-    strHeadRight = MsgBox.Input("Insert text top right:",
-    "Header right"," ")
+  if (anz = "many") then
+    strPage = i.AsString + "/" + theBatchLayoutL.Count.AsString
   else
-    strHeadLeft = nil
-    strHeadRight = nil
+    strPage = MsgBox.Input ("Insert text bottom right", "Footer right", "1")
+    if (strPage = nil) then
+      return nil
+    end
   end
   
+  '# creates, adjusts and adds graphic text to layout
   gtxDoc = GraphicText.Make (strDoc, docOrigin)  
   gtxUser = GraphicText.Make (strUser, userOrigin)
   gtxPage = GraphicText.Make (strPage, pageOrigin)
@@ -149,9 +180,5 @@ if ((lytActive.is(Layout)) and (lytActive.GetClass.GetClassName <> "DialogEditor
     textSymHeadRight.SetColor(theColor)
     textSymHeadRight.SetFont (theFont)
     lytActive.GetGraphics.Add (gtxHeadRight)
-  end
-
-else
-  MsgBox.Warning ("This script is meant for an Active Layout only.  Exiting.","")
-  exit
+  end  
 end

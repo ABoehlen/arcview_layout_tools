@@ -1,41 +1,49 @@
 '#################################################################
 '#
-'# Filename:     LayoutTools.Documentation.ave
+'# Filename:     LayoutTools_Sub_Documentation.ave
 '# Author:       Adrian Boehlen
-'# Date:         30.11.2018
-'# Version:      0.8
+'# Date:         06.11.2022
+'# Version:      1.0
 '#
-'# Purpose:      enthaelt den Text fuer die Hilfeseiten
+'# Purpose:      enthaelt den Text fuer die Hilfeseiten. Dieser 
+'#               wird globalen Variablen zugewiesen
 '#
 '#################################################################
 
 
 _uebersicht = 
-"Commands and their functions"+NL+
-"-----------------------------------------------"+NL+NL+
-"new                 Creates a new layout document"+NL+
-"copy                Copies a layout"+NL+
+"==============================================="+NL+
+"                        Commands and their functions"+NL+
+"==============================================="+NL+NL+
+"cp                    Copies a layout"+NL+
+"delhd                Deletes header and footer for the chosen layouts"+NL+
+"dels                  Deletes selected features"+NL+
+"def                   Shows dialog to select the default value table"+NL+
 "fi                      Imports textfiles"+NL+
-"fis                    Imports textfiles preformatted"+NL+
+"fis                     Imports textfiles preformatted"+NL+
+"go                    Switches guides on (for the active layout)"+NL+
+"gom                 Switches guides on (for many layouts)"+NL+
+"gf                     Switches guides off (for the active layout)"+NL+
+"gfm                  Switches guides off (for many layouts)"+NL+
+"hd                    Creates header and footer for the active layout"+NL+
+"hdm                  Creates header and footer for many layouts"+NL+
 "help                 Shows this help page"+NL+
 "help <cmd>     Shows the help for the chosen command"+NL+
-"hlon                 Switches guides on (for the active layout)"+NL+
-"hlonm              Switches guides on (for many layouts)"+NL+
-"hloff                 Switches guides off (for the active layout)"+NL+
-"hloffm              Switches guides off (for many layouts)"+NL+
-"heado              Creates header and footer for the active layout"+NL+
-"headm             Creates header and footer for many layouts"+NL+
-"delhead           Deletes header and footer for the chosen layouts"+NL+
-"li                       Imports text for list"+NL+
-"lis                     Imports text preformatted for list"+NL+
-"mx<value>       Moves the selected elements on the x axis"+NL+
-"my<value>       Moves the selected elements on the y axis"+NL+
 "lytimp               Imports a layout from an ODB file "+NL+
 "lytexp               Exports one or more layouts into an ODB file"+NL+
+"mrg                  Shows recommended margins"+NL+
+"mx<value>       Moves the selected elements on the x axis"+NL+
+"my<value>       Moves the selected elements on the y axis"+NL+
+"new                 Creates a new layout document"+NL+
+"ol                      Imports text for ordered list"+NL+
+"ols                    Imports text preformatted for ordered list"+NL+
 "regm                Creates registration marks"+NL+
 "selall                Selects all elements on the active layout"+NL+
 "ti                      Imports text"+NL+
-"tis                    Imports text preformatted"+NL+
+"tis                     Imports text preformatted"+NL+
+"ul                      Imports text for unordered list"+NL+
+"uls                    Imports text preformatted for unordered list"+NL+
+"wd                   Shows dialog to select the working directory"+NL+
 "unselall            Unselect all selected elements"+NL+
 "zoomex            Zoom to exportview"+NL
 
@@ -55,34 +63,34 @@ _helpcopy =
 "The new layout will be added and opened"
 
 
-_helphlon =
+_helpgo =
 "Switch guides on (for the active layout)"+NL+
 "-------------------------------------------------------------"+NL+NL+
-"""hlon"" stands for ""Hilfslinie (German for guide) on"" "+NL+NL+
+"""go"" stands for ""guide on"" "+NL+NL+
 "In the active layout, switches previously turned off guides on again."
 
-_helphlonm =
+_helpgom =
 "Switch guides on (for many layouts)"+NL+
 "-------------------------------------------------------"+NL+NL+
-"""hlon"" stands for ""Hilfslinie (German for guide) on"" "+NL+NL+
+"""gom"" stands for ""guide on many"" "+NL+NL+
 "In the chosen layouts, switches previously turned off guides on again."
 
-_helphloff =
+_helpgf =
 "Switch guides off (for the active layout)"+NL+
 "-------------------------------------------------------------"+NL+NL+
-"""hloff"" stands for ""Hilfslinie (German for guide) off"" "+NL+NL+
-"In the active layout, switches guides, created with the horizontal/vertical lines tool, off."
+"""gf"" stands for ""guide off"" "+NL+NL+
+"In the active layout, switches guides, created with the horizontal/vertical guides tool, off."
 
-_helphloffm =
+_helpgfm =
 "Switch guides off (for many layouts)"+NL+
 "------------------------------------------------------"+NL+NL+
-"""hloff"" stands for ""Hilfslinie (German for guide) off"" "+NL+NL+
-"In the chosen layouts, switches guides, created with the horizontal/vertical lines tool, off."
+"""gfm"" stands for ""guide off many"" "+NL+NL+
+"In the chosen layouts, switches guides, created with the horizontal/vertical guides tool, off."
 
-_helpheado =
+_helphd =
 "Creates header and footer for the active layout"+NL+
 "-------------------------------------------------------------------------"+NL+NL+
-"""heado"" stands for ""header (and footer) for one (layout)"" "+NL+NL+
+"""hd"" stands for ""header (and footer) (for the active layout)"" "+NL+NL+
 "The following parameters are predefined:"+NL+NL+
 "Header (optional):"+NL+
 "- a text on the left and/or a text on the right"+NL+
@@ -91,10 +99,10 @@ _helpheado =
 "- centre: the author's name"+NL+
 "- right: a text, e.g. the date or the page number"
 
-_helpheadm =
+_helphdm =
 "Creates header and footer for many layouts"+NL+
 "--------------------------------------------------------------------"+NL+NL+
-"""headm"" stands for ""header (and footer) for many (layouts)"" "+NL+NL+
+"""hdm"" stands for ""header (and footer) (for many layouts)"" "+NL+NL+
 "At least one layout has to be chosen."+NL+
 "The following parameters are predefined:"+NL+NL+
 "Header (optional):"+NL+
@@ -104,11 +112,18 @@ _helpheadm =
 "- centre: the author's name"+NL+
 "- right: the number of the actual page and the total number of pages"
 
-_helpdelhead =
+_helpdelhd =
 "Deletes header and footer for the chosen layouts"+NL+
 "----------------------------------------------------------------------------"+NL+NL+
-"""delhead"" stands for ""delete header (and footer)"" "+NL+NL+
+"""delhd"" stands for ""delete header (and footer)"" "+NL+NL+
 "Header and footer for the chosen layouts will be deleted."
+
+_helpdels =
+"Deletes selected features"+NL+
+"----------------------------------------------------------------------------"+NL+NL+
+"""dels"" stands for ""delete selected features"" "+NL+NL+
+"Selected features (i.e. graphic elements) in the active layout will be deleted."
+
 
 _helplytimp =
 "Imports a layout from an ODB file"+NL+
@@ -121,6 +136,14 @@ _helplytexp =
 "----------------------------------------------------------------------"+NL+NL+
 """lytexp"" stands for ""layout export"" "+NL+NL+
 "Select one or more layouts to write them into an ODB file."
+
+_helpmrg =
+"Shows recommended margins"+NL+
+"-----------------------------------------------"+NL+NL+
+"""mrg"" stands for ""margins"" "+NL+NL+
+"In typography, a margin is the area between the main content of a page and the page edges. (Wikipedia)"+NL+
+"Based on typographic guidelines this function calculates recommended margins, depending of the given dimensions of the page and if it is a single or a double page."+NL+
+"You can enter this values directly into the Layout Page Settings dialog, or you can adapt them as you wish."
 
 _helpfi =
 "Imports a textfile"+NL+
@@ -145,11 +168,35 @@ _helpfis =
 "The content of the chosen text file will then be visible inside the still selected textbox."+NL+
 "Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
 
-_helpli =
-"Imports text for list"+NL+
-"----------------------------"+NL+NL+
-"""li"" stands for ""list import"" "+NL+NL+
-"Imports the content of a text window into the layout for building a list. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+_helpoli =
+"Imports text for ordered list"+NL+
+"-----------------------------------------"+NL+NL+
+"""ol"" stands for ""ordered list import"" "+NL+NL+
+"Imports the content of a text window into the layout for building an ordered list. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Type or paste text into the new window ""Import Text"". The beginning of each list element must be marked with the character ""¬"""+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value."+NL+
+"4. Define the font size"+NL+
+"5. Define the space between the marker and the text"+NL+
+"The content of the text window will then be visible inside the still selected textbox. The markers belonging to it will appear at the given distance to the left."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+_helpolis =
+"Imports text for ordered list preformatted"+NL+
+"--------------------------------------------------------------"+NL+NL+
+"""ols"" stands for ""ordered list import simple"" "+NL+NL+
+"Imports the content of a text window into the layout for building an ordered list. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+"1. Type or paste text into the new window ""Import Text"". The beginning of each list element must be marked with the character ""¬"""+NL+
+"2. Define the width of the new textblock."+NL+
+"3. Define the font size"+NL+
+"The content of the text window will then be visible inside the still selected textbox. The markers belonging to it will appear at the given distance to the left."+NL+
+"Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
+
+_helpuli =
+"Imports text for unordered list"+NL+
+"---------------------------------------------"+NL+NL+
+"""ul"" stands for ""unordered list import"" "+NL+NL+
+"Imports the content of a text window into the layout for building an unordered list. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
 "1. Type or paste text into the new window ""Import Text"". The beginning of each list element must be marked with the character ""¬"""+NL+
 "2. Define the width of the new textblock."+NL+
 "3. Choose the font, the font style and the font colour. Some colours are predefined, but it's possible to mix any colour by it's RGB value."+NL+
@@ -159,17 +206,16 @@ _helpli =
 "The content of the text window will then be visible inside the still selected textbox. The bullets belonging to it will appear at the given distance to the left."+NL+
 "Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
 
-_helplis =
-"Imports text for list preformatted"+NL+
-"-------------------------------------------------"+NL+NL+
-"""lis"" stands for ""list import simple"" "+NL+NL+
-"Imports the content of a text window into the layout for building a list. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
+_helpulis =
+"Imports text for unordered list preformatted"+NL+
+"------------------------------------------------------------------"+NL+NL+
+"""uls"" stands for ""unordered list import simple"" "+NL+NL+
+"Imports the content of a text window into the layout for building an unordered list. The font definition ist predefined (DejaVu Sans, Condensed, black), except the size. There must be a selected textbox (with or without content). This will be the upper left corner of the new textbox."+NL+NL+
 "1. Type or paste text into the new window ""Import Text"". The beginning of each list element must be marked with the character ""¬"""+NL+
 "2. Define the width of the new textblock."+NL+
 "3. Define the font size"+NL+
 "The content of the text window will then be visible inside the still selected textbox. The bullets belonging to it will appear at the given distance to the left."+NL+
 "Note: Special characters can be given by their triple-digit ASCII code, prefixed with \"
-
 
 _helpti =
 "Imports text"+NL+

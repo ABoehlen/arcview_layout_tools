@@ -1,1 +1,17 @@
-av.getproject.finddialog("LayoutTools").open
+'###########################################################################
+'#
+'# Filename:     LayoutTools_start.ave
+'# Author:       Adrian Boehlen
+'# Date:         30.12.2022
+'# Version:      0.3
+'#
+'# Purpose:      oeffnet die LayoutTools Toolbar und den Dialog zum
+'#               Auswaehlen der Tabelle mit den Defaultwerten
+'#
+'###########################################################################
+
+av.GetProject.FindDialog("LayoutTools").Open
+av.Run("LayoutTools.General_SetDefaultValues", {})
+'av.Run("LayoutTools.General_SetWorkingDirectory", {})
+
+

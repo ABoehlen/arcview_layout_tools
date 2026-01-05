@@ -5,8 +5,8 @@
 'Gets the Layout...
 myProj = av.GetProject
 someLayouts = myProj.GetDocswithGui(av.FindGui("Layout"))
-alayoutChoice = MsgBox.ChoiceAsString( someLayouts, "Choose a Layout to copy:", "Copy Layout")
-if (alayoutChoice = nil) then
+aLayoutChoice = MsgBox.ChoiceAsString( someLayouts, "Choose a Layout to copy:", "Copy Layout")
+if (aLayoutChoice = nil) then
   return nil
 end
 theLayout = myProj.FindDoc( alayoutChoice.AsString )
@@ -27,4 +27,3 @@ else
   newLayout.GetWin.Open
 end
 
-'End of script...

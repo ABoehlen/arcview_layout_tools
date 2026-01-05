@@ -1,0 +1,29 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_Sel_Delete.ave
+'# Author:       Adrian Boehlen
+'# Date:         04.12.2022
+'# Version:      1.0
+'#
+'# Purpose:      loescht selektierte Elemente im Layout
+'#
+'#########################################################################
+
+theLayout = av.GetActiveDoc
+
+if (theLayout.Is(layout).Not) then
+  MsgBox.Warning("Start this script from an active Layout.","")
+  return nil
+end
+
+if (theLayout.GetGraphics.HasSelected) then
+  if (MsgBox.YesNo("Are you sure?", "Delete features?", true)) then
+    av.GetProject.SetModified(true)
+    theLayout.GetGraphics.ClearSelected
+  else
+    return nil
+  end
+else
+  MsgBox.Info("No selected features to delete.","")
+end
+

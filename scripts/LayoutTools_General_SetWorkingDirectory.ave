@@ -1,0 +1,24 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_General_SetWorkingDirectory.ave
+'# Author:       Adrian Boehlen
+'# Date:         02.12.2022
+'# Version:      1.0
+'#
+'# Purpose:      Alternativ-Script zum standardmaessigen Dialog zum 
+'#               Festlegen des Arbeitsverzeichnisses. Im Gegensatz
+'#               zu diesem kann das Verzeichnis im Dialog ausgewaehlt
+'#               und braucht nicht eingetippt zu werden.
+'#
+'#########################################################################
+
+theProject = av.GetProject
+
+newDir = FileDialog.Put("   Select directory - not files".AsFileName, "*","Set Working Directory ")
+if (newDir = nil) then
+  return nil
+end
+
+newDir = newDir.ReturnDir
+theProject.SetWorkDir(newDir)
+

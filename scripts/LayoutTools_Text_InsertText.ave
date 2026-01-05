@@ -1,9 +1,9 @@
 '#########################################################################
 '#
-'# Filename:     LayoutTools_InsertText.ave
+'# Filename:     LayoutTools_Text_InsertText.ave
 '# Author:       Adrian Boehlen
-'# Date:         10.09.2017
-'# Version:      0.6
+'# Date:         27.11.2022
+'# Version:      0.7
 '#
 '# Purpose:      Basiert auf Layout.Text mit folgenden Erweiterungen:
 '#               - Standardschrift wird vordefiniert
@@ -15,10 +15,6 @@
 '#               - funktioniert nur mit Flattersatz linksbuendig und
 '#                 Standard-Zeilenabstand 1.0
 '#
-'#               erfordert:
-'#               - LayoutTools.Sub_DefaultValues
-'#               - LayoutTools.Sub_ReturnColor
-'#
 '#########################################################################
 
 theLayout = av.GetActiveDoc
@@ -29,15 +25,13 @@ if (theGraphicList.HasSelected = TRUE) then
   theOriY = theSelected.GetExtent.GetY
 end
 
-av.Run("LayoutTools.Sub_DefaultValues", {})   '# Defaultwerte einlesen
-
 CPC = av.FindDialog("Graphic.Label Defaults")
 IconList = CPC.FindByName("CalloutIcons")
 thePrefs = IconList.GetObjectTag.Get("Ttool1")
 
-thePrefs.Set(0, _schriftart)
-thePrefs.Set(1, _schriftschnitt)
-thePrefs.Set(2, _schriftgroesse)
+thePrefs.Set(0, _defaultValues.Get("schriftart"))
+thePrefs.Set(1, _defaultValues.Get("schriftschnitt"))
+thePrefs.Set(2, _defaultValues.Get("schriftgroesse"))
 
       '(0) Font Family    (String) 
       '(1) Font Style     (String)

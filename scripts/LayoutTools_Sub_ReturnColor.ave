@@ -1,3 +1,15 @@
+'#####################################################################
+'#
+'# Filename:     LayoutTools_Sub_ReturnColor.ave
+'# Author:       Adrian Boehlen
+'# Date:         09.11.2018
+'# Version:      1.0
+'#
+'# Purpose:      Definiert RGB-Werte von Farben, die ueber Namen
+'#               angesprochen werden
+'#
+'#####################################################################
+
 nc = Color.make
 
 if (Self = "Black") then

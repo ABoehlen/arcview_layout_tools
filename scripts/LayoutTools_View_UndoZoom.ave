@@ -1,3 +1,15 @@
+'#########################################################################
+'#
+'# Filename:     LayoutTools_View_UndoZoom.ave
+'# Author:       Adrian Boehlen
+'# Date:         06.11.2022
+'# Version:      1.0
+'#
+'# Purpose:      Macht die aus dem View Modus bekannte Funktion auch fuer
+'#               Layouts verfuegbar
+'#
+'#########################################################################
+
 theLayout = av.GetActiveDoc
 
 if (theLayout.Is(layout).Not) then
