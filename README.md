@@ -2,6 +2,8 @@
 Layout Tools is an Avenue extension used in ArcView GIS that provides many useful functions for working with layouts.
 
 ## Purpose
+![Layout Tools toolbar](https://github.com/ABoehlen/arcview_layout_tools/blob/main/layout_tools_toolbar.png)
+
 Layout Tools includes tools for convenient editing layouts. There are some general tools and a command line which has to be used for all the other tools: Type `help` to open a list of all available commands and their functions:
 
 * `cp`: Copies a layout
